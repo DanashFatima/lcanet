@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>The Activity module of the Life Cycle Assessment Network Ontology (LCAnet).</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/lcanet/activity#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/lcanet/activity#","name":"The Activity module of the Life Cycle Assessment Network Ontology (LCAnet).", "headline":"Document describing the ontology https://w3id.org/lcanet/activity#", "dateReleased":"Thu Apr 30 17:10:28 CEST 2026", "version":"2.1.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Fatima Danash","url":"https://orcid.org/0000-0002-0438-6831"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>The Activity module of the Life Cycle Assessment Network Ontology (LCAnet).</h1>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="https://w3id.org/lcanet/activity/2.1.0">https://w3id.org/lcanet/activity/2.1.0</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="https://w3id.org/lcanet/activity#">https://w3id.org/lcanet/activity#</a></dd>
+<dt>Revision:</dt>
+<dd>2.1.0</dd>
+<dt>Issued on:</dt>
+<dd>2026-04-30</dd>
+<dt>Authors:</dt>
+<dd><a href="https://orcid.org/0000-0002-0438-6831">Fatima Danash</a></dd>
+
+<dt>Publisher:</dt>
+<dd><a href="https://www.cea.fr">https://www.cea.fr</a></dd>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Danash, F., et al. (2026). 
+<b>LCAnet: A Modular Ontology Network for Life Cycle Assessment</b> (Version 2.1.0). 
+<!-- Available at: <a href="https://w3id.org/lcanet">https://w3id.org/lcanet</a> -->
+</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+LCAnet is a modular ontology network for Life Cycle Assessment (LCA) designed to provide a unified semantic framework for representing LCA systems. It is composed of six interoperable modules covering key aspects of LCA modeling: the Core module, Activity module, Actor module, Property module, Spatiotemporal module, and Impact Assessment module. The Core module serves as the central backbone of the network by importing the other modules and establishing explicit semantic links across all components, enabling consistent representation and reasoning over LCA data.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+LCAnet-Activity provides classes and properties that enable users to model activities and flows in Life Cycle Assessment systems. It represents activities, product flows, and environmental exchanges across life cycle stages.
+
+The module captures the operational dimension of LCA systems and is integrated with other LCAnet modules through the Core ontology, which links activities to actors, properties, and impact assessment results.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>act</b></td><td>&lt;https://w3id.org/lcanet/activity#&gt;</td></tr>
+<tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1/&gt;</td></tr>
+<tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>swrl</b></td><td>&lt;http://www.w3.org/2003/11/swrl#&gt;</td></tr>
+<tr><td><b>swrla</b></td><td>&lt;http://swrl.stanford.edu/ontologies/3.3/swrla.owl#&gt;</td></tr>
+<tr><td><b>swrlb</b></td><td>&lt;http://www.w3.org/2003/11/swrlb#&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="modules">
+<h3 id="moduleslist" class="list">LCAnet Modules</h3>
+
+<ul>
+  <li><a href="../activity/index-en.html">Activity module</a></li>
+  <li><a href="../actor/index-en.html">Actor module</a></li>
+  <li><a href="../ia/index-en.html">Impact Assessment module</a></li>
+  <li><a href="../property/index-en.html">Property module</a></li>
+  <li><a href="../st/index-en.html">Spatiotemporal module</a></li>
+  <li><a href="../core/index-en.html">Core module</a></li>
+</ul>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">LCAnet-Activity: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a>
+   </li>
+   <li>
+      <a href="#ActivityTag" title="https://w3id.org/lcanet/activity#ActivityTag">Activity Tag</a>
+   </li>
+   <li>
+      <a href="#Biosphere" title="https://w3id.org/lcanet/activity#Biosphere">Biosphere</a>
+   </li>
+   <li>
+      <a href="#ComposedActivity"
+         title="https://w3id.org/lcanet/activity#ComposedActivity">Composed Activity</a>
+   </li>
+   <li>
+      <a href="#ElementaryFlow" title="https://w3id.org/lcanet/activity#ElementaryFlow">Elementary Flow</a>
+   </li>
+   <li>
+      <a href="#EmissionFlow" title="https://w3id.org/lcanet/activity#EmissionFlow">Emission Flow</a>
+   </li>
+   <li>
+      <a href="#EnvironemntalType"
+         title="https://w3id.org/lcanet/activity#EnvironemntalType">Environmental Type</a>
+   </li>
+   <li>
+      <a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a>
+   </li>
+   <li>
+      <a href="#FlowTag" title="https://w3id.org/lcanet/activity#FlowTag">Flow Tag</a>
+   </li>
+   <li>
+      <a href="#IntermediateFlow"
+         title="https://w3id.org/lcanet/activity#IntermediateFlow">Intermediate Flow</a>
+   </li>
+   <li>
+      <a href="#ProductFlow" title="https://w3id.org/lcanet/activity#ProductFlow">Product Flow</a>
+   </li>
+   <li>
+      <a href="#ResourceFlow" title="https://w3id.org/lcanet/activity#ResourceFlow">Resource Flow</a>
+   </li>
+   <li>
+      <a href="#SequencedActivity"
+         title="https://w3id.org/lcanet/activity#SequencedActivity">Sequenced Activity</a>
+   </li>
+   <li>
+      <a href="#Technosphere" title="https://w3id.org/lcanet/activity#Technosphere">Technosphere</a>
+   </li>
+   <li>
+      <a href="#WasteFlow" title="https://w3id.org/lcanet/activity#WasteFlow">Waste Flow</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#connected" title="https://w3id.org/lcanet/activity#connected">connected</a>
+   </li>
+   <li>
+      <a href="#hasActivityPart" title="https://w3id.org/lcanet/activity#hasActivityPart">has Activity Part</a>
+   </li>
+   <li>
+      <a href="#hasActivityTag" title="https://w3id.org/lcanet/activity#hasActivityTag">has Activity Tag</a>
+   </li>
+   <li>
+      <a href="#hasEndActivity" title="https://w3id.org/lcanet/activity#hasEndActivity">has End Activity</a>
+   </li>
+   <li>
+      <a href="#hasEnvironmentalType"
+         title="https://w3id.org/lcanet/activity#hasEnvironmentalType">has Environmental Type</a>
+   </li>
+   <li>
+      <a href="#hasFlowTag" title="https://w3id.org/lcanet/activity#hasFlowTag">has Flow Tag</a>
+   </li>
+   <li>
+      <a href="#hasInputFlow" title="https://w3id.org/lcanet/activity#hasInputFlow">has Input Flow</a>
+   </li>
+   <li>
+      <a href="#hasInputProduct" title="https://w3id.org/lcanet/activity#hasInputProduct">has Input Product</a>
+   </li>
+   <li>
+      <a href="#hasOutputFlow" title="https://w3id.org/lcanet/activity#hasOutputFlow">has Output Flow</a>
+   </li>
+   <li>
+      <a href="#hasOutputProduct"
+         title="https://w3id.org/lcanet/activity#hasOutputProduct">has Output Product</a>
+   </li>
+   <li>
+      <a href="#hasStartActivity"
+         title="https://w3id.org/lcanet/activity#hasStartActivity">has Start Activity</a>
+   </li>
+   <li>
+      <a href="#isEndActivityOf" title="https://w3id.org/lcanet/activity#isEndActivityOf">is End Activity Of</a>
+   </li>
+   <li>
+      <a href="#isEnvironmentOf" title="https://w3id.org/lcanet/activity#isEnvironmentOf">is Environment Of</a>
+   </li>
+   <li>
+      <a href="#isInputFlowOf" title="https://w3id.org/lcanet/activity#isInputFlowOf">is Input Flow Of</a>
+   </li>
+   <li>
+      <a href="#isInputProductOf"
+         title="https://w3id.org/lcanet/activity#isInputProductOf">is Input Product Of</a>
+   </li>
+   <li>
+      <a href="#isOutputFlowOf" title="https://w3id.org/lcanet/activity#isOutputFlowOf">is Output Flow Of</a>
+   </li>
+   <li>
+      <a href="#isOutputProductOf"
+         title="https://w3id.org/lcanet/activity#isOutputProductOf">is Output Product Of</a>
+   </li>
+   <li>
+      <a href="#isPartOfActivity"
+         title="https://w3id.org/lcanet/activity#isPartOfActivity">is Part Of Activity</a>
+   </li>
+   <li>
+      <a href="#isStartActivityOf"
+         title="https://w3id.org/lcanet/activity#isStartActivityOf">is Start Activity Of</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/date" title="http://purl.org/dc/terms/date">
+         <span>date</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Exchange_Percentage"
+         title="https://w3id.org/lcanet/activity#Exchange_Percentage">
+         <span>Exchange Percentage</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+         title="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+         <span>is Rule Enabled</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">
+         <span>issued</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+         <span>preferred Namespace Prefix</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+         <span>preferred Namespace Uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">
+         <span>publisher</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+</ul><h4> SWRL Rules </h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#d4e1102">Rule #4</a>
+   </li>
+   <li>
+      <a href="#d4e1153">Rule #5</a>
+   </li>
+   <li>
+      <a href="#d4e1783">Input flows of a sequenced activity</a>
+   </li>
+   <li>
+      <a href="#d4e1204">Input Flows of Composed Activity</a>
+   </li>
+   <li>
+      <a href="#d4e1349">Input Product Flow of a composed activity</a>
+   </li>
+   <li>
+      <a href="#d4e728">Input Product flow of a sequenced activity</a>
+   </li>
+   <li>
+      <a href="#d4e1493">Output flows of a composed activity</a>
+   </li>
+   <li>
+      <a href="#d4e1928">Output flows of a sequenced activity</a>
+   </li>
+   <li>
+      <a href="#d4e1639">Output Product flow of a composed activity</a>
+   </li>
+   <li>
+      <a href="#d4e872">Output Product flow of a sequenced activity</a>
+   </li>
+   <li>
+      <a href="#d4e1017">Transitivity of has_Part</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">LCAnet-Activity: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">The Activity module is part of the LCAnet ontology proposed by the SmartACV Carnot Project.
+            It provides a formal representation of activities and their associated flows, enabling 
+            the modeling of activity/flow diagrams within the LCA realization of a product or service.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for LCAnet-Activity classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by LCAnet-Activity.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a></li>
+  <li><a href="#ActivityTag" title="https://w3id.org/lcanet/activity#ActivityTag">Activity Tag</a></li>
+  <li><a href="#Biosphere" title="https://w3id.org/lcanet/activity#Biosphere">Biosphere</a></li>
+  <li><a href="#ComposedActivity" title="https://w3id.org/lcanet/activity#ComposedActivity">Composed Activity</a></li>
+  <li><a href="#ElementaryFlow" title="https://w3id.org/lcanet/activity#ElementaryFlow">Elementary Flow</a></li>
+  <li><a href="#EmissionFlow" title="https://w3id.org/lcanet/activity#EmissionFlow">Emission Flow</a></li>
+  <li><a href="#EnvironemntalType" title="https://w3id.org/lcanet/activity#EnvironemntalType">Environmental Type</a></li>
+  <li><a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a></li>
+  <li><a href="#FlowTag" title="https://w3id.org/lcanet/activity#FlowTag">Flow Tag</a></li>
+  <li><a href="#IntermediateFlow" title="https://w3id.org/lcanet/activity#IntermediateFlow">Intermediate Flow</a></li>
+  <li><a href="#ProductFlow" title="https://w3id.org/lcanet/activity#ProductFlow">Product Flow</a></li>
+  <li><a href="#ResourceFlow" title="https://w3id.org/lcanet/activity#ResourceFlow">Resource Flow</a></li>
+  <li><a href="#SequencedActivity" title="https://w3id.org/lcanet/activity#SequencedActivity">Sequenced Activity</a></li>
+  <li><a href="#Technosphere" title="https://w3id.org/lcanet/activity#Technosphere">Technosphere</a></li>
+  <li><a href="#WasteFlow" title="https://w3id.org/lcanet/activity#WasteFlow">Waste Flow</a></li>
+ </ul>
+ <div class="entity" id="Activity">
+  <h3>Activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#Activity</p>
+  <div class="comment">
+   <span class="markdown">Represents a process or operation within the LCA system that consumes and/or produces flows.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ComposedActivity" title="https://w3id.org/lcanet/activity#ComposedActivity">Composed Activity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasActivityTag" title="https://w3id.org/lcanet/activity#hasActivityTag">has Activity Tag</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasActivityPart" title="https://w3id.org/lcanet/activity#hasActivityPart">has Activity Part</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEndActivity" title="https://w3id.org/lcanet/activity#hasEndActivity">has End Activity</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasStartActivity" title="https://w3id.org/lcanet/activity#hasStartActivity">has Start Activity</a> <sup class="type-op" title="object property">op</sup>, <a href="#isInputFlowOf" title="https://w3id.org/lcanet/activity#isInputFlowOf">is Input Flow Of</a> <sup class="type-op" title="object property">op</sup>, <a href="#isInputProductOf" title="https://w3id.org/lcanet/activity#isInputProductOf">is Input Product Of</a> <sup class="type-op" title="object property">op</sup>, <a href="#isOutputFlowOf" title="https://w3id.org/lcanet/activity#isOutputFlowOf">is Output Flow Of</a> <sup class="type-op" title="object property">op</sup>, <a href="#isOutputProductOf" title="https://w3id.org/lcanet/activity#isOutputProductOf">is Output Product Of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ActivityTag">
+  <h3>Activity Tag<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#ActivityTag</p>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasActivityTag" title="https://w3id.org/lcanet/activity#hasActivityTag">has Activity Tag</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Biosphere">
+  <h3>Biosphere<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#Biosphere</p>
+  <div class="comment">
+   <span class="markdown">Represents the natural environment external to the technosphere, including air, water, and soil compartments. It is the domain in which elementary flows originate or terminate, such as natural resource extraction and emissions.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EnvironemntalType" title="https://w3id.org/lcanet/activity#EnvironemntalType">Environmental Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Technosphere" title="https://w3id.org/lcanet/activity#Technosphere">Technosphere</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ComposedActivity">
+  <h3>Composed Activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#ComposedActivity</p>
+  <div class="comment">
+   <span class="markdown">An activity that is made up of multiple sub-activities, which together represent a higher-level process.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#SequencedActivity" title="https://w3id.org/lcanet/activity#SequencedActivity">Sequenced Activity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasActivityPart" title="https://w3id.org/lcanet/activity#hasActivityPart">has Activity Part</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ElementaryFlow">
+  <h3>Elementary Flow<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#ElementaryFlow</p>
+  <div class="comment">
+   <span class="markdown">A flow that connects an activity directly with the natural environment i.e. has a biosphere boundary.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#hasEnvironmentalType" title="https://w3id.org/lcanet/activity#hasEnvironmentalType">has Environmental Type</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#Biosphere" title="https://w3id.org/lcanet/activity#Biosphere">Biosphere</a> <sup class="type-c" title="class">c</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#EmissionFlow" title="https://w3id.org/lcanet/activity#EmissionFlow">Emission Flow</a> <sup class="type-c" title="class">c</sup>, <a href="#ResourceFlow" title="https://w3id.org/lcanet/activity#ResourceFlow">Resource Flow</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#IntermediateFlow" title="https://w3id.org/lcanet/activity#IntermediateFlow">Intermediate Flow</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EmissionFlow">
+  <h3>Emission Flow<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#EmissionFlow</p>
+  <div class="comment">
+   <span class="markdown">Represents an elementary flow corresponding to a substance or energy released from the technosphere into the biosphere. It includes emissions to environmental compartments such as air, water, and soil.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#ElementaryFlow" title="https://w3id.org/lcanet/activity#ElementaryFlow">Elementary Flow</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#isOutputFlowOf" title="https://w3id.org/lcanet/activity#isOutputFlowOf">is Output Flow Of</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ElementaryFlow" title="https://w3id.org/lcanet/activity#ElementaryFlow">Elementary Flow</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#ResourceFlow" title="https://w3id.org/lcanet/activity#ResourceFlow">Resource Flow</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EnvironemntalType">
+  <h3>Environmental Type<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#EnvironemntalType</p>
+  <div class="comment">
+   <span class="markdown">A classification of the environment into biosphere or technosphere, used to distinguish whether flows cross system boundaries or remain within the human-made system.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Biosphere" title="https://w3id.org/lcanet/activity#Biosphere">Biosphere</a> <sup class="type-c" title="class">c</sup>, <a href="#Technosphere" title="https://w3id.org/lcanet/activity#Technosphere">Technosphere</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasEnvironmentalType" title="https://w3id.org/lcanet/activity#hasEnvironmentalType">has Environmental Type</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Flow">
+  <h3>Flow<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#Flow</p>
+  <div class="comment">
+   <span class="markdown">Represents the transfer of materials, energy, or resources between activities or between an activity and the environment.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ElementaryFlow" title="https://w3id.org/lcanet/activity#ElementaryFlow">Elementary Flow</a> <sup class="type-c" title="class">c</sup>, <a href="#IntermediateFlow" title="https://w3id.org/lcanet/activity#IntermediateFlow">Intermediate Flow</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#connected" title="https://w3id.org/lcanet/activity#connected">connected</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEnvironmentalType" title="https://w3id.org/lcanet/activity#hasEnvironmentalType">has Environmental Type</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFlowTag" title="https://w3id.org/lcanet/activity#hasFlowTag">has Flow Tag</a> <sup class="type-op" title="object property">op</sup>, <a href="#isInputFlowOf" title="https://w3id.org/lcanet/activity#isInputFlowOf">is Input Flow Of</a> <sup class="type-op" title="object property">op</sup>, <a href="#isOutputFlowOf" title="https://w3id.org/lcanet/activity#isOutputFlowOf">is Output Flow Of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#connected" title="https://w3id.org/lcanet/activity#connected">connected</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FlowTag">
+  <h3>Flow Tag<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#FlowTag</p>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasFlowTag" title="https://w3id.org/lcanet/activity#hasFlowTag">has Flow Tag</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IntermediateFlow">
+  <h3>Intermediate Flow<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#IntermediateFlow</p>
+  <div class="comment">
+   <span class="markdown">A flow that connects two activities within the technosphere, serving as an input to one activity and an output from another, or is wasted as waste.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#hasEnvironmentalType" title="https://w3id.org/lcanet/activity#hasEnvironmentalType">has Environmental Type</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#Technosphere" title="https://w3id.org/lcanet/activity#Technosphere">Technosphere</a> <sup class="type-c" title="class">c</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ProductFlow" title="https://w3id.org/lcanet/activity#ProductFlow">Product Flow</a> <sup class="type-c" title="class">c</sup>, <a href="#WasteFlow" title="https://w3id.org/lcanet/activity#WasteFlow">Waste Flow</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#ElementaryFlow" title="https://w3id.org/lcanet/activity#ElementaryFlow">Elementary Flow</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ProductFlow">
+  <h3>Product Flow<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#ProductFlow</p>
+  <div class="comment">
+   <span class="markdown">Represents an intermediate flow within the technosphere corresponding to a product, service, or energy carrier with an associated economic value. Such flows are exchanged between activities as intended inputs or outputs within the life cycle system.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#IntermediateFlow" title="https://w3id.org/lcanet/activity#IntermediateFlow">Intermediate Flow</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> ((<a href="#isInputProductOf" title="https://w3id.org/lcanet/activity#isInputProductOf">is Input Product Of</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>) <span class="logic">or</span> (<a href="#isOutputProductOf" title="https://w3id.org/lcanet/activity#isOutputProductOf">is Output Product Of</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>))
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IntermediateFlow" title="https://w3id.org/lcanet/activity#IntermediateFlow">Intermediate Flow</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#isInputProductOf" title="https://w3id.org/lcanet/activity#isInputProductOf">is Input Product Of</a> <sup class="type-op" title="object property">op</sup>, <a href="#isOutputProductOf" title="https://w3id.org/lcanet/activity#isOutputProductOf">is Output Product Of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ResourceFlow">
+  <h3>Resource Flow<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#ResourceFlow</p>
+  <div class="comment">
+   <span class="markdown">Represents an elementary flow corresponding to a substance or energy extracted from the biosphere into the technosphere. It includes natural resources such as minerals, biomass, water, and energy carriers.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#ElementaryFlow" title="https://w3id.org/lcanet/activity#ElementaryFlow">Elementary Flow</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#isInputFlowOf" title="https://w3id.org/lcanet/activity#isInputFlowOf">is Input Flow Of</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ElementaryFlow" title="https://w3id.org/lcanet/activity#ElementaryFlow">Elementary Flow</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#EmissionFlow" title="https://w3id.org/lcanet/activity#EmissionFlow">Emission Flow</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SequencedActivity">
+  <h3>Sequenced Activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#SequencedActivity</p>
+  <div class="comment">
+   <span class="markdown">A composed activity in which the constituent sub-activities follow a specific temporal or logical sequence.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ComposedActivity" title="https://w3id.org/lcanet/activity#ComposedActivity">Composed Activity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasEndActivity" title="https://w3id.org/lcanet/activity#hasEndActivity">has End Activity</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasStartActivity" title="https://w3id.org/lcanet/activity#hasStartActivity">has Start Activity</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Technosphere">
+  <h3>Technosphere<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#Technosphere</p>
+  <div class="comment">
+   <span class="markdown">Represents the system of human activities and industrial processes within the life cycle of a product or service. It encompasses all transformations and exchanges of intermediate flows occurring within the economic system.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EnvironemntalType" title="https://w3id.org/lcanet/activity#EnvironemntalType">Environmental Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Biosphere" title="https://w3id.org/lcanet/activity#Biosphere">Biosphere</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="WasteFlow">
+  <h3>Waste Flow<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#WasteFlow</p>
+  <div class="comment">
+   <span class="markdown">Represents an intermediate flow within the technosphere corresponding to materials or substances that are discarded by an activity and require further treatment, recovery, or disposal. These flows are typically characterized by the absence of positive economic value for the producing activity.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IntermediateFlow" title="https://w3id.org/lcanet/activity#IntermediateFlow">Intermediate Flow</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#connected" title="https://w3id.org/lcanet/activity#connected">connected</a></li>
+  <li><a href="#hasActivityPart" title="https://w3id.org/lcanet/activity#hasActivityPart">has Activity Part</a></li>
+  <li><a href="#hasActivityTag" title="https://w3id.org/lcanet/activity#hasActivityTag">has Activity Tag</a></li>
+  <li><a href="#hasEndActivity" title="https://w3id.org/lcanet/activity#hasEndActivity">has End Activity</a></li>
+  <li><a href="#hasEnvironmentalType" title="https://w3id.org/lcanet/activity#hasEnvironmentalType">has Environmental Type</a></li>
+  <li><a href="#hasFlowTag" title="https://w3id.org/lcanet/activity#hasFlowTag">has Flow Tag</a></li>
+  <li><a href="#hasInputFlow" title="https://w3id.org/lcanet/activity#hasInputFlow">has Input Flow</a></li>
+  <li><a href="#hasInputProduct" title="https://w3id.org/lcanet/activity#hasInputProduct">has Input Product</a></li>
+  <li><a href="#hasOutputFlow" title="https://w3id.org/lcanet/activity#hasOutputFlow">has Output Flow</a></li>
+  <li><a href="#hasOutputProduct" title="https://w3id.org/lcanet/activity#hasOutputProduct">has Output Product</a></li>
+  <li><a href="#hasStartActivity" title="https://w3id.org/lcanet/activity#hasStartActivity">has Start Activity</a></li>
+  <li><a href="#isEndActivityOf" title="https://w3id.org/lcanet/activity#isEndActivityOf">is End Activity Of</a></li>
+  <li><a href="#isEnvironmentOf" title="https://w3id.org/lcanet/activity#isEnvironmentOf">is Environment Of</a></li>
+  <li><a href="#isInputFlowOf" title="https://w3id.org/lcanet/activity#isInputFlowOf">is Input Flow Of</a></li>
+  <li><a href="#isInputProductOf" title="https://w3id.org/lcanet/activity#isInputProductOf">is Input Product Of</a></li>
+  <li><a href="#isOutputFlowOf" title="https://w3id.org/lcanet/activity#isOutputFlowOf">is Output Flow Of</a></li>
+  <li><a href="#isOutputProductOf" title="https://w3id.org/lcanet/activity#isOutputProductOf">is Output Product Of</a></li>
+  <li><a href="#isPartOfActivity" title="https://w3id.org/lcanet/activity#isPartOfActivity">is Part Of Activity</a></li>
+  <li><a href="#isStartActivityOf" title="https://w3id.org/lcanet/activity#isStartActivityOf">is Start Activity Of</a></li>
+ </ul>
+ <div class="entity" id="connected">
+  <h3>connected<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#connected</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> symmetric</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasActivityPart">
+  <h3>has Activity Part<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#hasActivityPart</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#hasEndActivity" title="https://w3id.org/lcanet/activity#hasEndActivity">has End Activity</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasStartActivity" title="https://w3id.org/lcanet/activity#hasStartActivity">has Start Activity</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ComposedActivity" title="https://w3id.org/lcanet/activity#ComposedActivity">Composed Activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isPartOfActivity" title="https://w3id.org/lcanet/activity#isPartOfActivity">is Part Of Activity</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasActivityTag">
+  <h3>has Activity Tag<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#hasActivityTag</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> asymmetric, irreflexive</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ActivityTag" title="https://w3id.org/lcanet/activity#ActivityTag">Activity Tag</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasEndActivity">
+  <h3>has End Activity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#hasEndActivity</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> asymmetric, irreflexive</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasActivityPart" title="https://w3id.org/lcanet/activity#hasActivityPart">has Activity Part</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SequencedActivity" title="https://w3id.org/lcanet/activity#SequencedActivity">Sequenced Activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isEndActivityOf" title="https://w3id.org/lcanet/activity#isEndActivityOf">is End Activity Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasEnvironmentalType">
+  <h3>has Environmental Type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#hasEnvironmentalType</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EnvironemntalType" title="https://w3id.org/lcanet/activity#EnvironemntalType">Environmental Type</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isEnvironmentOf" title="https://w3id.org/lcanet/activity#isEnvironmentOf">is Environment Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasFlowTag">
+  <h3>has Flow Tag<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#hasFlowTag</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#FlowTag" title="https://w3id.org/lcanet/activity#FlowTag">Flow Tag</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasInputFlow">
+  <h3>has Input Flow<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#hasInputFlow</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#hasInputProduct" title="https://w3id.org/lcanet/activity#hasInputProduct">has Input Product</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isInputFlowOf" title="https://w3id.org/lcanet/activity#isInputFlowOf">is Input Flow Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasInputProduct">
+  <h3>has Input Product<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#hasInputProduct</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasInputFlow" title="https://w3id.org/lcanet/activity#hasInputFlow">has Input Flow</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isInputProductOf" title="https://w3id.org/lcanet/activity#isInputProductOf">is Input Product Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasOutputFlow">
+  <h3>has Output Flow<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#hasOutputFlow</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#hasOutputProduct" title="https://w3id.org/lcanet/activity#hasOutputProduct">has Output Product</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isOutputFlowOf" title="https://w3id.org/lcanet/activity#isOutputFlowOf">is Output Flow Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasOutputProduct">
+  <h3>has Output Product<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#hasOutputProduct</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasOutputFlow" title="https://w3id.org/lcanet/activity#hasOutputFlow">has Output Flow</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isOutputProductOf" title="https://w3id.org/lcanet/activity#isOutputProductOf">is Output Product Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasStartActivity">
+  <h3>has Start Activity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#hasStartActivity</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> asymmetric, irreflexive</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasActivityPart" title="https://w3id.org/lcanet/activity#hasActivityPart">has Activity Part</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SequencedActivity" title="https://w3id.org/lcanet/activity#SequencedActivity">Sequenced Activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isStartActivityOf" title="https://w3id.org/lcanet/activity#isStartActivityOf">is Start Activity Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isEndActivityOf">
+  <h3>is End Activity Of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#isEndActivityOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#isPartOfActivity" title="https://w3id.org/lcanet/activity#isPartOfActivity">is Part Of Activity</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasEndActivity" title="https://w3id.org/lcanet/activity#hasEndActivity">has End Activity</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isEnvironmentOf">
+  <h3>is Environment Of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#isEnvironmentOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasEnvironmentalType" title="https://w3id.org/lcanet/activity#hasEnvironmentalType">has Environmental Type</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isInputFlowOf">
+  <h3>is Input Flow Of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#isInputFlowOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#isInputProductOf" title="https://w3id.org/lcanet/activity#isInputProductOf">is Input Product Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasInputFlow" title="https://w3id.org/lcanet/activity#hasInputFlow">has Input Flow</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isInputProductOf">
+  <h3>is Input Product Of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#isInputProductOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#isInputFlowOf" title="https://w3id.org/lcanet/activity#isInputFlowOf">is Input Flow Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ProductFlow" title="https://w3id.org/lcanet/activity#ProductFlow">Product Flow</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasInputProduct" title="https://w3id.org/lcanet/activity#hasInputProduct">has Input Product</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isOutputFlowOf">
+  <h3>is Output Flow Of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#isOutputFlowOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#isOutputProductOf" title="https://w3id.org/lcanet/activity#isOutputProductOf">is Output Product Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasOutputFlow" title="https://w3id.org/lcanet/activity#hasOutputFlow">has Output Flow</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isOutputProductOf">
+  <h3>is Output Product Of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#isOutputProductOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#isOutputFlowOf" title="https://w3id.org/lcanet/activity#isOutputFlowOf">is Output Flow Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ProductFlow" title="https://w3id.org/lcanet/activity#ProductFlow">Product Flow</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasOutputProduct" title="https://w3id.org/lcanet/activity#hasOutputProduct">has Output Product</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isPartOfActivity">
+  <h3>is Part Of Activity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#isPartOfActivity</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#isEndActivityOf" title="https://w3id.org/lcanet/activity#isEndActivityOf">is End Activity Of</a> <sup class="type-op" title="object property">op</sup>, <a href="#isStartActivityOf" title="https://w3id.org/lcanet/activity#isStartActivityOf">is Start Activity Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasActivityPart" title="https://w3id.org/lcanet/activity#hasActivityPart">has Activity Part</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isStartActivityOf">
+  <h3>is Start Activity Of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#isStartActivityOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#isPartOfActivity" title="https://w3id.org/lcanet/activity#isPartOfActivity">is Part Of Activity</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasStartActivity" title="https://w3id.org/lcanet/activity#hasStartActivity">has Start Activity</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/date" title="http://purl.org/dc/terms/date"> <span>date</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description"> <span>description</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description"> <span>description</span> </a></li>
+  <li><a href="#Exchange_Percentage" title="https://w3id.org/lcanet/activity#Exchange_Percentage"> <span>Exchange Percentage</span> </a></li>
+  <li><a href="#http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" title="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"> <span>is Rule Enabled</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued"> <span>issued</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespacePrefix" title="http://purl.org/vocab/vann/preferredNamespacePrefix"> <span>preferred Namespace Prefix</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri"> <span>preferred Namespace Uri</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher"> <span>publisher</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title"> <span>title</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/terms/creator">
+  <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/date">
+  <h3>date<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/date</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/description</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+ </div>
+ <div class="entity" id="Exchange_Percentage">
+  <h3>Exchange Percentage<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/activity#Exchange_Percentage</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+  <h3>is Rule Enabled<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/issued">
+  <h3>issued<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/issued</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  <h3>preferred Namespace Prefix<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespacePrefix</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespaceUri">
+  <h3>preferred Namespace Uri<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespaceUri</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/publisher">
+  <h3>publisher<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/publisher</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/title">
+  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="swrlrules">
+ <h3 id="swrlrules" class="list">SWRL rules</h3>
+ <ul class="hlist">
+  <li><a href="#d4e1102">Rule #4</a></li>
+  <li><a href="#d4e1153">Rule #5</a></li>
+  <li><a href="#d4e1783">Input flows of a sequenced activity</a></li>
+  <li><a href="#d4e1204">Input Flows of Composed Activity</a></li>
+  <li><a href="#d4e1349">Input Product Flow of a composed activity</a></li>
+  <li><a href="#d4e728">Input Product flow of a sequenced activity</a></li>
+  <li><a href="#d4e1493">Output flows of a composed activity</a></li>
+  <li><a href="#d4e1928">Output flows of a sequenced activity</a></li>
+  <li><a href="#d4e1639">Output Product flow of a composed activity</a></li>
+  <li><a href="#d4e872">Output Product flow of a sequenced activity</a></li>
+  <li><a href="#d4e1017">Transitivity of has_Part</a></li>
+ </ul>
+ <div class="entity" id="d4e1102">
+  <h3>Rule #4<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p><a href="#hasInputFlow" title="https://w3id.org/lcanet/activity#hasInputFlow">has Input Flow</a> <sup class="type-op" title="object property">op</sup>(?x,?f) -&gt; <a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup>(?f)</p>
+ </div>
+ <div class="entity" id="d4e1153">
+  <h3>Rule #5<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p><a href="#hasOutputFlow" title="https://w3id.org/lcanet/activity#hasOutputFlow">has Output Flow</a> <sup class="type-op" title="object property">op</sup>(?x,?f) -&gt; <a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup>(?f)</p>
+ </div>
+ <div class="entity" id="d4e1783">
+  <h3>Input flows of a sequenced activity<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>for any flow type: emission (resources) or intermediate flows<br><br><a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup>(?f) , <a href="#SequencedActivity" title="https://w3id.org/lcanet/activity#SequencedActivity">Sequenced Activity</a> <sup class="type-c" title="class">c</sup>(?a) , <a href="#hasActivityPart" title="https://w3id.org/lcanet/activity#hasActivityPart">has Activity Part</a> <sup class="type-op" title="object property">op</sup>(?a,?b) , <a href="#isInputFlowOf" title="https://w3id.org/lcanet/activity#isInputFlowOf">is Input Flow Of</a> <sup class="type-op" title="object property">op</sup>(?f,?b) , <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>(?b) -&gt; <a href="#isInputFlowOf" title="https://w3id.org/lcanet/activity#isInputFlowOf">is Input Flow Of</a> <sup class="type-op" title="object property">op</sup>(?f,?a)</p>
+ </div>
+ <div class="entity" id="d4e1204">
+  <h3>Input Flows of Composed Activity<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>for any flow type: elementary (resources) or intermediate flows<br><br><a href="#ComposedActivity" title="https://w3id.org/lcanet/activity#ComposedActivity">Composed Activity</a> <sup class="type-c" title="class">c</sup>(?a) , <a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup>(?f) , <a href="#hasActivityPart" title="https://w3id.org/lcanet/activity#hasActivityPart">has Activity Part</a> <sup class="type-op" title="object property">op</sup>(?a,?b) , <a href="#isInputFlowOf" title="https://w3id.org/lcanet/activity#isInputFlowOf">is Input Flow Of</a> <sup class="type-op" title="object property">op</sup>(?f,?b) , <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>(?b) -&gt; <a href="#isInputFlowOf" title="https://w3id.org/lcanet/activity#isInputFlowOf">is Input Flow Of</a> <sup class="type-op" title="object property">op</sup>(?f,?a)</p>
+ </div>
+ <div class="entity" id="d4e1349">
+  <h3>Input Product Flow of a composed activity<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p><br><br><a href="#ComposedActivity" title="https://w3id.org/lcanet/activity#ComposedActivity">Composed Activity</a> <sup class="type-c" title="class">c</sup>(?a) , <a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup>(?f) , <a href="#hasActivityPart" title="https://w3id.org/lcanet/activity#hasActivityPart">has Activity Part</a> <sup class="type-op" title="object property">op</sup>(?a,?b) , <a href="#isInputProductOf" title="https://w3id.org/lcanet/activity#isInputProductOf">is Input Product Of</a> <sup class="type-op" title="object property">op</sup>(?f,?b) , <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>(?b) -&gt; <a href="#isInputProductOf" title="https://w3id.org/lcanet/activity#isInputProductOf">is Input Product Of</a> <sup class="type-op" title="object property">op</sup>(?f,?a)</p>
+ </div>
+ <div class="entity" id="d4e728">
+  <h3>Input Product flow of a sequenced activity<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p><br><br><a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup>(?f) , <a href="#SequencedActivity" title="https://w3id.org/lcanet/activity#SequencedActivity">Sequenced Activity</a> <sup class="type-c" title="class">c</sup>(?a) , <a href="#isInputProductOf" title="https://w3id.org/lcanet/activity#isInputProductOf">is Input Product Of</a> <sup class="type-op" title="object property">op</sup>(?f,?b) , <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>(?b) , <a href="#hasStartActivity" title="https://w3id.org/lcanet/activity#hasStartActivity">has Start Activity</a> <sup class="type-op" title="object property">op</sup>(?a,?b) -&gt; <a href="#isInputProductOf" title="https://w3id.org/lcanet/activity#isInputProductOf">is Input Product Of</a> <sup class="type-op" title="object property">op</sup>(?f,?a)</p>
+ </div>
+ <div class="entity" id="d4e1493">
+  <h3>Output flows of a composed activity<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>for any flow type: elementary (emissions) or intermediate flows<br><br><a href="#ComposedActivity" title="https://w3id.org/lcanet/activity#ComposedActivity">Composed Activity</a> <sup class="type-c" title="class">c</sup>(?a) , <a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup>(?f) , <a href="#hasActivityPart" title="https://w3id.org/lcanet/activity#hasActivityPart">has Activity Part</a> <sup class="type-op" title="object property">op</sup>(?a,?b) , <a href="#isOutputFlowOf" title="https://w3id.org/lcanet/activity#isOutputFlowOf">is Output Flow Of</a> <sup class="type-op" title="object property">op</sup>(?f,?b) , <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>(?b) -&gt; <a href="#isOutputFlowOf" title="https://w3id.org/lcanet/activity#isOutputFlowOf">is Output Flow Of</a> <sup class="type-op" title="object property">op</sup>(?f,?a)</p>
+ </div>
+ <div class="entity" id="d4e1928">
+  <h3>Output flows of a sequenced activity<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>for any flow type: elementary (emissions) or intermediate flows<br><br><a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup>(?f) , <a href="#SequencedActivity" title="https://w3id.org/lcanet/activity#SequencedActivity">Sequenced Activity</a> <sup class="type-c" title="class">c</sup>(?a) , <a href="#hasActivityPart" title="https://w3id.org/lcanet/activity#hasActivityPart">has Activity Part</a> <sup class="type-op" title="object property">op</sup>(?a,?b) , <a href="#isOutputFlowOf" title="https://w3id.org/lcanet/activity#isOutputFlowOf">is Output Flow Of</a> <sup class="type-op" title="object property">op</sup>(?f,?b) , <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>(?b) -&gt; <a href="#isOutputFlowOf" title="https://w3id.org/lcanet/activity#isOutputFlowOf">is Output Flow Of</a> <sup class="type-op" title="object property">op</sup>(?f,?a)</p>
+ </div>
+ <div class="entity" id="d4e1639">
+  <h3>Output Product flow of a composed activity<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p><br><br><a href="#ComposedActivity" title="https://w3id.org/lcanet/activity#ComposedActivity">Composed Activity</a> <sup class="type-c" title="class">c</sup>(?a) , <a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup>(?f) , <a href="#hasActivityPart" title="https://w3id.org/lcanet/activity#hasActivityPart">has Activity Part</a> <sup class="type-op" title="object property">op</sup>(?a,?b) , <a href="#isOutputProductOf" title="https://w3id.org/lcanet/activity#isOutputProductOf">is Output Product Of</a> <sup class="type-op" title="object property">op</sup>(?f,?b) , <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>(?b) -&gt; <a href="#isOutputProductOf" title="https://w3id.org/lcanet/activity#isOutputProductOf">is Output Product Of</a> <sup class="type-op" title="object property">op</sup>(?f,?a)</p>
+ </div>
+ <div class="entity" id="d4e872">
+  <h3>Output Product flow of a sequenced activity<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p><br><br><a href="#hasEndActivity" title="https://w3id.org/lcanet/activity#hasEndActivity">has End Activity</a> <sup class="type-op" title="object property">op</sup>(?a,?b) , <a href="#Flow" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup>(?f) , <a href="#SequencedActivity" title="https://w3id.org/lcanet/activity#SequencedActivity">Sequenced Activity</a> <sup class="type-c" title="class">c</sup>(?a) , <a href="#isOutputProductOf" title="https://w3id.org/lcanet/activity#isOutputProductOf">is Output Product Of</a> <sup class="type-op" title="object property">op</sup>(?f,?b) , <a href="#Activity" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup>(?b) -&gt; <a href="#isOutputProductOf" title="https://w3id.org/lcanet/activity#isOutputProductOf">is Output Product Of</a> <sup class="type-op" title="object property">op</sup>(?f,?a)</p>
+ </div>
+ <div class="entity" id="d4e1017">
+  <h3>Transitivity of has_Part<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>The obligation of writing it as a rule comes from the fact that asserting Tans(has_Part_Activity) makes the property non-simple yileding in several estrictions on its usage, including cardinality restrictions which appears in the Composed_Activity class.<br><br><a href="#hasActivityPart" title="https://w3id.org/lcanet/activity#hasActivityPart">has Activity Part</a> <sup class="type-op" title="object property">op</sup>(?,?) , <a href="#hasActivityPart" title="https://w3id.org/lcanet/activity#hasActivityPart">has Activity Part</a> <sup class="type-op" title="object property">op</sup>(?,?) -&gt; <a href="#hasActivityPart" title="https://w3id.org/lcanet/activity#hasActivityPart">has Activity Part</a> <sup class="type-op" title="object property">op</sup>(?,?)</p>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

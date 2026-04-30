@@ -1,0 +1,744 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org/lcanet/activity", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "en" : "The Activity module of the Life Cycle Assessment Network Ontology (LCAnet)."
+    },
+    "iri" : "https://w3id.org/lcanet/activity",
+    "version" : "2.1.0",
+    "author" : [ "https://orcid.org/0000-0002-0438-6831" ],
+    "description" : {
+      "undefined" : "The Activity module is part of the LCAnet ontology proposed by the SmartACV Carnot Project.\n            It provides a formal representation of activities and their associated flows, enabling \n            the modeling of activity/flow diagrams within the LCA realization of a product or service."
+    },
+    "labels" : {
+      "undefined" : "LCAnet-Activity"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0002-0438-6831",
+        "type" : "iri"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "act",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "https://www.cea.fr",
+        "type" : "iri"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/lcanet/activity#",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "2.1.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "The Activity module of the Life Cycle Assessment Network Ontology (LCAnet).",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-04-30",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "12",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "17",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/lcanet/activity#EnvironemntalType",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnvironemntalType",
+      "undefined" : "Environmental Type"
+    },
+    "subClasses" : [ "4", "5" ],
+    "comment" : {
+      "undefined" : "A classification of the environment into biosphere or technosphere, used to distinguish whether flows cross system boundaries or remain within the human-made system."
+    },
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#ComposedActivity",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ComposedActivity",
+      "undefined" : "Composed Activity"
+    },
+    "subClasses" : [ "7" ],
+    "comment" : {
+      "undefined" : "An activity that is made up of multiple sub-activities, which together represent a higher-level process."
+    },
+    "id" : "6",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#FlowTag",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FlowTag",
+      "undefined" : "Flow Tag"
+    },
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#EmissionFlow",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EmissionFlow",
+      "undefined" : "Emission Flow"
+    },
+    "intersection" : [ "10" ],
+    "comment" : {
+      "undefined" : "Represents an elementary flow corresponding to a substance or energy released from the technosphere into the biosphere. \nIt includes emissions to environmental compartments such as air, water, and soil."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "9",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#ProductFlow",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProductFlow",
+      "undefined" : "Product Flow"
+    },
+    "intersection" : [ "17" ],
+    "comment" : {
+      "undefined" : "Represents an intermediate flow within the technosphere corresponding to a product, service, or energy carrier with an associated economic value. \nSuch flows are exchanged between activities as intended inputs or outputs within the life cycle system."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "12",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#ActivityTag",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActivityTag",
+      "undefined" : "Activity Tag"
+    },
+    "id" : "2"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#Biosphere",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Biosphere",
+      "undefined" : "Biosphere"
+    },
+    "comment" : {
+      "undefined" : "Represents the natural environment external to the technosphere, \nincluding air, water, and soil compartments. It is the domain in which elementary \nflows originate or terminate, such as natural resource extraction and emissions."
+    },
+    "id" : "5",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "39",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#Activity",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Activity",
+      "undefined" : "Activity"
+    },
+    "subClasses" : [ "6" ],
+    "comment" : {
+      "undefined" : "Represents a process or operation within the LCA system that consumes and/or produces flows."
+    },
+    "id" : "1"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#WasteFlow",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WasteFlow",
+      "undefined" : "Waste Flow"
+    },
+    "comment" : {
+      "undefined" : "Represents an intermediate flow within the technosphere corresponding to materials or substances that are discarded by an activity and require further treatment, recovery, or disposal. \nThese flows are typically characterized by the absence of positive economic value for the producing activity."
+    },
+    "id" : "28",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#SequencedActivity",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SequencedActivity",
+      "undefined" : "Sequenced Activity"
+    },
+    "comment" : {
+      "undefined" : "A composed activity in which the constituent sub-activities follow a specific temporal or logical sequence."
+    },
+    "id" : "7",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#ElementaryFlow",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ElementaryFlow",
+      "undefined" : "Elementary Flow"
+    },
+    "subClasses" : [ "32", "9" ],
+    "intersection" : [ "15" ],
+    "comment" : {
+      "undefined" : "A flow that connects an activity directly with the natural environment i.e. has a biosphere  boundary."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "10",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#Flow",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Flow",
+      "undefined" : "Flow"
+    },
+    "subClasses" : [ "10", "17" ],
+    "comment" : {
+      "undefined" : "Represents the transfer of materials, energy, or resources between activities or between an activity and the environment."
+    },
+    "id" : "15"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#ResourceFlow",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResourceFlow",
+      "undefined" : "Resource Flow"
+    },
+    "intersection" : [ "10" ],
+    "comment" : {
+      "undefined" : "Represents an elementary flow corresponding to a substance or energy extracted from the biosphere into the technosphere. \nIt includes natural resources such as minerals, biomass, water, and energy carriers."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "32",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#IntermediateFlow",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IntermediateFlow",
+      "undefined" : "Intermediate Flow"
+    },
+    "subClasses" : [ "28", "12" ],
+    "intersection" : [ "15" ],
+    "comment" : {
+      "undefined" : "A flow that connects two activities within the technosphere, serving as an input to one activity and an output from another, or is wasted as waste."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "17",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#Technosphere",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Technosphere",
+      "undefined" : "Technosphere"
+    },
+    "comment" : {
+      "undefined" : "Represents the system of human activities and industrial processes \nwithin the life cycle of a product or service. It encompasses all transformations \nand exchanges of intermediate flows occurring within the economic system."
+    },
+    "id" : "4",
+    "superClasses" : [ "3" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "36",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "37",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/lcanet/activity#hasActivityTag",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasActivityTag",
+      "undefined" : "has Activity Tag"
+    },
+    "domain" : "1",
+    "attributes" : [ "irreflexive", "object", "asymmetric" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#isOutputProductOf",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "isOutputProductOf",
+      "undefined" : "is Output Product Of"
+    },
+    "superproperty" : [ "13" ],
+    "domain" : "12",
+    "attributes" : [ "object" ],
+    "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#hasOutputFlow",
+    "inverse" : "13",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "hasOutputFlow",
+      "undefined" : "has Output Flow"
+    },
+    "domain" : "1",
+    "subproperty" : [ "16" ],
+    "attributes" : [ "object" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#hasInputFlow",
+    "inverse" : "19",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "hasInputFlow",
+      "undefined" : "has Input Flow"
+    },
+    "domain" : "1",
+    "subproperty" : [ "20" ],
+    "attributes" : [ "object" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#hasEndActivity",
+    "inverse" : "22",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasEndActivity",
+      "undefined" : "has End Activity"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "7",
+    "attributes" : [ "irreflexive", "object", "asymmetric" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#hasInputProduct",
+    "inverse" : "24",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasInputProduct",
+      "undefined" : "has Input Product"
+    },
+    "superproperty" : [ "18" ],
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "20"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#hasOutputProduct",
+    "inverse" : "11",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasOutputProduct",
+      "undefined" : "has Output Product"
+    },
+    "superproperty" : [ "14" ],
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "16"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#isInputFlowOf",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "isInputFlowOf",
+      "undefined" : "is Input Flow Of"
+    },
+    "domain" : "15",
+    "subproperty" : [ "24" ],
+    "attributes" : [ "object" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#hasStartActivity",
+    "inverse" : "26",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasStartActivity",
+      "undefined" : "has Start Activity"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "7",
+    "attributes" : [ "irreflexive", "object", "asymmetric" ],
+    "id" : "25"
+  }, {
+    "range" : "17",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "27"
+  }, {
+    "range" : "15",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "29"
+  }, {
+    "range" : "17",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "30"
+  }, {
+    "range" : "10",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "31"
+  }, {
+    "range" : "15",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "33"
+  }, {
+    "range" : "10",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "range" : "17",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "35"
+  }, {
+    "range" : "32",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "36"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#hasEnvironmentalType",
+    "inverse" : "38",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "hasEnvironmentalType",
+      "undefined" : "has Environmental Type"
+    },
+    "domain" : "15",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "37"
+  }, {
+    "range" : "3",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "40"
+  }, {
+    "range" : "3",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "41"
+  }, {
+    "range" : "1",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "42"
+  }, {
+    "range" : "6",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "43"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#hasFlowTag",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "hasFlowTag",
+      "undefined" : "has Flow Tag"
+    },
+    "domain" : "15",
+    "attributes" : [ "object" ],
+    "id" : "44"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#hasActivityPart",
+    "inverse" : "45",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasActivityPart",
+      "undefined" : "has Activity Part"
+    },
+    "domain" : "6",
+    "subproperty" : [ "25", "21" ],
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#isOutputFlowOf",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "isOutputFlowOf",
+      "undefined" : "is Output Flow Of"
+    },
+    "domain" : "15",
+    "subproperty" : [ "11" ],
+    "attributes" : [ "object" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#isInputProductOf",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "isInputProductOf",
+      "undefined" : "is Input Product Of"
+    },
+    "superproperty" : [ "19" ],
+    "domain" : "12",
+    "attributes" : [ "object" ],
+    "id" : "24"
+  }, {
+    "range" : "15",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#isPartOfActivity",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "isPartOfActivity",
+      "undefined" : "is Part Of Activity"
+    },
+    "domain" : "39",
+    "subproperty" : [ "22", "26" ],
+    "attributes" : [ "object" ],
+    "id" : "45"
+  }, {
+    "range" : "4",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "47"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#isEndActivityOf",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "isEndActivityOf",
+      "undefined" : "is End Activity Of"
+    },
+    "superproperty" : [ "45" ],
+    "domain" : "39",
+    "attributes" : [ "object" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#connected",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "connected",
+      "undefined" : "connected"
+    },
+    "domain" : "15",
+    "attributes" : [ "symmetric", "object" ],
+    "id" : "48"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#isEnvironmentOf",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "isEnvironmentOf",
+      "undefined" : "is Environment Of"
+    },
+    "domain" : "39",
+    "attributes" : [ "object" ],
+    "id" : "38"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#isStartActivityOf",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "isStartActivityOf",
+      "undefined" : "is Start Activity Of"
+    },
+    "superproperty" : [ "45" ],
+    "domain" : "39",
+    "attributes" : [ "object" ],
+    "id" : "26"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#hasEnvironmentalType",
+    "inverse" : "38",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "hasEnvironmentalType",
+      "undefined" : "has Environmental Type"
+    },
+    "domain" : "15",
+    "attributes" : [ "object" ],
+    "id" : "49"
+  } ]
+}
