@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>The Spatiotemporal module of the Life Cycle Assessment Network Ontology (LCAnet).</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/lcanet/st#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/lcanet/st#","name":"The Spatiotemporal module of the Life Cycle Assessment Network Ontology (LCAnet).", "headline":"Document describing the ontology https://w3id.org/lcanet/st#", "dateReleased":"Thu Apr 30 17:14:47 CEST 2026", "version":"2.1.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Fatima Danash","url":"https://orcid.org/0000-0002-0438-6831"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>The Spatiotemporal module of the Life Cycle Assessment Network Ontology (LCAnet).</h1>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="https://w3id.org/lcanet/st/2.1.0">https://w3id.org/lcanet/st/2.1.0</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="https://w3id.org/lcanet/st#">https://w3id.org/lcanet/st#</a></dd>
+<dt>Revision:</dt>
+<dd>2.1.0</dd>
+<dt>Issued on:</dt>
+<dd>2026-04-30</dd>
+<dt>Authors:</dt>
+<dd><a href="https://orcid.org/0000-0002-0438-6831">Fatima Danash</a>, CEA List</dd>
+
+<dt>Publisher:</dt>
+<dd><a href="https://www.cea.fr">https://www.cea.fr</a></dd>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Danash, F., et al. (2026). 
+<b>LCAnet: A Modular Ontology Network for Life Cycle Assessment</b> (Version 2.1.0). 
+<!-- Available at: <a href="https://w3id.org/lcanet">https://w3id.org/lcanet</a> -->
+</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+LCAnet is a modular ontology network for Life Cycle Assessment (LCA) designed to provide a unified semantic framework for representing LCA systems. It is composed of six interoperable modules covering key aspects of LCA modeling: the Core module, Activity module, Actor module, Property module, Spatiotemporal module, and Impact Assessment module. The Core module serves as the central backbone of the network by importing the other modules and establishing explicit semantic links across all components, enabling consistent representation and reasoning over LCA data.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+LCAnet-Spatiotemporal provides classes and properties that enable users to model spatial and temporal aspects of Life Cycle Assessment systems. It represents locations, spatial scales, and temporal entities associated with activities.
+
+The module provides contextual information for LCA modelling and is connected to other LCAnet modules through the Core ontology.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1/&gt;</td></tr>
+<tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>gn</b></td><td>&lt;http://www.geonames.org/ontology#&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>schema</b></td><td>&lt;https://schema.org/&gt;</td></tr>
+<tr><td><b>st</b></td><td>&lt;https://w3id.org/lcanet/st#&gt;</td></tr>
+<tr><td><b>time</b></td><td>&lt;http://www.w3.org/2006/time#&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>wgs84_pos</b></td><td>&lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="modules">
+<h3 id="moduleslist" class="list">LCAnet Modules</h3>
+
+<ul>
+  <li><a href="../activity/index-en.html">Activity module</a></li>
+  <li><a href="../actor/index-en.html">Actor module</a></li>
+  <li><a href="../ia/index-en.html">Impact Assessment module</a></li>
+  <li><a href="../property/index-en.html">Property module</a></li>
+  <li><a href="../st/index-en.html">Spatiotemporal module</a></li>
+  <li><a href="../core/index-en.html">Core module</a></li>
+</ul>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">LCAnet-Spatiotemporal: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#AdministrativeRegion" title="https://w3id.org/lcanet/st#AdministrativeRegion">Administrative Region</a>
+   </li>
+   <li>
+      <a href="#http://www.geonames.org/ontology#Feature" title="http://www.geonames.org/ontology#Feature">
+         <span>Feature</span>
+      </a>
+   </li>
+   <li>
+      <a href="#GeoPoint" title="https://w3id.org/lcanet/st#GeoPoint">GeoPoint</a>
+   </li>
+   <li>
+      <a href="#GlobalScale" title="https://w3id.org/lcanet/st#GlobalScale">Global Scale</a>
+   </li>
+   <li>
+      <a href="#LocalScale" title="https://w3id.org/lcanet/st#LocalScale">Local Scale</a>
+   </li>
+   <li>
+      <a href="#Location" title="https://w3id.org/lcanet/st#Location">Location</a>
+   </li>
+   <li>
+      <a href="#NationalScale" title="https://w3id.org/lcanet/st#NationalScale">National Scale</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/Place" title="https://schema.org/Place">
+         <span>Place</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#Point" title="http://www.w3.org/2003/01/geo/wgs84_pos#Point">
+         <span>Point</span>
+      </a>
+   </li>
+   <li>
+      <a href="#RegionalScale" title="https://w3id.org/lcanet/st#RegionalScale">Regional Scale</a>
+   </li>
+   <li>
+      <a href="#Site" title="https://w3id.org/lcanet/st#Site">Site</a>
+   </li>
+   <li>
+      <a href="#SpatialScale" title="https://w3id.org/lcanet/st#SpatialScale">Spatial Scale</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#hasCoordinates" title="https://w3id.org/lcanet/st#hasCoordinates">has coordinates</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2006/time#hasDuration" title="http://www.w3.org/2006/time#hasDuration">
+         <span>has Duration</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasDuration" title="https://w3id.org/lcanet/st#hasDuration">has duration</a>
+   </li>
+   <li>
+      <a href="#hasLocation" title="https://w3id.org/lcanet/st#hasLocation">has location</a>
+   </li>
+   <li>
+      <a href="#hasSpatialLocation" title="https://w3id.org/lcanet/st#hasSpatialLocation">has spatial scale</a>
+   </li>
+   <li>
+      <a href="#hasTemporalExtent" title="https://w3id.org/lcanet/st#hasTemporalExtent">has temporal extent</a>
+   </li>
+   <li>
+      <a href="#hasTemporalResolution" title="https://w3id.org/lcanet/st#hasTemporalResolution">has temporal resolution</a>
+   </li>
+   <li>
+      <a href="#inRegion" title="https://w3id.org/lcanet/st#inRegion">in region</a>
+   </li>
+   <li>
+      <a href="#locatedIn" title="https://w3id.org/lcanet/st#locatedIn">located in</a>
+   </li>
+   <li>
+      <a href="#occursAt" title="https://w3id.org/lcanet/st#occursAt">occurs at</a>
+   </li>
+   <li>
+      <a href="#validDuring" title="https://w3id.org/lcanet/st#validDuring">valid during</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/date" title="http://purl.org/dc/terms/date">
+         <span>date</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">
+         <span>issued</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+         <span>preferred Namespace Prefix</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+         <span>preferred Namespace Uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">
+         <span>publisher</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">LCAnet-Spatiotemporal: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">The Spatiotemporal module is part of the LCAnet ontology proposed by the SmartACV Carnot Project.
+            It provides a formal representation of spatial and temporal aspects relevant to the LCA process,
+            enabling the modeling and integration of location- and time-specific data for products or services.
+            For the temporal aspect, it reuses classes and properties by importing the Time ontology: Time instant,
+            Time interval, and DurationDescription. For the spatial aspect, it aligns with some pre-defined classes 
+            from other ontologies such as the Feature class from the geonames vocabulary.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for LCAnet-Spatiotemporal classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by LCAnet-Spatiotemporal.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#AdministrativeRegion" title="https://w3id.org/lcanet/st#AdministrativeRegion">Administrative Region</a></li>
+  <li><a href="#http://www.geonames.org/ontology#Feature" title="http://www.geonames.org/ontology#Feature"> <span>Feature</span> </a></li>
+  <li><a href="#GeoPoint" title="https://w3id.org/lcanet/st#GeoPoint">GeoPoint</a></li>
+  <li><a href="#GlobalScale" title="https://w3id.org/lcanet/st#GlobalScale">Global Scale</a></li>
+  <li><a href="#LocalScale" title="https://w3id.org/lcanet/st#LocalScale">Local Scale</a></li>
+  <li><a href="#Location" title="https://w3id.org/lcanet/st#Location">Location</a></li>
+  <li><a href="#NationalScale" title="https://w3id.org/lcanet/st#NationalScale">National Scale</a></li>
+  <li><a href="#https://schema.org/Place" title="https://schema.org/Place"> <span>Place</span> </a></li>
+  <li><a href="#http://www.w3.org/2003/01/geo/wgs84_pos#Point" title="http://www.w3.org/2003/01/geo/wgs84_pos#Point"> <span>Point</span> </a></li>
+  <li><a href="#RegionalScale" title="https://w3id.org/lcanet/st#RegionalScale">Regional Scale</a></li>
+  <li><a href="#Site" title="https://w3id.org/lcanet/st#Site">Site</a></li>
+  <li><a href="#SpatialScale" title="https://w3id.org/lcanet/st#SpatialScale">Spatial Scale</a></li>
+ </ul>
+ <div class="entity" id="AdministrativeRegion">
+  <h3>Administrative Region<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/st#AdministrativeRegion</p>
+  <div class="comment">
+   <span class="markdown">A political or administrative territorial unit, such as a country, state, province, or city. Aligns with schema:AdministrativeArea and gn:Feature.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://schema.org/AdministrativeArea" target="_blank" title="https://schema.org/AdministrativeArea">Administrative Area</a> <sup class="type-c" title="class">c</sup>, <a href="#Location" title="https://w3id.org/lcanet/st#Location">Location</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#inRegion" title="https://w3id.org/lcanet/st#inRegion">in region</a> <sup class="type-op" title="object property">op</sup>, <a href="#locatedIn" title="https://w3id.org/lcanet/st#locatedIn">located in</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.geonames.org/ontology#Feature">
+  <h3>Feature<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.geonames.org/ontology#Feature</p>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#Location" title="https://w3id.org/lcanet/st#Location">Location</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="GeoPoint">
+  <h3>GeoPoint<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/st#GeoPoint</p>
+  <div class="comment">
+   <span class="markdown">A geographic point represented by WGS84 latitude and longitude coordinates.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasCoordinates" title="https://w3id.org/lcanet/st#hasCoordinates">has coordinates</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="GlobalScale">
+  <h3>Global Scale<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/st#GlobalScale</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialScale" title="https://w3id.org/lcanet/st#SpatialScale">Spatial Scale</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LocalScale">
+  <h3>Local Scale<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/st#LocalScale</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialScale" title="https://w3id.org/lcanet/st#SpatialScale">Spatial Scale</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Location">
+  <h3>Location<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/st#Location</p>
+  <div class="comment">
+   <span class="markdown">A general spatial entity representing any identifiable place or geographic feature. Equivalent to schema:Place and gn:Feature. </span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" target="_blank" title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial Thing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AdministrativeRegion" title="https://w3id.org/lcanet/st#AdministrativeRegion">Administrative Region</a> <sup class="type-c" title="class">c</sup>, <a href="#Site" title="https://w3id.org/lcanet/st#Site">Site</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasCoordinates" title="https://w3id.org/lcanet/st#hasCoordinates">has coordinates</a> <sup class="type-op" title="object property">op</sup>, <a href="#locatedIn" title="https://w3id.org/lcanet/st#locatedIn">located in</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasLocation" title="https://w3id.org/lcanet/st#hasLocation">has location</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="NationalScale">
+  <h3>National Scale<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/st#NationalScale</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialScale" title="https://w3id.org/lcanet/st#SpatialScale">Spatial Scale</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://schema.org/Place">
+  <h3>Place<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/Place</p>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#Location" title="https://w3id.org/lcanet/st#Location">Location</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#Point">
+  <h3>Point<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2003/01/geo/wgs84_pos#Point</p>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#GeoPoint" title="https://w3id.org/lcanet/st#GeoPoint">GeoPoint</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RegionalScale">
+  <h3>Regional Scale<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/st#RegionalScale</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialScale" title="https://w3id.org/lcanet/st#SpatialScale">Spatial Scale</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Site">
+  <h3>Site<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/st#Site</p>
+  <div class="comment">
+   <span class="markdown"> A specific location associated with an activity, facility, installation, or process. Examples: LCA process site, production site, waste treatment site. </span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Location" title="https://w3id.org/lcanet/st#Location">Location</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SpatialScale">
+  <h3>Spatial Scale<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/st#SpatialScale</p>
+  <div class="comment">
+   <span class="markdown"> A classification of the level of spatial granularity applied in an LCA study, such as global, continental, national, regional, or local scale. Used for specifying the spatial resolution of data or impacts. </span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#GlobalScale" title="https://w3id.org/lcanet/st#GlobalScale">Global Scale</a> <sup class="type-c" title="class">c</sup>, <a href="#LocalScale" title="https://w3id.org/lcanet/st#LocalScale">Local Scale</a> <sup class="type-c" title="class">c</sup>, <a href="#NationalScale" title="https://w3id.org/lcanet/st#NationalScale">National Scale</a> <sup class="type-c" title="class">c</sup>, <a href="#RegionalScale" title="https://w3id.org/lcanet/st#RegionalScale">Regional Scale</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasSpatialLocation" title="https://w3id.org/lcanet/st#hasSpatialLocation">has spatial scale</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#hasCoordinates" title="https://w3id.org/lcanet/st#hasCoordinates">has coordinates</a></li>
+  <li><a href="#http://www.w3.org/2006/time#hasDuration" title="http://www.w3.org/2006/time#hasDuration"> <span>has Duration</span> </a></li>
+  <li><a href="#hasDuration" title="https://w3id.org/lcanet/st#hasDuration">has duration</a></li>
+  <li><a href="#hasLocation" title="https://w3id.org/lcanet/st#hasLocation">has location</a></li>
+  <li><a href="#hasSpatialLocation" title="https://w3id.org/lcanet/st#hasSpatialLocation">has spatial scale</a></li>
+  <li><a href="#hasTemporalExtent" title="https://w3id.org/lcanet/st#hasTemporalExtent">has temporal extent</a></li>
+  <li><a href="#hasTemporalResolution" title="https://w3id.org/lcanet/st#hasTemporalResolution">has temporal resolution</a></li>
+  <li><a href="#inRegion" title="https://w3id.org/lcanet/st#inRegion">in region</a></li>
+  <li><a href="#locatedIn" title="https://w3id.org/lcanet/st#locatedIn">located in</a></li>
+  <li><a href="#occursAt" title="https://w3id.org/lcanet/st#occursAt">occurs at</a></li>
+  <li><a href="#validDuring" title="https://w3id.org/lcanet/st#validDuring">valid during</a></li>
+ </ul>
+ <div class="entity" id="hasCoordinates">
+  <h3>has coordinates<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/st#hasCoordinates</p>
+  <div class="comment">
+   <span class="markdown"> Associates a location with a geographic point defined by WGS84 latitude and longitude. </span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Location" title="https://w3id.org/lcanet/st#Location">Location</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#GeoPoint" title="https://w3id.org/lcanet/st#GeoPoint">GeoPoint</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2006/time#hasDuration">
+  <h3>has Duration<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2006/time#hasDuration</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has equivalent properties
+    </dt>
+    <dd>
+     <a href="#hasDuration" title="https://w3id.org/lcanet/st#hasDuration">has duration</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDuration">
+  <h3>has duration<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/st#hasDuration</p>
+  <div class="comment">
+   <span class="markdown"> Specifies the duration of a temporal entity such as a process or interval. Directly corresponds to time:hasDuration. </span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has equivalent properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2006/time#hasDuration" title="http://www.w3.org/2006/time#hasDuration">has Duration</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2006/time#TemporalEntity" target="_blank" title="http://www.w3.org/2006/time#TemporalEntity">Temporal Entity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2006/time#DurationDescription" target="_blank" title="http://www.w3.org/2006/time#DurationDescription">Duration Description</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasLocation">
+  <h3>has location<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/st#hasLocation</p>
+  <div class="comment">
+   <span class="markdown"> Relates an entity to a geographic location (Administrative Region or Site) where it takes place or exists. </span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Location" title="https://w3id.org/lcanet/st#Location">Location</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSpatialLocation">
+  <h3>has spatial scale<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/st#hasSpatialLocation</p>
+  <div class="comment">
+   <span class="markdown"> Indicates the level of spatial granularity (e.g., global, national, regional, local) at which a location or LCA dataset is defined. </span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SpatialScale" title="https://w3id.org/lcanet/st#SpatialScale">Spatial Scale</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTemporalExtent">
+  <h3>has temporal extent<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/st#hasTemporalExtent</p>
+  <div class="comment">
+   <span class="markdown"> Relates an entity to the time interval during which it exists, occurs, or is valid. Aligned with time:Interval. </span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2006/time#Interval" target="_blank" title="http://www.w3.org/2006/time#Interval">Interval</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTemporalResolution">
+  <h3>has temporal resolution<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/st#hasTemporalResolution</p>
+  <div class="comment">
+   <span class="markdown"> Indicates the temporal granularity or resolution at which data or observations are aggregated or reported (e.g., hourly, monthly, yearly). </span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2006/time#DurationDescription" target="_blank" title="http://www.w3.org/2006/time#DurationDescription">Duration Description</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="inRegion">
+  <h3>in region<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/st#inRegion</p>
+  <div class="comment">
+   <span class="markdown"> Relates any entity (e.g., process, facility, emission) to an administrative region where it occurs or is assessed. </span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#AdministrativeRegion" title="https://w3id.org/lcanet/st#AdministrativeRegion">Administrative Region</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="locatedIn">
+  <h3>located in<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/st#locatedIn</p>
+  <div class="comment">
+   <span class="markdown"> Indicates that a location is contained within an administrative region (not a Site), such as a city located in a province or country. </span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Location" title="https://w3id.org/lcanet/st#Location">Location</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#AdministrativeRegion" title="https://w3id.org/lcanet/st#AdministrativeRegion">Administrative Region</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="occursAt">
+  <h3>occurs at<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/st#occursAt</p>
+  <div class="comment">
+   <span class="markdown"> Relates an event or process to a specific temporal instant. Aligns conceptually with time:Instant. </span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2006/time#Instant" target="_blank" title="http://www.w3.org/2006/time#Instant">Instant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="validDuring">
+  <h3>valid during<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/st#validDuring</p>
+  <div class="comment">
+   <span class="markdown"> Indicates the temporal interval for which a dataset, measurement, or assessment is valid. </span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2006/time#Interval" target="_blank" title="http://www.w3.org/2006/time#Interval">Interval</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/date" title="http://purl.org/dc/terms/date"> <span>date</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description"> <span>description</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued"> <span>issued</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespacePrefix" title="http://purl.org/vocab/vann/preferredNamespacePrefix"> <span>preferred Namespace Prefix</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri"> <span>preferred Namespace Uri</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher"> <span>publisher</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title"> <span>title</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/terms/creator">
+  <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/date">
+  <h3>date<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/date</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/issued">
+  <h3>issued<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/issued</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  <h3>preferred Namespace Prefix<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespacePrefix</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespaceUri">
+  <h3>preferred Namespace Uri<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespaceUri</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/publisher">
+  <h3>publisher<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/publisher</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/title">
+  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
