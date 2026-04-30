@@ -1,0 +1,438 @@
+<https://w3id.org/lcanet/core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/lcanet/core> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/lcanet/core/2.1.0> .
+<https://w3id.org/lcanet/core> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/lcanet/activity> .
+<https://w3id.org/lcanet/core> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/lcanet/actor> .
+<https://w3id.org/lcanet/core> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/lcanet/ia> .
+<https://w3id.org/lcanet/core> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/lcanet/property> .
+<https://w3id.org/lcanet/core> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/lcanet/st> .
+<https://w3id.org/lcanet/core> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-0438-6831> .
+<https://w3id.org/lcanet/core> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0003-3896-7295> .
+<https://w3id.org/lcanet/core> <http://purl.org/dc/terms/contributor> <https://orcid.org/0009-0002-7928-9902> .
+<https://w3id.org/lcanet/core> <http://purl.org/dc/terms/contributor> "Emmanuelle Core" .
+<https://w3id.org/lcanet/core> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-0438-6831> .
+<https://w3id.org/lcanet/core> <http://purl.org/dc/terms/description> "The Core module is the central module of the LCAnet ontology proposed by the SmartACV Carnot Project.\n            It defines the basic elements of a LCA study based on ISO 14040 and ISO 14044 such as the goal, scope, etc. \n            It also imports and links the other LCAnet ontology modules (Activity, Actor, Property, Spatiotemporal, and Impact Assessment)\n            providing an integration layer between the modules.\n            Thus, it serves as a semantic backbone for consistent modeling and reasoning over LCA knowledge." .
+<https://w3id.org/lcanet/core> <http://purl.org/dc/terms/issued> "2026-04-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/lcanet/core> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/lcanet/core> <http://purl.org/dc/terms/publisher> <https://www.cea.fr> .
+<https://w3id.org/lcanet/core> <http://purl.org/dc/terms/title> "The Core module of the Life Cycle Assessment Network Ontology (LCAnet)."@en .
+<https://w3id.org/lcanet/core> <http://purl.org/vocab/vann/preferredNamespacePrefix> "core" .
+<https://w3id.org/lcanet/core> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/lcanet/core#" .
+<https://w3id.org/lcanet/core> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology imports:\n            - Activity module: https://w3id.org/lcanet/activity#\n            - Actor module: https://w3id.org/lcanet/actor#\n            - Impact Assessment module: https://w3id.org/lcanet/ia#\n            - Property module: https://w3id.org/lcanet/property#\n            - Spatiotemporal module: https://w3id.org/lcanet/st#\n        " .
+<https://w3id.org/lcanet/core> <http://www.w3.org/2000/01/rdf-schema#label> "LCAnet-Core" .
+<https://w3id.org/lcanet/core> <http://www.w3.org/2002/07/owl#versionInfo> "2.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/lcanet/core#activityBelongsToLCstage
+<https://w3id.org/lcanet/core#activityBelongsToLCstage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#activityBelongsToLCstage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/activity#Activity> .
+<https://w3id.org/lcanet/core#activityBelongsToLCstage> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/core#LifeCycleStage> .
+<https://w3id.org/lcanet/core#activityBelongsToLCstage> <http://www.w3.org/2000/01/rdf-schema#label> "activity belongs to LC stage" .
+# 
+# https://w3id.org/lcanet/core#activityHasImpactResult
+<https://w3id.org/lcanet/core#activityHasImpactResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#activityHasImpactResult> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/lcanet/core#impactResultConcernsActivity> .
+<https://w3id.org/lcanet/core#activityHasImpactResult> <http://www.w3.org/2000/01/rdf-schema#label> "activity has Impact Result" .
+# 
+# https://w3id.org/lcanet/core#flowHasImpactResult
+<https://w3id.org/lcanet/core#flowHasImpactResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#flowHasImpactResult> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/lcanet/core#impactResultConcernsFlow> .
+<https://w3id.org/lcanet/core#flowHasImpactResult> <http://www.w3.org/2000/01/rdf-schema#label> "flow has Impact Result" .
+# 
+# https://w3id.org/lcanet/core#hasFlowCategory
+<https://w3id.org/lcanet/core#hasFlowCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#hasFlowCategory> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/lcanet/ia#OverallImpactResult> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/lcanet/ia#LcaResult> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/core#hasFlowCategory> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/activity#FlowTag> .
+<https://w3id.org/lcanet/core#hasFlowCategory> <http://www.w3.org/2000/01/rdf-schema#label> "has Flow Category" .
+# 
+# https://w3id.org/lcanet/core#hasProperty
+<https://w3id.org/lcanet/core#hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#hasProperty> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/lcanet/activity#Flow> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/lcanet/activity#Activity> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/core#hasProperty> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/property#Property> .
+<https://w3id.org/lcanet/core#hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has Property" .
+# 
+# https://w3id.org/lcanet/core#hasSpatialAspect
+<https://w3id.org/lcanet/core#hasSpatialAspect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#hasSpatialAspect> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/activity#Activity> .
+<https://w3id.org/lcanet/core#hasSpatialAspect> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/st#Location> .
+<https://w3id.org/lcanet/core#hasSpatialAspect> <http://www.w3.org/2000/01/rdf-schema#label> "has Spatial Aspect" .
+# 
+# https://w3id.org/lcanet/core#hasTemporalAspect
+<https://w3id.org/lcanet/core#hasTemporalAspect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#hasTemporalAspect> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/activity#Activity> .
+<https://w3id.org/lcanet/core#hasTemporalAspect> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#TemporalEntity> .
+<https://w3id.org/lcanet/core#hasTemporalAspect> <http://www.w3.org/2000/01/rdf-schema#label> "has Temporal Aspect" .
+# 
+# https://w3id.org/lcanet/core#impactResultConcernsActivity
+<https://w3id.org/lcanet/core#impactResultConcernsActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#impactResultConcernsActivity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/ia#LcaResult> .
+<https://w3id.org/lcanet/core#impactResultConcernsActivity> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/activity#Activity> .
+<https://w3id.org/lcanet/core#impactResultConcernsActivity> <http://www.w3.org/2000/01/rdf-schema#label> "impact Result Concerns Activity" .
+# 
+# https://w3id.org/lcanet/core#impactResultConcernsFlow
+<https://w3id.org/lcanet/core#impactResultConcernsFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#impactResultConcernsFlow> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/ia#LcaResult> .
+<https://w3id.org/lcanet/core#impactResultConcernsFlow> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/activity#Flow> .
+<https://w3id.org/lcanet/core#impactResultConcernsFlow> <http://www.w3.org/2000/01/rdf-schema#label> "impact Result Concerns Flow" .
+# 
+# https://w3id.org/lcanet/core#interpretationContainsOIR
+<https://w3id.org/lcanet/core#interpretationContainsOIR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#interpretationContainsOIR> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/core#Interpretation> .
+<https://w3id.org/lcanet/core#interpretationContainsOIR> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/ia#OverallImpactResult> .
+<https://w3id.org/lcanet/core#interpretationContainsOIR> <http://www.w3.org/2000/01/rdf-schema#label> "interpretation contains OIR" .
+# 
+# https://w3id.org/lcanet/core#interpretationDefinedBy
+<https://w3id.org/lcanet/core#interpretationDefinedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#interpretationDefinedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/core#Interpretation> .
+<https://w3id.org/lcanet/core#interpretationDefinedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/actor#Agent> .
+<https://w3id.org/lcanet/core#interpretationDefinedBy> <http://www.w3.org/2000/01/rdf-schema#label> "interpretation defined by" .
+# 
+# https://w3id.org/lcanet/core#lcaModeHasScope
+<https://w3id.org/lcanet/core#lcaModeHasScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#lcaModeHasScope> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/core#LcaModel> .
+<https://w3id.org/lcanet/core#lcaModeHasScope> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/core#Scope> .
+<https://w3id.org/lcanet/core#lcaModeHasScope> <http://www.w3.org/2000/01/rdf-schema#label> "lca model has scope" .
+# 
+# https://w3id.org/lcanet/core#lcaModelConcernsLCStage
+<https://w3id.org/lcanet/core#lcaModelConcernsLCStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#lcaModelConcernsLCStage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/core#LcaModel> .
+<https://w3id.org/lcanet/core#lcaModelConcernsLCStage> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/core#LifeCycleStage> .
+<https://w3id.org/lcanet/core#lcaModelConcernsLCStage> <http://www.w3.org/2000/01/rdf-schema#label> "lca model concerns LC stage" .
+# 
+# https://w3id.org/lcanet/core#lcaModelHasAuthor
+<https://w3id.org/lcanet/core#lcaModelHasAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#lcaModelHasAuthor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/core#LcaModel> .
+<https://w3id.org/lcanet/core#lcaModelHasAuthor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/actor#Agent> .
+<https://w3id.org/lcanet/core#lcaModelHasAuthor> <http://www.w3.org/2000/01/rdf-schema#label> "lca model has author" .
+# 
+# https://w3id.org/lcanet/core#lcaModelResultsInInterpretation
+<https://w3id.org/lcanet/core#lcaModelResultsInInterpretation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#lcaModelResultsInInterpretation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/core#LcaModel> .
+<https://w3id.org/lcanet/core#lcaModelResultsInInterpretation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/core#Interpretation> .
+<https://w3id.org/lcanet/core#lcaModelResultsInInterpretation> <http://www.w3.org/2000/01/rdf-schema#label> "lca model results in interpretation" .
+# 
+# https://w3id.org/lcanet/core#methodologyAssessesTopic
+<https://w3id.org/lcanet/core#methodologyAssessesTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#methodologyAssessesTopic> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/lcanet/ia#Methodology> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/lcanet/ia#Method> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/core#methodologyAssessesTopic> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/core#Scope> .
+<https://w3id.org/lcanet/core#methodologyAssessesTopic> <http://www.w3.org/2000/01/rdf-schema#label> "methodology assesses topic" .
+# 
+# https://w3id.org/lcanet/core#realizedBy
+<https://w3id.org/lcanet/core#realizedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#realizedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/lcanet/core#realizesActivity> .
+<https://w3id.org/lcanet/core#realizedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/activity#Activity> .
+<https://w3id.org/lcanet/core#realizedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/actor#Agent> .
+<https://w3id.org/lcanet/core#realizedBy> <http://www.w3.org/2000/01/rdf-schema#label> "realized by" .
+# 
+# https://w3id.org/lcanet/core#realizesActivity
+<https://w3id.org/lcanet/core#realizesActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#realizesActivity> <http://www.w3.org/2000/01/rdf-schema#label> "realizes activity" .
+# 
+# https://w3id.org/lcanet/core#scopeDefinedBy
+<https://w3id.org/lcanet/core#scopeDefinedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#scopeDefinedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/core#Scope> .
+<https://w3id.org/lcanet/core#scopeDefinedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/actor#Agent> .
+<https://w3id.org/lcanet/core#scopeDefinedBy> <http://www.w3.org/2000/01/rdf-schema#label> "scope defined by" .
+# 
+# https://w3id.org/lcanet/core#scopeHasReferenceFlow
+<https://w3id.org/lcanet/core#scopeHasReferenceFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#scopeHasReferenceFlow> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/core#Scope> .
+<https://w3id.org/lcanet/core#scopeHasReferenceFlow> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/activity#ProductFlow> .
+<https://w3id.org/lcanet/core#scopeHasReferenceFlow> <http://www.w3.org/2000/01/rdf-schema#label> "scope has reference flow" .
+# 
+# https://w3id.org/lcanet/core#scopeHasSpatialScale
+<https://w3id.org/lcanet/core#scopeHasSpatialScale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#scopeHasSpatialScale> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/core#Scope> .
+<https://w3id.org/lcanet/core#scopeHasSpatialScale> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/st#SpatialScale> .
+<https://w3id.org/lcanet/core#scopeHasSpatialScale> <http://www.w3.org/2000/01/rdf-schema#label> "scope has spatial scale" .
+# 
+# https://w3id.org/lcanet/core#scopeHasTemporalScale
+<https://w3id.org/lcanet/core#scopeHasTemporalScale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#scopeHasTemporalScale> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/core#Scope> .
+<https://w3id.org/lcanet/core#scopeHasTemporalScale> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#TemporalEntity> .
+<https://w3id.org/lcanet/core#scopeHasTemporalScale> <http://www.w3.org/2000/01/rdf-schema#label> "scope has temporal scale" .
+# 
+# https://w3id.org/lcanet/core#usedBy
+<https://w3id.org/lcanet/core#usedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/core#usedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/activity#Flow> .
+<https://w3id.org/lcanet/core#usedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/actor#Agent> .
+<https://w3id.org/lcanet/core#usedBy> <http://www.w3.org/2000/01/rdf-schema#label> "used by" .
+# 
+# https://w3id.org/lcanet/ia#assessIC
+<https://w3id.org/lcanet/ia#assessIC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/lcanet/ia#calculatedByCM
+<https://w3id.org/lcanet/ia#calculatedByCM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/lcanet/ia#calculatesCF
+<https://w3id.org/lcanet/ia#calculatesCF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/lcanet/ia#hasIC
+<https://w3id.org/lcanet/ia#hasIC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/lcanet/ia#quantifiedByCF
+<https://w3id.org/lcanet/ia#quantifiedByCF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/lcanet/ia#quantifiesICI
+<https://w3id.org/lcanet/ia#quantifiesICI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/lcanet/ia#usesCM
+<https://w3id.org/lcanet/ia#usesCM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://qudt.org/schema/qudt#numericValue
+<http://qudt.org/schema/qudt#numericValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://w3id.org/lcanet/core#lcaModelHasGoal
+<https://w3id.org/lcanet/core#lcaModelHasGoal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/lcanet/core#lcaModelHasGoal> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/core#LcaModel> .
+<https://w3id.org/lcanet/core#lcaModelHasGoal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/lcanet/core#lcaModelHasGoal> <http://www.w3.org/2000/01/rdf-schema#comment> "The lcaModelHasGoal data property represents the objective of the LCA study, defined as a textual description that specifies the intended purpose and use of the LCA results." .
+<https://w3id.org/lcanet/core#lcaModelHasGoal> <http://www.w3.org/2000/01/rdf-schema#label> "lca Model Has Goal" .
+# 
+# https://w3id.org/lcanet/core#lcaModelHasId
+<https://w3id.org/lcanet/core#lcaModelHasId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/lcanet/core#lcaModelHasId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/core#LcaModel> .
+<https://w3id.org/lcanet/core#lcaModelHasId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/lcanet/core#lcaModelHasId> <http://www.w3.org/2000/01/rdf-schema#label> "lca Model Has Id" .
+# 
+# https://w3id.org/lcanet/core#scopeHasAssumption
+<https://w3id.org/lcanet/core#scopeHasAssumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/lcanet/core#scopeHasAssumption> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/core#Scope> .
+<https://w3id.org/lcanet/core#scopeHasAssumption> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/lcanet/core#scopeHasAssumption> <http://www.w3.org/2000/01/rdf-schema#label> "scope Has Assumption" .
+# 
+# https://w3id.org/lcanet/core#scopeHasFunctionalUnit
+<https://w3id.org/lcanet/core#scopeHasFunctionalUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/lcanet/core#scopeHasFunctionalUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/core#Scope> .
+<https://w3id.org/lcanet/core#scopeHasFunctionalUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/lcanet/core#scopeHasFunctionalUnit> <http://www.w3.org/2000/01/rdf-schema#label> "scope Has Functional Unit" .
+# 
+# https://w3id.org/lcanet/core#scopeHasSystemBoundary
+<https://w3id.org/lcanet/core#scopeHasSystemBoundary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/lcanet/core#scopeHasSystemBoundary> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/core#Scope> .
+<https://w3id.org/lcanet/core#scopeHasSystemBoundary> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/lcanet/core#scopeHasSystemBoundary> <http://www.w3.org/2000/01/rdf-schema#label> "Scope Has System Boundary" .
+# 
+# https://w3id.org/lcanet/property#hasUnit
+<https://w3id.org/lcanet/property#hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2006/time#TemporalEntity
+<http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/activity#Activity
+<https://w3id.org/lcanet/activity#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/activity#ActivityTag
+<https://w3id.org/lcanet/activity#ActivityTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/activity#Biosphere
+<https://w3id.org/lcanet/activity#Biosphere> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/activity#Flow
+<https://w3id.org/lcanet/activity#Flow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/activity#FlowTag
+<https://w3id.org/lcanet/activity#FlowTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/activity#ProductFlow
+<https://w3id.org/lcanet/activity#ProductFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/activity#Technosphere
+<https://w3id.org/lcanet/activity#Technosphere> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/actor#Agent
+<https://w3id.org/lcanet/actor#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/core#Interpretation
+<https://w3id.org/lcanet/core#Interpretation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/core#Interpretation> <http://www.w3.org/2000/01/rdf-schema#comment> "The Interpretation class connects the LCA model to the Impact Assessment module, representing the analysis and interpretation of results to support decision-making, conclusions, and recommendations." .
+<https://w3id.org/lcanet/core#Interpretation> <http://www.w3.org/2000/01/rdf-schema#label> "Interpretation" .
+# 
+# https://w3id.org/lcanet/core#LcaModel
+<https://w3id.org/lcanet/core#LcaModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/core#LcaModel> <http://www.w3.org/2000/01/rdf-schema#comment> "The LCA model class represents a complete Life Cycle Assessment instance within the LCAnet ontology network. \nIts instance ID encapsulates all aspects of the LCA study, linking to scope, goal, life cycle stages, and interpretation results." .
+<https://w3id.org/lcanet/core#LcaModel> <http://www.w3.org/2000/01/rdf-schema#label> "LCA Model" .
+# 
+# https://w3id.org/lcanet/core#LifeCycleStage
+<https://w3id.org/lcanet/core#LifeCycleStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/core#LifeCycleStage> <http://www.w3.org/2000/01/rdf-schema#comment> "The LifeCycle stage class enumerates the standard stages of a product or service life cycle, providing an exhaustive list of the five possible stages for classification and analysis within the LCA." .
+<https://w3id.org/lcanet/core#LifeCycleStage> <http://www.w3.org/2000/01/rdf-schema#label> "Life Cycle Stage" .
+# 
+# https://w3id.org/lcanet/core#Scope
+<https://w3id.org/lcanet/core#Scope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/core#Scope> <http://www.w3.org/2000/01/rdf-schema#comment> "The Scope class captures the boundaries and context of an LCA study, including spatial and temporal aspects, functional unit, system boundaries, and assumptions, and a reference flow. Each element is represented via data properties connecting the Scope class to its corresponding values." .
+<https://w3id.org/lcanet/core#Scope> <http://www.w3.org/2000/01/rdf-schema#label> "Scope" .
+# 
+# https://w3id.org/lcanet/ia#CharacterizationFactor
+<https://w3id.org/lcanet/ia#CharacterizationFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/ia#CharacterizationModel
+<https://w3id.org/lcanet/ia#CharacterizationModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/ia#ImpactCategory
+<https://w3id.org/lcanet/ia#ImpactCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/ia#ImpactCategoryIndicator
+<https://w3id.org/lcanet/ia#ImpactCategoryIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/ia#LcaResult
+<https://w3id.org/lcanet/ia#LcaResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/ia#LcaResult> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid12 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/lcanet/ia#ImpactCategory> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/lcanet/ia#hasIC> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/lcanet/ia#LcaResult> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid17 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/lcanet/activity#FlowTag> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/lcanet/core#hasFlowCategory> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/lcanet/ia#LcaResult> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/ia#Method
+<https://w3id.org/lcanet/ia#Method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/ia#Methodology
+<https://w3id.org/lcanet/ia#Methodology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/ia#OverallImpactResult
+<https://w3id.org/lcanet/ia#OverallImpactResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/property#BalanceableProperty
+<https://w3id.org/lcanet/property#BalanceableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/property#DataQualityProperty
+<https://w3id.org/lcanet/property#DataQualityProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/property#Property
+<https://w3id.org/lcanet/property#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/property#QualitativeProperty
+<https://w3id.org/lcanet/property#QualitativeProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/property#QuantitativeProperty
+<https://w3id.org/lcanet/property#QuantitativeProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/st#Location
+<https://w3id.org/lcanet/st#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/lcanet/st#SpatialScale
+<https://w3id.org/lcanet/st#SpatialScale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
