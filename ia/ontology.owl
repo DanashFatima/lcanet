@@ -1,0 +1,749 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/lcanet/ia#"
+     xml:base="https://w3id.org/lcanet/ia"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:dcterms="http://purl.org/dc/dcterms/">
+    <owl:Ontology rdf:about="https://w3id.org/lcanet/ia">
+        <owl:versionIRI rdf:resource="https://w3id.org/lcanet/ia/2.1.0"/>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-0438-6831"/>
+        <terms:description>The Impact Assessment module is part of the LCAnet ontology proposed by the SmartACV Carnot Project.
+            It provides a formal representation of impact assessment concepts, methods, and characterization factors,
+            enabling the evaluation and quantification of environmental impacts within the LCA process of a product or service.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-30</terms:issued>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:publisher rdf:resource="https://www.cea.fr"/>
+        <terms:title xml:lang="en">The Impact Assessment module of the Life Cycle Assessment Network Ontology (LCAnet).</terms:title>
+        <vann:preferredNamespacePrefix>ia</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/lcanet/ia#</vann:preferredNamespaceUri>
+        <rdfs:label>LCAnet-ImpactAssessment</rdfs:label>
+        <owl:versionInfo>2.1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/dcterms/bibliographicCitation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/dcterms/bibliographicCitation"/>
+    
+
+
+    <!-- http://purl.org/dc/dcterms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/dcterms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/date -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/date"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYear -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYear"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#assessIC -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/ia#assessIC">
+        <owl:inverseOf rdf:resource="https://w3id.org/lcanet/ia#assessedByICI"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lcanet/ia#ImpactCategoryIndicator"/>
+        <rdfs:range rdf:resource="https://w3id.org/lcanet/ia#ImpactCategory"/>
+        <rdfs:label>assess IC</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#assessedByICI -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/ia#assessedByICI">
+        <rdfs:label>assessed By ICI</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#calculatedByCM -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/ia#calculatedByCM">
+        <owl:inverseOf rdf:resource="https://w3id.org/lcanet/ia#calculatesCF"/>
+        <rdfs:label>calculated By CM</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#calculatesCF -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/ia#calculatesCF">
+        <rdfs:domain rdf:resource="https://w3id.org/lcanet/ia#CharacterizationModel"/>
+        <rdfs:range rdf:resource="https://w3id.org/lcanet/ia#CharacterizationFactor"/>
+        <rdfs:label>calculates CF</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#containedInOIR -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/ia#containedInOIR">
+        <owl:inverseOf rdf:resource="https://w3id.org/lcanet/ia#containsLcaResult"/>
+        <rdfs:label>contained In OIR</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#containsLcaResult -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/ia#containsLcaResult">
+        <rdfs:domain rdf:resource="https://w3id.org/lcanet/ia#OverallImpactResult"/>
+        <rdfs:range rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+        <rdfs:label>contains Lca Result</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#hasIC -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/ia#hasIC">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lcanet/ia#LcaResult"/>
+                    <rdf:Description rdf:about="https://w3id.org/lcanet/ia#OverallImpactResult"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/lcanet/ia#ImpactCategory"/>
+        <rdfs:label>has Impact Category</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#imposedByMethodology -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/ia#imposedByMethodology">
+        <owl:inverseOf rdf:resource="https://w3id.org/lcanet/ia#imposesIC"/>
+        <rdfs:label>imposed by Methodology</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#imposesIC -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/ia#imposesIC">
+        <rdfs:domain rdf:resource="https://w3id.org/lcanet/ia#Methodology"/>
+        <rdfs:range rdf:resource="https://w3id.org/lcanet/ia#ImpactCategory"/>
+        <rdfs:label>imposes IC</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#includedInMethodology -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/ia#includedInMethodology">
+        <owl:inverseOf rdf:resource="https://w3id.org/lcanet/ia#includesMethod"/>
+        <rdfs:label>included In Methodology</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#includesMethod -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/ia#includesMethod">
+        <rdfs:domain rdf:resource="https://w3id.org/lcanet/ia#Methodology"/>
+        <rdfs:range rdf:resource="https://w3id.org/lcanet/ia#Method"/>
+        <rdfs:label>includes Method</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#quantifiedByCF -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/ia#quantifiedByCF">
+        <owl:inverseOf rdf:resource="https://w3id.org/lcanet/ia#quantifiesICI"/>
+        <rdfs:label>quantified By CF</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#quantifiesICI -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/ia#quantifiesICI">
+        <rdfs:domain rdf:resource="https://w3id.org/lcanet/ia#CharacterizationFactor"/>
+        <rdfs:range rdf:resource="https://w3id.org/lcanet/ia#ImpactCategoryIndicator"/>
+        <rdfs:label>quantifies ICI</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#usedInMethod -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/ia#usedInMethod">
+        <owl:inverseOf rdf:resource="https://w3id.org/lcanet/ia#usesCM"/>
+        <rdfs:label>used In Method</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#usesCM -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/ia#usesCM">
+        <rdfs:domain rdf:resource="https://w3id.org/lcanet/ia#Method"/>
+        <rdfs:range rdf:resource="https://w3id.org/lcanet/ia#CharacterizationModel"/>
+        <rdfs:label>uses CM</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://qudt.org/schema/qudt#numericValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://qudt.org/schema/qudt#numericValue">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lcanet/ia#LcaResult"/>
+                    <rdf:Description rdf:about="https://w3id.org/lcanet/ia#OverallImpactResult"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt"/>
+        <rdfs:label>numeric value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#hasDefaultUnit -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lcanet/ia#hasDefaultUnit">
+        <rdfs:domain rdf:resource="https://w3id.org/lcanet/ia#ImpactCategoryIndicator"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>has Default Unit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#AirPollutionFootprint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#AirPollutionFootprint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+        <rdfs:comment>Quantifies the release of airborne pollutants (e.g., particulate matter, photochemical ozone formation) over the life cycle of a product. AirPollutionFootprint is an ImpactResult associated with relevant environmental impact categories.</rdfs:comment>
+        <rdfs:label>Air Pollution Footprint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#CarbonFootprint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#CarbonFootprint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+        <rdfs:comment>means the sum of greenhouse gas emissions and greenhouse gas removals in a product system, expressed as CO equivalents and based on a life cycle assessment using the single impact category of climate change. (ESPR Art 2 25))</rdfs:comment>
+        <rdfs:label>Carbon Footprint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#CharacterizationFactor -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#CharacterizationFactor">
+        <rdfs:comment>Also called Impact factors, are factors that quantify the relative impact of different substances within the same category. These factors are used to convert the number of emissions into impact scores for each category.</rdfs:comment>
+        <rdfs:label>Characterization Factor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#CharacterizationModel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#CharacterizationModel">
+        <rdfs:comment>A characterization model provides a mathmetical framework, as a set of equations, to quantify an impact category based on the chosen method. Example: IPCC (2021). A characterization model is used by a method.</rdfs:comment>
+        <rdfs:label>Characterization Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#EnergyFootprint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#EnergyFootprint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+        <rdfs:comment>Quantifies the total energy use associated with a product throughout its life cycle, including renewable and non-renewable sources. EnergyFootprint is a FlowResult linked to the Energy FlowType.</rdfs:comment>
+        <rdfs:label>Energy Footprint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#EutrophicationFootprint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#EutrophicationFootprint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+        <rdfs:comment>Quantifies nutrient enrichment impacts (eutrophication) on freshwater, marine, or terrestrial ecosystems caused by a product during its life cycle. It aggregates relevant ImpactCategories.</rdfs:comment>
+        <rdfs:label>Eutophication Footprint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#ImpactCategory -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#ImpactCategory">
+        <rdfs:comment>An impact category represents a specific environmental issue that the LCA aims to assess, such as global warming or ozone depletion. Each category aggregates the effects of different emissions that contribute to the same environmental problem.</rdfs:comment>
+        <rdfs:label>Impact Category</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#ImpactCategoryIndicator -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#ImpactCategoryIndicator">
+        <rdfs:comment>An impact category refers to a specific metric/measurable quantity that is used to quantify an impact category, such as Global Warming Potential (GWP) and Ozone Depletion Potential (ODP).</rdfs:comment>
+        <rdfs:label>Impact Category Indicator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#LandFootprint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#LandFootprint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+        <rdfs:comment>Quantifies the occupation and transformation of land caused by a product throughout its life cycle. LandFootprint is an ImpactResult linked to the LandUse impact category.</rdfs:comment>
+        <rdfs:label>Land Footprint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#LcaResult -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#LcaResult">
+        <rdfs:comment>A LCA result corresponds to the computed value of each flow (or sometimes activity as a group of its input and output flows) concerning an impact category (IC). 
+Thus, it is an entity that makes links to: a flow/activity (e.g. flat chip resistor), an exact value (e.g. 1,16E-03), and an impact category (e.g. climate change), indicating the participation of this flow/activity in the studied impact category issue.</rdfs:comment>
+        <rdfs:label>LCA Result</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#MaterialFootprint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#MaterialFootprint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+        <rdfs:comment>refers to the total amount of raw materials extracted to meet final consumption demands. (ESPR Art 2 (26)).</rdfs:comment>
+        <rdfs:label>Material Footprint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#Method -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#Method">
+        <rdfs:comment>LCIA methods allow to transform raw emissions and resource data into understandable impact scores. Examples of methods include EN15804+A2, EF v3.1.</rdfs:comment>
+        <rdfs:label>Method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#Methodology -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#Methodology">
+        <rdfs:comment>LCIA methodologies group related LCIA methods.
+A methodology (identified by an LCA expert for carrying out a specific LCA study), assesses some topic which is included in the scope of the LCA study.</rdfs:comment>
+        <rdfs:label>Methodology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#OverallImpactResult -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#OverallImpactResult">
+        <rdfs:comment>It corresponds to the sum of all LCA result values of all flows/activities in the studied LCA of a product X, regarding an impact category Y.</rdfs:comment>
+        <rdfs:label>Overall Impact Result</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#OzoneDepletionFootprint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#OzoneDepletionFootprint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+        <rdfs:comment>Quantifies the potential stratospheric ozone layer depletion caused by substances emitted by a product throughout its life cycle. It is an ImpactResult linked to the Ozone Depletion impact category.</rdfs:comment>
+        <rdfs:label>Ozone Depletion Footprint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#ToxicityFootprint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#ToxicityFootprint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+        <rdfs:comment>Quantifies the potential human health and ecological toxicity impacts of a product over its life cycle. ToxicityFootprint aggregates relevant ImpactCategories such as Human Toxicity (cancer and non-cancer) and Ecotoxicity.</rdfs:comment>
+        <rdfs:label>Toxicity Footprint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#WaterFootprint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#WaterFootprint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+        <rdfs:comment>Quantifies the freshwater consumption associated with a product throughout its life cycle. WaterFootprint is a FlowResult linked to the Water FlowType.</rdfs:comment>
+        <rdfs:label>Water Footprint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="urn:swrl:var#c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#o">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#a">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/lcanet/ia#hasIC"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="https://w3id.org/lcanet/ia#ImpactCategory"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/lcanet/ia#containedInOIR"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#o"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="https://w3id.org/lcanet/ia#OverallImpactResult"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/lcanet/ia#hasIC"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/lcanet/ia#ImpactCategory"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/lcanet/ia#hasIC"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/lcanet/ia#containedInOIR"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#o"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="https://w3id.org/lcanet/ia#OverallImpactResult"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/lcanet/ia#hasIC"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
