@@ -1,0 +1,865 @@
+@prefix : <https://w3id.org/lcanet/activity#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/lcanet/activity#> .
+
+<https://w3id.org/lcanet/activity> rdf:type owl:Ontology ;
+                                    owl:versionIRI <https://w3id.org/lcanet/activity/2.1.0> ;
+                                    <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-0438-6831> ;
+                                    <http://purl.org/dc/terms/description> """The Activity module is part of the LCAnet ontology proposed by the SmartACV Carnot Project.
+            It provides a formal representation of activities and their associated flows, enabling 
+            the modeling of activity/flow diagrams within the LCA realization of a product or service.""" ;
+                                    <http://purl.org/dc/terms/issued> "2026-04-30"^^xsd:date ;
+                                    <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                    <http://purl.org/dc/terms/publisher> <https://www.cea.fr> ;
+                                    <http://purl.org/dc/terms/title> "The Activity module of the Life Cycle Assessment Network Ontology (LCAnet)."@en ;
+                                    <http://purl.org/vocab/vann/preferredNamespacePrefix> "act" ;
+                                    <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/lcanet/activity#" ;
+                                    rdfs:label "LCAnet-Activity" ;
+                                    owl:versionInfo "2.1.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/date
+<http://purl.org/dc/terms/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/activity#Exchange_Percentage
+:Exchange_Percentage rdf:type owl:AnnotationProperty ;
+                     rdfs:range xsd:decimal .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/lcanet/activity#connected
+:connected rdf:type owl:ObjectProperty ,
+                    owl:SymmetricProperty ;
+           rdfs:domain :Flow ;
+           rdfs:range :Flow ;
+           rdfs:label "connected" .
+
+
+###  https://w3id.org/lcanet/activity#hasActivityPart
+:hasActivityPart rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :isPartOfActivity ;
+                 rdfs:domain :ComposedActivity ;
+                 rdfs:range :Activity ;
+                 rdfs:label "has Activity Part" .
+
+
+###  https://w3id.org/lcanet/activity#hasActivityTag
+:hasActivityTag rdf:type owl:ObjectProperty ,
+                         owl:AsymmetricProperty ,
+                         owl:IrreflexiveProperty ;
+                rdfs:domain :Activity ;
+                rdfs:range :ActivityTag ;
+                rdfs:label "has Activity Tag" .
+
+
+###  https://w3id.org/lcanet/activity#hasEndActivity
+:hasEndActivity rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasActivityPart ;
+                owl:inverseOf :isEndActivityOf ;
+                rdf:type owl:AsymmetricProperty ,
+                         owl:IrreflexiveProperty ;
+                rdfs:domain :SequencedActivity ;
+                rdfs:range :Activity ;
+                rdfs:label "has End Activity" .
+
+
+###  https://w3id.org/lcanet/activity#hasEnvironmentalType
+:hasEnvironmentalType rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :isEnvironmentOf ;
+                      rdfs:domain :Flow ;
+                      rdfs:range :EnvironemntalType ;
+                      rdfs:label "has Environmental Type" .
+
+
+###  https://w3id.org/lcanet/activity#hasFlowTag
+:hasFlowTag rdf:type owl:ObjectProperty ;
+            rdfs:domain :Flow ;
+            rdfs:range :FlowTag ;
+            rdfs:label "has Flow Tag" .
+
+
+###  https://w3id.org/lcanet/activity#hasInputFlow
+:hasInputFlow rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isInputFlowOf ;
+              rdfs:label "has Input Flow" .
+
+
+###  https://w3id.org/lcanet/activity#hasInputProduct
+:hasInputProduct rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasInputFlow ;
+                 owl:inverseOf :isInputProductOf ;
+                 rdfs:label "has Input Product" .
+
+
+###  https://w3id.org/lcanet/activity#hasOutputFlow
+:hasOutputFlow rdf:type owl:ObjectProperty ;
+               owl:inverseOf :isOutputFlowOf ;
+               rdfs:label "has Output Flow" .
+
+
+###  https://w3id.org/lcanet/activity#hasOutputProduct
+:hasOutputProduct rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :hasOutputFlow ;
+                  owl:inverseOf :isOutputProductOf ;
+                  rdfs:label "has Output Product" .
+
+
+###  https://w3id.org/lcanet/activity#hasStartActivity
+:hasStartActivity rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :hasActivityPart ;
+                  owl:inverseOf :isStartActivityOf ;
+                  rdf:type owl:AsymmetricProperty ,
+                           owl:IrreflexiveProperty ;
+                  rdfs:domain :SequencedActivity ;
+                  rdfs:range :Activity ;
+                  rdfs:label "has Start Activity" .
+
+
+###  https://w3id.org/lcanet/activity#isEndActivityOf
+:isEndActivityOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :isPartOfActivity ;
+                 rdfs:label "is End Activity Of" .
+
+
+###  https://w3id.org/lcanet/activity#isEnvironmentOf
+:isEnvironmentOf rdf:type owl:ObjectProperty ;
+                 rdfs:label "is Environment Of" .
+
+
+###  https://w3id.org/lcanet/activity#isInputFlowOf
+:isInputFlowOf rdf:type owl:ObjectProperty ;
+               rdfs:domain :Flow ;
+               rdfs:range :Activity ;
+               rdfs:label "is Input Flow Of" .
+
+
+###  https://w3id.org/lcanet/activity#isInputProductOf
+:isInputProductOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :isInputFlowOf ;
+                  rdfs:domain :ProductFlow ;
+                  rdfs:range :Activity ;
+                  rdfs:label "is Input Product Of" .
+
+
+###  https://w3id.org/lcanet/activity#isOutputFlowOf
+:isOutputFlowOf rdf:type owl:ObjectProperty ;
+                rdfs:domain :Flow ;
+                rdfs:range :Activity ;
+                rdfs:label "is Output Flow Of" .
+
+
+###  https://w3id.org/lcanet/activity#isOutputProductOf
+:isOutputProductOf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :isOutputFlowOf ;
+                   rdfs:domain :ProductFlow ;
+                   rdfs:range :Activity ;
+                   rdfs:label "is Output Product Of" .
+
+
+###  https://w3id.org/lcanet/activity#isPartOfActivity
+:isPartOfActivity rdf:type owl:ObjectProperty ;
+                  rdfs:label "is Part Of Activity" .
+
+
+###  https://w3id.org/lcanet/activity#isStartActivityOf
+:isStartActivityOf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :isPartOfActivity ;
+                   rdfs:label "is Start Activity Of" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/lcanet/activity#Activity
+:Activity rdf:type owl:Class ;
+          owl:disjointWith :Flow ;
+          rdfs:comment "Represents a process or operation within the LCA system that consumes and/or produces flows." ;
+          rdfs:label "Activity" .
+
+
+###  https://w3id.org/lcanet/activity#ActivityTag
+:ActivityTag rdf:type owl:Class ;
+             rdfs:label "Activity Tag" .
+
+
+###  https://w3id.org/lcanet/activity#Biosphere
+:Biosphere rdf:type owl:Class ;
+           rdfs:subClassOf :EnvironemntalType ;
+           owl:disjointWith :Technosphere ;
+           rdfs:comment """Represents the natural environment external to the technosphere, 
+including air, water, and soil compartments. It is the domain in which elementary 
+flows originate or terminate, such as natural resource extraction and emissions.""" ;
+           rdfs:label "Biosphere" .
+
+
+###  https://w3id.org/lcanet/activity#ComposedActivity
+:ComposedActivity rdf:type owl:Class ;
+                  rdfs:subClassOf :Activity ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasActivityPart ;
+                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass :Activity
+                                  ] ;
+                  rdfs:comment "An activity that is made up of multiple sub-activities, which together represent a higher-level process." ;
+                  rdfs:label "Composed Activity" .
+
+
+###  https://w3id.org/lcanet/activity#ElementaryFlow
+:ElementaryFlow rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( :Flow
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hasEnvironmentalType ;
+                                                             owl:someValuesFrom :Biosphere
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf :Flow ;
+                owl:disjointWith :IntermediateFlow ;
+                rdfs:comment "A flow that connects an activity directly with the natural environment i.e. has a biosphere  boundary." ;
+                rdfs:label "Elementary Flow" .
+
+
+###  https://w3id.org/lcanet/activity#EmissionFlow
+:EmissionFlow rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( :ElementaryFlow
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :isOutputFlowOf ;
+                                                           owl:someValuesFrom :Activity
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:subClassOf :ElementaryFlow ;
+              owl:disjointWith :ResourceFlow ;
+              rdfs:comment """Represents an elementary flow corresponding to a substance or energy released from the technosphere into the biosphere. 
+It includes emissions to environmental compartments such as air, water, and soil.""" ;
+              rdfs:label "Emission Flow" .
+
+
+###  https://w3id.org/lcanet/activity#EnvironemntalType
+:EnvironemntalType rdf:type owl:Class ;
+                   rdfs:comment "A classification of the environment into biosphere or technosphere, used to distinguish whether flows cross system boundaries or remain within the human-made system." ;
+                   rdfs:label "Environmental Type" .
+
+
+###  https://w3id.org/lcanet/activity#Flow
+:Flow rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasEnvironmentalType ;
+                        owl:someValuesFrom :EnvironemntalType
+                      ] ;
+      rdfs:comment "Represents the transfer of materials, energy, or resources between activities or between an activity and the environment." ;
+      rdfs:label "Flow" .
+
+
+###  https://w3id.org/lcanet/activity#FlowTag
+:FlowTag rdf:type owl:Class ;
+         rdfs:label "Flow Tag" .
+
+
+###  https://w3id.org/lcanet/activity#IntermediateFlow
+:IntermediateFlow rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( :Flow
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :hasEnvironmentalType ;
+                                                               owl:someValuesFrom :Technosphere
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:subClassOf :Flow ;
+                  rdfs:comment "A flow that connects two activities within the technosphere, serving as an input to one activity and an output from another, or is wasted as waste." ;
+                  rdfs:label "Intermediate Flow" .
+
+
+###  https://w3id.org/lcanet/activity#ProductFlow
+:ProductFlow rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :IntermediateFlow
+                                                        [ rdf:type owl:Class ;
+                                                          owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty :isInputProductOf ;
+                                                                          owl:someValuesFrom :Activity
+                                                                        ]
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty :isOutputProductOf ;
+                                                                          owl:someValuesFrom :Activity
+                                                                        ]
+                                                                      )
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :IntermediateFlow ;
+             rdfs:comment """Represents an intermediate flow within the technosphere corresponding to a product, service, or energy carrier with an associated economic value. 
+Such flows are exchanged between activities as intended inputs or outputs within the life cycle system.""" ;
+             rdfs:label "Product Flow" .
+
+
+###  https://w3id.org/lcanet/activity#ResourceFlow
+:ResourceFlow rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( :ElementaryFlow
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :isInputFlowOf ;
+                                                           owl:someValuesFrom :Activity
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:subClassOf :ElementaryFlow ;
+              rdfs:comment """Represents an elementary flow corresponding to a substance or energy extracted from the biosphere into the technosphere. 
+It includes natural resources such as minerals, biomass, water, and energy carriers.""" ;
+              rdfs:label "Resource Flow" .
+
+
+###  https://w3id.org/lcanet/activity#SequencedActivity
+:SequencedActivity rdf:type owl:Class ;
+                   rdfs:subClassOf :ComposedActivity ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasActivityPart ;
+                                     owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                     owl:onClass :Activity
+                                   ] ;
+                   rdfs:comment "A composed activity in which the constituent sub-activities follow a specific temporal or logical sequence." ;
+                   rdfs:label "Sequenced Activity" .
+
+
+###  https://w3id.org/lcanet/activity#Technosphere
+:Technosphere rdf:type owl:Class ;
+              rdfs:subClassOf :EnvironemntalType ;
+              rdfs:comment """Represents the system of human activities and industrial processes 
+within the life cycle of a product or service. It encompasses all transformations 
+and exchanges of intermediate flows occurring within the economic system.""" ;
+              rdfs:label "Technosphere" .
+
+
+###  https://w3id.org/lcanet/activity#WasteFlow
+:WasteFlow rdf:type owl:Class ;
+           rdfs:subClassOf :IntermediateFlow ;
+           rdfs:comment """Represents an intermediate flow within the technosphere corresponding to materials or substances that are discarded by an activity and require further treatment, recovery, or disposal. 
+These flows are typically characterized by the absence of positive economic value for the producing activity.""" ;
+           rdfs:label "Waste Flow" .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+:a rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:f rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:b rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<https://w3id.org/lcanet/activity/x> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<https://w3id.org/lcanet/activity/y> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<https://w3id.org/lcanet/activity/z> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#x> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#f> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "Input Product flow of a sequenced activity" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Flow ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :f
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :SequencedActivity ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :a
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :isInputProductOf ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :f ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> :Activity ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasStartActivity ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :a ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :isInputProductOf ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :f ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :a
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "Output Product flow of a sequenced activity" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasEndActivity ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :a ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Flow ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :f
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :SequencedActivity ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :a
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :isOutputProductOf ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :f ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> :Activity ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :isOutputProductOf ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :f ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :a
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "The obligation of writing it as a rule comes from the fact that asserting Tans(has_Part_Activity) makes the property non-simple yileding in several estrictions on its usage, including cardinality restrictions which appears in the Composed_Activity class." ;
+   rdfs:label "Transitivity of has_Part" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasActivityPart ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <https://w3id.org/lcanet/activity/x> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <https://w3id.org/lcanet/activity/y>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasActivityPart ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <https://w3id.org/lcanet/activity/y> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <https://w3id.org/lcanet/activity/z>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasActivityPart ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <https://w3id.org/lcanet/activity/x> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <https://w3id.org/lcanet/activity/z>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasInputFlow ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#f>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Flow ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#f>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasOutputFlow ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#f>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Flow ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#f>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "for any flow type: elementary (resources) or intermediate flows" ;
+   rdfs:label "Input Flows of Composed Activity" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ComposedActivity ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :a
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Flow ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :f
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasActivityPart ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :a ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :isInputFlowOf ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :f ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> :Activity ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :isInputFlowOf ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :f ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :a
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "Input Product Flow of a composed activity" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ComposedActivity ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :a
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Flow ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :f
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasActivityPart ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :a ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :isInputProductOf ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :f ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> :Activity ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :isInputProductOf ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :f ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :a
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "for any flow type: elementary (emissions) or intermediate flows" ;
+   rdfs:label "Output flows of a composed activity" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ComposedActivity ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :a
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Flow ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :f
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasActivityPart ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :a ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :isOutputFlowOf ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :f ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> :Activity ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :isOutputFlowOf ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :f ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :a
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "Output Product flow of a composed activity" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ComposedActivity ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :a
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Flow ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :f
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasActivityPart ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :a ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :isOutputProductOf ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :f ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> :Activity ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :isOutputProductOf ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :f ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :a
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "for any flow type: emission (resources) or intermediate flows" ;
+   rdfs:label "Input flows of a sequenced activity" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Flow ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :f
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :SequencedActivity ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :a
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasActivityPart ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :a ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :isInputFlowOf ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :f ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> :Activity ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :isInputFlowOf ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :f ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :a
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "for any flow type: elementary (emissions) or intermediate flows" ;
+   rdfs:label "Output flows of a sequenced activity" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Flow ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :f
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :SequencedActivity ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :a
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasActivityPart ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :a ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :isOutputFlowOf ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :f ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> :Activity ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :isOutputFlowOf ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :f ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :a
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
