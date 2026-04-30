@@ -1,0 +1,2361 @@
+@prefix : <https://w3id.org/lcanet/ICdata#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/lcanet/ICdata#> .
+
+<https://w3id.org/lcanet/ICdata> rdf:type owl:Ontology ;
+                                  owl:versionIRI <https://w3id.org/lcanet/ICdata/2.1.0> ;
+                                  owl:imports <https://w3id.org/lcanet/core> ;
+                                  <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-0438-6831> ;
+                                  <http://purl.org/dc/terms/description> """The Integrated Circuits (IC) knowledge graph representing the dataset from the IC use case, 
+        used to demonstarte the convenince and applicability of the LCAnet ontology.""" ;
+                                  <http://purl.org/dc/terms/issued> "2026-04-30"^^xsd:date ;
+                                  <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                  <http://purl.org/dc/terms/publisher> <https://www.cea.fr> ;
+                                  <http://purl.org/dc/terms/title> "The Integrated Circuits (IC) knowledge graph of the Life Cycle Assessment Network Ontology (LCAnet)."@en ;
+                                  <http://purl.org/vocab/vann/preferredNamespacePrefix> "ic" ;
+                                  <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/lcanet/ICdata#" ;
+                                  rdfs:label "ICdata" ;
+                                  owl:versionInfo "2.1.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://qudt.org/schema/qudt#numericValue
+<http://qudt.org/schema/qudt#numericValue> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2006/time#hasBeginning
+<http://www.w3.org/2006/time#hasBeginning> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2006/time#inXSDDate
+<http://www.w3.org/2006/time#inXSDDate> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/activity#connected
+<https://w3id.org/lcanet/activity#connected> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/activity#hasInputFlow
+<https://w3id.org/lcanet/activity#hasInputFlow> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/activity#hasInputProduct
+<https://w3id.org/lcanet/activity#hasInputProduct> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/activity#hasOutputProduct
+<https://w3id.org/lcanet/activity#hasOutputProduct> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/activity#isInputFlowOf
+<https://w3id.org/lcanet/activity#isInputFlowOf> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/activity#isOutputProductOf
+<https://w3id.org/lcanet/activity#isOutputProductOf> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/core#activityBelongsToLCstage
+<https://w3id.org/lcanet/core#activityBelongsToLCstage> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/core#flowHasImpactResult
+<https://w3id.org/lcanet/core#flowHasImpactResult> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/core#hasProperty
+<https://w3id.org/lcanet/core#hasProperty> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/core#impactResultConcernsActivity
+<https://w3id.org/lcanet/core#impactResultConcernsActivity> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/core#lcaModelConcernsLCStage
+<https://w3id.org/lcanet/core#lcaModelConcernsLCStage> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/core#lcaModelHasAuthor
+<https://w3id.org/lcanet/core#lcaModelHasAuthor> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/core#lcaModelHasGoal
+<https://w3id.org/lcanet/core#lcaModelHasGoal> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/core#lcaModelHasScope
+<https://w3id.org/lcanet/core#lcaModelHasScope> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/core#lcaModelResultsInInterpretation
+<https://w3id.org/lcanet/core#lcaModelResultsInInterpretation> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/core#methodologyAssessesTopic
+<https://w3id.org/lcanet/core#methodologyAssessesTopic> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/core#scopeHasAssumption
+<https://w3id.org/lcanet/core#scopeHasAssumption> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/core#scopeHasFunctionalUnit
+<https://w3id.org/lcanet/core#scopeHasFunctionalUnit> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/core#scopeHasReferenceFlow
+<https://w3id.org/lcanet/core#scopeHasReferenceFlow> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/core#scopeHasSpatialScale
+<https://w3id.org/lcanet/core#scopeHasSpatialScale> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/core#scopeHasSystemBoundary
+<https://w3id.org/lcanet/core#scopeHasSystemBoundary> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/core#scopeHasTemporalScale
+<https://w3id.org/lcanet/core#scopeHasTemporalScale> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/ia#assessIC
+<https://w3id.org/lcanet/ia#assessIC> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/ia#calculatedByCM
+<https://w3id.org/lcanet/ia#calculatedByCM> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/ia#calculatesCF
+<https://w3id.org/lcanet/ia#calculatesCF> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/ia#containedInOIR
+<https://w3id.org/lcanet/ia#containedInOIR> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/ia#quantifiedByCF
+<https://w3id.org/lcanet/ia#quantifiedByCF> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/ia#quantifiesICI
+<https://w3id.org/lcanet/ia#quantifiesICI> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/ia#usesCM
+<https://w3id.org/lcanet/ia#usesCM> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/property#hasQualityValue
+<https://w3id.org/lcanet/property#hasQualityValue> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/property#hasQuantityValue
+<https://w3id.org/lcanet/property#hasQuantityValue> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/lcanet/property#hasUnit
+<https://w3id.org/lcanet/property#hasUnit> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/lcanet/core#hasFlowCategory
+<https://w3id.org/lcanet/core#hasFlowCategory> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2000/10/swap/pim/contact#Person
+<http://www.w3.org/2000/10/swap/pim/contact#Person> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/activity#Activity
+<https://w3id.org/lcanet/activity#Activity> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/activity#ActivityTag
+<https://w3id.org/lcanet/activity#ActivityTag> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/activity#Biosphere
+<https://w3id.org/lcanet/activity#Biosphere> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/activity#Flow
+<https://w3id.org/lcanet/activity#Flow> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/activity#FlowTag
+<https://w3id.org/lcanet/activity#FlowTag> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/activity#ProductFlow
+<https://w3id.org/lcanet/activity#ProductFlow> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/activity#Technosphere
+<https://w3id.org/lcanet/activity#Technosphere> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/actor#Person
+<https://w3id.org/lcanet/actor#Person> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/core#Interpretation
+<https://w3id.org/lcanet/core#Interpretation> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/core#LcaModel
+<https://w3id.org/lcanet/core#LcaModel> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/core#LifeCycleStage
+<https://w3id.org/lcanet/core#LifeCycleStage> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/core#Scope
+<https://w3id.org/lcanet/core#Scope> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/ia#AirPollutionFootprint
+<https://w3id.org/lcanet/ia#AirPollutionFootprint> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lcanet/ia#LcaResult>
+                                                                                              [ rdf:type owl:Class ;
+                                                                                                owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                owl:onProperty <https://w3id.org/lcanet/ia#hasIC> ;
+                                                                                                                owl:hasValue :Particulate_matter
+                                                                                                              ]
+                                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                                owl:onProperty <https://w3id.org/lcanet/ia#hasIC> ;
+                                                                                                                owl:hasValue :Photochemical_ozone_formation_human_health
+                                                                                                              ]
+                                                                                                            )
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] .
+
+
+###  https://w3id.org/lcanet/ia#CarbonFootprint
+<https://w3id.org/lcanet/ia#CarbonFootprint> rdf:type owl:Class ;
+                                             owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lcanet/ia#LcaResult>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lcanet/ia#hasIC> ;
+                                                                                          owl:hasValue :Climate_change_total
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] .
+
+
+###  https://w3id.org/lcanet/ia#CharacterizationFactor
+<https://w3id.org/lcanet/ia#CharacterizationFactor> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/ia#CharacterizationModel
+<https://w3id.org/lcanet/ia#CharacterizationModel> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/ia#EnergyFootprint
+<https://w3id.org/lcanet/ia#EnergyFootprint> rdf:type owl:Class ;
+                                             owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lcanet/ia#LcaResult>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lcanet/core#hasFlowCategory> ;
+                                                                                          owl:hasValue :Energy_resources
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] .
+
+
+###  https://w3id.org/lcanet/ia#EutrophicationFootprint
+<https://w3id.org/lcanet/ia#EutrophicationFootprint> rdf:type owl:Class ;
+                                                     owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lcanet/ia#LcaResult>
+                                                                                                [ rdf:type owl:Class ;
+                                                                                                  owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                  owl:onProperty <https://w3id.org/lcanet/ia#hasIC> ;
+                                                                                                                  owl:hasValue :Eutrophication_freshwater
+                                                                                                                ]
+                                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                                  owl:onProperty <https://w3id.org/lcanet/ia#hasIC> ;
+                                                                                                                  owl:hasValue :Eutrophication_marine
+                                                                                                                ]
+                                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                                  owl:onProperty <https://w3id.org/lcanet/ia#hasIC> ;
+                                                                                                                  owl:hasValue :Eutrophication_terrestrial
+                                                                                                                ]
+                                                                                                              )
+                                                                                                ]
+                                                                                              ) ;
+                                                                           rdf:type owl:Class
+                                                                         ] .
+
+
+###  https://w3id.org/lcanet/ia#ImpactCategory
+<https://w3id.org/lcanet/ia#ImpactCategory> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/ia#ImpactCategoryIndicator
+<https://w3id.org/lcanet/ia#ImpactCategoryIndicator> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/ia#LandFootprint
+<https://w3id.org/lcanet/ia#LandFootprint> rdf:type owl:Class ;
+                                           owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lcanet/ia#LcaResult>
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty <https://w3id.org/lcanet/ia#hasIC> ;
+                                                                                        owl:hasValue :Land_use_occupation_and_transformation
+                                                                                      ]
+                                                                                    ) ;
+                                                                 rdf:type owl:Class
+                                                               ] .
+
+
+###  https://w3id.org/lcanet/ia#LcaResult
+<https://w3id.org/lcanet/ia#LcaResult> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/ia#MaterialFootprint
+<https://w3id.org/lcanet/ia#MaterialFootprint> rdf:type owl:Class ;
+                                               owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lcanet/ia#LcaResult>
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <https://w3id.org/lcanet/core#hasFlowCategory> ;
+                                                                                            owl:hasValue :Material_Resources
+                                                                                          ]
+                                                                                        ) ;
+                                                                     rdf:type owl:Class
+                                                                   ] .
+
+
+###  https://w3id.org/lcanet/ia#Method
+<https://w3id.org/lcanet/ia#Method> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/ia#Methodology
+<https://w3id.org/lcanet/ia#Methodology> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/ia#OverallImpactResult
+<https://w3id.org/lcanet/ia#OverallImpactResult> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/ia#OzoneDepletionFootprint
+<https://w3id.org/lcanet/ia#OzoneDepletionFootprint> rdf:type owl:Class ;
+                                                     owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lcanet/ia#LcaResult>
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <https://w3id.org/lcanet/ia#hasIC> ;
+                                                                                                  owl:hasValue :Ozone_depletion
+                                                                                                ]
+                                                                                              ) ;
+                                                                           rdf:type owl:Class
+                                                                         ] .
+
+
+###  https://w3id.org/lcanet/ia#ToxicityFootprint
+<https://w3id.org/lcanet/ia#ToxicityFootprint> rdf:type owl:Class ;
+                                               owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lcanet/ia#LcaResult>
+                                                                                          [ rdf:type owl:Class ;
+                                                                                            owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty <https://w3id.org/lcanet/ia#hasIC> ;
+                                                                                                            owl:hasValue :Ecotoxicity_freshwater
+                                                                                                          ]
+                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty <https://w3id.org/lcanet/ia#hasIC> ;
+                                                                                                            owl:hasValue :Human_toxicity_cancer
+                                                                                                          ]
+                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty <https://w3id.org/lcanet/ia#hasIC> ;
+                                                                                                            owl:hasValue :Human_toxicity_non_cancer
+                                                                                                          ]
+                                                                                                        )
+                                                                                          ]
+                                                                                        ) ;
+                                                                     rdf:type owl:Class
+                                                                   ] .
+
+
+###  https://w3id.org/lcanet/ia#WaterFootprint
+<https://w3id.org/lcanet/ia#WaterFootprint> rdf:type owl:Class ;
+                                            owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lcanet/ia#LcaResult>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/lcanet/ia#hasIC> ;
+                                                                                         owl:hasValue :Water_use
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] .
+
+
+###  https://w3id.org/lcanet/property#BalanceableProperty
+<https://w3id.org/lcanet/property#BalanceableProperty> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/property#DataQualityProperty
+<https://w3id.org/lcanet/property#DataQualityProperty> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/property#QualitativeProperty
+<https://w3id.org/lcanet/property#QualitativeProperty> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/property#QuantitativeProperty
+<https://w3id.org/lcanet/property#QuantitativeProperty> rdf:type owl:Class .
+
+
+###  https://w3id.org/lcanet/st#Site
+<https://w3id.org/lcanet/st#Site> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/lcanet/ICdata#Abiotic_resource_depletion_ADP_ultimate_reserves
+:Abiotic_resource_depletion_ADP_ultimate_reserves rdf:type owl:NamedIndividual ,
+                                                           <https://w3id.org/lcanet/ia#CharacterizationFactor> ;
+                                                  rdfs:label "Abiotic resource depletion (ADP ultimate reserves)" ;
+                                                  <https://w3id.org/lcanet/ia#assessIC> :Resource_use_minerals_and_metals ;
+                                                  <https://w3id.org/lcanet/ia#quantifiedByCF> <https://w3id.org/lcanet/ICdata#3cde2dec99d14565a0fbd440b2e9a1e5> ;
+                                                  <https://w3id.org/lcanet/property#hasUnit> "kg Sb -eq" .
+
+
+###  https://w3id.org/lcanet/ICdata#Accumulated_Exceedance
+:Accumulated_Exceedance rdf:type owl:NamedIndividual ,
+                                 <https://w3id.org/lcanet/ia#CharacterizationModel> ;
+                        <http://purl.org/dc/terms/bibliographicCitation> "(Seppälä et al. 2006, Posch et al, 2008)" ;
+                        rdfs:label "Accumulated Exceedance" .
+
+
+###  https://w3id.org/lcanet/ICdata#Accumulated_Exceedance_AE
+:Accumulated_Exceedance_AE rdf:type owl:NamedIndividual ,
+                                    <https://w3id.org/lcanet/ia#ImpactCategoryIndicator> ;
+                           rdfs:label "Accumulated Exceedance (AE)" ;
+                           <https://w3id.org/lcanet/ia#assessIC> :Acidification ,
+                                                                 :Eutrophication_terrestrial ;
+                           <https://w3id.org/lcanet/ia#quantifiedByCF> :fcc6b6dc5ce0460b9abf365124c24b60 ,
+                                                                       <https://w3id.org/lcanet/ICdata#3a6dcc343adb4a9eafe7b8216fb820ff> ;
+                           <https://w3id.org/lcanet/property#hasUnit> "mol H+ -eq" ,
+                                                                      "mol N -eq" .
+
+
+###  https://w3id.org/lcanet/ICdata#Acidification
+:Acidification rdf:type owl:NamedIndividual ,
+                        <https://w3id.org/lcanet/ia#ImpactCategory> ;
+               rdfs:label "Acidification" .
+
+
+###  https://w3id.org/lcanet/ICdata#Available_WAter_REmaining_AWARE_model
+:Available_WAter_REmaining_AWARE_model rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/lcanet/ia#CharacterizationModel> ;
+                                       <http://purl.org/dc/terms/bibliographicCitation> "(Boulay et al., 2018; UNEP 2016)" ;
+                                       rdfs:label "Available WAter REmaining (AWARE) model" .
+
+
+###  https://w3id.org/lcanet/ICdata#Based_on_USEtox2.1_model
+:Based_on_USEtox2.1_model rdf:type owl:NamedIndividual ,
+                                   <https://w3id.org/lcanet/ia#CharacterizationModel> ;
+                          <http://purl.org/dc/terms/bibliographicCitation> "(Fantke et al. 2017), adapted as in Saouter et al., 2018" ;
+                          rdfs:label "Based on USEtox2.1 model" .
+
+
+###  https://w3id.org/lcanet/ICdata#Bern_model_based_on_IPCC_2021
+:Bern_model_based_on_IPCC_2021 rdf:type owl:NamedIndividual ,
+                                        <https://w3id.org/lcanet/ia#CharacterizationModel> ;
+                               <http://purl.org/dc/terms/bibliographicCitation> "(Forster et al., 2021)" ;
+                               rdfs:label "Bern model based on IPCC 2021" .
+
+
+###  https://w3id.org/lcanet/ICdata#Biotic_resource_depletion_fossil_fuels_ADP_fossil
+:Biotic_resource_depletion_fossil_fuels_ADP_fossil rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/lcanet/ia#ImpactCategoryIndicator> ;
+                                                   rdfs:label "Biotic resource depletion fossil fuels (ADP-fossil)" ;
+                                                   <https://w3id.org/lcanet/ia#assessIC> :Resource_use_fossils ;
+                                                   <https://w3id.org/lcanet/ia#quantifiedByCF> :f941187970724fce99e30b2b40f1a144 ;
+                                                   <https://w3id.org/lcanet/property#hasUnit> "MJ" .
+
+
+###  https://w3id.org/lcanet/ICdata#CEA-internal
+:CEA-internal rdf:type owl:NamedIndividual ;
+              <http://purl.org/dc/elements/1.1/description> "Internal to SmartACV members + LFIM members" .
+
+
+###  https://w3id.org/lcanet/ICdata#CF_CO2equivalents
+:CF_CO2equivalents rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/lcanet/ia#CharacterizationFactor> ;
+                   <https://w3id.org/lcanet/ia#quantifiesICI> :Global_Warming_Potential_GWP100 ;
+                   <https://w3id.org/lcanet/property#hasUnit> "kg CO2 eq" .
+
+
+###  https://w3id.org/lcanet/ICdata#CML_2002_method_v.4.8
+:CML_2002_method_v.4.8 rdf:type owl:NamedIndividual ,
+                                <https://w3id.org/lcanet/ia#CharacterizationModel> ;
+                       <http://purl.org/dc/terms/bibliographicCitation> "van Oers et al., 2002" ;
+                       rdfs:label "CML 2002 method, v.4.8" .
+
+
+###  https://w3id.org/lcanet/ICdata#CODDE-v3-db-time-start
+:CODDE-v3-db-time-start rdf:type owl:NamedIndividual ;
+                        <http://www.w3.org/2006/time#inXSDDate> "27-01-2021" .
+
+
+###  https://w3id.org/lcanet/ICdata#Climate_change_total
+:Climate_change_total rdf:type owl:NamedIndividual ,
+                               <https://w3id.org/lcanet/ia#ImpactCategory> ;
+                      rdfs:label "Climate change, total" .
+
+
+###  https://w3id.org/lcanet/ICdata#Comparative_Toxic_Unit_for_ecosystems_CTUe
+:Comparative_Toxic_Unit_for_ecosystems_CTUe rdf:type owl:NamedIndividual ,
+                                                     <https://w3id.org/lcanet/ia#ImpactCategoryIndicator> ;
+                                            rdfs:label "Comparative Toxic Unit for ecosystems (CTUe)" ;
+                                            <https://w3id.org/lcanet/ia#assessIC> :Ecotoxicity_freshwater ;
+                                            <https://w3id.org/lcanet/ia#quantifiedByCF> <https://w3id.org/lcanet/ICdata#18a6684317da48ff8f8c8c8f36200972> ;
+                                            <https://w3id.org/lcanet/property#hasUnit> "CTUe" .
+
+
+###  https://w3id.org/lcanet/ICdata#Comparative_Toxic_Unit_for_humans_CTUh
+:Comparative_Toxic_Unit_for_humans_CTUh rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/lcanet/ia#ImpactCategoryIndicator> ;
+                                        rdfs:label "Comparative Toxic Unit for humans (CTUh)" ;
+                                        <https://w3id.org/lcanet/ia#assessIC> :Human_toxicity_cancer ,
+                                                                              :Human_toxicity_non_cancer ;
+                                        <https://w3id.org/lcanet/ia#quantifiedByCF> <https://w3id.org/lcanet/ICdata#43640569fe3c4b1a99c900c9e6bc6980> ,
+                                                                                    <https://w3id.org/lcanet/ICdata#9e9c4443b42440c99f790a02bea4d677> ;
+                                        <https://w3id.org/lcanet/property#hasUnit> "CTUh" .
+
+
+###  https://w3id.org/lcanet/ICdata#Degree_of_Confidence
+:Degree_of_Confidence rdf:type owl:NamedIndividual ,
+                               <https://w3id.org/lcanet/property#DataQualityProperty> .
+
+
+###  https://w3id.org/lcanet/ICdata#Description
+:Description rdf:type owl:NamedIndividual ,
+                      <https://w3id.org/lcanet/property#QualitativeProperty> .
+
+
+###  https://w3id.org/lcanet/ICdata#EDIP_model
+:EDIP_model rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/lcanet/ia#CharacterizationModel> ;
+            <http://purl.org/dc/terms/bibliographicCitation> "based on the ODPs of the World Meteorological Organisation (WMO) over an infinite time horizon (WMO 2014 + integrations)" ;
+            rdfs:label "EDIP model" .
+
+
+###  https://w3id.org/lcanet/ICdata#EF_v3.1_methodology
+:EF_v3.1_methodology rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/lcanet/ia#Methodology> .
+
+
+###  https://w3id.org/lcanet/ICdata#EUTREND_model
+:EUTREND_model rdf:type owl:NamedIndividual ,
+                        <https://w3id.org/lcanet/ia#CharacterizationFactor> ;
+               <http://purl.org/dc/terms/bibliographicCitation> "(Struijs et al, 2009) as applied in ReCiPe 2008" ;
+               rdfs:label "EUTREND model" .
+
+
+###  https://w3id.org/lcanet/ICdata#Ecotoxicity_freshwater
+:Ecotoxicity_freshwater rdf:type owl:NamedIndividual ,
+                                 <https://w3id.org/lcanet/ia#ImpactCategory> ;
+                        rdfs:label "Ecotoxicity, freshwater" .
+
+
+###  https://w3id.org/lcanet/ICdata#Emission_Agricultural
+:Emission_Agricultural rdf:type owl:NamedIndividual ,
+                                <https://w3id.org/lcanet/activity#Biosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Emission_Forestry
+:Emission_Forestry rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/lcanet/activity#Biosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Emission_High_Pop
+:Emission_High_Pop rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/lcanet/activity#Biosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Emission_Industrial
+:Emission_Industrial rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/lcanet/activity#Biosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Emission_Low_Pop
+:Emission_Low_Pop rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/lcanet/activity#Biosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Emission_Low_Pop_long_term
+:Emission_Low_Pop_long_term rdf:type owl:NamedIndividual ,
+                                     <https://w3id.org/lcanet/activity#Biosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Emission_to_Ground_Water
+:Emission_to_Ground_Water rdf:type owl:NamedIndividual ,
+                                   <https://w3id.org/lcanet/activity#Biosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Emission_to_Ground_Water_lon_term
+:Emission_to_Ground_Water_lon_term rdf:type owl:NamedIndividual ,
+                                            <https://w3id.org/lcanet/activity#Biosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Emission_to_Ocean
+:Emission_to_Ocean rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/lcanet/activity#Biosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Emission_to_River
+:Emission_to_River rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/lcanet/activity#Biosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#End_of_Use_stage
+:End_of_Use_stage rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/lcanet/core#LifeCycleStage> .
+
+
+###  https://w3id.org/lcanet/ICdata#Energy_Production
+:Energy_Production rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/lcanet/activity#ActivityTag> .
+
+
+###  https://w3id.org/lcanet/ICdata#Energy_resources
+:Energy_resources rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/lcanet/activity#FlowTag> .
+
+
+###  https://w3id.org/lcanet/ICdata#Eutrophication_freshwater
+:Eutrophication_freshwater rdf:type owl:NamedIndividual ,
+                                    <https://w3id.org/lcanet/ia#ImpactCategory> ;
+                           rdfs:label "Eutrophication, freshwater" .
+
+
+###  https://w3id.org/lcanet/ICdata#Eutrophication_marine
+:Eutrophication_marine rdf:type owl:NamedIndividual ,
+                                <https://w3id.org/lcanet/ia#ImpactCategory> ;
+                       rdfs:label "Eutrophication, marine" .
+
+
+###  https://w3id.org/lcanet/ICdata#Eutrophication_terrestrial
+:Eutrophication_terrestrial rdf:type owl:NamedIndividual ,
+                                     <https://w3id.org/lcanet/ia#ImpactCategory> ;
+                            rdfs:label "Eutrophication, terrestrial" .
+
+
+###  https://w3id.org/lcanet/ICdata#Fraction_of_nutrients_reaching_freshwater_end_compartment_P
+:Fraction_of_nutrients_reaching_freshwater_end_compartment_P rdf:type owl:NamedIndividual ,
+                                                                      <https://w3id.org/lcanet/ia#ImpactCategoryIndicator> ;
+                                                             rdfs:label "Fraction of nutrients reaching freshwater end compartment (P)" ;
+                                                             <https://w3id.org/lcanet/ia#assessIC> :Eutrophication_freshwater ;
+                                                             <https://w3id.org/lcanet/ia#quantifiedByCF> :ac65dd6094a14be2a259f19b78d3016f ;
+                                                             <https://w3id.org/lcanet/property#hasUnit> "kg P -eq" .
+
+
+###  https://w3id.org/lcanet/ICdata#Fraction_of_nutrients_reaching_marine_end_compartment_N
+:Fraction_of_nutrients_reaching_marine_end_compartment_N rdf:type owl:NamedIndividual ,
+                                                                  <https://w3id.org/lcanet/ia#ImpactCategoryIndicator> ;
+                                                         rdfs:label "Fraction of nutrients reaching marine end compartment (N)" ;
+                                                         <https://w3id.org/lcanet/ia#assessIC> :Eutrophication_marine ;
+                                                         <https://w3id.org/lcanet/ia#quantifiedByCF> <https://w3id.org/lcanet/ICdata#51a1767a998e43ef85328b952ce81466> ;
+                                                         <https://w3id.org/lcanet/property#hasUnit> "kg N -eq" .
+
+
+###  https://w3id.org/lcanet/ICdata#Global_Warming_Potential_GWP100
+:Global_Warming_Potential_GWP100 rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/lcanet/ia#ImpactCategoryIndicator> ;
+                                 rdfs:label "Global Warming Potential (GWP100)" ;
+                                 <https://w3id.org/lcanet/ia#assessIC> :Climate_change_total ;
+                                 <https://w3id.org/lcanet/ia#quantifiedByCF> :Global_warming_potential_GWP_over_a_100_year_time_horizon ;
+                                 <https://w3id.org/lcanet/property#hasUnit> "kg CO2-eq" .
+
+
+###  https://w3id.org/lcanet/ICdata#Global_warming_potential_GWP_over_a_100_year_time_horizon
+:Global_warming_potential_GWP_over_a_100_year_time_horizon rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/lcanet/ia#CharacterizationFactor> ;
+                                                           rdfs:label "Global warming potential (GWP) over a 100-year time horizon" ;
+                                                           <https://w3id.org/lcanet/ia#calculatedByCM> :Bern_model_based_on_IPCC_2021 .
+
+
+###  https://w3id.org/lcanet/ICdata#Human_exposure_efficiency_relative_to_U235
+:Human_exposure_efficiency_relative_to_U235 rdf:type owl:NamedIndividual ,
+                                                     <https://w3id.org/lcanet/ia#ImpactCategoryIndicator> ;
+                                            rdfs:label "Human exposure efficiency relative to U235" ;
+                                            <https://w3id.org/lcanet/ia#assessIC> :Ionising_radiation_human_health ;
+                                            <https://w3id.org/lcanet/ia#quantifiedByCF> :a5795b7bdeb34ab0bf8401320356bd9f ;
+                                            <https://w3id.org/lcanet/property#hasUnit> "kBq U235 -eq" .
+
+
+###  https://w3id.org/lcanet/ICdata#Human_health_effect_model
+:Human_health_effect_model rdf:type owl:NamedIndividual ,
+                                    <https://w3id.org/lcanet/ia#CharacterizationModel> ;
+                           <http://purl.org/dc/terms/bibliographicCitation> "as developed by Dreicer et al., 1995)" ;
+                           rdfs:label "Human health effect model" .
+
+
+###  https://w3id.org/lcanet/ICdata#Human_toxicity_cancer
+:Human_toxicity_cancer rdf:type owl:NamedIndividual ,
+                                <https://w3id.org/lcanet/ia#ImpactCategory> ;
+                       rdfs:label "Human toxicity, cancer" .
+
+
+###  https://w3id.org/lcanet/ICdata#Human_toxicity_non_cancer
+:Human_toxicity_non_cancer rdf:type owl:NamedIndividual ,
+                                    <https://w3id.org/lcanet/ia#ImpactCategory> ;
+                           rdfs:label "Human toxicity, non-cancer" .
+
+
+###  https://w3id.org/lcanet/ICdata#Hypothesis
+:Hypothesis rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/lcanet/property#QualitativeProperty> .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-29_mask_silicon_substrate_130nm_CN
+:IC-29_mask_silicon_substrate_130nm_CN rdf:type owl:NamedIndividual ;
+                                       <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Chinese_Circuit ;
+                                       <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                  :IC-prop_production2 ,
+                                                                                  :IC-prop_sur_2 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-29_mask_silicon_substrate_130nm_EU
+:IC-29_mask_silicon_substrate_130nm_EU rdf:type owl:NamedIndividual ;
+                                       <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_European_Circuit ;
+                                       <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                  :IC-prop_production1 ,
+                                                                                  :IC-prop_sur_2 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-29_mask_silicon_substrate_130nm_TW
+:IC-29_mask_silicon_substrate_130nm_TW rdf:type owl:NamedIndividual ;
+                                       <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Taiwanian_Circuit ;
+                                       <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                  :IC-prop_production3 ,
+                                                                                  :IC-prop_sur_2 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-33_mask_silicon_substrate_90nm_CN
+:IC-33_mask_silicon_substrate_90nm_CN rdf:type owl:NamedIndividual ;
+                                      <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Chinese_Circuit ;
+                                      <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                 :IC-prop_production2 ,
+                                                                                 :IC-prop_sur_2 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-33_mask_silicon_substrate_90nm_EU
+:IC-33_mask_silicon_substrate_90nm_EU rdf:type owl:NamedIndividual ;
+                                      <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_European_Circuit ;
+                                      <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                 :IC-prop_production1 ,
+                                                                                 :IC-prop_sur_2 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-33_mask_silicon_substrate_90nm_TW
+:IC-33_mask_silicon_substrate_90nm_TW rdf:type owl:NamedIndividual ;
+                                      <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Taiwanian_Circuit ;
+                                      <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                 :IC-prop_production3 ,
+                                                                                 :IC-prop_sur_2 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-38_mask_silicon_substrate_65nm_CN
+:IC-38_mask_silicon_substrate_65nm_CN rdf:type owl:NamedIndividual ;
+                                      <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Chinese_Circuit ;
+                                      <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                 :IC-prop_production2 ,
+                                                                                 :IC-prop_sur_2 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-38_mask_silicon_substrate_65nm_EU
+:IC-38_mask_silicon_substrate_65nm_EU rdf:type owl:NamedIndividual ;
+                                      <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_European_Circuit ;
+                                      <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                 :IC-prop_production1 ,
+                                                                                 :IC-prop_sur_2 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-38_mask_silicon_substrate_65nm_TW
+:IC-38_mask_silicon_substrate_65nm_TW rdf:type owl:NamedIndividual ;
+                                      <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Taiwanian_Circuit ;
+                                      <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                 :IC-prop_production3 ,
+                                                                                 :IC-prop_sur_2 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-42_mask_silicon_substrate_45nm_CN
+:IC-42_mask_silicon_substrate_45nm_CN rdf:type owl:NamedIndividual ;
+                                      <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Chinese_Circuit ;
+                                      <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                 :IC-prop_production2 ,
+                                                                                 :IC-prop_sur_2 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-42_mask_silicon_substrate_45nm_EU
+:IC-42_mask_silicon_substrate_45nm_EU rdf:type owl:NamedIndividual ;
+                                      <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_European_Circuit ;
+                                      <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                 :IC-prop_production1 ,
+                                                                                 :IC-prop_sur_2 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-42_mask_silicon_substrate_45nm_TW
+:IC-42_mask_silicon_substrate_45nm_TW rdf:type owl:NamedIndividual ;
+                                      <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Taiwanian_Circuit ;
+                                      <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                 :IC-prop_production3 ,
+                                                                                 :IC-prop_sur_2 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-50_mask_silicon_substrate_28nm_CN
+:IC-50_mask_silicon_substrate_28nm_CN rdf:type owl:NamedIndividual ;
+                                      <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Chinese_Circuit ;
+                                      <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                 :IC-prop_production2 ,
+                                                                                 :IC-prop_sur_2 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-50_mask_silicon_substrate_28nm_EU
+:IC-50_mask_silicon_substrate_28nm_EU rdf:type owl:NamedIndividual ;
+                                      <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_European_Circuit ;
+                                      <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                 :IC-prop_production1 ,
+                                                                                 :IC-prop_sur_2 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-50_mask_silicon_substrate_28nm_TW
+:IC-50_mask_silicon_substrate_28nm_TW rdf:type owl:NamedIndividual ;
+                                      <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Taiwanian_Circuit ;
+                                      <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                 :IC-prop_production3 ,
+                                                                                 :IC-prop_sur_2 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-700_mg_Connector_for_PWB_FR
+:IC-700_mg_Connector_for_PWB_FR rdf:type owl:NamedIndividual ;
+                                <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Daughter_Board ;
+                                <https://w3id.org/lcanet/core#flowHasImpactResult> :IRF4 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Axial_ferrite_inductor_SMD_RoHS_compliant__Singapore
+:IC-Axial_ferrite_inductor_SMD_RoHS_compliant__Singapore rdf:type owl:NamedIndividual ;
+                                                         <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Mother_Board ;
+                                                         <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                                    :IC-prop_quantity_9 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Ceramic_SMD_capacitor_RoHS_compliant_France_FR
+:IC-Ceramic_SMD_capacitor_RoHS_compliant_France_FR rdf:type owl:NamedIndividual ;
+                                                   <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Daughter_Board ;
+                                                   <https://w3id.org/lcanet/core#flowHasImpactResult> :IRF8 ;
+                                                   <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                              :IC-prop_quantity_23 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Ceramic_SMD_capacitor_RoHS_compliant_France_FR_i1
+:IC-Ceramic_SMD_capacitor_RoHS_compliant_France_FR_i1 rdf:type owl:NamedIndividual ;
+                                                      <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Test_Card_FT3242H ;
+                                                      <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                                 :IC-prop_quantity_3 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Ceramic_dual_in_line_package_CERDIP_France_FR
+:IC-Ceramic_dual_in_line_package_CERDIP_France_FR rdf:type owl:NamedIndividual ;
+                                                  <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Generic_module_Package_FR ;
+                                                  <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                             :IC-prop_mass_0.25 ,
+                                                                                             :IC-prop_production4 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Ceramic_quad_flat_packages_CQFP_France_FR
+:IC-Ceramic_quad_flat_packages_CQFP_France_FR rdf:type owl:NamedIndividual ;
+                                              <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Generic_module_Package_FR ;
+                                              <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                         :IC-prop_mass_0.25 ,
+                                                                                         :IC-prop_production4 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Ceramic_quad_flat_packages_CQFP_France_FR_i1
+:IC-Ceramic_quad_flat_packages_CQFP_France_FR_i1 rdf:type owl:NamedIndividual ;
+                                                 <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Daughter_Board ;
+                                                 <https://w3id.org/lcanet/core#flowHasImpactResult> :IRF6 ;
+                                                 <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                            :IC-prop_mass_451 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Chinese_Circuit
+:IC-Chinese_Circuit rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/lcanet/activity#ProductFlow> ;
+                    <https://w3id.org/lcanet/activity#connected> :IC-Chinese_Circuit_i ;
+                    <https://w3id.org/lcanet/core#hasProperty> :IC-prop_sur_1 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Chinese_Circuit_i
+:IC-Chinese_Circuit_i rdf:type owl:NamedIndividual ,
+                               <https://w3id.org/lcanet/activity#ProductFlow> ;
+                      <https://w3id.org/lcanet/core#hasProperty> :IC-prop_sur_0.23 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Coaxial_connector_FR
+:IC-Coaxial_connector_FR rdf:type owl:NamedIndividual ;
+                         <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Daughter_Board ;
+                         <https://w3id.org/lcanet/core#flowHasImpactResult> :IRF7 ;
+                         <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                    :IC-prop_mass_820 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Coaxial_connector__FR
+:IC-Coaxial_connector__FR rdf:type owl:NamedIndividual ;
+                          <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Mother_Board ;
+                          <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                     :IC-prop_mass_1 ,
+                                                                     :IC-prop_quantity_12 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Connector_for_PWB_FR
+:IC-Connector_for_PWB_FR rdf:type owl:NamedIndividual ;
+                         <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Daughter_Board ;
+                         <https://w3id.org/lcanet/core#flowHasImpactResult> :IRF2 ;
+                         <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                    :IC-prop_mass_700 ,
+                                                                    :IC-prop_quantity_2 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Connector_for_PWB_FR_i1
+:IC-Connector_for_PWB_FR_i1 rdf:type owl:NamedIndividual ;
+                            <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Mother_Board ;
+                            <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                       :IC-prop_mass_500 ,
+                                                                       :IC-prop_quantity_2 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Daughter_Board
+:IC-Daughter_Board rdf:type owl:NamedIndividual ;
+                   <https://w3id.org/lcanet/activity#connected> :IC-Daughter_Board_i1 ;
+                   <https://w3id.org/lcanet/core#hasProperty> :IC-prop_quantity_1 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Daughter_Board_i1
+:IC-Daughter_Board_i1 rdf:type owl:NamedIndividual ;
+                      <https://w3id.org/lcanet/core#hasProperty> :IC-prop_quantity_1 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Diode_SMD_MELF_MINIMELF_France_FR
+:IC-Diode_SMD_MELF_MINIMELF_France_FR rdf:type owl:NamedIndividual ;
+                                      <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Test_Card_FT3242H ;
+                                      <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                 :IC-prop_quantity_2 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Dual_in_line_plastic_packages_frame_0.25_PDIP_France_FR
+:IC-Dual_in_line_plastic_packages_frame_0.25_PDIP_France_FR rdf:type owl:NamedIndividual ;
+                                                            <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Generic_module_Package_FR ;
+                                                            <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                                       :IC-prop_mass_0.25 ,
+                                                                                                       :IC-prop_production4 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-European_Circuit
+:IC-European_Circuit rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/lcanet/activity#ProductFlow> ;
+                     <https://w3id.org/lcanet/activity#connected> :IC-European_Circuit_i ;
+                     <https://w3id.org/lcanet/core#hasProperty> :IC-prop_sur_1 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-European_Circuit_i
+:IC-European_Circuit_i rdf:type owl:NamedIndividual ,
+                                <https://w3id.org/lcanet/activity#ProductFlow> ;
+                       <https://w3id.org/lcanet/core#hasProperty> :IC-prop_sur_0.16 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Flat_chip_resistor_SMD_RoHS_compliant_France_FR
+:IC-Flat_chip_resistor_SMD_RoHS_compliant_France_FR rdf:type owl:NamedIndividual ;
+                                                    <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Daughter_Board ;
+                                                    <https://w3id.org/lcanet/core#flowHasImpactResult> :IRF3 ;
+                                                    <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                               :IC-prop_quantity_7 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Flat_chip_resistor_SMD_RoHS_compliant_France_FR_i1
+:IC-Flat_chip_resistor_SMD_RoHS_compliant_France_FR_i1 rdf:type owl:NamedIndividual ;
+                                                       <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Test_Card_FT3242H ;
+                                                       <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                                  :IC-prop_quantity_3 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Flat_chip_resistor_SMD_RoHS_compliant_France_FR_i2
+:IC-Flat_chip_resistor_SMD_RoHS_compliant_France_FR_i2 rdf:type owl:NamedIndividual ;
+                                                       <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Mother_Board ;
+                                                       <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                                  :IC-prop_quantity_76 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit
+:IC-Generic_module_Integrated_Circuit rdf:type owl:NamedIndividual ,
+                                               <https://w3id.org/lcanet/activity#ProductFlow> ;
+                                      <https://w3id.org/lcanet/activity#connected> :IC-Generic_module_Integrated_Circuit_i1 ,
+                                                                                   :IC-Generic_module_Integrated_Circuit_i2 ,
+                                                                                   :IC-Generic_module_Integrated_Circuit_i3 ;
+                                      <https://w3id.org/lcanet/core#hasProperty> :IC-prop_sur_1 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i1
+:IC-Generic_module_Integrated_Circuit_i1 rdf:type owl:NamedIndividual ;
+                                         <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                    :IC-prop_mass_0.161 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i2
+:IC-Generic_module_Integrated_Circuit_i2 rdf:type owl:NamedIndividual ;
+                                         <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                    :IC-prop_sur_157.4 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i3
+:IC-Generic_module_Integrated_Circuit_i3 rdf:type owl:NamedIndividual ;
+                                         <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                    :IC-prop_sur_50 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR
+:IC-Generic_module_Package_FR rdf:type owl:NamedIndividual ;
+                              <https://w3id.org/lcanet/activity#connected> :IC-Generic_module_Package_FR_i1 ,
+                                                                           :IC-Generic_module_Package_FR_i2 ,
+                                                                           :IC-Generic_module_Package_FR_i3 ;
+                              <https://w3id.org/lcanet/core#hasProperty> :IC-prop_mass_1 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR_i1
+:IC-Generic_module_Package_FR_i1 rdf:type owl:NamedIndividual ;
+                                 <https://w3id.org/lcanet/core#flowHasImpactResult> :IRF5 ;
+                                 <https://w3id.org/lcanet/core#hasProperty> :IC-prop_sur_4.1 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR_i2
+:IC-Generic_module_Package_FR_i2 rdf:type owl:NamedIndividual ;
+                                 <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                            :IC-prop_mass_5.482 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR_i3
+:IC-Generic_module_Package_FR_i3 rdf:type owl:NamedIndividual ;
+                                 <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                            :IC-prop_mass_1.029 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-High_quad_packages_HiQUAD_France_FR
+:IC-High_quad_packages_HiQUAD_France_FR rdf:type owl:NamedIndividual ;
+                                        <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Generic_module_Package_FR ;
+                                        <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                   :IC-prop_mass_0.25 ,
+                                                                                   :IC-prop_production4 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-ICV_Storaige_Prototype
+:IC-ICV_Storaige_Prototype rdf:type owl:NamedIndividual ;
+                           <https://w3id.org/lcanet/activity#isOutputProductOf> :IC-Production_of_ICV_Storaige_Prototype ;
+                           <https://w3id.org/lcanet/core#hasProperty> :IC-prop_quantity_1 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Jack_base_female_RoHS_compliant_Europe_RER
+:IC-Jack_base_female_RoHS_compliant_Europe_RER rdf:type owl:NamedIndividual ;
+                                               <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Mother_Board ;
+                                               <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                          :IC-prop_mass_1.7 ,
+                                                                                          :IC-prop_quantity_1 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-LED_high_power_SMD_Europe_RER
+:IC-LED_high_power_SMD_Europe_RER rdf:type owl:NamedIndividual ;
+                                  <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Mother_Board ;
+                                  <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                             :IC-prop_quantity_15 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Metal_housing_connector_average_composition_RER
+:IC-Metal_housing_connector_average_composition_RER rdf:type owl:NamedIndividual ;
+                                                    <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Mother_Board ;
+                                                    <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                               :IC-prop_mass_7.031 ,
+                                                                                               :IC-prop_quantity_1 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Mother_Board
+:IC-Mother_Board rdf:type owl:NamedIndividual ;
+                 <https://w3id.org/lcanet/activity#connected> :IC-Mother_Board_i1 ;
+                 <https://w3id.org/lcanet/core#hasProperty> :IC-prop_quantity_1 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Mother_Board_i1
+:IC-Mother_Board_i1 rdf:type owl:NamedIndividual ;
+                    <https://w3id.org/lcanet/core#hasProperty> :IC-prop_quantity_0.5 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-PCI_Bus_connector_RER
+:IC-PCI_Bus_connector_RER rdf:type owl:NamedIndividual ;
+                          <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Mother_Board ;
+                          <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                     :IC-prop_mass_18.8 ,
+                                                                     :IC-prop_quantity_196 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-PCI_Bus_connector_RER_i1
+:IC-PCI_Bus_connector_RER_i1 rdf:type owl:NamedIndividual ;
+                             <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Test_Card_FT3242H ;
+                             <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                        :IC-prop_mass_18.8 ,
+                                                                        :IC-prop_quantity_62 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-PWB_FR4_preg_6_layers_RER_i1
+:IC-PWB_FR4_preg_6_layers_RER_i1 rdf:type owl:NamedIndividual ;
+                                 <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Daughter_Board ;
+                                 <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                            :IC-prop_sur_3600 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-PWB_FR4_preg_6_layers_RER_i2
+:IC-PWB_FR4_preg_6_layers_RER_i2 rdf:type owl:NamedIndividual ;
+                                 <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Mother_Board ;
+                                 <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                            :IC-prop_sur_31500 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Potentiometer_RoHS_compliant__SP
+:IC-Potentiometer_RoHS_compliant__SP rdf:type owl:NamedIndividual ;
+                                     <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Mother_Board ;
+                                     <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                :IC-prop_mass_620 ,
+                                                                                :IC-prop_quantity_5 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Production_of_Chinese_Circuit
+:IC-Production_of_Chinese_Circuit rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/lcanet/activity#Activity> ;
+                                  rdfs:label "Production of Chinese Circuit" ;
+                                  <https://w3id.org/lcanet/activity#hasOutputProduct> :IC-Chinese_Circuit ;
+                                  <https://w3id.org/lcanet/core#activityBelongsToLCstage> :Production_stage .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Production_of_Daughter_Board
+:IC-Production_of_Daughter_Board rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/lcanet/activity#Activity> ;
+                                 rdfs:label "Production of Daughter Board" ;
+                                 <https://w3id.org/lcanet/activity#hasInputProduct> :IC-Generic_module_Integrated_Circuit_i1 ,
+                                                                                    :IC-Generic_module_Package_FR_i1 ;
+                                 <https://w3id.org/lcanet/activity#hasOutputProduct> :IC-Daughter_Board ;
+                                 <https://w3id.org/lcanet/core#activityBelongsToLCstage> :Production_stage .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Production_of_European_Circuit
+:IC-Production_of_European_Circuit rdf:type owl:NamedIndividual ,
+                                            <https://w3id.org/lcanet/activity#Activity> ;
+                                   rdfs:label "Production of European Circuit" ;
+                                   <https://w3id.org/lcanet/activity#hasOutputProduct> :IC-European_Circuit ;
+                                   <https://w3id.org/lcanet/core#activityBelongsToLCstage> :Production_stage .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Production_of_Generic_module_Integrated_circuit
+:IC-Production_of_Generic_module_Integrated_circuit rdf:type owl:NamedIndividual ,
+                                                             <https://w3id.org/lcanet/activity#Activity> ;
+                                                    rdfs:label "Production of Generic Module Integrated Circuit" ;
+                                                    <https://w3id.org/lcanet/activity#hasInputProduct> :IC-Chinese_Circuit_i ,
+                                                                                                       :IC-European_Circuit_i ,
+                                                                                                       :IC-Taiwan_Circuit_i ;
+                                                    <https://w3id.org/lcanet/activity#hasOutputProduct> :IC-Generic_module_Integrated_Circuit ;
+                                                    <https://w3id.org/lcanet/core#activityBelongsToLCstage> :Production_stage .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Production_of_Generic_module_Package_FR
+:IC-Production_of_Generic_module_Package_FR rdf:type owl:NamedIndividual ,
+                                                     <https://w3id.org/lcanet/activity#Activity> ;
+                                            rdfs:label "Production of Generic Module Package FR" ;
+                                            <https://w3id.org/lcanet/activity#hasOutputProduct> :IC-Generic_module_Package_FR ;
+                                            <https://w3id.org/lcanet/core#activityBelongsToLCstage> :Production_stage .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Production_of_ICV_Storaige_Prototype
+:IC-Production_of_ICV_Storaige_Prototype rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/lcanet/activity#Activity> ;
+                                         rdfs:label "Production of ICV Storage Prototype" ;
+                                         <https://w3id.org/lcanet/activity#hasInputProduct> :IC-Daughter_Board_i1 ,
+                                                                                            :IC-Mother_Board_i1 ,
+                                                                                            :IC-Test_Card_FT3242H_i1 ;
+                                         <https://w3id.org/lcanet/core#activityBelongsToLCstage> :Production_stage .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board
+:IC-Production_of_Mother_Board rdf:type owl:NamedIndividual ,
+                                        <https://w3id.org/lcanet/activity#Activity> ;
+                               rdfs:label "Production of Mother Board" ;
+                               <https://w3id.org/lcanet/activity#hasInputProduct> :IC-Generic_module_Integrated_Circuit_i2 ,
+                                                                                  :IC-Generic_module_Package_FR_i2 ;
+                               <https://w3id.org/lcanet/activity#hasOutputProduct> :IC-Mother_Board ;
+                               <https://w3id.org/lcanet/core#activityBelongsToLCstage> :Production_stage .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Production_of_Taiwanian_Circuit
+:IC-Production_of_Taiwanian_Circuit rdf:type owl:NamedIndividual ,
+                                             <https://w3id.org/lcanet/activity#Activity> ;
+                                    rdfs:label "Production of Thaiwanian Circuit" ;
+                                    <https://w3id.org/lcanet/activity#hasOutputProduct> :IC-Taiwan_Circuit ;
+                                    <https://w3id.org/lcanet/core#activityBelongsToLCstage> :Production_stage .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Production_of_Test_Card_FT3242H
+:IC-Production_of_Test_Card_FT3242H rdf:type owl:NamedIndividual ,
+                                             <https://w3id.org/lcanet/activity#Activity> ;
+                                    rdfs:label "Production of Test Card FT3242H" ;
+                                    <https://w3id.org/lcanet/activity#hasInputProduct> :IC-Generic_module_Integrated_Circuit_i3 ,
+                                                                                       :IC-Generic_module_Package_FR_i3 ;
+                                    <https://w3id.org/lcanet/activity#hasOutputProduct> :IC-Test_Card_FT3242H ;
+                                    <https://w3id.org/lcanet/core#activityBelongsToLCstage> :Production_stage .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Small_outline_diode_semiconductor_Low_power_SOT23_SOT89_SOT223_France_FR
+:IC-Small_outline_diode_semiconductor_Low_power_SOT23_SOT89_SOT223_France_FR rdf:type owl:NamedIndividual ;
+                                                                             <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Mother_Board ;
+                                                                             <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                                                        :IC-prop_quantity_3 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Stamping_ink_deposition_on_plastics_FR
+:IC-Stamping_ink_deposition_on_plastics_FR rdf:type owl:NamedIndividual ;
+                                           <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Daughter_Board ;
+                                           <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                      :IC-prop_sur_10 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Stamping_ink_deposition_on_plastics_FR_i1
+:IC-Stamping_ink_deposition_on_plastics_FR_i1 rdf:type owl:NamedIndividual ;
+                                              <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Mother_Board ;
+                                              <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                         :IC-prop_sur_4 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Taiwan_Circuit
+:IC-Taiwan_Circuit rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/lcanet/activity#ProductFlow> ;
+                   <https://w3id.org/lcanet/activity#connected> :IC-Taiwan_Circuit_i ;
+                   <https://w3id.org/lcanet/core#hasProperty> :IC-prop_sur_1 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Taiwan_Circuit_i
+:IC-Taiwan_Circuit_i rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/lcanet/activity#ProductFlow> ;
+                     <https://w3id.org/lcanet/core#hasProperty> :IC-prop_sur_0.61 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Test_Card_FT3242H
+:IC-Test_Card_FT3242H rdf:type owl:NamedIndividual ;
+                      <https://w3id.org/lcanet/activity#connected> :IC-Test_Card_FT3242H_i1 ;
+                      <https://w3id.org/lcanet/core#hasProperty> :IC-prop_quantity_1 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Test_Card_FT3242H_i1
+:IC-Test_Card_FT3242H_i1 rdf:type owl:NamedIndividual ;
+                         <https://w3id.org/lcanet/core#hasProperty> :IC-prop_quantity_0.5 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Through_hole_transistor_IPAK_I2PAK_SOT32_SOT82_France_FR
+:IC-Through_hole_transistor_IPAK_I2PAK_SOT32_SOT82_France_FR rdf:type owl:NamedIndividual ;
+                                                             <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Mother_Board ;
+                                                             <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                                        :IC-prop_mass_1.5mg ,
+                                                                                                        :IC-prop_quantity_4 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-USB_base_B_type_female_RoHS_compliant_Europe_RER
+:IC-USB_base_B_type_female_RoHS_compliant_Europe_RER rdf:type owl:NamedIndividual ;
+                                                     <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Test_Card_FT3242H ;
+                                                     <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                                :IC-prop_quantity_1 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-USB_plug_mini-B_type_male_Europe_RER
+:IC-USB_plug_mini-B_type_male_Europe_RER rdf:type owl:NamedIndividual ;
+                                         <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Mother_Board ;
+                                         <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                    :IC-prop_quantity_1 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Wafer_silicon_substrate_42_masks_45_nm_photolithography_Europe_EU-28
+:IC-Wafer_silicon_substrate_42_masks_45_nm_photolithography_Europe_EU-28 rdf:type owl:NamedIndividual ;
+                                                                         <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Daughter_Board ;
+                                                                         <https://w3id.org/lcanet/core#flowHasImpactResult> :IRF1 ;
+                                                                         <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                                                    :IC-prop_sur_9 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Welding_of_steel_parts_electric_welding_France_FR
+:IC-Welding_of_steel_parts_electric_welding_France_FR rdf:type owl:NamedIndividual ;
+                                                      <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Mother_Board ;
+                                                      <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                                 :IC-prop_length_7 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-ceramic_SMD_capacitor_RoHS_compliant_France_FR
+:IC-ceramic_SMD_capacitor_RoHS_compliant_France_FR rdf:type owl:NamedIndividual ;
+                                                   <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Mother_Board ;
+                                                   <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                              :IC-prop_quantity_95 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-configurable_Soldering_of_SMD_components_SAC_reflow_soldering_at_plant
+:IC-configurable_Soldering_of_SMD_components_SAC_reflow_soldering_at_plant rdf:type owl:NamedIndividual ;
+                                                                           <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Daughter_Board ;
+                                                                           <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_nage ,
+                                                                                                                      :IC-prop_mass_7429 ,
+                                                                                                                      :IC-prop_quantity_18 .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde
+:IC-prop_DB_Codde rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/lcanet/property#QualitativeProperty> ;
+                  rdfs:label "Database_Source" ;
+                  <https://w3id.org/lcanet/property#hasQualityValue> "CODDE (v3.00.000)" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_DB_nage
+:IC-prop_DB_nage rdf:type owl:NamedIndividual ,
+                          <https://w3id.org/lcanet/property#QualitativeProperty> ;
+                 rdfs:label "Database_Source" ;
+                 <https://w3id.org/lcanet/property#hasQualityValue> "NegaOctet (v01.00.001)" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_length_7
+:IC-prop_length_7 rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                  rdfs:label "Length" ;
+                  <https://w3id.org/lcanet/property#hasQuantityValue> 7 ;
+                  <https://w3id.org/lcanet/property#hasUnit> "mm" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_mass_0.161
+:IC-prop_mass_0.161 rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                    rdfs:label "Mass" ;
+                    <https://w3id.org/lcanet/property#hasQuantityValue> 0.161 ;
+                    <https://w3id.org/lcanet/property#hasUnit> "g" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_mass_0.25
+:IC-prop_mass_0.25 rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                   rdfs:label "Mass" ;
+                   <https://w3id.org/lcanet/property#hasQuantityValue> 0.25 ;
+                   <https://w3id.org/lcanet/property#hasUnit> "g" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_mass_1
+:IC-prop_mass_1 rdf:type owl:NamedIndividual ,
+                         <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                rdfs:label "Mass" ;
+                <https://w3id.org/lcanet/property#hasQuantityValue> 1 ;
+                <https://w3id.org/lcanet/property#hasUnit> "g" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_mass_1.029
+:IC-prop_mass_1.029 rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                    rdfs:label "Mass" ;
+                    <https://w3id.org/lcanet/property#hasQuantityValue> 1.029 ;
+                    <https://w3id.org/lcanet/property#hasUnit> "g" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_mass_1.5
+:IC-prop_mass_1.5 rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                  rdfs:label "Mass" ;
+                  <https://w3id.org/lcanet/property#hasQuantityValue> 1.5 ;
+                  <https://w3id.org/lcanet/property#hasUnit> "g" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_mass_1.5mg
+:IC-prop_mass_1.5mg rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                    rdfs:label "Mass" ;
+                    <https://w3id.org/lcanet/property#hasQuantityValue> 1.5 ;
+                    <https://w3id.org/lcanet/property#hasUnit> "mg" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_mass_1.7
+:IC-prop_mass_1.7 rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                  rdfs:label "Mass" ;
+                  <https://w3id.org/lcanet/property#hasQuantityValue> 1.7 ;
+                  <https://w3id.org/lcanet/property#hasUnit> "g" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_mass_18.8
+:IC-prop_mass_18.8 rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                   rdfs:label "Mass" ;
+                   <https://w3id.org/lcanet/property#hasQuantityValue> 18.8 ;
+                   <https://w3id.org/lcanet/property#hasUnit> "mg" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_mass_260
+:IC-prop_mass_260 rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                  rdfs:label "Mass" ;
+                  <https://w3id.org/lcanet/property#hasQuantityValue> 260 ;
+                  <https://w3id.org/lcanet/property#hasUnit> "mg" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_mass_451
+:IC-prop_mass_451 rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                  rdfs:label "Mass" ;
+                  <https://w3id.org/lcanet/property#hasQuantityValue> 451 ;
+                  <https://w3id.org/lcanet/property#hasUnit> "mg" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_mass_5.482
+:IC-prop_mass_5.482 rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                    rdfs:label "Mass" ;
+                    <https://w3id.org/lcanet/property#hasQuantityValue> 5.482 ;
+                    <https://w3id.org/lcanet/property#hasUnit> "g" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_mass_500
+:IC-prop_mass_500 rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                  rdfs:label "Mass" ;
+                  <https://w3id.org/lcanet/property#hasQuantityValue> 500 ;
+                  <https://w3id.org/lcanet/property#hasUnit> "g" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_mass_620
+:IC-prop_mass_620 rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                  rdfs:label "Mass" ;
+                  <https://w3id.org/lcanet/property#hasQuantityValue> 620 ;
+                  <https://w3id.org/lcanet/property#hasUnit> "mg" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_mass_7.031
+:IC-prop_mass_7.031 rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                    rdfs:label "Mass" ;
+                    <https://w3id.org/lcanet/property#hasQuantityValue> 7.031 ;
+                    <https://w3id.org/lcanet/property#hasUnit> "g" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_mass_700
+:IC-prop_mass_700 rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                  rdfs:label "Mass" ;
+                  <https://w3id.org/lcanet/property#hasQuantityValue> 700 ;
+                  <https://w3id.org/lcanet/property#hasUnit> "mg" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_mass_7429
+:IC-prop_mass_7429 rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                   rdfs:label "Mass" ;
+                   <https://w3id.org/lcanet/property#hasQuantityValue> 7429 ;
+                   <https://w3id.org/lcanet/property#hasUnit> "mg" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_mass_820
+:IC-prop_mass_820 rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                  rdfs:label "Mass" ;
+                  <https://w3id.org/lcanet/property#hasQuantityValue> 820 ;
+                  <https://w3id.org/lcanet/property#hasUnit> "mg" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_production1
+:IC-prop_production1 rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/lcanet/property#QualitativeProperty> ;
+                     rdfs:label "Produced_In" ;
+                     <https://w3id.org/lcanet/property#hasQualityValue> "Europe" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_production2
+:IC-prop_production2 rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/lcanet/property#QualitativeProperty> ;
+                     rdfs:label "Produced_In" ;
+                     <https://w3id.org/lcanet/property#hasQualityValue> "Taiwan" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_production3
+:IC-prop_production3 rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/lcanet/property#QualitativeProperty> ;
+                     rdfs:label "Produced_In" ;
+                     <https://w3id.org/lcanet/property#hasQualityValue> "China" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_production4
+:IC-prop_production4 rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/lcanet/property#QualitativeProperty> ;
+                     rdfs:label "Produced_In" ;
+                     <https://w3id.org/lcanet/property#hasQualityValue> "France" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_quantity_0.5
+:IC-prop_quantity_0.5 rdf:type owl:NamedIndividual ,
+                               <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                      rdfs:label "Quantity" ;
+                      <https://w3id.org/lcanet/property#hasQuantityValue> 0.5 ;
+                      <https://w3id.org/lcanet/property#hasUnit> "unit" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_quantity_1
+:IC-prop_quantity_1 rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                    rdfs:label "Quantity" ;
+                    <https://w3id.org/lcanet/property#hasQuantityValue> 1 ;
+                    <https://w3id.org/lcanet/property#hasUnit> "unit" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_quantity_12
+:IC-prop_quantity_12 rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                     rdfs:label "Quantity" ;
+                     <https://w3id.org/lcanet/property#hasQuantityValue> 12 ;
+                     <https://w3id.org/lcanet/property#hasUnit> "unit" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_quantity_15
+:IC-prop_quantity_15 rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                     rdfs:label "Quantity" ;
+                     <https://w3id.org/lcanet/property#hasQuantityValue> 15 ;
+                     <https://w3id.org/lcanet/property#hasUnit> "unit" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_quantity_18
+:IC-prop_quantity_18 rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                     rdfs:label "Quantity" ;
+                     <https://w3id.org/lcanet/property#hasQuantityValue> 18 ;
+                     <https://w3id.org/lcanet/property#hasUnit> "unit" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_quantity_196
+:IC-prop_quantity_196 rdf:type owl:NamedIndividual ,
+                               <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                      rdfs:label "Quantity" ;
+                      <https://w3id.org/lcanet/property#hasQuantityValue> 196 ;
+                      <https://w3id.org/lcanet/property#hasUnit> "unit" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_quantity_2
+:IC-prop_quantity_2 rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                    rdfs:label "Quantity" ;
+                    <https://w3id.org/lcanet/property#hasQuantityValue> 2 ;
+                    <https://w3id.org/lcanet/property#hasUnit> "unit" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_quantity_23
+:IC-prop_quantity_23 rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                     rdfs:label "Quantity" ;
+                     <https://w3id.org/lcanet/property#hasQuantityValue> 23 ;
+                     <https://w3id.org/lcanet/property#hasUnit> "unit" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_quantity_3
+:IC-prop_quantity_3 rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                    rdfs:label "Quantity" ;
+                    <https://w3id.org/lcanet/property#hasQuantityValue> 3 ;
+                    <https://w3id.org/lcanet/property#hasUnit> "unit" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_quantity_4
+:IC-prop_quantity_4 rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                    rdfs:label "Quantity" ;
+                    <https://w3id.org/lcanet/property#hasQuantityValue> 4 ;
+                    <https://w3id.org/lcanet/property#hasUnit> "unit" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_quantity_5
+:IC-prop_quantity_5 rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                    rdfs:label "Quantity" ;
+                    <https://w3id.org/lcanet/property#hasQuantityValue> 5 ;
+                    <https://w3id.org/lcanet/property#hasUnit> "unit" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_quantity_62
+:IC-prop_quantity_62 rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                     rdfs:label "Quantity" ;
+                     <https://w3id.org/lcanet/property#hasQuantityValue> 62 ;
+                     <https://w3id.org/lcanet/property#hasUnit> "unit" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_quantity_7
+:IC-prop_quantity_7 rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                    rdfs:label "Quantity" ;
+                    <https://w3id.org/lcanet/property#hasQuantityValue> 7 ;
+                    <https://w3id.org/lcanet/property#hasUnit> "unit" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_quantity_76
+:IC-prop_quantity_76 rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                     rdfs:label "Quantity" ;
+                     <https://w3id.org/lcanet/property#hasQuantityValue> 76 ;
+                     <https://w3id.org/lcanet/property#hasUnit> "unit" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_quantity_9
+:IC-prop_quantity_9 rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                    rdfs:label "Quantity" ;
+                    <https://w3id.org/lcanet/property#hasQuantityValue> 9 ;
+                    <https://w3id.org/lcanet/property#hasUnit> "unit" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_quantity_95
+:IC-prop_quantity_95 rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                     rdfs:label "Quantity" ;
+                     <https://w3id.org/lcanet/property#hasQuantityValue> 95 ;
+                     <https://w3id.org/lcanet/property#hasUnit> "unit" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_sur_0.16
+:IC-prop_sur_0.16 rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                  rdfs:label "Surface" ;
+                  <https://w3id.org/lcanet/property#hasQuantityValue> 0.16 ;
+                  <https://w3id.org/lcanet/property#hasUnit> "mm2" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_sur_0.23
+:IC-prop_sur_0.23 rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                  rdfs:label "Surface" ;
+                  <https://w3id.org/lcanet/property#hasQuantityValue> 0.23 ;
+                  <https://w3id.org/lcanet/property#hasUnit> "mm2" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_sur_0.61
+:IC-prop_sur_0.61 rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                  rdfs:label "Surface" ;
+                  <https://w3id.org/lcanet/property#hasQuantityValue> 0.61 ;
+                  <https://w3id.org/lcanet/property#hasUnit> "mm2" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_sur_1
+:IC-prop_sur_1 rdf:type owl:NamedIndividual ,
+                        <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+               rdfs:label "Surface" ;
+               <https://w3id.org/lcanet/property#hasQuantityValue> 1 ;
+               <https://w3id.org/lcanet/property#hasUnit> "mm2" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_sur_10
+:IC-prop_sur_10 rdf:type owl:NamedIndividual ,
+                         <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                rdfs:label "Surface" ;
+                <https://w3id.org/lcanet/property#hasQuantityValue> 10 ;
+                <https://w3id.org/lcanet/property#hasUnit> "mm2" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_sur_157.4
+:IC-prop_sur_157.4 rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                   rdfs:label "Surface" ;
+                   <https://w3id.org/lcanet/property#hasQuantityValue> 157.4 ;
+                   <https://w3id.org/lcanet/property#hasUnit> "mm2" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_sur_2
+:IC-prop_sur_2 rdf:type owl:NamedIndividual ,
+                        <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+               rdfs:label "Surface" ;
+               <https://w3id.org/lcanet/property#hasQuantityValue> 2 ;
+               <https://w3id.org/lcanet/property#hasUnit> "mm2" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_sur_31500
+:IC-prop_sur_31500 rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                   rdfs:label "Surface" ;
+                   <https://w3id.org/lcanet/property#hasQuantityValue> 31500 ;
+                   <https://w3id.org/lcanet/property#hasUnit> "mm2" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_sur_3600
+:IC-prop_sur_3600 rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                  rdfs:label "Surface" ;
+                  <https://w3id.org/lcanet/property#hasQuantityValue> 3600 ;
+                  <https://w3id.org/lcanet/property#hasUnit> "mm2" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_sur_4
+:IC-prop_sur_4 rdf:type owl:NamedIndividual ,
+                        <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+               rdfs:label "Surface" ;
+               <https://w3id.org/lcanet/property#hasQuantityValue> 4 ;
+               <https://w3id.org/lcanet/property#hasUnit> "mm2" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_sur_4.1
+:IC-prop_sur_4.1 rdf:type owl:NamedIndividual ,
+                          <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                 rdfs:label "Surface" ;
+                 <https://w3id.org/lcanet/property#hasQuantityValue> 4.1 ;
+                 <https://w3id.org/lcanet/property#hasUnit> "mm2" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_sur_50
+:IC-prop_sur_50 rdf:type owl:NamedIndividual ,
+                         <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+                rdfs:label "Surface" ;
+                <https://w3id.org/lcanet/property#hasQuantityValue> 50 ;
+                <https://w3id.org/lcanet/property#hasUnit> "mm2" .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-prop_sur_9
+:IC-prop_sur_9 rdf:type owl:NamedIndividual ,
+                        <https://w3id.org/lcanet/property#QuantitativeProperty> ;
+               rdfs:label "Surface" ;
+               <https://w3id.org/lcanet/property#hasQuantityValue> 9 ;
+               <https://w3id.org/lcanet/property#hasUnit> "mm2" .
+
+
+###  https://w3id.org/lcanet/ICdata#IPCC_method
+:IPCC_method rdf:type owl:NamedIndividual ,
+                      <https://w3id.org/lcanet/ia#Method> ;
+             <https://w3id.org/lcanet/ia#usesCM> :IPCC_model .
+
+
+###  https://w3id.org/lcanet/ICdata#IPCC_model
+:IPCC_model rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/lcanet/ia#CharacterizationModel> ;
+            <https://w3id.org/lcanet/ia#calculatesCF> :CF_CO2equivalents .
+
+
+###  https://w3id.org/lcanet/ICdata#IRF1
+:IRF1 rdf:type owl:NamedIndividual ,
+               <https://w3id.org/lcanet/ia#LcaResult> ;
+      <http://qudt.org/schema/qudt#numericValue> "0.1254897000569" ;
+      <https://w3id.org/lcanet/ia#hasIC> :Climate_change_total .
+
+
+###  https://w3id.org/lcanet/ICdata#IRF2
+:IRF2 rdf:type owl:NamedIndividual ,
+               <https://w3id.org/lcanet/ia#LcaResult> ;
+      <http://qudt.org/schema/qudt#numericValue> 0.0125489005 ;
+      <https://w3id.org/lcanet/ia#hasIC> :Climate_change_total .
+
+
+###  https://w3id.org/lcanet/ICdata#IRF3
+:IRF3 rdf:type owl:NamedIndividual ,
+               <https://w3id.org/lcanet/ia#LcaResult> ;
+      <http://qudt.org/schema/qudt#numericValue> 0.215496007 ;
+      <https://w3id.org/lcanet/ia#hasIC> :Climate_change_total .
+
+
+###  https://w3id.org/lcanet/ICdata#IRF4
+:IRF4 rdf:type owl:NamedIndividual ,
+               <https://w3id.org/lcanet/ia#LcaResult> ;
+      <http://qudt.org/schema/qudt#numericValue> 0.32514870004 ;
+      <https://w3id.org/lcanet/ia#hasIC> :Climate_change_total .
+
+
+###  https://w3id.org/lcanet/ICdata#IRF5
+:IRF5 rdf:type owl:NamedIndividual ,
+               <https://w3id.org/lcanet/ia#LcaResult> ;
+      <http://qudt.org/schema/qudt#numericValue> 0.154730006 ;
+      <https://w3id.org/lcanet/ia#hasIC> :Climate_change_total .
+
+
+###  https://w3id.org/lcanet/ICdata#IRF6
+:IRF6 rdf:type owl:NamedIndividual ,
+               <https://w3id.org/lcanet/ia#LcaResult> ;
+      <http://qudt.org/schema/qudt#numericValue> 0.351420009754 ;
+      <https://w3id.org/lcanet/ia#hasIC> :Climate_change_total .
+
+
+###  https://w3id.org/lcanet/ICdata#IRF7
+:IRF7 rdf:type owl:NamedIndividual ,
+               <https://w3id.org/lcanet/ia#LcaResult> ;
+      <http://qudt.org/schema/qudt#numericValue> 0.32541112208 ;
+      <https://w3id.org/lcanet/ia#hasIC> :Climate_change_total .
+
+
+###  https://w3id.org/lcanet/ICdata#IRF8
+:IRF8 rdf:type owl:NamedIndividual ,
+               <https://w3id.org/lcanet/ia#LcaResult> ;
+      <http://qudt.org/schema/qudt#numericValue> 0.421587009 ;
+      <https://w3id.org/lcanet/ia#hasIC> :Climate_change_total .
+
+
+###  https://w3id.org/lcanet/ICdata#IR_Production_Circuit_Storaige
+:IR_Production_Circuit_Storaige rdf:type owl:NamedIndividual ,
+                                         <https://w3id.org/lcanet/ia#LcaResult> ;
+                                <http://qudt.org/schema/qudt#numericValue> "0,194533374702331" ;
+                                <https://w3id.org/lcanet/core#impactResultConcernsActivity> :IC-Production_of_ICV_Storaige_Prototype ;
+                                <https://w3id.org/lcanet/ia#containedInOIR> :Overall_IR_Climate_Change ;
+                                <https://w3id.org/lcanet/ia#hasIC> :Climate_change_total .
+
+
+###  https://w3id.org/lcanet/ICdata#IR_Production_Daughter_Board
+:IR_Production_Daughter_Board rdf:type owl:NamedIndividual ,
+                                       <https://w3id.org/lcanet/ia#LcaResult> ;
+                              <http://qudt.org/schema/qudt#numericValue> "0,540494410009839" ;
+                              <https://w3id.org/lcanet/core#impactResultConcernsActivity> :IC-Production_of_Daughter_Board ;
+                              <https://w3id.org/lcanet/ia#containedInOIR> :Overall_IR_Climate_Change ;
+                              <https://w3id.org/lcanet/ia#hasIC> :Climate_change_total .
+
+
+###  https://w3id.org/lcanet/ICdata#IR_Production_Mother_Board
+:IR_Production_Mother_Board rdf:type owl:NamedIndividual ,
+                                     <https://w3id.org/lcanet/ia#LcaResult> ;
+                            <http://qudt.org/schema/qudt#numericValue> "10,1273637779549" ;
+                            <https://w3id.org/lcanet/core#impactResultConcernsActivity> :IC-Production_of_Mother_Board ;
+                            <https://w3id.org/lcanet/ia#containedInOIR> :Overall_IR_Climate_Change .
+
+
+###  https://w3id.org/lcanet/ICdata#IR_Production_Test_Card
+:IR_Production_Test_Card rdf:type owl:NamedIndividual ,
+                                  <https://w3id.org/lcanet/ia#LcaResult> ;
+                         <http://qudt.org/schema/qudt#numericValue> "1,57650467322258" ;
+                         <https://w3id.org/lcanet/core#impactResultConcernsActivity> :IC-Production_of_Test_Card_FT3242H ;
+                         <https://w3id.org/lcanet/ia#containedInOIR> :Overall_IR_Climate_Change ;
+                         <https://w3id.org/lcanet/ia#hasIC> :Climate_change_total .
+
+
+###  https://w3id.org/lcanet/ICdata#Impact_on_human_health
+:Impact_on_human_health rdf:type owl:NamedIndividual ,
+                                 <https://w3id.org/lcanet/ia#ImpactCategoryIndicator> ;
+                        rdfs:label "Impact on human health" ;
+                        <https://w3id.org/lcanet/ia#assessIC> :Particulate_matter ;
+                        <https://w3id.org/lcanet/ia#quantifiedByCF> <https://w3id.org/lcanet/ICdata#0daac3eb16074ecb93922f7338ae93bb> ;
+                        <https://w3id.org/lcanet/property#hasUnit> "disease incidence" .
+
+
+###  https://w3id.org/lcanet/ICdata#Inputs_of_other_types
+:Inputs_of_other_types rdf:type owl:NamedIndividual ,
+                                <https://w3id.org/lcanet/activity#Technosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Inputted_Energy_Consumption
+:Inputted_Energy_Consumption rdf:type owl:NamedIndividual ,
+                                      <https://w3id.org/lcanet/activity#Technosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Inputted_Manufactured_Product
+:Inputted_Manufactured_Product rdf:type owl:NamedIndividual ,
+                                        <https://w3id.org/lcanet/activity#Technosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Inputted_Material
+:Inputted_Material rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/lcanet/activity#Technosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Inputted_Packaging_Material
+:Inputted_Packaging_Material rdf:type owl:NamedIndividual ,
+                                      <https://w3id.org/lcanet/activity#Technosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Inputted_Process
+:Inputted_Process rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/lcanet/activity#Technosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Inputted_Recycled_Material
+:Inputted_Recycled_Material rdf:type owl:NamedIndividual ,
+                                     <https://w3id.org/lcanet/activity#Technosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Inputted_Transportation
+:Inputted_Transportation rdf:type owl:NamedIndividual ,
+                                  <https://w3id.org/lcanet/activity#Technosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Inputted_Water_Consumption
+:Inputted_Water_Consumption rdf:type owl:NamedIndividual ,
+                                     <https://w3id.org/lcanet/activity#Technosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Interpretation-Report-XV1
+:Interpretation-Report-XV1 rdf:type owl:NamedIndividual ,
+                                    <https://w3id.org/lcanet/core#Interpretation> ;
+                           <https://w3id.org/lcanet/ia#containedInOIR> :Overall_IR_Climate_Change .
+
+
+###  https://w3id.org/lcanet/ICdata#Ionising_radiation_human_health
+:Ionising_radiation_human_health rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/lcanet/ia#ImpactCategory> ;
+                                 rdfs:label "Ionising radiation, human health" .
+
+
+###  https://w3id.org/lcanet/ICdata#LANCA_model
+:LANCA_model rdf:type owl:NamedIndividual ,
+                      <https://w3id.org/lcanet/ia#CharacterizationModel> ;
+             <http://purl.org/dc/terms/bibliographicCitation> "Soil quality index based on LANCA model (De Laurentiis et al. 2019) and on the LANCA CF version 2.5 (Horn and Maier, 2018)" ;
+             rdfs:label "LANCA model" .
+
+
+###  https://w3id.org/lcanet/ICdata#LCA-ICV-Storaige-performed-at
+:LCA-ICV-Storaige-performed-at rdf:type owl:NamedIndividual ,
+                                        <http://www.w3.org/2006/time#Instant> ;
+                               <http://www.w3.org/2006/time#inXSDDate> "November 2024" .
+
+
+###  https://w3id.org/lcanet/ICdata#LCA-ICV-Storiage-valid-between
+:LCA-ICV-Storiage-valid-between rdf:type owl:NamedIndividual ;
+                                <http://purl.org/dc/elements/1.1/description> "Acccording to the database versions, from which values for flows are taken, each version has a validity start-/end year" ;
+                                <http://www.w3.org/2006/time#hasBeginning> :CODDE-v3-db-time-start ,
+                                                                           :NegaOctet-v1-db-time-start .
+
+
+###  https://w3id.org/lcanet/ICdata#LCA_of_ICV_Storaige_Prototype
+:LCA_of_ICV_Storaige_Prototype rdf:type owl:NamedIndividual ,
+                                        <https://w3id.org/lcanet/core#LcaModel> ;
+                               <https://w3id.org/lcanet/core#lcaModelConcernsLCStage> :Material_Extraction_stage ,
+                                                                                      :Production_stage ;
+                               <https://w3id.org/lcanet/core#lcaModelHasAuthor> :Thibault_Halter ;
+                               <https://w3id.org/lcanet/core#lcaModelHasGoal> "This LCA is an explorative work of a digital system from its design, in order to systematize this approach in future numeric designs." ;
+                               <https://w3id.org/lcanet/core#lcaModelHasScope> :Scope_of_ICV_Storaige_Prototype ;
+                               <https://w3id.org/lcanet/core#lcaModelResultsInInterpretation> :Interpretation-Report-XV1 .
+
+
+###  https://w3id.org/lcanet/ICdata#LCAsystemsSite
+:LCAsystemsSite rdf:type owl:NamedIndividual ,
+                         <https://w3id.org/lcanet/st#Site> .
+
+
+###  https://w3id.org/lcanet/ICdata#LOTOS_EUROS_model
+:LOTOS_EUROS_model rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/lcanet/ia#CharacterizationModel> ;
+                   <http://purl.org/dc/terms/bibliographicCitation> "(Van Zelm et al, 2008) as applied in ReCiPe 2008" ;
+                   rdfs:label "LOTOS-EUROS model" .
+
+
+###  https://w3id.org/lcanet/ICdata#Land_use_occupation_and_transformation
+:Land_use_occupation_and_transformation rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/lcanet/ia#ImpactCategory> ;
+                                        rdfs:label "Land use (occupation and transformation)" .
+
+
+###  https://w3id.org/lcanet/ICdata#Mass_Balance
+:Mass_Balance rdf:type owl:NamedIndividual ,
+                       <https://w3id.org/lcanet/property#BalanceableProperty> .
+
+
+###  https://w3id.org/lcanet/ICdata#Material_Extraction_stage
+:Material_Extraction_stage rdf:type owl:NamedIndividual ,
+                                    <https://w3id.org/lcanet/core#LifeCycleStage> .
+
+
+###  https://w3id.org/lcanet/ICdata#Material_Production
+:Material_Production rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/lcanet/activity#ActivityTag> .
+
+
+###  https://w3id.org/lcanet/ICdata#Material_Resources
+:Material_Resources rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/lcanet/activity#FlowTag> .
+
+
+###  https://w3id.org/lcanet/ICdata#Methodology_EF_v3.0
+:Methodology_EF_v3.0 rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/lcanet/ia#Methodology> ;
+                     <https://w3id.org/lcanet/core#methodologyAssessesTopic> :Scope_of_ICV_Storaige_Prototype .
+
+
+###  https://w3id.org/lcanet/ICdata#NegaOctet-v1-db-time-start
+:NegaOctet-v1-db-time-start rdf:type owl:NamedIndividual ;
+                            <http://www.w3.org/2006/time#inXSDDate> "22-11-2022" .
+
+
+###  https://w3id.org/lcanet/ICdata#Outputs_of_other_types
+:Outputs_of_other_types rdf:type owl:NamedIndividual ,
+                                 <https://w3id.org/lcanet/activity#Technosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Outputted_ByProduct
+:Outputted_ByProduct rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/lcanet/activity#Technosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Outputted_Product
+:Outputted_Product rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/lcanet/activity#Technosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Outputted_Waste_for_Incineration
+:Outputted_Waste_for_Incineration rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/lcanet/activity#Technosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Outputted_Waste_for_disposal
+:Outputted_Waste_for_disposal rdf:type owl:NamedIndividual ,
+                                       <https://w3id.org/lcanet/activity#Technosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Overall_IR_Climate_Change
+:Overall_IR_Climate_Change rdf:type owl:NamedIndividual ,
+                                    <https://w3id.org/lcanet/ia#OverallImpactResult> ;
+                           <http://qudt.org/schema/qudt#numericValue> "12,4388962358897" ;
+                           <https://w3id.org/lcanet/ia#hasIC> :Climate_change_total .
+
+
+###  https://w3id.org/lcanet/ICdata#Ozone_Depletion_Potential_ODP
+:Ozone_Depletion_Potential_ODP rdf:type owl:NamedIndividual ,
+                                        <https://w3id.org/lcanet/ia#ImpactCategoryIndicator> ;
+                               rdfs:label "Ozone Depletion Potential (ODP)" ;
+                               <https://w3id.org/lcanet/ia#assessIC> :Ozone_depletion ;
+                               <https://w3id.org/lcanet/ia#quantifiedByCF> :dc3acd87af0a4fe4b4686ed51b13e934 ;
+                               <https://w3id.org/lcanet/property#hasUnit> "kg CFC-11-eq" .
+
+
+###  https://w3id.org/lcanet/ICdata#Ozone_depletion
+:Ozone_depletion rdf:type owl:NamedIndividual ,
+                          <https://w3id.org/lcanet/ia#ImpactCategory> ;
+                 rdfs:label "Ozone depletion" .
+
+
+###  https://w3id.org/lcanet/ICdata#PM_model
+:PM_model rdf:type owl:NamedIndividual ,
+                   <https://w3id.org/lcanet/ia#CharacterizationModel> ;
+          <http://purl.org/dc/terms/bibliographicCitation> "(Fantke et al., 2016 in UNEP 2016)" ;
+          rdfs:label "PM model" .
+
+
+###  https://w3id.org/lcanet/ICdata#Particulate_matter
+:Particulate_matter rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/lcanet/ia#ImpactCategory> ;
+                    rdfs:label "Particulate matter" .
+
+
+###  https://w3id.org/lcanet/ICdata#Photochemical_ozone_formation_human_health
+:Photochemical_ozone_formation_human_health rdf:type owl:NamedIndividual ,
+                                                     <https://w3id.org/lcanet/ia#ImpactCategory> ;
+                                            rdfs:label "Photochemical ozone formation, human health" .
+
+
+###  https://w3id.org/lcanet/ICdata#Processing
+:Processing rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/lcanet/activity#ActivityTag> .
+
+
+###  https://w3id.org/lcanet/ICdata#Production_Site
+:Production_Site rdf:type owl:NamedIndividual ,
+                          <https://w3id.org/lcanet/property#QualitativeProperty> .
+
+
+###  https://w3id.org/lcanet/ICdata#Production_stage
+:Production_stage rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/lcanet/core#LifeCycleStage> .
+
+
+###  https://w3id.org/lcanet/ICdata#Productionsite
+:Productionsite rdf:type owl:NamedIndividual ,
+                         <https://w3id.org/lcanet/st#Site> .
+
+
+###  https://w3id.org/lcanet/ICdata#Quantity
+:Quantity rdf:type owl:NamedIndividual ,
+                   <https://w3id.org/lcanet/property#QuantitativeProperty> .
+
+
+###  https://w3id.org/lcanet/ICdata#Realized_On_Machine
+:Realized_On_Machine rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/lcanet/property#QualitativeProperty> .
+
+
+###  https://w3id.org/lcanet/ICdata#Resource_from_Air
+:Resource_from_Air rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/lcanet/activity#Biosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Resource_from_Biotic
+:Resource_from_Biotic rdf:type owl:NamedIndividual ,
+                               <https://w3id.org/lcanet/activity#Biosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Resource_from_Land
+:Resource_from_Land rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/lcanet/activity#Biosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Resource_from_Water
+:Resource_from_Water rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/lcanet/activity#Biosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Resource_use_fossils
+:Resource_use_fossils rdf:type owl:NamedIndividual ,
+                               <https://w3id.org/lcanet/ia#ImpactCategory> ;
+                      rdfs:label "Resource use, fossils" .
+
+
+###  https://w3id.org/lcanet/ICdata#Resource_use_minerals_and_metals
+:Resource_use_minerals_and_metals rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/lcanet/ia#ImpactCategory> ;
+                                  rdfs:label "Resource use, minerals and metals" .
+
+
+###  https://w3id.org/lcanet/ICdata#Resources_from_Ground
+:Resources_from_Ground rdf:type owl:NamedIndividual ,
+                                <https://w3id.org/lcanet/activity#Biosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Scope_of_ICV_Storaige_Prototype
+:Scope_of_ICV_Storaige_Prototype rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/lcanet/core#Scope> ;
+                                 <https://w3id.org/lcanet/core#scopeHasAssumption> "no assumptions made" ;
+                                 <https://w3id.org/lcanet/core#scopeHasFunctionalUnit> "The production of 1 unit of prototype version of the ICV storaige (Temporary statement)" ;
+                                 <https://w3id.org/lcanet/core#scopeHasReferenceFlow> :IC-ICV_Storaige_Prototype ;
+                                 <https://w3id.org/lcanet/core#scopeHasSpatialScale> :CEA-internal ;
+                                 <https://w3id.org/lcanet/core#scopeHasSystemBoundary> "Cradle to Gate" ;
+                                 <https://w3id.org/lcanet/core#scopeHasTemporalScale> :LCA-ICV-Storaige-performed-at ,
+                                                                                      :LCA-ICV-Storiage-valid-between .
+
+
+###  https://w3id.org/lcanet/ICdata#Service
+:Service rdf:type owl:NamedIndividual ,
+                  <https://w3id.org/lcanet/activity#ActivityTag> .
+
+
+###  https://w3id.org/lcanet/ICdata#Soap
+:Soap rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/lcanet/ICdata#Soil_quality_index_dimensionless
+:Soil_quality_index_dimensionless rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/lcanet/ia#ImpactCategoryIndicator> ;
+                                  rdfs:label "Soil quality index (dimensionless)" ;
+                                  <https://w3id.org/lcanet/ia#assessIC> :Land_use_occupation_and_transformation ;
+                                  <https://w3id.org/lcanet/ia#quantifiedByCF> <https://w3id.org/lcanet/ICdata#7972ac525f924b94afca491923c5489a> .
+
+
+###  https://w3id.org/lcanet/ICdata#Thibault_Halter
+:Thibault_Halter rdf:type owl:NamedIndividual ,
+                          <https://w3id.org/lcanet/actor#Person> .
+
+
+###  https://w3id.org/lcanet/ICdata#Transportation
+:Transportation rdf:type owl:NamedIndividual ,
+                         <https://w3id.org/lcanet/activity#ActivityTag> .
+
+
+###  https://w3id.org/lcanet/ICdata#Transportation_stage
+:Transportation_stage rdf:type owl:NamedIndividual ,
+                               <https://w3id.org/lcanet/core#LifeCycleStage> .
+
+
+###  https://w3id.org/lcanet/ICdata#Tropospheric_ozone_concentration_increase
+:Tropospheric_ozone_concentration_increase rdf:type owl:NamedIndividual ,
+                                                    <https://w3id.org/lcanet/ia#ImpactCategoryIndicator> ;
+                                           rdfs:label "Tropospheric ozone concentration increase" ;
+                                           <https://w3id.org/lcanet/ia#assessIC> :Photochemical_ozone_formation_human_health ;
+                                           <https://w3id.org/lcanet/ia#quantifiedByCF> <https://w3id.org/lcanet/ICdata#71c84e64a5e5417eafb4d50cc7f26eec> ;
+                                           <https://w3id.org/lcanet/property#hasUnit> "kg NMVOC -eq" .
+
+
+###  https://w3id.org/lcanet/ICdata#Use_stage
+:Use_stage rdf:type owl:NamedIndividual ,
+                    <https://w3id.org/lcanet/core#LifeCycleStage> .
+
+
+###  https://w3id.org/lcanet/ICdata#User_deprivation_potential_deprivation_weighted_consumption
+:User_deprivation_potential_deprivation_weighted_consumption rdf:type owl:NamedIndividual ,
+                                                                      <https://w3id.org/lcanet/ia#ImpactCategoryIndicator> ;
+                                                             rdfs:label "User deprivation potential (deprivation-weighted consumption)" ;
+                                                             <https://w3id.org/lcanet/ia#assessIC> :Water_use ;
+                                                             <https://w3id.org/lcanet/ia#quantifiedByCF> <https://w3id.org/lcanet/ICdata#21914d7240fd422597f68af660756198> ;
+                                                             <https://w3id.org/lcanet/property#hasUnit> "m3 world-eq" .
+
+
+###  https://w3id.org/lcanet/ICdata#Volume
+:Volume rdf:type owl:NamedIndividual ,
+                 <https://w3id.org/lcanet/property#QuantitativeProperty> .
+
+
+###  https://w3id.org/lcanet/ICdata#WasteTreatmentSite
+:WasteTreatmentSite rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/lcanet/st#Site> .
+
+
+###  https://w3id.org/lcanet/ICdata#Waste_Treatment
+:Waste_Treatment rdf:type owl:NamedIndividual ,
+                          <https://w3id.org/lcanet/activity#ActivityTag> .
+
+
+###  https://w3id.org/lcanet/ICdata#Water_use
+:Water_use rdf:type owl:NamedIndividual ,
+                    <https://w3id.org/lcanet/ia#ImpactCategory> ;
+           rdfs:label "Water use" .
+
+
+###  https://w3id.org/lcanet/ICdata#a5795b7bdeb34ab0bf8401320356bd9f
+:a5795b7bdeb34ab0bf8401320356bd9f rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/lcanet/ICdata#ac65dd6094a14be2a259f19b78d3016f
+:ac65dd6094a14be2a259f19b78d3016f rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/lcanet/ICdata#dc3acd87af0a4fe4b4686ed51b13e934
+:dc3acd87af0a4fe4b4686ed51b13e934 rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/lcanet/ICdata#f941187970724fce99e30b2b40f1a144
+:f941187970724fce99e30b2b40f1a144 rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/lcanet/ICdata#fcc6b6dc5ce0460b9abf365124c24b60
+:fcc6b6dc5ce0460b9abf365124c24b60 rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/lcanet/ICdata#test1
+:test1 rdf:type owl:NamedIndividual ,
+                <https://w3id.org/lcanet/activity#Activity> ;
+       <https://w3id.org/lcanet/activity#hasInputFlow> :test2 .
+
+
+###  https://w3id.org/lcanet/ICdata#test2
+:test2 rdf:type owl:NamedIndividual ,
+                <https://w3id.org/lcanet/activity#Flow> .
+
+
+###  https://w3id.org/lcanet/ICdata#0daac3eb16074ecb93922f7338ae93bb
+<https://w3id.org/lcanet/ICdata#0daac3eb16074ecb93922f7338ae93bb> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/lcanet/ICdata#18a6684317da48ff8f8c8c8f36200972
+<https://w3id.org/lcanet/ICdata#18a6684317da48ff8f8c8c8f36200972> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/lcanet/ICdata#21914d7240fd422597f68af660756198
+<https://w3id.org/lcanet/ICdata#21914d7240fd422597f68af660756198> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/lcanet/ICdata#3a6dcc343adb4a9eafe7b8216fb820ff
+<https://w3id.org/lcanet/ICdata#3a6dcc343adb4a9eafe7b8216fb820ff> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/lcanet/ICdata#3cde2dec99d14565a0fbd440b2e9a1e5
+<https://w3id.org/lcanet/ICdata#3cde2dec99d14565a0fbd440b2e9a1e5> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/lcanet/ICdata#43640569fe3c4b1a99c900c9e6bc6980
+<https://w3id.org/lcanet/ICdata#43640569fe3c4b1a99c900c9e6bc6980> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/lcanet/ICdata#51a1767a998e43ef85328b952ce81466
+<https://w3id.org/lcanet/ICdata#51a1767a998e43ef85328b952ce81466> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/lcanet/ICdata#71c84e64a5e5417eafb4d50cc7f26eec
+<https://w3id.org/lcanet/ICdata#71c84e64a5e5417eafb4d50cc7f26eec> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/lcanet/ICdata#7972ac525f924b94afca491923c5489a
+<https://w3id.org/lcanet/ICdata#7972ac525f924b94afca491923c5489a> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/lcanet/ICdata#9e9c4443b42440c99f790a02bea4d677
+<https://w3id.org/lcanet/ICdata#9e9c4443b42440c99f790a02bea4d677> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/lcanet/ICdata#Emission_to_Stratosphere+Biosphere
+<https://w3id.org/lcanet/ICdata#Emission_to_Stratosphere+Biosphere> rdf:type owl:NamedIndividual ,
+                                                                             <https://w3id.org/lcanet/activity#Biosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#IC-Relay_solid_state_optocoupler_high_current_60V/1.0A/0.5ohm_China_CN
+<https://w3id.org/lcanet/ICdata#IC-Relay_solid_state_optocoupler_high_current_60V/1.0A/0.5ohm_China_CN> rdf:type owl:NamedIndividual ;
+                                                                                                        <https://w3id.org/lcanet/activity#isInputFlowOf> :IC-Production_of_Mother_Board ;
+                                                                                                        <https://w3id.org/lcanet/core#hasProperty> :IC-prop_DB_Codde ,
+                                                                                                                                                   :IC-prop_mass_260 ,
+                                                                                                                                                   :IC-prop_quantity_4 .
+
+
+###  https://w3id.org/lcanet/ICdata#Inputted_Auxiliaries/consumables
+<https://w3id.org/lcanet/ICdata#Inputted_Auxiliaries/consumables> rdf:type owl:NamedIndividual ,
+                                                                           <https://w3id.org/lcanet/activity#Technosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Inputted_Maintenance/Cleaning_auxiliaries
+<https://w3id.org/lcanet/ICdata#Inputted_Maintenance/Cleaning_auxiliaries> rdf:type owl:NamedIndividual ,
+                                                                                    <https://w3id.org/lcanet/activity#Technosphere> .
+
+
+###  https://w3id.org/lcanet/ICdata#Outputted_Waste_for_recycling/treatment
+<https://w3id.org/lcanet/ICdata#Outputted_Waste_for_recycling/treatment> rdf:type owl:NamedIndividual ,
+                                                                                  <https://w3id.org/lcanet/activity#Technosphere> .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
