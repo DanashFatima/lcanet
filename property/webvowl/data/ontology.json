@@ -1,0 +1,256 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org/lcanet/property", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "en" : "The Property module of the Life Cycle Assessment Network Ontology (LCAnet)."
+    },
+    "iri" : "https://w3id.org/lcanet/property",
+    "version" : "2.1.0",
+    "author" : [ "https://orcid.org/0000-0002-0438-6831" ],
+    "description" : {
+      "undefined" : "The Property module is part of the LCAnet ontology proposed by the SmartACV Carnot Project.\n            It provides a formal representation of qualitative and quantitaive properties to \n            LCA processes and flows, enabling the description of LCA data for products or services."
+    },
+    "labels" : {
+      "undefined" : "LCAnet-Property"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0002-0438-6831",
+        "type" : "iri"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "prop",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "https://www.cea.fr",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "2.1.0",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/lcanet/property#",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "The Property module of the Life Cycle Assessment Network Ontology (LCAnet).",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-04-30",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/lcanet/property#DataQualityProperty",
+    "baseIri" : "https://w3id.org/lcanet/property",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataQualityProperty",
+      "undefined" : "Data Quality Property"
+    },
+    "comment" : {
+      "undefined" : "A property that represents the quality, reliability, or validity of data associated with an entity or measurement."
+    },
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/lcanet/property#Property",
+    "baseIri" : "https://w3id.org/lcanet/property",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Property",
+      "undefined" : "Property"
+    },
+    "subClasses" : [ "1", "4" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/lcanet/property#BalanceableProperty",
+    "baseIri" : "https://w3id.org/lcanet/property",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BalanceableProperty",
+      "undefined" : "Balanceable Property"
+    },
+    "comment" : {
+      "undefined" : "A property representing a flow of materials, energy, or emissions that is tracked and balanced in life cycle assessment studies."
+    },
+    "id" : "11",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/property#QuantitativeProperty",
+    "baseIri" : "https://w3id.org/lcanet/property",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QuantitativeProperty",
+      "undefined" : "Quantitative Property"
+    },
+    "subClasses" : [ "3", "11" ],
+    "comment" : {
+      "undefined" : "A property that represents a measurable numeric quantity associated with an entity."
+    },
+    "id" : "4",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/property#QualitativeProperty",
+    "baseIri" : "https://w3id.org/lcanet/property",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QualitativeProperty",
+      "undefined" : "Qualitative Property"
+    },
+    "comment" : {
+      "undefined" : "A property that represents a descriptive or categorical characteristic of an entity."
+    },
+    "id" : "1",
+    "superClasses" : [ "6" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "12",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/lcanet/property#hasQualityValue",
+    "baseIri" : "https://w3id.org/lcanet/property",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasQualityValue",
+      "undefined" : "has Quality Value"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "0"
+  }, {
+    "range" : "6",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "7"
+  }, {
+    "range" : "6",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "8"
+  }, {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "9"
+  }, {
+    "range" : "4",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "10"
+  }, {
+    "iri" : "https://w3id.org/lcanet/property#hasQuantityValue",
+    "baseIri" : "https://w3id.org/lcanet/property",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "hasQuantityValue",
+      "undefined" : "has Quantity Value"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/lcanet/property#hasUnit",
+    "baseIri" : "https://w3id.org/lcanet/property",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "hasUnit",
+      "undefined" : "has Unit"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "13"
+  } ]
+}

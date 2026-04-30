@@ -1,0 +1,124 @@
+<https://w3id.org/lcanet/property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/lcanet/property> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/lcanet/property/2.1.0> .
+<https://w3id.org/lcanet/property> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-0438-6831> .
+<https://w3id.org/lcanet/property> <http://purl.org/dc/terms/description> "The Property module is part of the LCAnet ontology proposed by the SmartACV Carnot Project.\n            It provides a formal representation of qualitative and quantitaive properties to \n            LCA processes and flows, enabling the description of LCA data for products or services." .
+<https://w3id.org/lcanet/property> <http://purl.org/dc/terms/issued> "2026-04-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/lcanet/property> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/lcanet/property> <http://purl.org/dc/terms/publisher> <https://www.cea.fr> .
+<https://w3id.org/lcanet/property> <http://purl.org/dc/terms/title> "The Property module of the Life Cycle Assessment Network Ontology (LCAnet)."@en .
+<https://w3id.org/lcanet/property> <http://purl.org/vocab/vann/preferredNamespacePrefix> "prop" .
+<https://w3id.org/lcanet/property> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/lcanet/property#" .
+<https://w3id.org/lcanet/property> <http://www.w3.org/2000/01/rdf-schema#label> "LCAnet-Property" .
+<https://w3id.org/lcanet/property> <http://www.w3.org/2002/07/owl#versionInfo> "2.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/date
+<http://purl.org/dc/terms/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/lcanet/property#hasQualityValue
+<https://w3id.org/lcanet/property#hasQualityValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/lcanet/property#hasQualityValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/property#QualitativeProperty> .
+<https://w3id.org/lcanet/property#hasQualityValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/lcanet/property#hasQualityValue> <http://www.w3.org/2000/01/rdf-schema#label> "has Quality Value" .
+# 
+# https://w3id.org/lcanet/property#hasQuantityValue
+<https://w3id.org/lcanet/property#hasQuantityValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/lcanet/property#hasQuantityValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/property#QuantitativeProperty> .
+<https://w3id.org/lcanet/property#hasQuantityValue> <http://www.w3.org/2000/01/rdf-schema#label> "has Quantity Value" .
+# 
+# https://w3id.org/lcanet/property#hasUnit
+<https://w3id.org/lcanet/property#hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/lcanet/property#hasUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/property#QuantitativeProperty> .
+<https://w3id.org/lcanet/property#hasUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/lcanet/property#hasUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has Unit" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/lcanet/property#BalanceableProperty
+<https://w3id.org/lcanet/property#BalanceableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/property#BalanceableProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/property#QuantitativeProperty> .
+<https://w3id.org/lcanet/property#BalanceableProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A property representing a flow of materials, energy, or emissions that is tracked and balanced in life cycle assessment studies." .
+<https://w3id.org/lcanet/property#BalanceableProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Balanceable Property" .
+# 
+# https://w3id.org/lcanet/property#DataQualityProperty
+<https://w3id.org/lcanet/property#DataQualityProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/property#DataQualityProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/property#QuantitativeProperty> .
+<https://w3id.org/lcanet/property#DataQualityProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A property that represents the quality, reliability, or validity of data associated with an entity or measurement." .
+<https://w3id.org/lcanet/property#DataQualityProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Data Quality Property" .
+# 
+# https://w3id.org/lcanet/property#Property
+<https://w3id.org/lcanet/property#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/property#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property" .
+# 
+# https://w3id.org/lcanet/property#QualitativeProperty
+<https://w3id.org/lcanet/property#QualitativeProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/property#QualitativeProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/property#Property> .
+<https://w3id.org/lcanet/property#QualitativeProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A property that represents a descriptive or categorical characteristic of an entity." .
+<https://w3id.org/lcanet/property#QualitativeProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Qualitative Property" .
+# 
+# https://w3id.org/lcanet/property#QuantitativeProperty
+<https://w3id.org/lcanet/property#QuantitativeProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/property#QuantitativeProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/property#Property> .
+<https://w3id.org/lcanet/property#QuantitativeProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A property that represents a measurable numeric quantity associated with an entity." .
+<https://w3id.org/lcanet/property#QuantitativeProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Quantitative Property" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
