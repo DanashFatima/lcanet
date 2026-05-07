@@ -124,14 +124,6 @@ WHERE {
         act:isOutputFlowOf ?activity .
   ?activity rdfs:label "Production of Mother Board" .
   OPTIONAL { ?flow rdfs:label ?flowLabel . }
-  {
-    ?flow act:hasEnvironmentalType ?x .
-    ?x a act:Biosphere .
-  }
-  UNION
-  {
-    ?flow a act:ElementaryFlow .
-  }
 }
 ```
 
