@@ -1,0 +1,5 @@
+ LCAnet Competency Questions
+
+This document presents the competency questions (CQs) used to validate the modular LCAnet ontology, together with their corresponding SPARQL queries.
+
+The queries were executed in GraphDB using the populated ICdata use case.
