@@ -65,8 +65,16 @@ WHERE {
   ?activity a act:Activity ;
             rdfs:label "Production of Mother Board" ;
             act:hasInputProduct ?inputFlow .
-  ?inputFlow act:connected ?outputFlow .
-  ?outputFlow act:isOutputProductOf ?downstreamActivity .
+  {
+        {?inputFlow act:connected ?outputFlow}
+        UNION 
+        {?outputFlow act:connected ?inputFlow}
+  }
+	{
+        {?outputFlow act:isOutputProductOf ?downstreamActivity }
+        UNION 
+        {?downstreamActivity act:hasOutputProduct ?outputFlow}
+  }
 }
 ```
 
@@ -78,8 +86,16 @@ WHERE {
   ?activity a act:Activity ;
             rdfs:label "Production of Mother Board" ;
             act:hasInputProduct ?inputFlow .
-  ?inputFlow act:connected ?outputFlow .
-  ?outputFlow act:isOutputProductOf ?intermediateActivity .
+  {
+        {?inputFlow act:connected ?outputFlow}
+        UNION 
+        {?outputFlow act:connected ?inputFlow}
+  }
+	{
+        {?outputFlow act:isOutputProductOf ?intermediateActivity }
+        UNION 
+        {?intermediateActivity act:hasOutputProduct ?outputFlow}
+  }
   ?intermediateActivity
     ( act:hasInputProduct /
       act:connected       /
