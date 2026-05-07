@@ -125,7 +125,7 @@ WHERE {
   ?activity rdfs:label "Production of Mother Board" .
   OPTIONAL { ?flow rdfs:label ?flowLabel . }
   {
-    ?flow act:hasEnvironmentType ?x .
+    ?flow act:hasEnvironmentalType ?x .
     ?x a act:Biosphere .
   }
   UNION
@@ -146,12 +146,11 @@ WHERE {
 ```sparql
 SELECT DISTINCT ?flow ?flowName ?flowType ?source
 WHERE {
-  ?flow a act:Flow .
   OPTIONAL { ?flow rdfs:label ?flowName . }
 
   OPTIONAL {
     ?flow a act:IntermediateFlow ;
-          act:hasEnvironmentType ?intEnv .
+          act:hasEnvironmentalType ?intEnv .
     BIND("Intermediate" AS ?flowType)
     BIND(?intEnv AS ?source)
   }
@@ -161,12 +160,12 @@ WHERE {
   }
   OPTIONAL {
     ?flow a act:EmissionFlow ;
-          act:hasEnvironmentType ?emEnv .
+          act:hasEnvironmentalType ?emEnv .
     BIND(CONCAT("Emission to ", STR(?emEnv)) AS ?source)
   }
   OPTIONAL {
     ?flow a act:ResourceFlow ;
-          act:hasEnvironmentType ?resEnv .
+          act:hasEnvironmentalType ?resEnv .
     BIND(CONCAT("Resource from ", STR(?resEnv)) AS ?source)
   }
 }
