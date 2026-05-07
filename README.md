@@ -4,11 +4,11 @@ LCAnet is a modular ontology for representing Life Cycle Assessment (LCA) knowle
 
 ## Repository Structure
 
-- `core/` — core ontology concepts and upper-level relations
+- `core/` — core ontology concepts and cross-module relations
 - `activity/` — activities, processes, and flow relations
-- `actor/` — stakeholders and organizational entities
+- `actor/` — agents and organizational entities
 - `st/` — spatiotemporal concepts and scales
-- `property/` — properties and quality values
+- `property/` — properties for quantity and quality values
 - `ia/` — impact assessment concepts and results
 - `ICdata/` — populated use case and example data
 - `LCAnet-architecture.svg` — ontology architecture diagram
