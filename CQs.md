@@ -102,8 +102,7 @@ WHERE {
 ```sparql
 SELECT ?flow ?flowLabel
 WHERE {
-  ?flow a act:Flow ;
-        prop:hasProperty ?x .
+  ?flow core:hasProperty ?x .
   ?x    rdfs:label           "Database_Source" ;
         prop:hasQualityValue "CODDE (v3.00.000)" .
   OPTIONAL { ?flow rdfs:label ?flowLabel . }
