@@ -40,28 +40,28 @@
         "value" : "https://www.cea.fr",
         "type" : "iri"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://w3id.org/lcanet/st#",
-        "type" : "label"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "2.1.0",
         "type" : "label"
       } ],
-      "issued" : [ {
-        "identifier" : "issued",
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
-        "value" : "2026-04-30",
+        "value" : "https://w3id.org/lcanet/st#",
         "type" : "label"
       } ],
       "title" : [ {
         "identifier" : "title",
         "language" : "en",
         "value" : "The Spatiotemporal module of the Life Cycle Assessment Network Ontology (LCAnet).",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-04-30",
         "type" : "label"
       } ]
     }
@@ -92,13 +92,13 @@
     "id" : "12",
     "type" : "owl:Thing"
   }, {
-    "id" : "7",
-    "type" : "owl:Class"
-  }, {
     "id" : "16",
     "type" : "owl:Class"
   }, {
-    "id" : "18",
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
     "type" : "owl:Class"
   }, {
     "id" : "5",
@@ -113,7 +113,7 @@
     "id" : "1",
     "type" : "owl:Thing"
   }, {
-    "id" : "20",
+    "id" : "19",
     "type" : "owl:Class"
   }, {
     "id" : "25",
@@ -128,7 +128,7 @@
     "id" : "30",
     "type" : "owl:Class"
   }, {
-    "id" : "19",
+    "id" : "18",
     "type" : "owl:Class"
   }, {
     "id" : "36",
@@ -137,10 +137,10 @@
     "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "17",
+    "id" : "20",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "34",
+    "id" : "33",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -212,6 +212,19 @@
       "undefined" : "Thing"
     }
   }, {
+    "iri" : "https://w3id.org/lcanet/st#SpatialScale",
+    "baseIri" : "https://w3id.org/lcanet/st",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SpatialScale",
+      "undefined" : "Spatial Scale"
+    },
+    "subClasses" : [ "15", "17", "18", "19" ],
+    "comment" : {
+      "undefined" : "\n            A classification of the level of spatial granularity applied in an LCA study,\n            such as global, continental, national, regional, or local scale.\n            Used for specifying the spatial resolution of data or impacts.\n        "
+    },
+    "id" : "16"
+  }, {
     "iri" : "https://w3id.org/lcanet/st#AdministrativeRegion",
     "baseIri" : "https://w3id.org/lcanet/st",
     "instances" : 0,
@@ -223,20 +236,7 @@
       "undefined" : "A political or administrative territorial unit, such as a country, state, province, or city.\n        Aligns with schema:AdministrativeArea and gn:Feature."
     },
     "id" : "7",
-    "superClasses" : [ "6", "17" ]
-  }, {
-    "iri" : "https://w3id.org/lcanet/st#SpatialScale",
-    "baseIri" : "https://w3id.org/lcanet/st",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "SpatialScale",
-      "undefined" : "Spatial Scale"
-    },
-    "subClasses" : [ "15", "18", "19", "20" ],
-    "comment" : {
-      "undefined" : "\n            A classification of the level of spatial granularity applied in an LCA study,\n            such as global, continental, national, regional, or local scale.\n            Used for specifying the spatial resolution of data or impacts.\n        "
-    },
-    "id" : "16"
+    "superClasses" : [ "6", "20" ]
   }, {
     "iri" : "https://w3id.org/lcanet/st#NationalScale",
     "baseIri" : "https://w3id.org/lcanet/st",
@@ -245,7 +245,7 @@
       "IRI-based" : "NationalScale",
       "undefined" : "National Scale"
     },
-    "id" : "18",
+    "id" : "17",
     "superClasses" : [ "16" ]
   }, {
     "iri" : "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
@@ -254,7 +254,7 @@
     "label" : {
       "IRI-based" : "Point"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "5"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
@@ -275,7 +275,7 @@
       "undefined" : "\n            A specific location associated with an activity, facility, installation, or process.\n            Examples: LCA process site, production site, waste treatment site.\n        "
     },
     "id" : "23",
-    "superClasses" : [ "17" ]
+    "superClasses" : [ "20" ]
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
@@ -291,7 +291,7 @@
       "IRI-based" : "LocalScale",
       "undefined" : "Local Scale"
     },
-    "id" : "20",
+    "id" : "19",
     "superClasses" : [ "16" ]
   }, {
     "iri" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
@@ -300,7 +300,7 @@
     "label" : {
       "IRI-based" : "SpatialThing"
     },
-    "subClasses" : [ "17" ],
+    "subClasses" : [ "20" ],
     "attributes" : [ "external" ],
     "id" : "25"
   }, {
@@ -320,7 +320,7 @@
     "label" : {
       "IRI-based" : "Feature"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "26"
   }, {
     "iri" : "http://www.w3.org/2006/time#DurationDescription",
@@ -339,7 +339,7 @@
       "IRI-based" : "RegionalScale",
       "undefined" : "Regional Scale"
     },
-    "id" : "19",
+    "id" : "18",
     "superClasses" : [ "16" ]
   }, {
     "iri" : "https://schema.org/Place",
@@ -348,7 +348,7 @@
     "label" : {
       "IRI-based" : "Place"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "36"
   }, {
     "iri" : "http://www.w3.org/2006/time#Instant",
@@ -373,7 +373,7 @@
       "undefined" : "A general spatial entity representing any identifiable place or geographic feature.\n            Equivalent to schema:Place and gn:Feature.\n        "
     },
     "attributes" : [ "equivalent" ],
-    "id" : "17",
+    "id" : "20",
     "superClasses" : [ "25" ]
   }, {
     "iri" : "http://www.w3.org/2006/time#TemporalEntity",
@@ -383,7 +383,7 @@
       "IRI-based" : "TemporalEntity"
     },
     "attributes" : [ "external" ],
-    "id" : "34"
+    "id" : "33"
   } ],
   "property" : [ {
     "id" : "0",
@@ -416,7 +416,7 @@
     "id" : "32",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "33",
+    "id" : "34",
     "type" : "owl:objectProperty"
   }, {
     "id" : "35",
@@ -460,22 +460,22 @@
   }, {
     "range" : "6",
     "domain" : "7",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "13"
   }, {
     "range" : "16",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "14"
   }, {
     "range" : "16",
-    "domain" : "18",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "21"
   }, {
     "iri" : "https://w3id.org/lcanet/st#hasLocation",
     "baseIri" : "https://w3id.org/lcanet/st",
-    "range" : "17",
+    "range" : "20",
     "label" : {
       "IRI-based" : "hasLocation",
       "undefined" : "has location"
@@ -494,7 +494,7 @@
       "IRI-based" : "locatedIn",
       "undefined" : "located in"
     },
-    "domain" : "17",
+    "domain" : "20",
     "comment" : {
       "undefined" : "\n            Indicates that a location is contained within an administrative region (not a Site),\n            such as a city located in a province or country.\n        "
     },
@@ -508,7 +508,7 @@
       "IRI-based" : "hasCoordinates",
       "undefined" : "has coordinates"
     },
-    "domain" : "17",
+    "domain" : "20",
     "comment" : {
       "undefined" : "\n            Associates a location with a geographic point defined by WGS84 latitude and longitude.\n        "
     },
@@ -539,6 +539,21 @@
     "attributes" : [ "external", "object" ],
     "id" : "31"
   }, {
+    "iri" : "https://w3id.org/lcanet/st#hasDuration",
+    "equivalent" : [ "31" ],
+    "baseIri" : "https://w3id.org/lcanet/st",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "hasDuration",
+      "undefined" : "has duration"
+    },
+    "domain" : "33",
+    "comment" : {
+      "undefined" : "\n            Specifies the duration of a temporal entity such as a process or interval.\n            Directly corresponds to time:hasDuration.\n        "
+    },
+    "attributes" : [ "object" ],
+    "id" : "32"
+  }, {
     "iri" : "https://w3id.org/lcanet/st#hasTemporalResolution",
     "baseIri" : "https://w3id.org/lcanet/st",
     "range" : "30",
@@ -551,22 +566,7 @@
       "undefined" : "\n            Indicates the temporal granularity or resolution at which data or observations\n            are aggregated or reported (e.g., hourly, monthly, yearly).\n        "
     },
     "attributes" : [ "object" ],
-    "id" : "32"
-  }, {
-    "iri" : "https://w3id.org/lcanet/st#hasDuration",
-    "equivalent" : [ "31" ],
-    "baseIri" : "https://w3id.org/lcanet/st",
-    "range" : "30",
-    "label" : {
-      "IRI-based" : "hasDuration",
-      "undefined" : "has duration"
-    },
-    "domain" : "34",
-    "comment" : {
-      "undefined" : "\n            Specifies the duration of a temporal entity such as a process or interval.\n            Directly corresponds to time:hasDuration.\n        "
-    },
-    "attributes" : [ "object" ],
-    "id" : "33"
+    "id" : "34"
   }, {
     "iri" : "https://w3id.org/lcanet/st#validDuring",
     "baseIri" : "https://w3id.org/lcanet/st",
@@ -596,14 +596,14 @@
     "attributes" : [ "object" ],
     "id" : "37"
   }, {
-    "range" : "17",
+    "range" : "20",
     "domain" : "7",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "38"
   }, {
-    "range" : "17",
+    "range" : "20",
     "domain" : "23",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "39"
   }, {
     "iri" : "https://w3id.org/lcanet/st#hasTemporalExtent",
@@ -621,18 +621,18 @@
     "id" : "40"
   }, {
     "range" : "16",
-    "domain" : "19",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "41"
   }, {
     "range" : "25",
-    "domain" : "17",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "42"
   }, {
     "range" : "16",
-    "domain" : "20",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "43"
   } ]
 }
