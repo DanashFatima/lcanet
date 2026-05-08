@@ -14,7 +14,7 @@ PREFIX prop:  <https://w3id.org/lcanet/property#>
 PREFIX st:    <https://w3id.org/lcanet/st#>
 PREFIX ia:    <https://w3id.org/lcanet/ia#>
 PREFIX ic:    <https://w3id.org/lcanet/ICdata#>
-PREFIX qudt:  <http://qudt.org/schema/qudt/>
+PREFIX qudt:  <http://qudt.org/schema/qudt#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
 ```
@@ -204,7 +204,7 @@ SELECT ?lcaModel
        (SAMPLE(?spatialScale)                            AS ?spatialScale)
 WHERE {
   ?lcaModel a core:LcaModel ;
-            core:lcaModelConcernsLcStage ?lcStage ;
+            core:lcaModelConcernsLCStage ?lcStage ;
             core:lcaModelHasScope        ?scope .
   ?scope core:scopeHasFunctionalUnit  ?functionalUnit ;
          core:scopeHasReferenceFlow   ?referenceFlow .
@@ -234,26 +234,24 @@ GROUP BY ?lcaModel
 **For flows:**
 
 ```sparql
-SELECT ?impactResultValue ?flow ?impactCategory
+SELECT ?impactResult ?impactResultValue ?flow ?impactCategory
 WHERE {
-  ?impactResult a ia:ImpactResult ;
-                qudt:numericValue                 ?impactResultValue ;
-                core:impactResultConcernsFlow     ?flow ;
-                ia:correspondsToIc                ?impactCategory .
+  ?impactResult a ia:LcaResult ;
+                core:impactResultConcernsFlow ?flow ;
+                ia:hasIC                          ?impactCategory ;
+                qudt:numericValue                 ?impactResultValue .
 }
 ```
 
 **For activities:**
 
 ```sparql
-SELECT ?impactResultValue ?activity ?impactCategory
+SELECT ?impactResult ?impactResultValue ?act ?impactCategory
 WHERE {
-  ?impactResult a ia:ImpactResult ;
-                qudt:numericValue                  ?impactResultValue ;
-                core:impactResultConcernsActivity  ?activity .
-  OPTIONAL {
-    ?impactResult ia:correspondsToIc ?impactCategory .
-  }
+  ?impactResult a ia:LcaResult ;
+                core:impactResultConcernsActivity ?act ;
+                ia:hasIC                          ?impactCategory ;
+                qudt:numericValue                 ?impactResultValue .
 }
 ```
 
