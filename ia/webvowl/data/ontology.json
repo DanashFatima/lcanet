@@ -77,7 +77,7 @@
     "id" : "3",
     "type" : "owl:Class"
   }, {
-    "id" : "7",
+    "id" : "9",
     "type" : "owl:Class"
   }, {
     "id" : "12",
@@ -131,7 +131,7 @@
     "id" : "14",
     "type" : "owl:Class"
   }, {
-    "id" : "9",
+    "id" : "8",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -183,7 +183,7 @@
     "comment" : {
       "undefined" : "refers to the total amount of raw materials extracted to meet final consumption demands. (ESPR Art 2 (26))."
     },
-    "id" : "7",
+    "id" : "9",
     "superClasses" : [ "1" ]
   }, {
     "iri" : "https://w3id.org/lcanet/ia#AirPollutionFootprint",
@@ -284,12 +284,12 @@
     "superClasses" : [ "1" ]
   }, {
     "instances" : 0,
-    "union" : [ "9", "1" ],
+    "union" : [ "8", "1" ],
     "attributes" : [ "anonymous", "union" ],
     "id" : "5"
   }, {
     "instances" : 0,
-    "union" : [ "9", "1" ],
+    "union" : [ "8", "1" ],
     "attributes" : [ "anonymous", "union" ],
     "id" : "38"
   }, {
@@ -337,7 +337,7 @@
       "IRI-based" : "LcaResult",
       "undefined" : "LCA Result"
     },
-    "subClasses" : [ "31", "23", "34", "0", "7", "17", "3", "20", "12" ],
+    "subClasses" : [ "31", "23", "34", "0", "9", "17", "3", "20", "12" ],
     "comment" : {
       "undefined" : "A LCA result corresponds to the computed value of each flow (or sometimes activity as a group of its input and output flows) concerning an impact category (IC). \nThus, it is an entity that makes links to: a flow/activity (e.g. flat chip resistor), an exact value (e.g. 1,16E-03), and an impact category (e.g. climate change), indicating the participation of this flow/activity in the studied impact category issue."
     },
@@ -378,13 +378,13 @@
     "comment" : {
       "undefined" : "It corresponds to the sum of all LCA result values of all flows/activities in the studied LCA of a product X, regarding an impact category Y."
     },
-    "id" : "9"
+    "id" : "8"
   } ],
   "property" : [ {
     "id" : "4",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "8",
+    "id" : "7",
     "type" : "owl:objectProperty"
   }, {
     "id" : "10",
@@ -478,9 +478,9 @@
       "IRI-based" : "containsLcaResult",
       "undefined" : "contains Lca Result"
     },
-    "domain" : "9",
+    "domain" : "8",
     "attributes" : [ "object" ],
-    "id" : "8"
+    "id" : "7"
   }, {
     "iri" : "https://w3id.org/lcanet/ia#quantifiesICI",
     "baseIri" : "https://w3id.org/lcanet/ia",
@@ -506,22 +506,22 @@
   }, {
     "range" : "1",
     "domain" : "12",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "15"
   }, {
     "range" : "1",
     "domain" : "17",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "16"
   }, {
     "range" : "1",
     "domain" : "20",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "19"
   }, {
     "range" : "1",
     "domain" : "3",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "21"
   }, {
     "iri" : "https://w3id.org/lcanet/ia#quantifiedByCF",
@@ -550,33 +550,33 @@
   }, {
     "range" : "1",
     "domain" : "31",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "30"
   }, {
     "range" : "1",
     "domain" : "23",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "32"
   }, {
     "range" : "1",
     "domain" : "34",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "33"
   }, {
     "range" : "1",
     "domain" : "0",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "35"
   }, {
     "range" : "1",
-    "domain" : "7",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "36"
   }, {
     "iri" : "https://w3id.org/lcanet/ia#containedInOIR",
-    "inverse" : "8",
+    "inverse" : "7",
     "baseIri" : "https://w3id.org/lcanet/ia",
-    "range" : "9",
+    "range" : "8",
     "label" : {
       "IRI-based" : "containedInOIR",
       "undefined" : "contained In OIR"
@@ -677,17 +677,6 @@
     "attributes" : [ "object" ],
     "id" : "45"
   }, {
-    "iri" : "https://w3id.org/lcanet/ia#hasDefaultUnit",
-    "baseIri" : "https://w3id.org/lcanet/ia",
-    "range" : "24",
-    "label" : {
-      "IRI-based" : "hasDefaultUnit",
-      "undefined" : "has Default Unit"
-    },
-    "domain" : "2",
-    "attributes" : [ "datatype" ],
-    "id" : "46"
-  }, {
     "iri" : "http://qudt.org/schema/qudt#numericValue",
     "baseIri" : "http://qudt.org/schema/qudt",
     "range" : "26",
@@ -704,7 +693,18 @@
       "undefined" : "numeric value"
     },
     "domain" : "38",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#hasDefaultUnit",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "hasDefaultUnit",
+      "undefined" : "has Default Unit"
+    },
+    "domain" : "2",
+    "attributes" : [ "datatype" ],
     "id" : "47"
   } ]
 }
