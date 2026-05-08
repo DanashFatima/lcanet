@@ -269,11 +269,11 @@ WHERE {
   ?impactCategory a ia:ImpactCategory ;
                   rdfs:label "Climate change, total" .
   ?overallIR a ia:OverallImpactResult ;
-               ia:correspondsToIc  ?impactCategory ;
+               ia:hasIC  ?impactCategory ;
                qudt:numericValue   ?overallImpactValue .
-  ?impactResult a ia:ImpactResult ;
+  ?impactResult a ia:LcaResult ;
                   core:impactResultConcernsActivity  ?activity ;
-                  ia:correspondsToIc                 ?impactCategory ;
+                  ia:hasIC                 ?impactCategory ;
                   qudt:numericValue                  ?impactResultValue ;
                   ia:containedInOIR                  ?overallIR .
   BIND(
@@ -300,9 +300,9 @@ SELECT ?flow ?activity ?flowImpactResult ?flowImpactValue ?percentage
 WHERE {
   ?impactCategory a ia:ImpactCategory ;
                   rdfs:label "Climate change, total" .
-  ?activityImpactResult a ia:ImpactResult ;
+  ?activityImpactResult a ia:LcaResult ;
                           core:impactResultConcernsActivity ?activity ;
-                          ia:correspondsToIc                ?impactCategory ;
+                          ia:hasIC                ?impactCategory ;
                           qudt:numericValue                 ?activityImpactValue .
   ?activity rdfs:label "Production of Daughter Board" .
   ?flow act:isInputFlowOf ?activity .
@@ -327,21 +327,25 @@ ORDER BY DESC(?percentage)
 
 ---
 
-### CQ10 — Flows associated with a given methodology
+### CQ10 — Flows associated with a properties
 
-**Question:** Which flows are associated with a given assessment methodology?
+**Question:** What is the total amount of flow X generated within the system boundary?
 
-**Description:** Retrieves all flows linked to a specified impact assessment methodology, enabling data quality checks and traceability of inventory data to their methodological context. Covers the Impact Assessment and Activity modules.
+**Description:** Retrieves the total quantitative amount of a specified flow produced or consumed within the system boundary of the LCA study. Covers the Property and Activity modules.
 
 ```sparql
-SELECT ?flow ?flowLabel ?methodology
+SELECT ?flow ?relatedTo ?activity ?SurfaceProperty
 WHERE {
-  ?methodology a ia:Methodology ;
-               rdfs:label "EF 3.0" .
-  ?impactResult a ia:ImpactResult ;
-                  ia:usesMethodology               ?methodology ;
-                  core:impactResultConcernsFlow    ?flow .
-  OPTIONAL { ?flow rdfs:label ?flowLabel . }
+  VALUES ?flow { 
+      <https://w3id.org/lcanet/ICdata#IC-Chinese_Circuit_i> 
+  }
+  ?activity a act:Activity ;
+    act:hasInputFlow ?flow .
+    BIND("input of" AS ?relatedTo)
+  ?flow a act:Flow;
+    	core:hasProperty ?x.
+  ?x 	prop:hasQuantityValue ?SurfaceProperty .
+
 }
 ```
 
@@ -356,11 +360,11 @@ WHERE {
 | CQ3 | Flow | Which flow datasets come from database X? | act, prop |
 | CQ4 | Flow | What are the elementary and intermediate flows associated with an activity? | act |
 | CQ5 | Flow | Which flows are classified as resources, emissions, or products? | act |
-| CQ6 | System model | What is the functional unit, scope, system boundary, and spatiotemporal scales of the LCA model? | core |
+| CQ6 | System model | What is the functional unit, scope, system boundary, and spatiotemporal scales of the LCA model? | st, core |
 | CQ7 | Impact Assessment | What is the impact result of a given activity or flow across impact categories? | ia, core |
 | CQ8 | Impact Assessment | Which activities contribute more than 2% to a given impact category? | ia, core, act |
 | CQ9 | Impact Assessment | What are the top contributing flows to an impact category for a given activity? | ia, act, core |
-| CQ10 | Data quality | Which flows are associated with a given assessment methodology? | ia, act |
+| CQ10 | Data quality | Which flows are associated with a given assessment methodology? | prop, act |
 
 ---
 
