@@ -1,0 +1,3937 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/ICdata-inferred#"
+     xml:base="https://w3id.org/ICdata-inferred"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/ICdata-inferred">
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-4553-3930"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0003-3896-7295"/>
+        <terms:contributor rdf:resource="https://orcid.org/0009-0002-7928-9902"/>
+        <terms:contributor>Emmanuelle Core</terms:contributor>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-0438-6831"/>
+        <terms:description>The Activity module is part of the LCAnet ontology proposed by the SmartACV Carnot Project.
+            It provides a formal representation of activities and their associated flows, enabling 
+            the modeling of activity/flow diagrams within the LCA realization of a product or service.</terms:description>
+        <terms:description>The Actor module is part of the LCAnet ontology proposed by the SmartACV Carnot Project. 
+            It provides a formal representation of actors (e.g., persons, organizations, and groups) 
+            involved in LCA processes, as well as their roles and responsibilities. 
+            It resuses some elements from the FOAF (Friend Of A Freind) ontology.</terms:description>
+        <terms:description>The Core module is the central module of the LCAnet ontology proposed by the SmartACV Carnot Project.
+            It defines the basic elements of a LCA study based on ISO 14040 and ISO 14044 such as the goal, scope, etc. 
+            It also imports and links the other LCAnet ontology modules (Activity, Actor, Property, Spatiotemporal, and Impact Assessment)
+            providing an integration layer between the modules.
+            Thus, it serves as a semantic backbone for consistent modeling and reasoning over LCA knowledge.</terms:description>
+        <terms:description>The Impact Assessment module is part of the LCAnet ontology proposed by the SmartACV Carnot Project.
+            It provides a formal representation of impact assessment concepts, methods, and characterization factors,
+            enabling the evaluation and quantification of environmental impacts within the LCA process of a product or service.</terms:description>
+        <terms:description>The Integrated Circuits (IC) knowledge graph representing the dataset from the IC use case, 
+        used to demonstarte the convenince and applicability of the LCAnet ontology.</terms:description>
+        <terms:description>The Property module is part of the LCAnet ontology proposed by the SmartACV Carnot Project.
+            It provides a formal representation of qualitative and quantitaive properties to 
+            LCA processes and flows, enabling the description of LCA data for products or services.</terms:description>
+        <terms:description>The Spatiotemporal module is part of the LCAnet ontology proposed by the SmartACV Carnot Project.
+            It provides a formal representation of spatial and temporal aspects relevant to the LCA process,
+            enabling the modeling and integration of location- and time-specific data for products or services.
+            For the temporal aspect, it reuses classes and properties by importing the Time ontology: Time instant,
+            Time interval, and DurationDescription. For the spatial aspect, it aligns with some pre-defined classes 
+            from other ontologies such as the Feature class from the geonames vocabulary.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-30</terms:issued>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:publisher rdf:resource="https://www.cea.fr"/>
+        <terms:title xml:lang="en">The Activity module of the Life Cycle Assessment Network Ontology (LCAnet).</terms:title>
+        <terms:title xml:lang="en">The Actor module of the Life Cycle Assessment Network Ontology (LCAnet).</terms:title>
+        <terms:title xml:lang="en">The Core module of the Life Cycle Assessment Network Ontology (LCAnet).</terms:title>
+        <terms:title xml:lang="en">The Impact Assessment module of the Life Cycle Assessment Network Ontology (LCAnet).</terms:title>
+        <terms:title xml:lang="en">The Integrated Circuits (IC) knowledge graph of the Life Cycle Assessment Network Ontology (LCAnet).</terms:title>
+        <terms:title xml:lang="en">The Property module of the Life Cycle Assessment Network Ontology (LCAnet).</terms:title>
+        <terms:title xml:lang="en">The Spatiotemporal module of the Life Cycle Assessment Network Ontology (LCAnet).</terms:title>
+        <vann:preferredNamespacePrefix>act</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix>actor</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix>core</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix>ia</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix>ic</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix>prop</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix>st</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/lcanet/ICdata#</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri>https://w3id.org/lcanet/activity#</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri>https://w3id.org/lcanet/actor#</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri>https://w3id.org/lcanet/core#</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri>https://w3id.org/lcanet/ia#</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri>https://w3id.org/lcanet/property#</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri>https://w3id.org/lcanet/st#</vann:preferredNamespaceUri>
+        <rdfs:comment>This ontology imports:
+            - Activity module: https://w3id.org/lcanet/activity#
+            - Actor module: https://w3id.org/lcanet/actor#
+            - Impact Assessment module: https://w3id.org/lcanet/ia#
+            - Property module: https://w3id.org/lcanet/property#
+            - Spatiotemporal module: https://w3id.org/lcanet/st#
+        </rdfs:comment>
+        <rdfs:label>ICdata</rdfs:label>
+        <rdfs:label>LCAnet-Activity</rdfs:label>
+        <rdfs:label>LCAnet-Actor</rdfs:label>
+        <rdfs:label>LCAnet-Core</rdfs:label>
+        <rdfs:label>LCAnet-ImpactAssessment</rdfs:label>
+        <rdfs:label>LCAnet-Property</rdfs:label>
+        <rdfs:label>LCAnet-Spatiotemporal</rdfs:label>
+        <owl:versionInfo>2.1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasBeginning -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#hasBeginning"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inXSDDate -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#inXSDDate"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasDuration -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasDuration">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/lcanet/st#hasDuration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#hasActivityPart -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/activity#hasActivityPart">
+        <rdfs:label>has Activity Part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#hasEndActivity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/activity#hasEndActivity">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lcanet/activity#hasActivityPart"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/lcanet/activity#isPartOfActivity"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:label>has End Activity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#hasInputFlow -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/activity#hasInputFlow">
+        <rdfs:label>has Input Flow</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#hasInputProduct -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/activity#hasInputProduct">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lcanet/activity#hasInputFlow"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/lcanet/activity#isInputFlowOf"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:label>has Input Product</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#hasOutputFlow -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/activity#hasOutputFlow">
+        <rdfs:label>has Output Flow</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#hasOutputProduct -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/activity#hasOutputProduct">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lcanet/activity#hasOutputFlow"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/lcanet/activity#isOutputFlowOf"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:label>has Output Product</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#hasStartActivity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/activity#hasStartActivity">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lcanet/activity#hasActivityPart"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/lcanet/activity#isPartOfActivity"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:label>has Start Activity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#isEndActivityOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/activity#isEndActivityOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lcanet/activity#isPartOfActivity"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/lcanet/activity#hasActivityPart"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:label>is End Activity Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#isInputFlowOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/activity#isInputFlowOf">
+        <rdfs:label>is Input Flow Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#isInputProductOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/activity#isInputProductOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lcanet/activity#isInputFlowOf"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/lcanet/activity#hasInputFlow"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:label>is Input Product Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#isOutputFlowOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/activity#isOutputFlowOf">
+        <rdfs:label>is Output Flow Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#isOutputProductOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/activity#isOutputProductOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lcanet/activity#isOutputFlowOf"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/lcanet/activity#hasOutputFlow"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:label>is Output Product Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#isPartOfActivity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/activity#isPartOfActivity">
+        <rdfs:label>is Part Of Activity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#isStartActivityOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/activity#isStartActivityOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lcanet/activity#isPartOfActivity"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/lcanet/activity#hasActivityPart"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:label>is Start Activity Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lcanet/st#hasDuration -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lcanet/st#hasDuration">
+        <rdfs:comment>
+            Specifies the duration of a temporal entity such as a process or interval.
+            Directly corresponds to time:hasDuration.
+        </rdfs:comment>
+        <rdfs:label>has duration</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/Agent -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/Agent">
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <owl:equivalentClass rdf:resource="https://w3id.org/lcanet/actor#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/actor#Agent -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/actor#Agent"/>
+    
+
+
+    <!-- http://www.geonames.org/ontology#Feature -->
+
+    <owl:Class rdf:about="http://www.geonames.org/ontology#Feature">
+        <owl:equivalentClass rdf:resource="https://schema.org/Place"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Place -->
+
+    <owl:Class rdf:about="https://schema.org/Place">
+        <owl:equivalentClass rdf:resource="https://w3id.org/lcanet/st#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/st#Location -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/st#Location"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#Point -->
+
+    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#Point">
+        <owl:equivalentClass rdf:resource="https://w3id.org/lcanet/st#GeoPoint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing -->
+
+    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalEntity -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Group -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Group">
+        <owl:equivalentClass rdf:resource="https://w3id.org/lcanet/actor#Group"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Agent"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/actor#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization">
+        <owl:equivalentClass rdf:resource="https://w3id.org/lcanet/actor#Organization"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Agent"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/actor#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <owl:equivalentClass rdf:resource="https://w3id.org/lcanet/actor#Person"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Agent"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/actor#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/AdministrativeArea -->
+
+    <owl:Class rdf:about="https://schema.org/AdministrativeArea"/>
+    
+
+
+    <!-- https://schema.org/Place -->
+
+    <owl:Class rdf:about="https://schema.org/Place">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#Activity -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/activity#Activity">
+        <rdfs:comment>Represents a process or operation within the LCA system that consumes and/or produces flows.</rdfs:comment>
+        <rdfs:label>Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#ActivityTag -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/activity#ActivityTag">
+        <rdfs:label>Activity Tag</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#Biosphere -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/activity#Biosphere">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+        <rdfs:comment>Represents the natural environment external to the technosphere, 
+including air, water, and soil compartments. It is the domain in which elementary 
+flows originate or terminate, such as natural resource extraction and emissions.</rdfs:comment>
+        <rdfs:label>Biosphere</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#ComposedActivity -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/activity#ComposedActivity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/activity#Activity"/>
+        <rdfs:comment>An activity that is made up of multiple sub-activities, which together represent a higher-level process.</rdfs:comment>
+        <rdfs:label>Composed Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#ElementaryFlow -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/activity#ElementaryFlow">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdfs:comment>A flow that connects an activity directly with the natural environment i.e. has a biosphere  boundary.</rdfs:comment>
+        <rdfs:label>Elementary Flow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#EmissionFlow -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/activity#EmissionFlow">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/activity#ElementaryFlow"/>
+        <rdfs:comment>Represents an elementary flow corresponding to a substance or energy released from the technosphere into the biosphere. 
+It includes emissions to environmental compartments such as air, water, and soil.</rdfs:comment>
+        <rdfs:label>Emission Flow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#EnvironemntalType -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/activity#EnvironemntalType">
+        <rdfs:comment>A classification of the environment into biosphere or technosphere, used to distinguish whether flows cross system boundaries or remain within the human-made system.</rdfs:comment>
+        <rdfs:label>Environmental Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#Flow -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/activity#Flow">
+        <rdfs:comment>Represents the transfer of materials, energy, or resources between activities or between an activity and the environment.</rdfs:comment>
+        <rdfs:label>Flow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#FlowTag -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/activity#FlowTag">
+        <rdfs:label>Flow Tag</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#IntermediateFlow -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/activity#IntermediateFlow">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdfs:comment>A flow that connects two activities within the technosphere, serving as an input to one activity and an output from another, or is wasted as waste.</rdfs:comment>
+        <rdfs:label>Intermediate Flow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#ProductFlow -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/activity#ProductFlow">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdfs:comment>Represents an intermediate flow within the technosphere corresponding to a product, service, or energy carrier with an associated economic value. 
+Such flows are exchanged between activities as intended inputs or outputs within the life cycle system.</rdfs:comment>
+        <rdfs:label>Product Flow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#ResourceFlow -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/activity#ResourceFlow">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/activity#ElementaryFlow"/>
+        <rdfs:comment>Represents an elementary flow corresponding to a substance or energy extracted from the biosphere into the technosphere. 
+It includes natural resources such as minerals, biomass, water, and energy carriers.</rdfs:comment>
+        <rdfs:label>Resource Flow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#SequencedActivity -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/activity#SequencedActivity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/activity#ComposedActivity"/>
+        <rdfs:comment>A composed activity in which the constituent sub-activities follow a specific temporal or logical sequence.</rdfs:comment>
+        <rdfs:label>Sequenced Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#Technosphere -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/activity#Technosphere">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+        <rdfs:comment>Represents the system of human activities and industrial processes 
+within the life cycle of a product or service. It encompasses all transformations 
+and exchanges of intermediate flows occurring within the economic system.</rdfs:comment>
+        <rdfs:label>Technosphere</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/activity#WasteFlow -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/activity#WasteFlow">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdfs:comment>Represents an intermediate flow within the technosphere corresponding to materials or substances that are discarded by an activity and require further treatment, recovery, or disposal. 
+These flows are typically characterized by the absence of positive economic value for the producing activity.</rdfs:comment>
+        <rdfs:label>Waste Flow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/actor#Agency -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/actor#Agency">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/actor#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/actor#Agent -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/actor#Agent"/>
+    
+
+
+    <!-- https://w3id.org/lcanet/actor#Auditor -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/actor#Auditor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/actor#Role"/>
+        <rdfs:comment>Represents a type of role that an agent may assume when evaluating, reviewing, or verifying the conformity and quality of a life cycle assessment study or its results.</rdfs:comment>
+        <rdfs:label>Auditor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/actor#Consumer -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/actor#Consumer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/actor#Role"/>
+        <rdfs:comment>epresents a type of role that an agent may assume when using or consuming a product or service during its life cycle.</rdfs:comment>
+        <rdfs:label>Consumer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/actor#Customer -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/actor#Customer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/actor#Role"/>
+        <rdfs:comment>Represents a type of role that an agent may assume when acquiring or purchasing a product or service within its life cycle.</rdfs:comment>
+        <rdfs:label>Customer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/actor#Group -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/actor#Group">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Agent"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/actor#Agent"/>
+        <rdfs:comment>A collection of members (may or may not be formalized).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/actor#Manufacturer -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/actor#Manufacturer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/actor#Role"/>
+        <rdfs:comment>Represents a type of role that an agent may assume when performing production or assembly activities within a life cycle system.</rdfs:comment>
+        <rdfs:label>Manufacturer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/actor#Organization -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/actor#Organization">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Agent"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/actor#Agent"/>
+        <rdfs:comment>A structured entity with identity and possibly legal status.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/actor#Person -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/actor#Person">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Agent"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/actor#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/actor#Recycler -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/actor#Recycler">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/actor#Role"/>
+        <rdfs:comment>Represents a type of role that an agent may assume when performing recovery, recycling, or treatment operations on products or materials at the end-of-life stage.</rdfs:comment>
+        <rdfs:label>Recycler</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/actor#Researcher -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/actor#Researcher">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/actor#Role"/>
+        <rdfs:comment>Represents a type of role that an agent may assume when conducting analysis, modeling, or scientific studies related to life cycle assessment data, methods, or systems.</rdfs:comment>
+        <rdfs:label>Researcher</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/actor#Role -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/actor#Role">
+        <rdfs:comment>Represents a functional role that an agent can assume in a specific context.
+Example: LCA Auditor, LCA Agency Role</rdfs:comment>
+        <rdfs:label>Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/core#Interpretation -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/core#Interpretation">
+        <rdfs:comment>The Interpretation class connects the LCA model to the Impact Assessment module, representing the analysis and interpretation of results to support decision-making, conclusions, and recommendations.</rdfs:comment>
+        <rdfs:label>Interpretation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/core#LcaModel -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/core#LcaModel">
+        <rdfs:comment>The LCA model class represents a complete Life Cycle Assessment instance within the LCAnet ontology network. 
+Its instance ID encapsulates all aspects of the LCA study, linking to scope, goal, life cycle stages, and interpretation results.</rdfs:comment>
+        <rdfs:label>LCA Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/core#LifeCycleStage -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/core#LifeCycleStage">
+        <rdfs:comment>The LifeCycle stage class enumerates the standard stages of a product or service life cycle, providing an exhaustive list of the five possible stages for classification and analysis within the LCA.</rdfs:comment>
+        <rdfs:label>Life Cycle Stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/core#Scope -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/core#Scope">
+        <rdfs:comment>The Scope class captures the boundaries and context of an LCA study, including spatial and temporal aspects, functional unit, system boundaries, and assumptions, and a reference flow. Each element is represented via data properties connecting the Scope class to its corresponding values.</rdfs:comment>
+        <rdfs:label>Scope</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#AirPollutionFootprint -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#AirPollutionFootprint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+        <rdfs:comment>Quantifies the release of airborne pollutants (e.g., particulate matter, photochemical ozone formation) over the life cycle of a product. AirPollutionFootprint is an ImpactResult associated with relevant environmental impact categories.</rdfs:comment>
+        <rdfs:label>Air Pollution Footprint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#CarbonFootprint -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#CarbonFootprint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+        <rdfs:comment>means the sum of greenhouse gas emissions and greenhouse gas removals in a product system, expressed as CO equivalents and based on a life cycle assessment using the single impact category of climate change. (ESPR Art 2 25))</rdfs:comment>
+        <rdfs:label>Carbon Footprint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#CharacterizationFactor -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#CharacterizationFactor">
+        <rdfs:comment>Also called Impact factors, are factors that quantify the relative impact of different substances within the same category. These factors are used to convert the number of emissions into impact scores for each category.</rdfs:comment>
+        <rdfs:label>Characterization Factor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#CharacterizationModel -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#CharacterizationModel">
+        <rdfs:comment>A characterization model provides a mathmetical framework, as a set of equations, to quantify an impact category based on the chosen method. Example: IPCC (2021). A characterization model is used by a method.</rdfs:comment>
+        <rdfs:label>Characterization Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#EnergyFootprint -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#EnergyFootprint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+        <rdfs:comment>Quantifies the total energy use associated with a product throughout its life cycle, including renewable and non-renewable sources. EnergyFootprint is a FlowResult linked to the Energy FlowType.</rdfs:comment>
+        <rdfs:label>Energy Footprint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#EutrophicationFootprint -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#EutrophicationFootprint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+        <rdfs:comment>Quantifies nutrient enrichment impacts (eutrophication) on freshwater, marine, or terrestrial ecosystems caused by a product during its life cycle. It aggregates relevant ImpactCategories.</rdfs:comment>
+        <rdfs:label>Eutophication Footprint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#ImpactCategory -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#ImpactCategory">
+        <rdfs:comment>An impact category represents a specific environmental issue that the LCA aims to assess, such as global warming or ozone depletion. Each category aggregates the effects of different emissions that contribute to the same environmental problem.</rdfs:comment>
+        <rdfs:label>Impact Category</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#ImpactCategoryIndicator -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#ImpactCategoryIndicator">
+        <rdfs:comment>An impact category refers to a specific metric/measurable quantity that is used to quantify an impact category, such as Global Warming Potential (GWP) and Ozone Depletion Potential (ODP).</rdfs:comment>
+        <rdfs:label>Impact Category Indicator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#LandFootprint -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#LandFootprint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+        <rdfs:comment>Quantifies the occupation and transformation of land caused by a product throughout its life cycle. LandFootprint is an ImpactResult linked to the LandUse impact category.</rdfs:comment>
+        <rdfs:label>Land Footprint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#LcaResult -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#LcaResult">
+        <rdfs:comment>A LCA result corresponds to the computed value of each flow (or sometimes activity as a group of its input and output flows) concerning an impact category (IC). 
+Thus, it is an entity that makes links to: a flow/activity (e.g. flat chip resistor), an exact value (e.g. 1,16E-03), and an impact category (e.g. climate change), indicating the participation of this flow/activity in the studied impact category issue.</rdfs:comment>
+        <rdfs:label>LCA Result</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#MaterialFootprint -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#MaterialFootprint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+        <rdfs:comment>refers to the total amount of raw materials extracted to meet final consumption demands. (ESPR Art 2 (26)).</rdfs:comment>
+        <rdfs:label>Material Footprint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#Method -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#Method">
+        <rdfs:comment>LCIA methods allow to transform raw emissions and resource data into understandable impact scores. Examples of methods include EN15804+A2, EF v3.1.</rdfs:comment>
+        <rdfs:label>Method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#Methodology -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#Methodology">
+        <rdfs:comment>LCIA methodologies group related LCIA methods.
+A methodology (identified by an LCA expert for carrying out a specific LCA study), assesses some topic which is included in the scope of the LCA study.</rdfs:comment>
+        <rdfs:label>Methodology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#OverallImpactResult -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#OverallImpactResult">
+        <rdfs:comment>It corresponds to the sum of all LCA result values of all flows/activities in the studied LCA of a product X, regarding an impact category Y.</rdfs:comment>
+        <rdfs:label>Overall Impact Result</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#OzoneDepletionFootprint -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#OzoneDepletionFootprint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+        <rdfs:comment>Quantifies the potential stratospheric ozone layer depletion caused by substances emitted by a product throughout its life cycle. It is an ImpactResult linked to the Ozone Depletion impact category.</rdfs:comment>
+        <rdfs:label>Ozone Depletion Footprint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#ToxicityFootprint -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#ToxicityFootprint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+        <rdfs:comment>Quantifies the potential human health and ecological toxicity impacts of a product over its life cycle. ToxicityFootprint aggregates relevant ImpactCategories such as Human Toxicity (cancer and non-cancer) and Ecotoxicity.</rdfs:comment>
+        <rdfs:label>Toxicity Footprint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/ia#WaterFootprint -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/ia#WaterFootprint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+        <rdfs:comment>Quantifies the freshwater consumption associated with a product throughout its life cycle. WaterFootprint is a FlowResult linked to the Water FlowType.</rdfs:comment>
+        <rdfs:label>Water Footprint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/property#BalanceableProperty -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/property#BalanceableProperty">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:comment>A property representing a flow of materials, energy, or emissions that is tracked and balanced in life cycle assessment studies.</rdfs:comment>
+        <rdfs:label>Balanceable Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/property#DataQualityProperty -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/property#DataQualityProperty">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:comment>A property that represents the quality, reliability, or validity of data associated with an entity or measurement.</rdfs:comment>
+        <rdfs:label>Data Quality Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/property#Property -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/property#Property">
+        <rdfs:label>Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/property#QualitativeProperty -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/property#QualitativeProperty">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdfs:comment>A property that represents a descriptive or categorical characteristic of an entity.</rdfs:comment>
+        <rdfs:label>Qualitative Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/property#QuantitativeProperty -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/property#QuantitativeProperty">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdfs:comment>A property that represents a measurable numeric quantity associated with an entity.</rdfs:comment>
+        <rdfs:label>Quantitative Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/st#AdministrativeRegion -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/st#AdministrativeRegion">
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <rdfs:subClassOf rdf:resource="https://schema.org/AdministrativeArea"/>
+        <rdfs:subClassOf rdf:resource="https://schema.org/Place"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/st#Location"/>
+        <rdfs:comment>A political or administrative territorial unit, such as a country, state, province, or city.
+        Aligns with schema:AdministrativeArea and gn:Feature.</rdfs:comment>
+        <rdfs:label>Administrative Region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/st#GeoPoint -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/st#GeoPoint">
+        <rdfs:comment>A geographic point represented by WGS84 latitude and longitude coordinates.</rdfs:comment>
+        <rdfs:label>GeoPoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/st#GlobalScale -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/st#GlobalScale">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/st#SpatialScale"/>
+        <rdfs:label>Global Scale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/st#LocalScale -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/st#LocalScale">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/st#SpatialScale"/>
+        <rdfs:label>Local Scale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/st#Location -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/st#Location">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        <rdfs:comment>A general spatial entity representing any identifiable place or geographic feature.
+            Equivalent to schema:Place and gn:Feature.
+        </rdfs:comment>
+        <rdfs:label>Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/st#NationalScale -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/st#NationalScale">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/st#SpatialScale"/>
+        <rdfs:label>National Scale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/st#RegionalScale -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/st#RegionalScale">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/st#SpatialScale"/>
+        <rdfs:label>Regional Scale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/st#Site -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/st#Site">
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <rdfs:subClassOf rdf:resource="https://schema.org/Place"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lcanet/st#Location"/>
+        <rdfs:comment>
+            A specific location associated with an activity, facility, installation, or process.
+            Examples: LCA process site, production site, waste treatment site.
+        </rdfs:comment>
+        <rdfs:label>Site</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lcanet/st#SpatialScale -->
+
+    <owl:Class rdf:about="https://w3id.org/lcanet/st#SpatialScale">
+        <rdfs:comment>
+            A classification of the level of spatial granularity applied in an LCA study,
+            such as global, continental, national, regional, or local scale.
+            Used for specifying the spatial resolution of data or impacts.
+        </rdfs:comment>
+        <rdfs:label>Spatial Scale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Abiotic_resource_depletion_ADP_ultimate_reserves -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Abiotic_resource_depletion_ADP_ultimate_reserves">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationFactor"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategoryIndicator"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Abiotic resource depletion (ADP ultimate reserves)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Accumulated_Exceedance -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Accumulated_Exceedance">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationModel"/>
+        <terms:bibliographicCitation>(Seppälä et al. 2006, Posch et al, 2008)</terms:bibliographicCitation>
+        <rdfs:label>Accumulated Exceedance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Accumulated_Exceedance_AE -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Accumulated_Exceedance_AE">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategoryIndicator"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Accumulated Exceedance (AE)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Acidification -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Acidification">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategory"/>
+        <rdfs:label>Acidification</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Available_WAter_REmaining_AWARE_model -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Available_WAter_REmaining_AWARE_model">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationModel"/>
+        <terms:bibliographicCitation>(Boulay et al., 2018; UNEP 2016)</terms:bibliographicCitation>
+        <rdfs:label>Available WAter REmaining (AWARE) model</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Based_on_USEtox2.1_model -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Based_on_USEtox2.1_model">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationModel"/>
+        <terms:bibliographicCitation>(Fantke et al. 2017), adapted as in Saouter et al., 2018</terms:bibliographicCitation>
+        <rdfs:label>Based on USEtox2.1 model</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Bern_model_based_on_IPCC_2021 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Bern_model_based_on_IPCC_2021">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationModel"/>
+        <terms:bibliographicCitation>(Forster et al., 2021)</terms:bibliographicCitation>
+        <rdfs:label>Bern model based on IPCC 2021</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Biotic_resource_depletion_fossil_fuels_ADP_fossil -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Biotic_resource_depletion_fossil_fuels_ADP_fossil">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategoryIndicator"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Biotic resource depletion fossil fuels (ADP-fossil)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#CEA-internal -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#CEA-internal">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/st#SpatialScale"/>
+        <dc:description>Internal to SmartACV members + LFIM members</dc:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#CF_CO2equivalents -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#CF_CO2equivalents">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationFactor"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#CML_2002_method_v.4.8 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#CML_2002_method_v.4.8">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationModel"/>
+        <terms:bibliographicCitation>van Oers et al., 2002</terms:bibliographicCitation>
+        <rdfs:label>CML 2002 method, v.4.8</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Climate_change_total -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Climate_change_total">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategory"/>
+        <rdfs:label>Climate change, total</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Comparative_Toxic_Unit_for_ecosystems_CTUe -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Comparative_Toxic_Unit_for_ecosystems_CTUe">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategoryIndicator"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Comparative Toxic Unit for ecosystems (CTUe)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Comparative_Toxic_Unit_for_humans_CTUh -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Comparative_Toxic_Unit_for_humans_CTUh">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategoryIndicator"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Comparative Toxic Unit for humans (CTUh)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Degree_of_Confidence -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Degree_of_Confidence">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#DataQualityProperty"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Description -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Description">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QualitativeProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#EDIP_model -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#EDIP_model">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationModel"/>
+        <terms:bibliographicCitation>based on the ODPs of the World Meteorological Organisation (WMO) over an infinite time horizon (WMO 2014 + integrations)</terms:bibliographicCitation>
+        <rdfs:label>EDIP model</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#EF_v3.1_methodology -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#EF_v3.1_methodology">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#Methodology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#EUTREND_model -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#EUTREND_model">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationFactor"/>
+        <terms:bibliographicCitation>(Struijs et al, 2009) as applied in ReCiPe 2008</terms:bibliographicCitation>
+        <rdfs:label>EUTREND model</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Ecotoxicity_freshwater -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Ecotoxicity_freshwater">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategory"/>
+        <rdfs:label>Ecotoxicity, freshwater</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Emission_Agricultural -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Emission_Agricultural">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Biosphere"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Emission_Forestry -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Emission_Forestry">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Biosphere"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Emission_High_Pop -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Emission_High_Pop">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Biosphere"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Emission_Industrial -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Emission_Industrial">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Biosphere"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Emission_Low_Pop -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Emission_Low_Pop">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Biosphere"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Emission_Low_Pop_long_term -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Emission_Low_Pop_long_term">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Biosphere"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Emission_to_Ground_Water -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Emission_to_Ground_Water">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Biosphere"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Emission_to_Ground_Water_lon_term -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Emission_to_Ground_Water_lon_term">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Biosphere"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Emission_to_Ocean -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Emission_to_Ocean">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Biosphere"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Emission_to_River -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Emission_to_River">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Biosphere"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#End_of_Use_stage -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#End_of_Use_stage">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/core#LifeCycleStage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Energy_Production -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Energy_Production">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ActivityTag"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Energy_resources -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Energy_resources">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#FlowTag"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Eutrophication_freshwater -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Eutrophication_freshwater">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategory"/>
+        <rdfs:label>Eutrophication, freshwater</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Eutrophication_marine -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Eutrophication_marine">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategory"/>
+        <rdfs:label>Eutrophication, marine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Eutrophication_terrestrial -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Eutrophication_terrestrial">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategory"/>
+        <rdfs:label>Eutrophication, terrestrial</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Fraction_of_nutrients_reaching_freshwater_end_compartment_P -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Fraction_of_nutrients_reaching_freshwater_end_compartment_P">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategoryIndicator"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Fraction of nutrients reaching freshwater end compartment (P)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Fraction_of_nutrients_reaching_marine_end_compartment_N -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Fraction_of_nutrients_reaching_marine_end_compartment_N">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategoryIndicator"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Fraction of nutrients reaching marine end compartment (N)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Global_Warming_Potential_GWP100 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Global_Warming_Potential_GWP100">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategoryIndicator"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Global Warming Potential (GWP100)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Global_warming_potential_GWP_over_a_100_year_time_horizon -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Global_warming_potential_GWP_over_a_100_year_time_horizon">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationFactor"/>
+        <rdfs:label>Global warming potential (GWP) over a 100-year time horizon</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Human_exposure_efficiency_relative_to_U235 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Human_exposure_efficiency_relative_to_U235">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategoryIndicator"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Human exposure efficiency relative to U235</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Human_health_effect_model -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Human_health_effect_model">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationModel"/>
+        <terms:bibliographicCitation>as developed by Dreicer et al., 1995)</terms:bibliographicCitation>
+        <rdfs:label>Human health effect model</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Human_toxicity_cancer -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Human_toxicity_cancer">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategory"/>
+        <rdfs:label>Human toxicity, cancer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Human_toxicity_non_cancer -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Human_toxicity_non_cancer">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategory"/>
+        <rdfs:label>Human toxicity, non-cancer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Hypothesis -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Hypothesis">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QualitativeProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-29_mask_silicon_substrate_130nm_CN -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-29_mask_silicon_substrate_130nm_CN">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-29_mask_silicon_substrate_130nm_EU -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-29_mask_silicon_substrate_130nm_EU">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-29_mask_silicon_substrate_130nm_TW -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-29_mask_silicon_substrate_130nm_TW">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-33_mask_silicon_substrate_90nm_CN -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-33_mask_silicon_substrate_90nm_CN">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-33_mask_silicon_substrate_90nm_EU -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-33_mask_silicon_substrate_90nm_EU">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-33_mask_silicon_substrate_90nm_TW -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-33_mask_silicon_substrate_90nm_TW">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-38_mask_silicon_substrate_65nm_CN -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-38_mask_silicon_substrate_65nm_CN">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-38_mask_silicon_substrate_65nm_EU -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-38_mask_silicon_substrate_65nm_EU">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-38_mask_silicon_substrate_65nm_TW -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-38_mask_silicon_substrate_65nm_TW">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-42_mask_silicon_substrate_45nm_CN -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-42_mask_silicon_substrate_45nm_CN">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-42_mask_silicon_substrate_45nm_EU -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-42_mask_silicon_substrate_45nm_EU">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-42_mask_silicon_substrate_45nm_TW -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-42_mask_silicon_substrate_45nm_TW">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-50_mask_silicon_substrate_28nm_CN -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-50_mask_silicon_substrate_28nm_CN">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-50_mask_silicon_substrate_28nm_EU -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-50_mask_silicon_substrate_28nm_EU">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-50_mask_silicon_substrate_28nm_TW -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-50_mask_silicon_substrate_28nm_TW">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-700_mg_Connector_for_PWB_FR -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-700_mg_Connector_for_PWB_FR">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Axial_ferrite_inductor_SMD_RoHS_compliant__Singapore -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Axial_ferrite_inductor_SMD_RoHS_compliant__Singapore">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Ceramic_SMD_capacitor_RoHS_compliant_France_FR -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Ceramic_SMD_capacitor_RoHS_compliant_France_FR">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Ceramic_SMD_capacitor_RoHS_compliant_France_FR_i1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Ceramic_SMD_capacitor_RoHS_compliant_France_FR_i1">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Ceramic_dual_in_line_package_CERDIP_France_FR -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Ceramic_dual_in_line_package_CERDIP_France_FR">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Ceramic_quad_flat_packages_CQFP_France_FR -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Ceramic_quad_flat_packages_CQFP_France_FR">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Ceramic_quad_flat_packages_CQFP_France_FR_i1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Ceramic_quad_flat_packages_CQFP_France_FR_i1">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Chinese_Circuit -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Chinese_Circuit">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ProductFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Chinese_Circuit_i -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Chinese_Circuit_i">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ProductFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Coaxial_connector_FR -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Coaxial_connector_FR">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Coaxial_connector__FR -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Coaxial_connector__FR">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Connector_for_PWB_FR -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Connector_for_PWB_FR">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Connector_for_PWB_FR_i1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Connector_for_PWB_FR_i1">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Daughter_Board -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Daughter_Board">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ProductFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Daughter_Board_i1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Daughter_Board_i1">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ProductFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Diode_SMD_MELF_MINIMELF_France_FR -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Diode_SMD_MELF_MINIMELF_France_FR">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Dual_in_line_plastic_packages_frame_0.25_PDIP_France_FR -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Dual_in_line_plastic_packages_frame_0.25_PDIP_France_FR">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-European_Circuit -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-European_Circuit">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ProductFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-European_Circuit_i -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-European_Circuit_i">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ProductFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Flat_chip_resistor_SMD_RoHS_compliant_France_FR -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Flat_chip_resistor_SMD_RoHS_compliant_France_FR">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Flat_chip_resistor_SMD_RoHS_compliant_France_FR_i1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Flat_chip_resistor_SMD_RoHS_compliant_France_FR_i1">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Flat_chip_resistor_SMD_RoHS_compliant_France_FR_i2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Flat_chip_resistor_SMD_RoHS_compliant_France_FR_i2">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ProductFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i1">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ProductFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i2">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ProductFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i3 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i3">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ProductFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ProductFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR_i1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR_i1">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ProductFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR_i2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR_i2">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ProductFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR_i3 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR_i3">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ProductFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-High_quad_packages_HiQUAD_France_FR -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-High_quad_packages_HiQUAD_France_FR">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-ICV_Storaige_Prototype -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-ICV_Storaige_Prototype">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ProductFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Jack_base_female_RoHS_compliant_Europe_RER -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Jack_base_female_RoHS_compliant_Europe_RER">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-LED_high_power_SMD_Europe_RER -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-LED_high_power_SMD_Europe_RER">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Metal_housing_connector_average_composition_RER -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Metal_housing_connector_average_composition_RER">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Mother_Board -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Mother_Board">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ProductFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Mother_Board_i1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Mother_Board_i1">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ProductFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-PCI_Bus_connector_RER -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-PCI_Bus_connector_RER">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-PCI_Bus_connector_RER_i1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-PCI_Bus_connector_RER_i1">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-PWB_FR4_preg_6_layers_RER_i1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-PWB_FR4_preg_6_layers_RER_i1">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-PWB_FR4_preg_6_layers_RER_i2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-PWB_FR4_preg_6_layers_RER_i2">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Potentiometer_RoHS_compliant__SP -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Potentiometer_RoHS_compliant__SP">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Production_of_Chinese_Circuit -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Production_of_Chinese_Circuit">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Activity"/>
+        <rdfs:label>Production of Chinese Circuit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Production_of_Daughter_Board -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Production_of_Daughter_Board">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Activity"/>
+        <rdfs:label>Production of Daughter Board</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Production_of_European_Circuit -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Production_of_European_Circuit">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Activity"/>
+        <rdfs:label>Production of European Circuit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Production_of_Generic_module_Integrated_circuit -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Production_of_Generic_module_Integrated_circuit">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Activity"/>
+        <rdfs:label>Production of Generic Module Integrated Circuit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Production_of_Generic_module_Package_FR -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Production_of_Generic_module_Package_FR">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Activity"/>
+        <rdfs:label>Production of Generic Module Package FR</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Production_of_ICV_Storaige_Prototype -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Production_of_ICV_Storaige_Prototype">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Activity"/>
+        <rdfs:label>Production of ICV Storage Prototype</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Activity"/>
+        <rdfs:label>Production of Mother Board</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Production_of_Taiwanian_Circuit -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Production_of_Taiwanian_Circuit">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Activity"/>
+        <rdfs:label>Production of Thaiwanian Circuit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Production_of_Test_Card_FT3242H -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Production_of_Test_Card_FT3242H">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Activity"/>
+        <rdfs:label>Production of Test Card FT3242H</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Small_outline_diode_semiconductor_Low_power_SOT23_SOT89_SOT223_France_FR -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Small_outline_diode_semiconductor_Low_power_SOT23_SOT89_SOT223_France_FR">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Stamping_ink_deposition_on_plastics_FR -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Stamping_ink_deposition_on_plastics_FR">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Stamping_ink_deposition_on_plastics_FR_i1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Stamping_ink_deposition_on_plastics_FR_i1">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Taiwan_Circuit -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Taiwan_Circuit">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ProductFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Taiwan_Circuit_i -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Taiwan_Circuit_i">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ProductFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Test_Card_FT3242H -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Test_Card_FT3242H">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ProductFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Test_Card_FT3242H_i1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Test_Card_FT3242H_i1">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#IntermediateFlow"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ProductFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Through_hole_transistor_IPAK_I2PAK_SOT32_SOT82_France_FR -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Through_hole_transistor_IPAK_I2PAK_SOT32_SOT82_France_FR">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-USB_base_B_type_female_RoHS_compliant_Europe_RER -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-USB_base_B_type_female_RoHS_compliant_Europe_RER">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-USB_plug_mini-B_type_male_Europe_RER -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-USB_plug_mini-B_type_male_Europe_RER">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Wafer_silicon_substrate_42_masks_45_nm_photolithography_Europe_EU-28 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Wafer_silicon_substrate_42_masks_45_nm_photolithography_Europe_EU-28">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Welding_of_steel_parts_electric_welding_France_FR -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Welding_of_steel_parts_electric_welding_France_FR">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-ceramic_SMD_capacitor_RoHS_compliant_France_FR -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-ceramic_SMD_capacitor_RoHS_compliant_France_FR">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-configurable_Soldering_of_SMD_components_SAC_reflow_soldering_at_plant -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-configurable_Soldering_of_SMD_components_SAC_reflow_soldering_at_plant">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QualitativeProperty"/>
+        <rdfs:label>Database_Source</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_DB_nage -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_DB_nage">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QualitativeProperty"/>
+        <rdfs:label>Database_Source</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_length_7 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_length_7">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Length</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_mass_0.161 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_mass_0.161">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Mass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_mass_0.25 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_mass_0.25">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Mass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_mass_1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_mass_1">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Mass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_mass_1.029 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_mass_1.029">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Mass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_mass_1.5 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_mass_1.5">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Mass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_mass_1.5mg -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_mass_1.5mg">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Mass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_mass_1.7 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_mass_1.7">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Mass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_mass_18.8 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_mass_18.8">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Mass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_mass_260 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_mass_260">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Mass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_mass_451 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_mass_451">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Mass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_mass_5.482 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_mass_5.482">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Mass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_mass_500 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_mass_500">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Mass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_mass_620 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_mass_620">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Mass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_mass_7.031 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_mass_7.031">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Mass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_mass_700 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_mass_700">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Mass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_mass_7429 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_mass_7429">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Mass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_mass_820 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_mass_820">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Mass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_production1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_production1">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QualitativeProperty"/>
+        <rdfs:label>Produced_In</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_production2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_production2">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QualitativeProperty"/>
+        <rdfs:label>Produced_In</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_production3 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_production3">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QualitativeProperty"/>
+        <rdfs:label>Produced_In</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_production4 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_production4">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QualitativeProperty"/>
+        <rdfs:label>Produced_In</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_quantity_0.5 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_quantity_0.5">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Quantity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_quantity_1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_quantity_1">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Quantity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_quantity_12 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_quantity_12">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Quantity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_quantity_15 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_quantity_15">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Quantity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_quantity_18 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_quantity_18">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Quantity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_quantity_196 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_quantity_196">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Quantity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_quantity_2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_quantity_2">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Quantity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_quantity_23 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_quantity_23">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Quantity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_quantity_3 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_quantity_3">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Quantity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_quantity_4 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_quantity_4">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Quantity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_quantity_5 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_quantity_5">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Quantity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_quantity_62 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_quantity_62">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Quantity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_quantity_7 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_quantity_7">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Quantity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_quantity_76 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_quantity_76">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Quantity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_quantity_9 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_quantity_9">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Quantity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_quantity_95 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_quantity_95">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Quantity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_sur_0.16 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_sur_0.16">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Surface</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_sur_0.23 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_sur_0.23">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Surface</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_sur_0.61 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_sur_0.61">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Surface</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_sur_1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_sur_1">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Surface</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_sur_10 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_sur_10">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Surface</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_sur_157.4 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_sur_157.4">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Surface</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_sur_2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_sur_2">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Surface</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_sur_31500 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_sur_31500">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Surface</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_sur_3600 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_sur_3600">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Surface</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_sur_4 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_sur_4">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Surface</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_sur_4.1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_sur_4.1">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Surface</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_sur_50 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_sur_50">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Surface</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-prop_sur_9 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-prop_sur_9">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Surface</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IPCC_method -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IPCC_method">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#Method"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IPCC_model -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IPCC_model">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationModel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IRF1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IRF1">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CarbonFootprint"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IRF2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IRF2">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CarbonFootprint"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IRF3 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IRF3">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CarbonFootprint"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IRF4 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IRF4">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CarbonFootprint"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IRF5 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IRF5">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CarbonFootprint"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IRF6 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IRF6">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CarbonFootprint"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IRF7 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IRF7">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CarbonFootprint"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IRF8 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IRF8">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CarbonFootprint"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IR_Production_Circuit_Storaige -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IR_Production_Circuit_Storaige">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CarbonFootprint"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IR_Production_Daughter_Board -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IR_Production_Daughter_Board">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CarbonFootprint"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IR_Production_Mother_Board -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IR_Production_Mother_Board">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CarbonFootprint"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IR_Production_Test_Card -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IR_Production_Test_Card">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CarbonFootprint"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Impact_on_human_health -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Impact_on_human_health">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategoryIndicator"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Impact on human health</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Inputs_of_other_types -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Inputs_of_other_types">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Technosphere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Inputted_Energy_Consumption -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Inputted_Energy_Consumption">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Technosphere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Inputted_Manufactured_Product -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Inputted_Manufactured_Product">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Technosphere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Inputted_Material -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Inputted_Material">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Technosphere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Inputted_Packaging_Material -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Inputted_Packaging_Material">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Technosphere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Inputted_Process -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Inputted_Process">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Technosphere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Inputted_Recycled_Material -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Inputted_Recycled_Material">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Technosphere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Inputted_Transportation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Inputted_Transportation">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Technosphere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Inputted_Water_Consumption -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Inputted_Water_Consumption">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Technosphere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Interpretation-Report-XV1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Interpretation-Report-XV1">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/core#Interpretation"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CarbonFootprint"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#LcaResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Ionising_radiation_human_health -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Ionising_radiation_human_health">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategory"/>
+        <rdfs:label>Ionising radiation, human health</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#LANCA_model -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#LANCA_model">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationModel"/>
+        <terms:bibliographicCitation>Soil quality index based on LANCA model (De Laurentiis et al. 2019) and on the LANCA CF version 2.5 (Horn and Maier, 2018)</terms:bibliographicCitation>
+        <rdfs:label>LANCA model</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#LCA-ICV-Storaige-performed-at -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#LCA-ICV-Storaige-performed-at">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <time:inXSDDate>November 2024</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#LCA-ICV-Storiage-valid-between -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#LCA-ICV-Storiage-valid-between">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <dc:description>Acccording to the database versions, from which values for flows are taken, each version has a validity start-/end year</dc:description>
+        <time:hasBeginning rdf:resource="https://w3id.org/lcanet/ICdata#CODDE-v3-db-time-start"/>
+        <time:hasBeginning rdf:resource="https://w3id.org/lcanet/ICdata#NegaOctet-v1-db-time-start"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#LCA_of_ICV_Storaige_Prototype -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#LCA_of_ICV_Storaige_Prototype">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/core#LcaModel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#LCAsystemsSite -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#LCAsystemsSite">
+        <rdf:type rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        <rdf:type rdf:resource="https://schema.org/Place"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/st#Location"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/st#Site"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#LOTOS_EUROS_model -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#LOTOS_EUROS_model">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationModel"/>
+        <terms:bibliographicCitation>(Van Zelm et al, 2008) as applied in ReCiPe 2008</terms:bibliographicCitation>
+        <rdfs:label>LOTOS-EUROS model</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Land_use_occupation_and_transformation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Land_use_occupation_and_transformation">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategory"/>
+        <rdfs:label>Land use (occupation and transformation)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Mass_Balance -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Mass_Balance">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#BalanceableProperty"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Material_Extraction_stage -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Material_Extraction_stage">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/core#LifeCycleStage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Material_Production -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Material_Production">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ActivityTag"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Material_Resources -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Material_Resources">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#FlowTag"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Methodology_EF_v3.0 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Methodology_EF_v3.0">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#Methodology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Outputs_of_other_types -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Outputs_of_other_types">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Technosphere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Outputted_ByProduct -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Outputted_ByProduct">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Technosphere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Outputted_Product -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Outputted_Product">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Technosphere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Outputted_Waste_for_Incineration -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Outputted_Waste_for_Incineration">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Technosphere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Outputted_Waste_for_disposal -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Outputted_Waste_for_disposal">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Technosphere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Overall_IR_Climate_Change -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Overall_IR_Climate_Change">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#OverallImpactResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Ozone_Depletion_Potential_ODP -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Ozone_Depletion_Potential_ODP">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategoryIndicator"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Ozone Depletion Potential (ODP)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Ozone_depletion -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Ozone_depletion">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategory"/>
+        <rdfs:label>Ozone depletion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#PM_model -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#PM_model">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationModel"/>
+        <terms:bibliographicCitation>(Fantke et al., 2016 in UNEP 2016)</terms:bibliographicCitation>
+        <rdfs:label>PM model</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Particulate_matter -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Particulate_matter">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategory"/>
+        <rdfs:label>Particulate matter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Photochemical_ozone_formation_human_health -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Photochemical_ozone_formation_human_health">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategory"/>
+        <rdfs:label>Photochemical ozone formation, human health</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Processing -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Processing">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ActivityTag"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Production_Site -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Production_Site">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QualitativeProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Production_stage -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Production_stage">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/core#LifeCycleStage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Productionsite -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Productionsite">
+        <rdf:type rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        <rdf:type rdf:resource="https://schema.org/Place"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/st#Location"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/st#Site"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Quantity -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Quantity">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Realized_On_Machine -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Realized_On_Machine">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QualitativeProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Resource_from_Air -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Resource_from_Air">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Biosphere"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Resource_from_Biotic -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Resource_from_Biotic">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Biosphere"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Resource_from_Land -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Resource_from_Land">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Biosphere"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Resource_from_Water -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Resource_from_Water">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Biosphere"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Resource_use_fossils -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Resource_use_fossils">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategory"/>
+        <rdfs:label>Resource use, fossils</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Resource_use_minerals_and_metals -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Resource_use_minerals_and_metals">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategory"/>
+        <rdfs:label>Resource use, minerals and metals</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Resources_from_Ground -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Resources_from_Ground">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Biosphere"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Scope_of_ICV_Storaige_Prototype -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Scope_of_ICV_Storaige_Prototype">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/core#Scope"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Service -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Service">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ActivityTag"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Soil_quality_index_dimensionless -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Soil_quality_index_dimensionless">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategoryIndicator"/>
+        <rdfs:label>Soil quality index (dimensionless)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Thibault_Halter -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Thibault_Halter">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/Agent"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/actor#Agent"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/actor#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Transportation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Transportation">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ActivityTag"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Transportation_stage -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Transportation_stage">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/core#LifeCycleStage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Tropospheric_ozone_concentration_increase -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Tropospheric_ozone_concentration_increase">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategoryIndicator"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>Tropospheric ozone concentration increase</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Use_stage -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Use_stage">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/core#LifeCycleStage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#User_deprivation_potential_deprivation_weighted_consumption -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#User_deprivation_potential_deprivation_weighted_consumption">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategoryIndicator"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+        <rdfs:label>User deprivation potential (deprivation-weighted consumption)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Volume -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Volume">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#Property"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/property#QuantitativeProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#WasteTreatmentSite -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#WasteTreatmentSite">
+        <rdf:type rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        <rdf:type rdf:resource="https://schema.org/Place"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/st#Location"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/st#Site"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Waste_Treatment -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Waste_Treatment">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#ActivityTag"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Water_use -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Water_use">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#ImpactCategory"/>
+        <rdfs:label>Water use</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#a5795b7bdeb34ab0bf8401320356bd9f -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#a5795b7bdeb34ab0bf8401320356bd9f">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationFactor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#ac65dd6094a14be2a259f19b78d3016f -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#ac65dd6094a14be2a259f19b78d3016f">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationFactor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#dc3acd87af0a4fe4b4686ed51b13e934 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#dc3acd87af0a4fe4b4686ed51b13e934">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationFactor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#f941187970724fce99e30b2b40f1a144 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#f941187970724fce99e30b2b40f1a144">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationFactor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#fcc6b6dc5ce0460b9abf365124c24b60 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#fcc6b6dc5ce0460b9abf365124c24b60">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationFactor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#test1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#test1">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Activity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#test2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#test2">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#0daac3eb16074ecb93922f7338ae93bb -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#0daac3eb16074ecb93922f7338ae93bb">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationFactor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#18a6684317da48ff8f8c8c8f36200972 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#18a6684317da48ff8f8c8c8f36200972">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationFactor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#21914d7240fd422597f68af660756198 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#21914d7240fd422597f68af660756198">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationFactor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#3a6dcc343adb4a9eafe7b8216fb820ff -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#3a6dcc343adb4a9eafe7b8216fb820ff">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationFactor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#3cde2dec99d14565a0fbd440b2e9a1e5 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#3cde2dec99d14565a0fbd440b2e9a1e5">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationFactor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#43640569fe3c4b1a99c900c9e6bc6980 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#43640569fe3c4b1a99c900c9e6bc6980">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationFactor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#51a1767a998e43ef85328b952ce81466 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#51a1767a998e43ef85328b952ce81466">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationFactor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#71c84e64a5e5417eafb4d50cc7f26eec -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#71c84e64a5e5417eafb4d50cc7f26eec">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationFactor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#7972ac525f924b94afca491923c5489a -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#7972ac525f924b94afca491923c5489a">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationFactor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#9e9c4443b42440c99f790a02bea4d677 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#9e9c4443b42440c99f790a02bea4d677">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/ia#CharacterizationFactor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Emission_to_Stratosphere+Biosphere -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Emission_to_Stratosphere+Biosphere">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Biosphere"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#IC-Relay_solid_state_optocoupler_high_current_60V/1.0A/0.5ohm_China_CN -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#IC-Relay_solid_state_optocoupler_high_current_60V/1.0A/0.5ohm_China_CN">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Inputted_Auxiliaries/consumables -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Inputted_Auxiliaries/consumables">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Technosphere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Inputted_Maintenance/Cleaning_auxiliaries -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Inputted_Maintenance/Cleaning_auxiliaries">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Technosphere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lcanet/ICdata#Outputted_Waste_for_recycling/treatment -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lcanet/ICdata#Outputted_Waste_for_recycling/treatment">
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#EnvironemntalType"/>
+        <rdf:type rdf:resource="https://w3id.org/lcanet/activity#Technosphere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://qudt.org/schema/qudt#numericValue">
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt"/>
+        <rdfs:label>numeric value</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/ICdata#CODDE-v3-db-time-start">
+        <time:inXSDDate>27-01-2021</time:inXSDDate>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/ICdata#NegaOctet-v1-db-time-start">
+        <time:inXSDDate>22-11-2022</time:inXSDDate>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/activity#connected">
+        <rdfs:label>connected</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/activity#hasActivityTag">
+        <rdfs:label>has Activity Tag</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/activity#hasEnvironmentalType">
+        <rdfs:label>has Environmental Type</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/activity#hasFlowTag">
+        <rdfs:label>has Flow Tag</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/activity#isEnvironmentOf">
+        <rdfs:label>is Environment Of</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/actor#Context">
+        <rdfs:comment>A social, institutional, or processual situation that provides the setting in which a Role is played by an Agent and where its associated Responsibilities apply. Examples include projects, collaborations, assessments, or audits.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/actor#Responsibility">
+        <rdfs:comment>A Responsibility is a relator (a kind of social relation) that connects: the Agent (bearer),
+the Role (through which it is borne), and the Action(s) or Goals to which it applies. It include duties, obligations, tasks, etc.
+Examples: certify LCA results, verify data quality, etc.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/actor#bearsResponsibility">
+        <rdfs:label>bears Responsibility</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/actor#entailedBy">
+        <rdfs:label>entailed By</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/actor#entails">
+        <rdfs:comment>A Role entails certain Responsibilities</rdfs:comment>
+        <rdfs:label>entails</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/actor#inContextOf">
+        <rdfs:comment>Relates a Role to the Context (e.g., project or process) in which it is instantiated and meaningful.</rdfs:comment>
+        <rdfs:label>in Context Of</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/actor#isBorneBy">
+        <rdfs:label>is Borne By</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/actor#playedBy">
+        <rdfs:label>played By</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/actor#playsRole">
+        <rdfs:comment>An Agent plays a Role</rdfs:comment>
+        <rdfs:label>plays Role</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#activityBelongsToLCstage">
+        <rdfs:label>activity belongs to LC stage</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#activityHasImpactResult">
+        <rdfs:label>activity has Impact Result</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#flowHasImpactResult">
+        <rdfs:label>flow has Impact Result</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#hasFlowCategory">
+        <rdfs:label>has Flow Category</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#hasProperty">
+        <rdfs:label>has Property</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#hasSpatialAspect">
+        <rdfs:label>has Spatial Aspect</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#hasTemporalAspect">
+        <rdfs:label>has Temporal Aspect</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#impactResultConcernsActivity">
+        <rdfs:label>impact Result Concerns Activity</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#impactResultConcernsFlow">
+        <rdfs:label>impact Result Concerns Flow</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#interpretationContainsOIR">
+        <rdfs:label>interpretation contains OIR</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#interpretationDefinedBy">
+        <rdfs:label>interpretation defined by</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#lcaModeHasScope">
+        <rdfs:label>lca model has scope</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#lcaModelConcernsLCStage">
+        <rdfs:label>lca model concerns LC stage</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#lcaModelHasAuthor">
+        <rdfs:label>lca model has author</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#lcaModelHasGoal">
+        <rdfs:comment>The lcaModelHasGoal data property represents the objective of the LCA study, defined as a textual description that specifies the intended purpose and use of the LCA results.</rdfs:comment>
+        <rdfs:label>lca Model Has Goal</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#lcaModelHasId">
+        <rdfs:label>lca Model Has Id</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#lcaModelResultsInInterpretation">
+        <rdfs:label>lca model results in interpretation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#methodologyAssessesTopic">
+        <rdfs:label>methodology assesses topic</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#realizedBy">
+        <rdfs:label>realized by</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#realizesActivity">
+        <rdfs:label>realizes activity</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#scopeDefinedBy">
+        <rdfs:label>scope defined by</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#scopeHasAssumption">
+        <rdfs:label>scope Has Assumption</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#scopeHasFunctionalUnit">
+        <rdfs:label>scope Has Functional Unit</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#scopeHasReferenceFlow">
+        <rdfs:label>scope has reference flow</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#scopeHasSpatialScale">
+        <rdfs:label>scope has spatial scale</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#scopeHasSystemBoundary">
+        <rdfs:label>Scope Has System Boundary</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#scopeHasTemporalScale">
+        <rdfs:label>scope has temporal scale</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/core#usedBy">
+        <rdfs:label>used by</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/ia#assessIC">
+        <rdfs:label>assess IC</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/ia#assessedByICI">
+        <rdfs:label>assessed By ICI</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/ia#calculatedByCM">
+        <rdfs:label>calculated By CM</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/ia#calculatesCF">
+        <rdfs:label>calculates CF</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/ia#containedInOIR">
+        <rdfs:label>contained In OIR</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/ia#containsLcaResult">
+        <rdfs:label>contains Lca Result</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/ia#hasDefaultUnit">
+        <rdfs:label>has Default Unit</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/ia#hasIC">
+        <rdfs:label>has Impact Category</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/ia#imposedByMethodology">
+        <rdfs:label>imposed by Methodology</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/ia#imposesIC">
+        <rdfs:label>imposes IC</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/ia#includedInMethodology">
+        <rdfs:label>included In Methodology</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/ia#includesMethod">
+        <rdfs:label>includes Method</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/ia#quantifiedByCF">
+        <rdfs:label>quantified By CF</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/ia#quantifiesICI">
+        <rdfs:label>quantifies ICI</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/ia#usedInMethod">
+        <rdfs:label>used In Method</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/ia#usesCM">
+        <rdfs:label>uses CM</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/property#hasQualityValue">
+        <rdfs:label>has Quality Value</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/property#hasQuantityValue">
+        <rdfs:label>has Quantity Value</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/property#hasUnit">
+        <rdfs:label>has Unit</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/st#hasCoordinates">
+        <rdfs:comment>
+            Associates a location with a geographic point defined by WGS84 latitude and longitude.
+        </rdfs:comment>
+        <rdfs:label>has coordinates</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/st#hasLocation">
+        <rdfs:comment>
+            Relates an entity to a geographic location (Administrative Region or Site) where it takes place or exists.
+        </rdfs:comment>
+        <rdfs:label>has location</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/st#hasSpatialLocation">
+        <rdfs:comment>
+            Indicates the level of spatial granularity (e.g., global, national, regional, local)
+            at which a location or LCA dataset is defined.
+        </rdfs:comment>
+        <rdfs:label>has spatial scale</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/st#hasTemporalExtent">
+        <rdfs:comment>
+            Relates an entity to the time interval during which it exists, occurs, or is valid.
+            Aligned with time:Interval.
+        </rdfs:comment>
+        <rdfs:label>has temporal extent</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/st#hasTemporalResolution">
+        <rdfs:comment>
+            Indicates the temporal granularity or resolution at which data or observations
+            are aggregated or reported (e.g., hourly, monthly, yearly).
+        </rdfs:comment>
+        <rdfs:label>has temporal resolution</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/st#inRegion">
+        <rdfs:comment>
+            Relates any entity (e.g., process, facility, emission) to an administrative
+            region where it occurs or is assessed.
+        </rdfs:comment>
+        <rdfs:label>in region</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/st#locatedIn">
+        <rdfs:comment>
+            Indicates that a location is contained within an administrative region (not a Site),
+            such as a city located in a province or country.
+        </rdfs:comment>
+        <rdfs:label>located in</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/st#occursAt">
+        <rdfs:comment>
+            Relates an event or process to a specific temporal instant.
+            Aligns conceptually with time:Instant.
+        </rdfs:comment>
+        <rdfs:label>occurs at</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lcanet/st#validDuring">
+        <rdfs:comment>
+            Indicates the temporal interval for which a dataset, measurement, or assessment is valid.
+        </rdfs:comment>
+        <rdfs:label>valid during</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
