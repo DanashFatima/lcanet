@@ -15,7 +15,7 @@
         <owl:imports rdf:resource="https://w3id.org/lcanet/ia"/>
         <owl:imports rdf:resource="https://w3id.org/lcanet/property"/>
         <owl:imports rdf:resource="https://w3id.org/lcanet/st"/>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0002-0438-6831"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-4553-3930"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0003-3896-7295"/>
         <terms:contributor rdf:resource="https://orcid.org/0009-0002-7928-9902"/>
         <terms:contributor>Emmanuelle Core</terms:contributor>
@@ -208,6 +208,8 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lcanet/activity#Activity"/>
                     <rdf:Description rdf:about="https://w3id.org/lcanet/activity#Flow"/>
+                    <rdf:Description rdf:about="https://w3id.org/lcanet/actor#Agent"/>
+                    <rdf:Description rdf:about="https://w3id.org/lcanet/core#LcaModel"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>

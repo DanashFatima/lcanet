@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/lcanet/core#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/lcanet/core#","name":"The Core module of the Life Cycle Assessment Network Ontology (LCAnet).", "headline":"Document describing the ontology https://w3id.org/lcanet/core#", "dateReleased":"Thu Apr 30 17:06:17 CEST 2026", "version":"2.1.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Fatima Danash","url":"https://orcid.org/0000-0002-0438-6831"}], "contributor":[{"@type":"Person","name":"Fabien Perdu","url":"https://orcid.org/0000-0002-4553-3930"},{"@type":"Person","name":"Saadia Dhouib","url":"https://orcid.org/0000-0003-3896-7295"},{"@type":"Person","name":"Jean-François Berrée","url":"https://orcid.org/0009-0002-7928-9902"},{"@type":"Person","name":"Emmanuelle Core"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/lcanet/core#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/lcanet/core#","name":"The Core module of the Life Cycle Assessment Network Ontology (LCAnet).", "headline":"Document describing the ontology https://w3id.org/lcanet/core#", "dateReleased":"Fri May 08 14:30:35 CEST 2026", "version":"2.1.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Fatima Danash","url":"https://orcid.org/0000-0002-0438-6831"}], "contributor":[{"@type":"Person","name":"Saadia Dhouib","url":"https://orcid.org/0000-0003-3896-7295"},{"@type":"Person","name":"Fabien Perdu","url":"https://orcid.org/0000-0002-4553-3930"},{"@type":"Person","name":"Jean-François Berrée","url":"https://orcid.org/0009-0002-7928-9902"},{"@type":"Person","name":"Emmanuelle Core"},{"@type":"Person","name":"Makan, Thibault HALTER","url":"https://orcid.org/0009-0003-5475-3091"},{"@type":"Person","name":"Chokri Mraidha","url":"https://orcid.org/0000-0003-2993-5734"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -78,10 +78,10 @@ $(function(){
 <dt>Issued on:</dt>
 <dd>2026-04-30</dd>
 <dt>Authors:</dt>
-<dd><a href="https://orcid.org/0000-0002-0438-6831">Fatima Danash</a>, CEA List</dd>
+<dd><a href="https://orcid.org/0000-0002-0438-6831">Fatima Danash</a></dd>
 
 <dt>Contributors:</dt>
-<dd><a href="https://orcid.org/0000-0002-4553-3930">Fabien Perdu</a></dd><dd><a href="https://orcid.org/0000-0003-3896-7295">Saadia Dhouib</a></dd><dd><a href="https://orcid.org/0009-0002-7928-9902">Jean-François Berrée</a></dd><dd>Emmanuelle Core</dd>
+<dd><a href="https://orcid.org/0000-0003-3896-7295">Saadia Dhouib</a></dd><dd><a href="https://orcid.org/0000-0002-4553-3930">Fabien Perdu</a></dd><dd><a href="https://orcid.org/0009-0002-7928-9902">Jean-François Berrée</a></dd><dd>Emmanuelle Core</dd><dd><a href="https://orcid.org/0009-0003-5475-3091">Makan, Thibault HALTER</a></dd><dd><a href="https://orcid.org/0000-0003-2993-5734">Chokri Mraidha</a></dd>
 
 <dt>Publisher:</dt>
 <dd><a href="https://www.cea.fr">https://www.cea.fr</a></dd>
@@ -94,7 +94,6 @@ $(function(){
 </dd>
 </dl>
 <hr/>
-
 </div>
 <div class="status">
 <div>
@@ -139,6 +138,7 @@ It imports and integrates the Activity, Actor, Property, Spatiotemporal, and Imp
 </table>
 </div>
 </div>
+
 <div id="modules">
 <h3 id="moduleslist" class="list">LCAnet Modules</h3>
 
@@ -390,7 +390,7 @@ This section provides details for each class and property defined by LCAnet-Core
     is in domain of
    </dt>
    <dd>
-    <a href="#lcaModelHasGoal" title="https://w3id.org/lcanet/core#lcaModelHasGoal">lca Model Has Goal</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#lcaModelHasId" title="https://w3id.org/lcanet/core#lcaModelHasId">lca Model Has Id</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#lcaModelConcernsLCStage" title="https://w3id.org/lcanet/core#lcaModelConcernsLCStage">lca model concerns LC stage</a> <sup class="type-op" title="object property">op</sup>, <a href="#lcaModelHasAuthor" title="https://w3id.org/lcanet/core#lcaModelHasAuthor">lca model has author</a> <sup class="type-op" title="object property">op</sup>, <a href="#lcaModeHasScope" title="https://w3id.org/lcanet/core#lcaModeHasScope">lca model has scope</a> <sup class="type-op" title="object property">op</sup>, <a href="#lcaModelResultsInInterpretation" title="https://w3id.org/lcanet/core#lcaModelResultsInInterpretation">lca model results in interpretation</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasProperty" title="https://w3id.org/lcanet/core#hasProperty">has Property</a> <sup class="type-op" title="object property">op</sup>, <a href="#lcaModelHasGoal" title="https://w3id.org/lcanet/core#lcaModelHasGoal">lca Model Has Goal</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#lcaModelHasId" title="https://w3id.org/lcanet/core#lcaModelHasId">lca Model Has Id</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#lcaModelConcernsLCStage" title="https://w3id.org/lcanet/core#lcaModelConcernsLCStage">lca model concerns LC stage</a> <sup class="type-op" title="object property">op</sup>, <a href="#lcaModelHasAuthor" title="https://w3id.org/lcanet/core#lcaModelHasAuthor">lca model has author</a> <sup class="type-op" title="object property">op</sup>, <a href="#lcaModeHasScope" title="https://w3id.org/lcanet/core#lcaModeHasScope">lca model has scope</a> <sup class="type-op" title="object property">op</sup>, <a href="#lcaModelResultsInInterpretation" title="https://w3id.org/lcanet/core#lcaModelResultsInInterpretation">lca model results in interpretation</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -552,7 +552,7 @@ This section provides details for each class and property defined by LCAnet-Core
      has domain
     </dt>
     <dd>
-     <a href="https://w3id.org/lcanet/activity#Activity" target="_blank" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://w3id.org/lcanet/activity#Flow" target="_blank" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup>
+     <a href="https://w3id.org/lcanet/activity#Activity" target="_blank" title="https://w3id.org/lcanet/activity#Activity">Activity</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://w3id.org/lcanet/activity#Flow" target="_blank" title="https://w3id.org/lcanet/activity#Flow">Flow</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://w3id.org/lcanet/actor#Agent" target="_blank" title="https://w3id.org/lcanet/actor#Agent">Agent</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#LcaModel" title="https://w3id.org/lcanet/core#LcaModel">LCA Model</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range

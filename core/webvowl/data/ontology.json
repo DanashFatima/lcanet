@@ -34,22 +34,22 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "https://orcid.org/0000-0002-0438-6831",
-        "type" : "iri"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "https://orcid.org/0000-0003-3896-7295",
-        "type" : "iri"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
         "value" : "Emmanuelle Core",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
+        "value" : "https://orcid.org/0000-0002-4553-3930",
+        "type" : "iri"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
         "value" : "https://orcid.org/0009-0002-7928-9902",
+        "type" : "iri"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0003-3896-7295",
         "type" : "iri"
       } ],
       "preferredNamespacePrefix" : [ {
@@ -76,16 +76,16 @@
         "value" : "https://w3id.org/lcanet/core#",
         "type" : "label"
       } ],
-      "issued" : [ {
-        "identifier" : "issued",
-        "language" : "undefined",
-        "value" : "2026-04-30",
-        "type" : "label"
-      } ],
       "title" : [ {
         "identifier" : "title",
         "language" : "en",
         "value" : "The Core module of the Life Cycle Assessment Network Ontology (LCAnet).",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-04-30",
         "type" : "label"
       } ]
     }
@@ -167,13 +167,13 @@
     "id" : "35",
     "type" : "owl:Class"
   }, {
-    "id" : "22",
+    "id" : "21",
     "type" : "owl:Class"
   }, {
     "id" : "53",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "45",
+    "id" : "48",
     "type" : "owl:unionOf"
   }, {
     "id" : "57",
@@ -188,10 +188,10 @@
     "id" : "61",
     "type" : "owl:Class"
   }, {
-    "id" : "47",
+    "id" : "45",
     "type" : "owl:Class"
   }, {
-    "id" : "21",
+    "id" : "20",
     "type" : "owl:Class"
   }, {
     "id" : "39",
@@ -366,7 +366,7 @@
   }, {
     "instances" : 0,
     "union" : [ "39", "40" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "38"
   }, {
     "iri" : "https://w3id.org/lcanet/property#Property",
@@ -436,7 +436,7 @@
       "IRI-based" : "Activity"
     },
     "attributes" : [ "external" ],
-    "id" : "22"
+    "id" : "21"
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "id" : "53",
@@ -446,13 +446,13 @@
     }
   }, {
     "instances" : 0,
-    "union" : [ "56", "21" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "45"
+    "union" : [ "56", "20" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "48"
   }, {
     "instances" : 0,
-    "union" : [ "47", "22" ],
-    "attributes" : [ "anonymous", "union" ],
+    "union" : [ "1", "45", "21", "9" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "57"
   }, {
     "iri" : "https://w3id.org/lcanet/ia#ImpactCategory",
@@ -489,7 +489,7 @@
       "IRI-based" : "Flow"
     },
     "attributes" : [ "external" ],
-    "id" : "47"
+    "id" : "45"
   }, {
     "iri" : "https://w3id.org/lcanet/ia#LcaResult",
     "baseIri" : "https://w3id.org/lcanet/ia",
@@ -498,7 +498,7 @@
       "IRI-based" : "LcaResult"
     },
     "attributes" : [ "external" ],
-    "id" : "21"
+    "id" : "20"
   }, {
     "iri" : "https://w3id.org/lcanet/ia#Methodology",
     "baseIri" : "https://w3id.org/lcanet/ia",
@@ -573,7 +573,7 @@
     "id" : "19",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "20",
+    "id" : "22",
     "type" : "owl:objectProperty"
   }, {
     "id" : "23",
@@ -597,7 +597,7 @@
     "id" : "44",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "46",
+    "id" : "47",
     "type" : "owl:objectProperty"
   }, {
     "id" : "50",
@@ -618,7 +618,7 @@
     "id" : "43",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "48",
+    "id" : "46",
     "type" : "owl:objectProperty"
   }, {
     "id" : "62",
@@ -747,6 +747,17 @@
     "attributes" : [ "object", "external" ],
     "id" : "18"
   }, {
+    "iri" : "https://w3id.org/lcanet/core#impactResultConcernsActivity",
+    "baseIri" : "https://w3id.org/lcanet/core",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "impactResultConcernsActivity",
+      "undefined" : "impact Result Concerns Activity"
+    },
+    "domain" : "20",
+    "attributes" : [ "object" ],
+    "id" : "19"
+  }, {
     "iri" : "https://w3id.org/lcanet/core#scopeDefinedBy",
     "baseIri" : "https://w3id.org/lcanet/core",
     "range" : "9",
@@ -756,18 +767,7 @@
     },
     "domain" : "2",
     "attributes" : [ "object" ],
-    "id" : "19"
-  }, {
-    "iri" : "https://w3id.org/lcanet/core#impactResultConcernsActivity",
-    "baseIri" : "https://w3id.org/lcanet/core",
-    "range" : "22",
-    "label" : {
-      "IRI-based" : "impactResultConcernsActivity",
-      "undefined" : "impact Result Concerns Activity"
-    },
-    "domain" : "21",
-    "attributes" : [ "object" ],
-    "id" : "20"
+    "id" : "22"
   }, {
     "iri" : "https://w3id.org/lcanet/core#scopeHasTemporalScale",
     "baseIri" : "https://w3id.org/lcanet/core",
@@ -831,9 +831,21 @@
       "IRI-based" : "realizedBy",
       "undefined" : "realized by"
     },
-    "domain" : "22",
+    "domain" : "21",
     "attributes" : [ "object" ],
     "id" : "42"
+  }, {
+    "iri" : "https://w3id.org/lcanet/core#flowHasImpactResult",
+    "inverse" : "46",
+    "baseIri" : "https://w3id.org/lcanet/core",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "flowHasImpactResult",
+      "undefined" : "flow has Impact Result"
+    },
+    "domain" : "45",
+    "attributes" : [ "object" ],
+    "id" : "44"
   }, {
     "iri" : "https://w3id.org/lcanet/core#hasFlowCategory",
     "baseIri" : "https://w3id.org/lcanet/core",
@@ -842,21 +854,9 @@
       "IRI-based" : "hasFlowCategory",
       "undefined" : "has Flow Category"
     },
-    "domain" : "45",
+    "domain" : "48",
     "attributes" : [ "object" ],
-    "id" : "44"
-  }, {
-    "iri" : "https://w3id.org/lcanet/core#flowHasImpactResult",
-    "inverse" : "48",
-    "baseIri" : "https://w3id.org/lcanet/core",
-    "range" : "21",
-    "label" : {
-      "IRI-based" : "flowHasImpactResult",
-      "undefined" : "flow has Impact Result"
-    },
-    "domain" : "47",
-    "attributes" : [ "object" ],
-    "id" : "46"
+    "id" : "47"
   }, {
     "iri" : "https://w3id.org/lcanet/core#scopeHasSystemBoundary",
     "baseIri" : "https://w3id.org/lcanet/core",
@@ -870,14 +870,14 @@
     "id" : "50"
   }, {
     "iri" : "https://w3id.org/lcanet/core#activityHasImpactResult",
-    "inverse" : "20",
+    "inverse" : "19",
     "baseIri" : "https://w3id.org/lcanet/core",
-    "range" : "21",
+    "range" : "20",
     "label" : {
       "IRI-based" : "activityHasImpactResult",
       "undefined" : "activity has Impact Result"
     },
-    "domain" : "22",
+    "domain" : "21",
     "attributes" : [ "object" ],
     "id" : "54"
   }, {
@@ -926,14 +926,14 @@
   }, {
     "iri" : "https://w3id.org/lcanet/core#impactResultConcernsFlow",
     "baseIri" : "https://w3id.org/lcanet/core",
-    "range" : "47",
+    "range" : "45",
     "label" : {
       "IRI-based" : "impactResultConcernsFlow",
       "undefined" : "impact Result Concerns Flow"
     },
-    "domain" : "21",
+    "domain" : "20",
     "attributes" : [ "object" ],
-    "id" : "48"
+    "id" : "46"
   }, {
     "iri" : "https://w3id.org/lcanet/core#lcaModelHasId",
     "baseIri" : "https://w3id.org/lcanet/core",
@@ -953,7 +953,7 @@
       "IRI-based" : "activityBelongsToLCstage",
       "undefined" : "activity belongs to LC stage"
     },
-    "domain" : "22",
+    "domain" : "21",
     "attributes" : [ "object" ],
     "id" : "63"
   }, {
@@ -974,7 +974,7 @@
       "IRI-based" : "hasTemporalAspect",
       "undefined" : "has Temporal Aspect"
     },
-    "domain" : "22",
+    "domain" : "21",
     "attributes" : [ "object" ],
     "id" : "65"
   }, {
@@ -995,7 +995,7 @@
       "IRI-based" : "hasSpatialAspect",
       "undefined" : "has Spatial Aspect"
     },
-    "domain" : "22",
+    "domain" : "21",
     "attributes" : [ "object" ],
     "id" : "67"
   }, {
@@ -1037,7 +1037,7 @@
       "IRI-based" : "usedBy",
       "undefined" : "used by"
     },
-    "domain" : "47",
+    "domain" : "45",
     "attributes" : [ "object" ],
     "id" : "72"
   }, {

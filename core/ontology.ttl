@@ -13,7 +13,7 @@
                                             <https://w3id.org/lcanet/ia> ,
                                             <https://w3id.org/lcanet/property> ,
                                             <https://w3id.org/lcanet/st> ;
-                                <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-0438-6831> ,
+                                <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-4553-3930> ,
                                                                        <https://orcid.org/0000-0003-3896-7295> ,
                                                                        <https://orcid.org/0009-0002-7928-9902> ,
                                                                        "Emmanuelle Core" ;
@@ -126,6 +126,8 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:domain [ rdf:type owl:Class ;
                            owl:unionOf ( <https://w3id.org/lcanet/activity#Activity>
                                          <https://w3id.org/lcanet/activity#Flow>
+                                         <https://w3id.org/lcanet/actor#Agent>
+                                         :LcaModel
                                        )
                          ] ;
              rdfs:range <https://w3id.org/lcanet/property#Property> ;

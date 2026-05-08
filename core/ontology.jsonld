@@ -9,27 +9,27 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid10",
+  "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid17"
-    }, {
-      "@id" : "_:genid12"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid12",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+      "@id" : "_:genid19"
     }, {
       "@id" : "_:genid14"
     } ]
   } ]
 }, {
   "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+    }, {
+      "@id" : "_:genid16"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/lcanet/ia#hasIC"
@@ -38,17 +38,17 @@
     "@id" : "https://w3id.org/lcanet/ia#ImpactCategory"
   } ]
 }, {
-  "@id" : "_:genid17",
+  "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/lcanet/ia#LcaResult"
     }, {
-      "@id" : "_:genid19"
+      "@id" : "_:genid21"
     } ]
   } ]
 }, {
-  "@id" : "_:genid19",
+  "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/lcanet/core#hasFlowCategory"
@@ -64,10 +64,14 @@
       "@id" : "https://w3id.org/lcanet/activity#Activity"
     }, {
       "@id" : "https://w3id.org/lcanet/activity#Flow"
+    }, {
+      "@id" : "https://w3id.org/lcanet/actor#Agent"
+    }, {
+      "@id" : "https://w3id.org/lcanet/core#LcaModel"
     } ]
   } ]
 }, {
-  "@id" : "_:genid7",
+  "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -140,7 +144,7 @@
   "@id" : "https://w3id.org/lcanet/core",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/contributor" : [ {
-    "@id" : "https://orcid.org/0000-0002-0438-6831"
+    "@id" : "https://orcid.org/0000-0002-4553-3930"
   }, {
     "@id" : "https://orcid.org/0000-0003-3896-7295"
   }, {
@@ -438,7 +442,7 @@
   "@id" : "https://w3id.org/lcanet/core#methodologyAssessesTopic",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid7"
+    "@id" : "_:genid9"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "methodology assesses topic"
@@ -579,7 +583,7 @@
   "@id" : "https://w3id.org/lcanet/ia#LcaResult",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid10"
+    "@id" : "_:genid12"
   } ]
 }, {
   "@id" : "https://w3id.org/lcanet/ia#Method",
