@@ -52,16 +52,16 @@
         "value" : "2.1.0",
         "type" : "label"
       } ],
-      "issued" : [ {
-        "identifier" : "issued",
-        "language" : "undefined",
-        "value" : "2026-04-30",
-        "type" : "label"
-      } ],
       "title" : [ {
         "identifier" : "title",
         "language" : "en",
         "value" : "The Actor module of the Life Cycle Assessment Network Ontology (LCAnet).",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-04-30",
         "type" : "label"
       } ]
     }
@@ -71,7 +71,7 @@
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "6",
+    "id" : "5",
     "type" : "owl:Class"
   }, {
     "id" : "10",
@@ -89,7 +89,7 @@
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "5",
+    "id" : "6",
     "type" : "owl:equivalentClass"
   }, {
     "id" : "27",
@@ -129,15 +129,6 @@
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
-    "iri" : "https://w3id.org/lcanet/actor#Agency",
-    "baseIri" : "https://w3id.org/lcanet/actor",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Agency"
-    },
-    "id" : "4",
-    "superClasses" : [ "5" ]
-  }, {
     "iri" : "https://w3id.org/lcanet/actor#Auditor",
     "baseIri" : "https://w3id.org/lcanet/actor",
     "instances" : 0,
@@ -148,8 +139,17 @@
     "comment" : {
       "undefined" : "Represents a type of role that an agent may assume when evaluating, reviewing, or verifying the conformity and quality of a life cycle assessment study or its results."
     },
-    "id" : "6",
+    "id" : "4",
     "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/actor#Agency",
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agency"
+    },
+    "id" : "5",
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/Agent",
     "baseIri" : "http://xmlns.com/foaf/0.1",
@@ -157,7 +157,7 @@
     "label" : {
       "IRI-based" : "Agent"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "10"
   }, {
     "iri" : "https://w3id.org/lcanet/actor#Agent",
@@ -167,7 +167,7 @@
     "label" : {
       "IRI-based" : "Agent"
     },
-    "subClasses" : [ "5", "8", "12" ],
+    "subClasses" : [ "6", "8", "12" ],
     "attributes" : [ "equivalent" ],
     "id" : "9"
   }, {
@@ -215,12 +215,12 @@
     "label" : {
       "IRI-based" : "Organization"
     },
-    "subClasses" : [ "4" ],
+    "subClasses" : [ "5" ],
     "comment" : {
       "undefined" : "A structured entity with identity and possibly legal status."
     },
     "attributes" : [ "equivalent" ],
-    "id" : "5",
+    "id" : "6",
     "superClasses" : [ "9" ]
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
@@ -249,7 +249,7 @@
     "label" : {
       "IRI-based" : "Organization"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "26"
   }, {
     "iri" : "https://w3id.org/lcanet/actor#Consumer",
@@ -271,7 +271,7 @@
     "label" : {
       "IRI-based" : "Agent"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "21"
   }, {
     "iri" : "https://w3id.org/lcanet/actor#Role",
@@ -281,7 +281,7 @@
       "IRI-based" : "Role",
       "undefined" : "Role"
     },
-    "subClasses" : [ "15", "17", "6", "20", "23", "32" ],
+    "subClasses" : [ "15", "17", "4", "20", "23", "32" ],
     "comment" : {
       "undefined" : "Represents a functional role that an agent can assume in a specific context.\nExample: LCA Auditor, LCA Agency Role"
     },
@@ -304,7 +304,7 @@
     "label" : {
       "IRI-based" : "Group"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "33"
   }, {
     "iri" : "https://w3id.org/lcanet/actor#Group",
@@ -338,7 +338,7 @@
     "label" : {
       "IRI-based" : "Person"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "34"
   }, {
     "iri" : "https://w3id.org/lcanet/actor#Customer",
@@ -421,42 +421,42 @@
   }, {
     "range" : "9",
     "domain" : "8",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "7"
   }, {
     "range" : "9",
     "domain" : "12",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "11"
   }, {
-    "range" : "5",
-    "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "6",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "13"
   }, {
     "range" : "2",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "14"
   }, {
     "range" : "2",
     "domain" : "17",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "16"
   }, {
     "range" : "2",
-    "domain" : "6",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "18"
   }, {
     "range" : "2",
     "domain" : "20",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "19"
   }, {
     "range" : "2",
     "domain" : "23",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "22"
   }, {
     "iri" : "https://w3id.org/lcanet/actor#playedBy",
@@ -472,8 +472,8 @@
     "id" : "24"
   }, {
     "range" : "9",
-    "domain" : "5",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "28"
   }, {
     "iri" : "https://w3id.org/lcanet/actor#inContextOf",
@@ -531,7 +531,7 @@
   }, {
     "range" : "2",
     "domain" : "32",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "35"
   }, {
     "iri" : "https://w3id.org/lcanet/actor#bearsResponsibility",
