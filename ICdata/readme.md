@@ -31,7 +31,9 @@ https://w3id.org/lcanet/ICdata
 | Impact Assessment | ImpactCategory, LcaResult, OverallImpactResult |
 
 ## Repository Structure
+```
 ICdata/
 ├── inputs/                       # Raw input data and Bill of Materials
-├── ICdata-HermiT-inferred.rdf    # Populated knowledge graph with the inferred triples (RDF/XML)
+├── ICdata-HermiT-inferred.rdf    # Populated knowledge graph with materialized inferred triples (RDF/XML)
 └── ICdata.ttl                    # Asserted triples only (Turtle)
+```
