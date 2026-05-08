@@ -117,6 +117,10 @@
 <https://w3id.org/lcanet/core#impactResultConcernsActivity> rdf:type owl:AnnotationProperty .
 
 
+###  https://w3id.org/lcanet/core#lcaModeHasScope
+<https://w3id.org/lcanet/core#lcaModeHasScope> rdf:type owl:AnnotationProperty .
+
+
 ###  https://w3id.org/lcanet/core#lcaModelConcernsLCStage
 <https://w3id.org/lcanet/core#lcaModelConcernsLCStage> rdf:type owl:AnnotationProperty .
 
@@ -127,10 +131,6 @@
 
 ###  https://w3id.org/lcanet/core#lcaModelHasGoal
 <https://w3id.org/lcanet/core#lcaModelHasGoal> rdf:type owl:AnnotationProperty .
-
-
-###  https://w3id.org/lcanet/core#lcaModelHasScope
-<https://w3id.org/lcanet/core#lcaModelHasScope> rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/lcanet/core#lcaModelResultsInInterpretation
@@ -1860,7 +1860,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/lcanet/ICdata#IR_Production_Circuit_Storaige
 :IR_Production_Circuit_Storaige rdf:type owl:NamedIndividual ,
                                          <https://w3id.org/lcanet/ia#LcaResult> ;
-                                <http://qudt.org/schema/qudt#numericValue> "0,194533374702331" ;
+                                <http://qudt.org/schema/qudt#numericValue> 0.194533374702331 ;
                                 <https://w3id.org/lcanet/core#impactResultConcernsActivity> :IC-Production_of_ICV_Storaige_Prototype ;
                                 <https://w3id.org/lcanet/ia#containedInOIR> :Overall_IR_Climate_Change ;
                                 <https://w3id.org/lcanet/ia#hasIC> :Climate_change_total .
@@ -1869,7 +1869,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/lcanet/ICdata#IR_Production_Daughter_Board
 :IR_Production_Daughter_Board rdf:type owl:NamedIndividual ,
                                        <https://w3id.org/lcanet/ia#LcaResult> ;
-                              <http://qudt.org/schema/qudt#numericValue> "0,540494410009839" ;
+                              <http://qudt.org/schema/qudt#numericValue> 0.540494410009839 ;
                               <https://w3id.org/lcanet/core#impactResultConcernsActivity> :IC-Production_of_Daughter_Board ;
                               <https://w3id.org/lcanet/ia#containedInOIR> :Overall_IR_Climate_Change ;
                               <https://w3id.org/lcanet/ia#hasIC> :Climate_change_total .
@@ -1878,7 +1878,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/lcanet/ICdata#IR_Production_Mother_Board
 :IR_Production_Mother_Board rdf:type owl:NamedIndividual ,
                                      <https://w3id.org/lcanet/ia#LcaResult> ;
-                            <http://qudt.org/schema/qudt#numericValue> "10,1273637779549" ;
+                            <http://qudt.org/schema/qudt#numericValue> 10.1273637779549 ;
                             <https://w3id.org/lcanet/core#impactResultConcernsActivity> :IC-Production_of_Mother_Board ;
                             <https://w3id.org/lcanet/ia#containedInOIR> :Overall_IR_Climate_Change .
 
@@ -1886,7 +1886,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/lcanet/ICdata#IR_Production_Test_Card
 :IR_Production_Test_Card rdf:type owl:NamedIndividual ,
                                   <https://w3id.org/lcanet/ia#LcaResult> ;
-                         <http://qudt.org/schema/qudt#numericValue> "1,57650467322258" ;
+                         <http://qudt.org/schema/qudt#numericValue> 1.57650467322258 ;
                          <https://w3id.org/lcanet/core#impactResultConcernsActivity> :IC-Production_of_Test_Card_FT3242H ;
                          <https://w3id.org/lcanet/ia#containedInOIR> :Overall_IR_Climate_Change ;
                          <https://w3id.org/lcanet/ia#hasIC> :Climate_change_total .
@@ -1981,11 +1981,11 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/lcanet/ICdata#LCA_of_ICV_Storaige_Prototype
 :LCA_of_ICV_Storaige_Prototype rdf:type owl:NamedIndividual ,
                                         <https://w3id.org/lcanet/core#LcaModel> ;
+                               <https://w3id.org/lcanet/core#lcaModeHasScope> :Scope_of_ICV_Storaige_Prototype ;
                                <https://w3id.org/lcanet/core#lcaModelConcernsLCStage> :Material_Extraction_stage ,
                                                                                       :Production_stage ;
                                <https://w3id.org/lcanet/core#lcaModelHasAuthor> :Thibault_Halter ;
                                <https://w3id.org/lcanet/core#lcaModelHasGoal> "This LCA is an explorative work of a digital system from its design, in order to systematize this approach in future numeric designs." ;
-                               <https://w3id.org/lcanet/core#lcaModelHasScope> :Scope_of_ICV_Storaige_Prototype ;
                                <https://w3id.org/lcanet/core#lcaModelResultsInInterpretation> :Interpretation-Report-XV1 .
 
 

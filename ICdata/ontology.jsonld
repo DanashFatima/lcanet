@@ -2793,7 +2793,8 @@
   "@id" : "https://w3id.org/lcanet/ICdata#IR_Production_Circuit_Storaige",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://qudt.org/schema/qudt#numericValue" : [ {
-    "@value" : "0,194533374702331"
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.194533374702331"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/lcanet/ia#LcaResult"
@@ -2811,7 +2812,8 @@
   "@id" : "https://w3id.org/lcanet/ICdata#IR_Production_Daughter_Board",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://qudt.org/schema/qudt#numericValue" : [ {
-    "@value" : "0,540494410009839"
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.540494410009839"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/lcanet/ia#LcaResult"
@@ -2829,7 +2831,8 @@
   "@id" : "https://w3id.org/lcanet/ICdata#IR_Production_Mother_Board",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://qudt.org/schema/qudt#numericValue" : [ {
-    "@value" : "10,1273637779549"
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "10.1273637779549"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/lcanet/ia#LcaResult"
@@ -2844,7 +2847,8 @@
   "@id" : "https://w3id.org/lcanet/ICdata#IR_Production_Test_Card",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://qudt.org/schema/qudt#numericValue" : [ {
-    "@value" : "1,57650467322258"
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1.57650467322258"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/lcanet/ia#LcaResult"
@@ -2998,6 +3002,9 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/lcanet/core#LcaModel"
   } ],
+  "https://w3id.org/lcanet/core#lcaModeHasScope" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Scope_of_ICV_Storaige_Prototype"
+  } ],
   "https://w3id.org/lcanet/core#lcaModelConcernsLCStage" : [ {
     "@id" : "https://w3id.org/lcanet/ICdata#Material_Extraction_stage"
   }, {
@@ -3008,9 +3015,6 @@
   } ],
   "https://w3id.org/lcanet/core#lcaModelHasGoal" : [ {
     "@value" : "This LCA is an explorative work of a digital system from its design, in order to systematize this approach in future numeric designs."
-  } ],
-  "https://w3id.org/lcanet/core#lcaModelHasScope" : [ {
-    "@id" : "https://w3id.org/lcanet/ICdata#Scope_of_ICV_Storaige_Prototype"
   } ],
   "https://w3id.org/lcanet/core#lcaModelResultsInInterpretation" : [ {
     "@id" : "https://w3id.org/lcanet/ICdata#Interpretation-Report-XV1"
@@ -3507,6 +3511,9 @@
   "@id" : "https://w3id.org/lcanet/core#impactResultConcernsActivity",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "https://w3id.org/lcanet/core#lcaModeHasScope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "https://w3id.org/lcanet/core#lcaModelConcernsLCStage",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -3514,9 +3521,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://w3id.org/lcanet/core#lcaModelHasGoal",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/lcanet/core#lcaModelHasScope",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://w3id.org/lcanet/core#lcaModelResultsInInterpretation",

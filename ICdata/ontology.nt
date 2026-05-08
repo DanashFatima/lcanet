@@ -89,6 +89,9 @@
 # https://w3id.org/lcanet/core#impactResultConcernsActivity
 <https://w3id.org/lcanet/core#impactResultConcernsActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# https://w3id.org/lcanet/core#lcaModeHasScope
+<https://w3id.org/lcanet/core#lcaModeHasScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # https://w3id.org/lcanet/core#lcaModelConcernsLCStage
 <https://w3id.org/lcanet/core#lcaModelConcernsLCStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -97,9 +100,6 @@
 # 
 # https://w3id.org/lcanet/core#lcaModelHasGoal
 <https://w3id.org/lcanet/core#lcaModelHasGoal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# https://w3id.org/lcanet/core#lcaModelHasScope
-<https://w3id.org/lcanet/core#lcaModelHasScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # https://w3id.org/lcanet/core#lcaModelResultsInInterpretation
 <https://w3id.org/lcanet/core#lcaModelResultsInInterpretation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -1656,7 +1656,7 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://w3id.org/lcanet/ICdata#IR_Production_Circuit_Storaige
 <https://w3id.org/lcanet/ICdata#IR_Production_Circuit_Storaige> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/lcanet/ICdata#IR_Production_Circuit_Storaige> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/lcanet/ia#LcaResult> .
-<https://w3id.org/lcanet/ICdata#IR_Production_Circuit_Storaige> <http://qudt.org/schema/qudt#numericValue> "0,194533374702331" .
+<https://w3id.org/lcanet/ICdata#IR_Production_Circuit_Storaige> <http://qudt.org/schema/qudt#numericValue> "0.194533374702331"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <https://w3id.org/lcanet/ICdata#IR_Production_Circuit_Storaige> <https://w3id.org/lcanet/core#impactResultConcernsActivity> <https://w3id.org/lcanet/ICdata#IC-Production_of_ICV_Storaige_Prototype> .
 <https://w3id.org/lcanet/ICdata#IR_Production_Circuit_Storaige> <https://w3id.org/lcanet/ia#containedInOIR> <https://w3id.org/lcanet/ICdata#Overall_IR_Climate_Change> .
 <https://w3id.org/lcanet/ICdata#IR_Production_Circuit_Storaige> <https://w3id.org/lcanet/ia#hasIC> <https://w3id.org/lcanet/ICdata#Climate_change_total> .
@@ -1664,7 +1664,7 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://w3id.org/lcanet/ICdata#IR_Production_Daughter_Board
 <https://w3id.org/lcanet/ICdata#IR_Production_Daughter_Board> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/lcanet/ICdata#IR_Production_Daughter_Board> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/lcanet/ia#LcaResult> .
-<https://w3id.org/lcanet/ICdata#IR_Production_Daughter_Board> <http://qudt.org/schema/qudt#numericValue> "0,540494410009839" .
+<https://w3id.org/lcanet/ICdata#IR_Production_Daughter_Board> <http://qudt.org/schema/qudt#numericValue> "0.540494410009839"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <https://w3id.org/lcanet/ICdata#IR_Production_Daughter_Board> <https://w3id.org/lcanet/core#impactResultConcernsActivity> <https://w3id.org/lcanet/ICdata#IC-Production_of_Daughter_Board> .
 <https://w3id.org/lcanet/ICdata#IR_Production_Daughter_Board> <https://w3id.org/lcanet/ia#containedInOIR> <https://w3id.org/lcanet/ICdata#Overall_IR_Climate_Change> .
 <https://w3id.org/lcanet/ICdata#IR_Production_Daughter_Board> <https://w3id.org/lcanet/ia#hasIC> <https://w3id.org/lcanet/ICdata#Climate_change_total> .
@@ -1672,14 +1672,14 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://w3id.org/lcanet/ICdata#IR_Production_Mother_Board
 <https://w3id.org/lcanet/ICdata#IR_Production_Mother_Board> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/lcanet/ICdata#IR_Production_Mother_Board> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/lcanet/ia#LcaResult> .
-<https://w3id.org/lcanet/ICdata#IR_Production_Mother_Board> <http://qudt.org/schema/qudt#numericValue> "10,1273637779549" .
+<https://w3id.org/lcanet/ICdata#IR_Production_Mother_Board> <http://qudt.org/schema/qudt#numericValue> "10.1273637779549"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <https://w3id.org/lcanet/ICdata#IR_Production_Mother_Board> <https://w3id.org/lcanet/core#impactResultConcernsActivity> <https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board> .
 <https://w3id.org/lcanet/ICdata#IR_Production_Mother_Board> <https://w3id.org/lcanet/ia#containedInOIR> <https://w3id.org/lcanet/ICdata#Overall_IR_Climate_Change> .
 # 
 # https://w3id.org/lcanet/ICdata#IR_Production_Test_Card
 <https://w3id.org/lcanet/ICdata#IR_Production_Test_Card> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/lcanet/ICdata#IR_Production_Test_Card> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/lcanet/ia#LcaResult> .
-<https://w3id.org/lcanet/ICdata#IR_Production_Test_Card> <http://qudt.org/schema/qudt#numericValue> "1,57650467322258" .
+<https://w3id.org/lcanet/ICdata#IR_Production_Test_Card> <http://qudt.org/schema/qudt#numericValue> "1.57650467322258"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <https://w3id.org/lcanet/ICdata#IR_Production_Test_Card> <https://w3id.org/lcanet/core#impactResultConcernsActivity> <https://w3id.org/lcanet/ICdata#IC-Production_of_Test_Card_FT3242H> .
 <https://w3id.org/lcanet/ICdata#IR_Production_Test_Card> <https://w3id.org/lcanet/ia#containedInOIR> <https://w3id.org/lcanet/ICdata#Overall_IR_Climate_Change> .
 <https://w3id.org/lcanet/ICdata#IR_Production_Test_Card> <https://w3id.org/lcanet/ia#hasIC> <https://w3id.org/lcanet/ICdata#Climate_change_total> .
@@ -1758,11 +1758,11 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://w3id.org/lcanet/ICdata#LCA_of_ICV_Storaige_Prototype
 <https://w3id.org/lcanet/ICdata#LCA_of_ICV_Storaige_Prototype> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/lcanet/ICdata#LCA_of_ICV_Storaige_Prototype> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/lcanet/core#LcaModel> .
+<https://w3id.org/lcanet/ICdata#LCA_of_ICV_Storaige_Prototype> <https://w3id.org/lcanet/core#lcaModeHasScope> <https://w3id.org/lcanet/ICdata#Scope_of_ICV_Storaige_Prototype> .
 <https://w3id.org/lcanet/ICdata#LCA_of_ICV_Storaige_Prototype> <https://w3id.org/lcanet/core#lcaModelConcernsLCStage> <https://w3id.org/lcanet/ICdata#Material_Extraction_stage> .
 <https://w3id.org/lcanet/ICdata#LCA_of_ICV_Storaige_Prototype> <https://w3id.org/lcanet/core#lcaModelConcernsLCStage> <https://w3id.org/lcanet/ICdata#Production_stage> .
 <https://w3id.org/lcanet/ICdata#LCA_of_ICV_Storaige_Prototype> <https://w3id.org/lcanet/core#lcaModelHasAuthor> <https://w3id.org/lcanet/ICdata#Thibault_Halter> .
 <https://w3id.org/lcanet/ICdata#LCA_of_ICV_Storaige_Prototype> <https://w3id.org/lcanet/core#lcaModelHasGoal> "This LCA is an explorative work of a digital system from its design, in order to systematize this approach in future numeric designs." .
-<https://w3id.org/lcanet/ICdata#LCA_of_ICV_Storaige_Prototype> <https://w3id.org/lcanet/core#lcaModelHasScope> <https://w3id.org/lcanet/ICdata#Scope_of_ICV_Storaige_Prototype> .
 <https://w3id.org/lcanet/ICdata#LCA_of_ICV_Storaige_Prototype> <https://w3id.org/lcanet/core#lcaModelResultsInInterpretation> <https://w3id.org/lcanet/ICdata#Interpretation-Report-XV1> .
 # 
 # https://w3id.org/lcanet/ICdata#LCAsystemsSite
