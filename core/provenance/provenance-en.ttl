@@ -1,0 +1,20 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<https://w3id.org/lcanet/core/2.2.0> a prov:Entity;
+	 dc:title "The Core module of the Life Cycle Assessment Network Ontology (LCAnet).";
+	 prov:wasAttributedTo <https://orcid.org/0000-0002-0438-6831>;
+	 dc:creator <https://orcid.org/0000-0002-0438-6831>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0002-4553-3930>;
+	 dc:contributor <https://orcid.org/0000-0002-4553-3930>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0003-3896-7295>;
+	 dc:contributor <https://orcid.org/0000-0003-3896-7295>;
+	 prov:wasAttributedTo <https://orcid.org/0009-0002-7928-9902>;
+	 dc:contributor <https://orcid.org/0009-0002-7928-9902>;
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:specializationOf <https://w3id.org/lcanet/core#>;
+	 prov:wasRevisionOf <2.1.0>;
+.
+:agent0 a prov:Agent; foaf:name "Emmanuelle Core".

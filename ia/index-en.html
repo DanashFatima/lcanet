@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>The Impact Assessment module of the Life Cycle Assessment Network Ontology (LCAnet).</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/lcanet/ia#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/lcanet/ia#","name":"The Impact Assessment module of the Life Cycle Assessment Network Ontology (LCAnet).", "headline":"Document describing the ontology https://w3id.org/lcanet/ia#", "dateReleased":"Wed May 20 13:35:38 CEST 2026", "version":"2.2.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"https://orcid.org/0000-0002-0438-6831","url":"https://orcid.org/0000-0002-0438-6831"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>The Impact Assessment module of the Life Cycle Assessment Network Ontology (LCAnet).</h1>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="https://w3id.org/lcanet/ia/2.2.0">https://w3id.org/lcanet/ia/2.2.0</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="https://w3id.org/lcanet/ia#">https://w3id.org/lcanet/ia#</a></dd>
+<dt>Previous version:</dt>
+<dd>2.1.0</dd>
+<dt>Revision:</dt>
+<dd>2.2.0</dd>
+<dt>Issued on:</dt>
+<dd>2026-05-20</dd>
+<dt>Authors:</dt>
+<dd><a href="https://orcid.org/0000-0002-0438-6831">Fatima Danash</a>, CEA List</dd>
+
+<dt>Publisher:</dt>
+<dd><a href="https://www.cea.fr">https://www.cea.fr</a></dd>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Danash, F., et al. (2026). 
+<b>LCAnet: A Modular Ontology Network for Life Cycle Assessment</b> (Version 2.2.0). 
+<!-- Available at: <a href="https://w3id.org/lcanet">https://w3id.org/lcanet</a> -->
+</dd>
+</dl>
+<hr/>
+
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+LCAnet is a modular ontology network for Life Cycle Assessment (LCA) designed to provide a unified semantic framework for representing LCA systems. It is composed of six interoperable modules covering key aspects of LCA modeling: the Core module, Activity module, Actor module, Property module, Spatiotemporal module, and Impact Assessment module. The Core module serves as the central backbone of the network by importing the other modules and establishing explicit semantic links across all components, enabling consistent representation and reasoning over LCA data.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+LCAnet-Impact Assessment provides classes and properties that enable users to model environmental impact evaluation in Life Cycle Assessment. It represents impact categories, characterization models, methods, and impact results.
+
+The module formalises the assessment of environmental effects and is connected to activities and flows through the Core ontology, enabling structured impact interpretation.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1/&gt;</td></tr>
+<tr><td><b>dcdcterms</b></td><td>&lt;http://purl.org/dc/dcterms/&gt;</td></tr>
+<tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>ia</b></td><td>&lt;https://w3id.org/lcanet/ia#&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>qudt</b></td><td>&lt;http://qudt.org/schema/qudt#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>swrl</b></td><td>&lt;http://www.w3.org/2003/11/swrl#&gt;</td></tr>
+<tr><td><b>swrlb</b></td><td>&lt;http://www.w3.org/2003/11/swrlb#&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="modules">
+<h3 id="moduleslist" class="list">LCAnet Modules</h3>
+
+<ul>
+  <li><a href="../activity/index-en.html">Activity module</a></li>
+  <li><a href="../actor/index-en.html">Actor module</a></li>
+  <li><a href="../ia/index-en.html">Impact Assessment module</a></li>
+  <li><a href="../property/index-en.html">Property module</a></li>
+  <li><a href="../st/index-en.html">Spatiotemporal module</a></li>
+  <li><a href="../core/index-en.html">Core module</a></li>
+</ul>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">LCAnet-ImpactAssessment: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#AirPollutionFootprint" title="https://w3id.org/lcanet/ia#AirPollutionFootprint">Air Pollution Footprint</a>
+   </li>
+   <li>
+      <a href="#CarbonFootprint" title="https://w3id.org/lcanet/ia#CarbonFootprint">Carbon Footprint</a>
+   </li>
+   <li>
+      <a href="#CharacterizationFactor"
+         title="https://w3id.org/lcanet/ia#CharacterizationFactor">Characterization Factor</a>
+   </li>
+   <li>
+      <a href="#CharacterizationModel" title="https://w3id.org/lcanet/ia#CharacterizationModel">Characterization Model</a>
+   </li>
+   <li>
+      <a href="#EnergyFootprint" title="https://w3id.org/lcanet/ia#EnergyFootprint">Energy Footprint</a>
+   </li>
+   <li>
+      <a href="#EutrophicationFootprint"
+         title="https://w3id.org/lcanet/ia#EutrophicationFootprint">Eutophication Footprint</a>
+   </li>
+   <li>
+      <a href="#ImpactCategory" title="https://w3id.org/lcanet/ia#ImpactCategory">Impact Category</a>
+   </li>
+   <li>
+      <a href="#ImpactCategoryIndicator"
+         title="https://w3id.org/lcanet/ia#ImpactCategoryIndicator">Impact Category Indicator</a>
+   </li>
+   <li>
+      <a href="#LandFootprint" title="https://w3id.org/lcanet/ia#LandFootprint">Land Footprint</a>
+   </li>
+   <li>
+      <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a>
+   </li>
+   <li>
+      <a href="#MaterialFootprint" title="https://w3id.org/lcanet/ia#MaterialFootprint">Material Footprint</a>
+   </li>
+   <li>
+      <a href="#Method" title="https://w3id.org/lcanet/ia#Method">Method</a>
+   </li>
+   <li>
+      <a href="#Methodology" title="https://w3id.org/lcanet/ia#Methodology">Methodology</a>
+   </li>
+   <li>
+      <a href="#OverallImpactResult" title="https://w3id.org/lcanet/ia#OverallImpactResult">Overall Impact Result</a>
+   </li>
+   <li>
+      <a href="#OzoneDepletionFootprint"
+         title="https://w3id.org/lcanet/ia#OzoneDepletionFootprint">Ozone Depletion Footprint</a>
+   </li>
+   <li>
+      <a href="#ToxicityFootprint" title="https://w3id.org/lcanet/ia#ToxicityFootprint">Toxicity Footprint</a>
+   </li>
+   <li>
+      <a href="#WaterFootprint" title="https://w3id.org/lcanet/ia#WaterFootprint">Water Footprint</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#assessIC" title="https://w3id.org/lcanet/ia#assessIC">assess IC</a>
+   </li>
+   <li>
+      <a href="#assessedByICI" title="https://w3id.org/lcanet/ia#assessedByICI">assessed By ICI</a>
+   </li>
+   <li>
+      <a href="#calculatedByCM" title="https://w3id.org/lcanet/ia#calculatedByCM">calculated By CM</a>
+   </li>
+   <li>
+      <a href="#calculatesCF" title="https://w3id.org/lcanet/ia#calculatesCF">calculates CF</a>
+   </li>
+   <li>
+      <a href="#containedInOIR" title="https://w3id.org/lcanet/ia#containedInOIR">contained In OIR</a>
+   </li>
+   <li>
+      <a href="#containsLcaResult" title="https://w3id.org/lcanet/ia#containsLcaResult">contains Lca Result</a>
+   </li>
+   <li>
+      <a href="#hasIC" title="https://w3id.org/lcanet/ia#hasIC">has Impact Category</a>
+   </li>
+   <li>
+      <a href="#imposedByMethodology" title="https://w3id.org/lcanet/ia#imposedByMethodology">imposed by Methodology</a>
+   </li>
+   <li>
+      <a href="#imposesIC" title="https://w3id.org/lcanet/ia#imposesIC">imposes IC</a>
+   </li>
+   <li>
+      <a href="#includedInMethodology" title="https://w3id.org/lcanet/ia#includedInMethodology">included In Methodology</a>
+   </li>
+   <li>
+      <a href="#includesMethod" title="https://w3id.org/lcanet/ia#includesMethod">includes Method</a>
+   </li>
+   <li>
+      <a href="#quantifiedByCF" title="https://w3id.org/lcanet/ia#quantifiedByCF">quantified By CF</a>
+   </li>
+   <li>
+      <a href="#quantifiesICI" title="https://w3id.org/lcanet/ia#quantifiesICI">quantifies ICI</a>
+   </li>
+   <li>
+      <a href="#usedInMethod" title="https://w3id.org/lcanet/ia#usedInMethod">used In Method</a>
+   </li>
+   <li>
+      <a href="#usesCM" title="https://w3id.org/lcanet/ia#usesCM">uses CM</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#hasDefaultUnit" title="https://w3id.org/lcanet/ia#hasDefaultUnit">has Default Unit</a>
+   </li>
+   <li>
+      <a href="#http://qudt.org/schema/qudt#numericValue" title="http://qudt.org/schema/qudt#numericValue">numeric value</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/dcterms/bibliographicCitation" title="http://purl.org/dc/dcterms/bibliographicCitation">
+         <span>bibliographic Citation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/date" title="http://purl.org/dc/terms/date">
+         <span>date</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/hasVersion" title="http://purl.org/dc/terms/hasVersion">
+         <span>has Version</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/dcterms/issued" title="http://purl.org/dc/dcterms/issued">
+         <span>issued</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">
+         <span>issued</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+         <span>preferred Namespace Prefix</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+         <span>preferred Namespace Uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">
+         <span>publisher</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+</ul><h4> SWRL Rules </h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#d4e689">Rule #1</a>
+   </li>
+   <li>
+      <a href="#d4e824">Rule #2</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">LCAnet-ImpactAssessment: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">The Impact Assessment module is part of the LCAnet ontology proposed by the SmartACV Carnot Project.
+            It provides a formal representation of impact assessment concepts, methods, and characterization factors,
+            enabling the evaluation and quantification of environmental impacts within the LCA process of a product or service.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for LCAnet-ImpactAssessment classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by LCAnet-ImpactAssessment.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#AirPollutionFootprint" title="https://w3id.org/lcanet/ia#AirPollutionFootprint">Air Pollution Footprint</a></li>
+  <li><a href="#CarbonFootprint" title="https://w3id.org/lcanet/ia#CarbonFootprint">Carbon Footprint</a></li>
+  <li><a href="#CharacterizationFactor" title="https://w3id.org/lcanet/ia#CharacterizationFactor">Characterization Factor</a></li>
+  <li><a href="#CharacterizationModel" title="https://w3id.org/lcanet/ia#CharacterizationModel">Characterization Model</a></li>
+  <li><a href="#EnergyFootprint" title="https://w3id.org/lcanet/ia#EnergyFootprint">Energy Footprint</a></li>
+  <li><a href="#EutrophicationFootprint" title="https://w3id.org/lcanet/ia#EutrophicationFootprint">Eutophication Footprint</a></li>
+  <li><a href="#ImpactCategory" title="https://w3id.org/lcanet/ia#ImpactCategory">Impact Category</a></li>
+  <li><a href="#ImpactCategoryIndicator" title="https://w3id.org/lcanet/ia#ImpactCategoryIndicator">Impact Category Indicator</a></li>
+  <li><a href="#LandFootprint" title="https://w3id.org/lcanet/ia#LandFootprint">Land Footprint</a></li>
+  <li><a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a></li>
+  <li><a href="#MaterialFootprint" title="https://w3id.org/lcanet/ia#MaterialFootprint">Material Footprint</a></li>
+  <li><a href="#Method" title="https://w3id.org/lcanet/ia#Method">Method</a></li>
+  <li><a href="#Methodology" title="https://w3id.org/lcanet/ia#Methodology">Methodology</a></li>
+  <li><a href="#OverallImpactResult" title="https://w3id.org/lcanet/ia#OverallImpactResult">Overall Impact Result</a></li>
+  <li><a href="#OzoneDepletionFootprint" title="https://w3id.org/lcanet/ia#OzoneDepletionFootprint">Ozone Depletion Footprint</a></li>
+  <li><a href="#ToxicityFootprint" title="https://w3id.org/lcanet/ia#ToxicityFootprint">Toxicity Footprint</a></li>
+  <li><a href="#WaterFootprint" title="https://w3id.org/lcanet/ia#WaterFootprint">Water Footprint</a></li>
+ </ul>
+ <div class="entity" id="AirPollutionFootprint">
+  <h3>Air Pollution Footprint<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#AirPollutionFootprint</p>
+  <div class="comment">
+   <span class="markdown">Quantifies the release of airborne pollutants (e.g., particulate matter, photochemical ozone formation) over the life cycle of a product. AirPollutionFootprint is an ImpactResult associated with relevant environmental impact categories.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CarbonFootprint">
+  <h3>Carbon Footprint<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#CarbonFootprint</p>
+  <div class="comment">
+   <span class="markdown">means the sum of greenhouse gas emissions and greenhouse gas removals in a product system, expressed as CO equivalents and based on a life cycle assessment using the single impact category of climate change. (ESPR Art 2 25))</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CharacterizationFactor">
+  <h3>Characterization Factor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#CharacterizationFactor</p>
+  <div class="comment">
+   <span class="markdown">Also called Impact factors, are factors that quantify the relative impact of different substances within the same category. These factors are used to convert the number of emissions into impact scores for each category.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#calculatedByCM" title="https://w3id.org/lcanet/ia#calculatedByCM">calculated By CM</a> <sup class="type-op" title="object property">op</sup>, <a href="#quantifiesICI" title="https://w3id.org/lcanet/ia#quantifiesICI">quantifies ICI</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#calculatesCF" title="https://w3id.org/lcanet/ia#calculatesCF">calculates CF</a> <sup class="type-op" title="object property">op</sup>, <a href="#quantifiedByCF" title="https://w3id.org/lcanet/ia#quantifiedByCF">quantified By CF</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CharacterizationModel" title="https://w3id.org/lcanet/ia#CharacterizationModel">Characterization Model</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactCategory" title="https://w3id.org/lcanet/ia#ImpactCategory">Impact Category</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactCategoryIndicator" title="https://w3id.org/lcanet/ia#ImpactCategoryIndicator">Impact Category Indicator</a> <sup class="type-c" title="class">c</sup>, <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a> <sup class="type-c" title="class">c</sup>, <a href="#Method" title="https://w3id.org/lcanet/ia#Method">Method</a> <sup class="type-c" title="class">c</sup>, <a href="#Methodology" title="https://w3id.org/lcanet/ia#Methodology">Methodology</a> <sup class="type-c" title="class">c</sup>, <a href="#OverallImpactResult" title="https://w3id.org/lcanet/ia#OverallImpactResult">Overall Impact Result</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CharacterizationModel">
+  <h3>Characterization Model<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#CharacterizationModel</p>
+  <div class="comment">
+   <span class="markdown">A characterization model provides a mathmetical framework, as a set of equations, to quantify an impact category based on the chosen method. Example: IPCC (2021). A characterization model is used by a method.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#calculatesCF" title="https://w3id.org/lcanet/ia#calculatesCF">calculates CF</a> <sup class="type-op" title="object property">op</sup>, <a href="#usedInMethod" title="https://w3id.org/lcanet/ia#usedInMethod">used In Method</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#calculatedByCM" title="https://w3id.org/lcanet/ia#calculatedByCM">calculated By CM</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesCM" title="https://w3id.org/lcanet/ia#usesCM">uses CM</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CharacterizationFactor" title="https://w3id.org/lcanet/ia#CharacterizationFactor">Characterization Factor</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactCategory" title="https://w3id.org/lcanet/ia#ImpactCategory">Impact Category</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactCategoryIndicator" title="https://w3id.org/lcanet/ia#ImpactCategoryIndicator">Impact Category Indicator</a> <sup class="type-c" title="class">c</sup>, <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a> <sup class="type-c" title="class">c</sup>, <a href="#Method" title="https://w3id.org/lcanet/ia#Method">Method</a> <sup class="type-c" title="class">c</sup>, <a href="#Methodology" title="https://w3id.org/lcanet/ia#Methodology">Methodology</a> <sup class="type-c" title="class">c</sup>, <a href="#OverallImpactResult" title="https://w3id.org/lcanet/ia#OverallImpactResult">Overall Impact Result</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EnergyFootprint">
+  <h3>Energy Footprint<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#EnergyFootprint</p>
+  <div class="comment">
+   <span class="markdown">Quantifies the total energy use associated with a product throughout its life cycle, including renewable and non-renewable sources. EnergyFootprint is a FlowResult linked to the Energy FlowType.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EutrophicationFootprint">
+  <h3>Eutophication Footprint<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#EutrophicationFootprint</p>
+  <div class="comment">
+   <span class="markdown">Quantifies nutrient enrichment impacts (eutrophication) on freshwater, marine, or terrestrial ecosystems caused by a product during its life cycle. It aggregates relevant ImpactCategories.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ImpactCategory">
+  <h3>Impact Category<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#ImpactCategory</p>
+  <div class="comment">
+   <span class="markdown">An impact category represents a specific environmental issue that the LCA aims to assess, such as global warming or ozone depletion. Each category aggregates the effects of different emissions that contribute to the same environmental problem.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#assessedByICI" title="https://w3id.org/lcanet/ia#assessedByICI">assessed By ICI</a> <sup class="type-op" title="object property">op</sup>, <a href="#imposedByMethodology" title="https://w3id.org/lcanet/ia#imposedByMethodology">imposed by Methodology</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#assessIC" title="https://w3id.org/lcanet/ia#assessIC">assess IC</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasIC" title="https://w3id.org/lcanet/ia#hasIC">has Impact Category</a> <sup class="type-op" title="object property">op</sup>, <a href="#imposesIC" title="https://w3id.org/lcanet/ia#imposesIC">imposes IC</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CharacterizationFactor" title="https://w3id.org/lcanet/ia#CharacterizationFactor">Characterization Factor</a> <sup class="type-c" title="class">c</sup>, <a href="#CharacterizationModel" title="https://w3id.org/lcanet/ia#CharacterizationModel">Characterization Model</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactCategoryIndicator" title="https://w3id.org/lcanet/ia#ImpactCategoryIndicator">Impact Category Indicator</a> <sup class="type-c" title="class">c</sup>, <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a> <sup class="type-c" title="class">c</sup>, <a href="#Method" title="https://w3id.org/lcanet/ia#Method">Method</a> <sup class="type-c" title="class">c</sup>, <a href="#Methodology" title="https://w3id.org/lcanet/ia#Methodology">Methodology</a> <sup class="type-c" title="class">c</sup>, <a href="#OverallImpactResult" title="https://w3id.org/lcanet/ia#OverallImpactResult">Overall Impact Result</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ImpactCategoryIndicator">
+  <h3>Impact Category Indicator<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#ImpactCategoryIndicator</p>
+  <div class="comment">
+   <span class="markdown">An impact category refers to a specific metric/measurable quantity that is used to quantify an impact category, such as Global Warming Potential (GWP) and Ozone Depletion Potential (ODP).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#assessIC" title="https://w3id.org/lcanet/ia#assessIC">assess IC</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDefaultUnit" title="https://w3id.org/lcanet/ia#hasDefaultUnit">has Default Unit</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#quantifiedByCF" title="https://w3id.org/lcanet/ia#quantifiedByCF">quantified By CF</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#assessedByICI" title="https://w3id.org/lcanet/ia#assessedByICI">assessed By ICI</a> <sup class="type-op" title="object property">op</sup>, <a href="#quantifiesICI" title="https://w3id.org/lcanet/ia#quantifiesICI">quantifies ICI</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CharacterizationFactor" title="https://w3id.org/lcanet/ia#CharacterizationFactor">Characterization Factor</a> <sup class="type-c" title="class">c</sup>, <a href="#CharacterizationModel" title="https://w3id.org/lcanet/ia#CharacterizationModel">Characterization Model</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactCategory" title="https://w3id.org/lcanet/ia#ImpactCategory">Impact Category</a> <sup class="type-c" title="class">c</sup>, <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a> <sup class="type-c" title="class">c</sup>, <a href="#Method" title="https://w3id.org/lcanet/ia#Method">Method</a> <sup class="type-c" title="class">c</sup>, <a href="#Methodology" title="https://w3id.org/lcanet/ia#Methodology">Methodology</a> <sup class="type-c" title="class">c</sup>, <a href="#OverallImpactResult" title="https://w3id.org/lcanet/ia#OverallImpactResult">Overall Impact Result</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LandFootprint">
+  <h3>Land Footprint<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#LandFootprint</p>
+  <div class="comment">
+   <span class="markdown">Quantifies the occupation and transformation of land caused by a product throughout its life cycle. LandFootprint is an ImpactResult linked to the LandUse impact category.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LcaResult">
+  <h3>LCA Result<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#LcaResult</p>
+  <div class="comment">
+   <span class="markdown">A LCA result corresponds to the computed value of each flow (or sometimes activity as a group of its input and output flows) concerning an impact category (IC). Thus, it is an entity that makes links to: a flow/activity (e.g. flat chip resistor), an exact value (e.g. 1,16E-03), and an impact category (e.g. climate change), indicating the participation of this flow/activity in the studied impact category issue.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AirPollutionFootprint" title="https://w3id.org/lcanet/ia#AirPollutionFootprint">Air Pollution Footprint</a> <sup class="type-c" title="class">c</sup>, <a href="#CarbonFootprint" title="https://w3id.org/lcanet/ia#CarbonFootprint">Carbon Footprint</a> <sup class="type-c" title="class">c</sup>, <a href="#EnergyFootprint" title="https://w3id.org/lcanet/ia#EnergyFootprint">Energy Footprint</a> <sup class="type-c" title="class">c</sup>, <a href="#EutrophicationFootprint" title="https://w3id.org/lcanet/ia#EutrophicationFootprint">Eutophication Footprint</a> <sup class="type-c" title="class">c</sup>, <a href="#LandFootprint" title="https://w3id.org/lcanet/ia#LandFootprint">Land Footprint</a> <sup class="type-c" title="class">c</sup>, <a href="#MaterialFootprint" title="https://w3id.org/lcanet/ia#MaterialFootprint">Material Footprint</a> <sup class="type-c" title="class">c</sup>, <a href="#OzoneDepletionFootprint" title="https://w3id.org/lcanet/ia#OzoneDepletionFootprint">Ozone Depletion Footprint</a> <sup class="type-c" title="class">c</sup>, <a href="#ToxicityFootprint" title="https://w3id.org/lcanet/ia#ToxicityFootprint">Toxicity Footprint</a> <sup class="type-c" title="class">c</sup>, <a href="#WaterFootprint" title="https://w3id.org/lcanet/ia#WaterFootprint">Water Footprint</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#containedInOIR" title="https://w3id.org/lcanet/ia#containedInOIR">contained In OIR</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasIC" title="https://w3id.org/lcanet/ia#hasIC">has Impact Category</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://qudt.org/schema/qudt#numericValue" title="http://qudt.org/schema/qudt#numericValue">numeric value</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#containsLcaResult" title="https://w3id.org/lcanet/ia#containsLcaResult">contains Lca Result</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CharacterizationFactor" title="https://w3id.org/lcanet/ia#CharacterizationFactor">Characterization Factor</a> <sup class="type-c" title="class">c</sup>, <a href="#CharacterizationModel" title="https://w3id.org/lcanet/ia#CharacterizationModel">Characterization Model</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactCategory" title="https://w3id.org/lcanet/ia#ImpactCategory">Impact Category</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactCategoryIndicator" title="https://w3id.org/lcanet/ia#ImpactCategoryIndicator">Impact Category Indicator</a> <sup class="type-c" title="class">c</sup>, <a href="#Method" title="https://w3id.org/lcanet/ia#Method">Method</a> <sup class="type-c" title="class">c</sup>, <a href="#Methodology" title="https://w3id.org/lcanet/ia#Methodology">Methodology</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MaterialFootprint">
+  <h3>Material Footprint<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#MaterialFootprint</p>
+  <div class="comment">
+   <span class="markdown">refers to the total amount of raw materials extracted to meet final consumption demands. (ESPR Art 2 (26)).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Method">
+  <h3>Method<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#Method</p>
+  <div class="comment">
+   <span class="markdown">LCIA methods allow to transform raw emissions and resource data into understandable impact scores. Examples of methods include EN15804+A2, EF v3.1.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#includedInMethodology" title="https://w3id.org/lcanet/ia#includedInMethodology">included In Methodology</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesCM" title="https://w3id.org/lcanet/ia#usesCM">uses CM</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#includesMethod" title="https://w3id.org/lcanet/ia#includesMethod">includes Method</a> <sup class="type-op" title="object property">op</sup>, <a href="#usedInMethod" title="https://w3id.org/lcanet/ia#usedInMethod">used In Method</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CharacterizationFactor" title="https://w3id.org/lcanet/ia#CharacterizationFactor">Characterization Factor</a> <sup class="type-c" title="class">c</sup>, <a href="#CharacterizationModel" title="https://w3id.org/lcanet/ia#CharacterizationModel">Characterization Model</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactCategory" title="https://w3id.org/lcanet/ia#ImpactCategory">Impact Category</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactCategoryIndicator" title="https://w3id.org/lcanet/ia#ImpactCategoryIndicator">Impact Category Indicator</a> <sup class="type-c" title="class">c</sup>, <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a> <sup class="type-c" title="class">c</sup>, <a href="#OverallImpactResult" title="https://w3id.org/lcanet/ia#OverallImpactResult">Overall Impact Result</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Methodology">
+  <h3>Methodology<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#Methodology</p>
+  <div class="comment">
+   <span class="markdown">LCIA methodologies group related LCIA methods. A methodology (identified by an LCA expert for carrying out a specific LCA study), assesses some topic which is included in the scope of the LCA study.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#imposesIC" title="https://w3id.org/lcanet/ia#imposesIC">imposes IC</a> <sup class="type-op" title="object property">op</sup>, <a href="#includesMethod" title="https://w3id.org/lcanet/ia#includesMethod">includes Method</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#imposedByMethodology" title="https://w3id.org/lcanet/ia#imposedByMethodology">imposed by Methodology</a> <sup class="type-op" title="object property">op</sup>, <a href="#includedInMethodology" title="https://w3id.org/lcanet/ia#includedInMethodology">included In Methodology</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CharacterizationFactor" title="https://w3id.org/lcanet/ia#CharacterizationFactor">Characterization Factor</a> <sup class="type-c" title="class">c</sup>, <a href="#CharacterizationModel" title="https://w3id.org/lcanet/ia#CharacterizationModel">Characterization Model</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactCategory" title="https://w3id.org/lcanet/ia#ImpactCategory">Impact Category</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactCategoryIndicator" title="https://w3id.org/lcanet/ia#ImpactCategoryIndicator">Impact Category Indicator</a> <sup class="type-c" title="class">c</sup>, <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a> <sup class="type-c" title="class">c</sup>, <a href="#OverallImpactResult" title="https://w3id.org/lcanet/ia#OverallImpactResult">Overall Impact Result</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="OverallImpactResult">
+  <h3>Overall Impact Result<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#OverallImpactResult</p>
+  <div class="comment">
+   <span class="markdown">It corresponds to the sum of all LCA result values of all flows/activities in the studied LCA of a product X, regarding an impact category Y.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#containsLcaResult" title="https://w3id.org/lcanet/ia#containsLcaResult">contains Lca Result</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasIC" title="https://w3id.org/lcanet/ia#hasIC">has Impact Category</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://qudt.org/schema/qudt#numericValue" title="http://qudt.org/schema/qudt#numericValue">numeric value</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#containedInOIR" title="https://w3id.org/lcanet/ia#containedInOIR">contained In OIR</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CharacterizationFactor" title="https://w3id.org/lcanet/ia#CharacterizationFactor">Characterization Factor</a> <sup class="type-c" title="class">c</sup>, <a href="#CharacterizationModel" title="https://w3id.org/lcanet/ia#CharacterizationModel">Characterization Model</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactCategory" title="https://w3id.org/lcanet/ia#ImpactCategory">Impact Category</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactCategoryIndicator" title="https://w3id.org/lcanet/ia#ImpactCategoryIndicator">Impact Category Indicator</a> <sup class="type-c" title="class">c</sup>, <a href="#Method" title="https://w3id.org/lcanet/ia#Method">Method</a> <sup class="type-c" title="class">c</sup>, <a href="#Methodology" title="https://w3id.org/lcanet/ia#Methodology">Methodology</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="OzoneDepletionFootprint">
+  <h3>Ozone Depletion Footprint<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#OzoneDepletionFootprint</p>
+  <div class="comment">
+   <span class="markdown">Quantifies the potential stratospheric ozone layer depletion caused by substances emitted by a product throughout its life cycle. It is an ImpactResult linked to the Ozone Depletion impact category.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ToxicityFootprint">
+  <h3>Toxicity Footprint<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#ToxicityFootprint</p>
+  <div class="comment">
+   <span class="markdown">Quantifies the potential human health and ecological toxicity impacts of a product over its life cycle. ToxicityFootprint aggregates relevant ImpactCategories such as Human Toxicity (cancer and non-cancer) and Ecotoxicity.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="WaterFootprint">
+  <h3>Water Footprint<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#WaterFootprint</p>
+  <div class="comment">
+   <span class="markdown">Quantifies the freshwater consumption associated with a product throughout its life cycle. WaterFootprint is a FlowResult linked to the Water FlowType.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#assessIC" title="https://w3id.org/lcanet/ia#assessIC">assess IC</a></li>
+  <li><a href="#assessedByICI" title="https://w3id.org/lcanet/ia#assessedByICI">assessed By ICI</a></li>
+  <li><a href="#calculatedByCM" title="https://w3id.org/lcanet/ia#calculatedByCM">calculated By CM</a></li>
+  <li><a href="#calculatesCF" title="https://w3id.org/lcanet/ia#calculatesCF">calculates CF</a></li>
+  <li><a href="#containedInOIR" title="https://w3id.org/lcanet/ia#containedInOIR">contained In OIR</a></li>
+  <li><a href="#containsLcaResult" title="https://w3id.org/lcanet/ia#containsLcaResult">contains Lca Result</a></li>
+  <li><a href="#hasIC" title="https://w3id.org/lcanet/ia#hasIC">has Impact Category</a></li>
+  <li><a href="#imposedByMethodology" title="https://w3id.org/lcanet/ia#imposedByMethodology">imposed by Methodology</a></li>
+  <li><a href="#imposesIC" title="https://w3id.org/lcanet/ia#imposesIC">imposes IC</a></li>
+  <li><a href="#includedInMethodology" title="https://w3id.org/lcanet/ia#includedInMethodology">included In Methodology</a></li>
+  <li><a href="#includesMethod" title="https://w3id.org/lcanet/ia#includesMethod">includes Method</a></li>
+  <li><a href="#quantifiedByCF" title="https://w3id.org/lcanet/ia#quantifiedByCF">quantified By CF</a></li>
+  <li><a href="#quantifiesICI" title="https://w3id.org/lcanet/ia#quantifiesICI">quantifies ICI</a></li>
+  <li><a href="#usedInMethod" title="https://w3id.org/lcanet/ia#usedInMethod">used In Method</a></li>
+  <li><a href="#usesCM" title="https://w3id.org/lcanet/ia#usesCM">uses CM</a></li>
+ </ul>
+ <div class="entity" id="assessIC">
+  <h3>assess IC<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#assessIC</p>
+  <div class="comment">
+   <span class="markdown">relates an ICI to the IC it assesses</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ImpactCategoryIndicator" title="https://w3id.org/lcanet/ia#ImpactCategoryIndicator">Impact Category Indicator</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ImpactCategory" title="https://w3id.org/lcanet/ia#ImpactCategory">Impact Category</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#assessedByICI" title="https://w3id.org/lcanet/ia#assessedByICI">assessed By ICI</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="assessedByICI">
+  <h3>assessed By ICI<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#assessedByICI</p>
+  <div class="comment">
+   <span class="markdown">relates an IC to the ICI it is assessed by</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ImpactCategory" title="https://w3id.org/lcanet/ia#ImpactCategory">Impact Category</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ImpactCategoryIndicator" title="https://w3id.org/lcanet/ia#ImpactCategoryIndicator">Impact Category Indicator</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#assessIC" title="https://w3id.org/lcanet/ia#assessIC">assess IC</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="calculatedByCM">
+  <h3>calculated By CM<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#calculatedByCM</p>
+  <div class="comment">
+   <span class="markdown">relates a CF to the CM it is calculated by</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CharacterizationFactor" title="https://w3id.org/lcanet/ia#CharacterizationFactor">Characterization Factor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#CharacterizationModel" title="https://w3id.org/lcanet/ia#CharacterizationModel">Characterization Model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#calculatesCF" title="https://w3id.org/lcanet/ia#calculatesCF">calculates CF</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="calculatesCF">
+  <h3>calculates CF<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#calculatesCF</p>
+  <div class="comment">
+   <span class="markdown">relates a CM to the CF it calculates</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CharacterizationModel" title="https://w3id.org/lcanet/ia#CharacterizationModel">Characterization Model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#CharacterizationFactor" title="https://w3id.org/lcanet/ia#CharacterizationFactor">Characterization Factor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#calculatedByCM" title="https://w3id.org/lcanet/ia#calculatedByCM">calculated By CM</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="containedInOIR">
+  <h3>contained In OIR<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#containedInOIR</p>
+  <div class="comment">
+   <span class="markdown">relates a LCA result to the OIR it is contained in</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#OverallImpactResult" title="https://w3id.org/lcanet/ia#OverallImpactResult">Overall Impact Result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#containsLcaResult" title="https://w3id.org/lcanet/ia#containsLcaResult">contains Lca Result</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="containsLcaResult">
+  <h3>contains Lca Result<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#containsLcaResult</p>
+  <div class="comment">
+   <span class="markdown">relates a OIR to the LCA result it contains</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#OverallImpactResult" title="https://w3id.org/lcanet/ia#OverallImpactResult">Overall Impact Result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#containedInOIR" title="https://w3id.org/lcanet/ia#containedInOIR">contained In OIR</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasIC">
+  <h3>has Impact Category<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#hasIC</p>
+  <div class="comment">
+   <span class="markdown">relates a result to an impact category</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#OverallImpactResult" title="https://w3id.org/lcanet/ia#OverallImpactResult">Overall Impact Result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ImpactCategory" title="https://w3id.org/lcanet/ia#ImpactCategory">Impact Category</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="imposedByMethodology">
+  <h3>imposed by Methodology<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#imposedByMethodology</p>
+  <div class="comment">
+   <span class="markdown">relates an IC to the methodology it is imposed by</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ImpactCategory" title="https://w3id.org/lcanet/ia#ImpactCategory">Impact Category</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Methodology" title="https://w3id.org/lcanet/ia#Methodology">Methodology</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#imposesIC" title="https://w3id.org/lcanet/ia#imposesIC">imposes IC</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="imposesIC">
+  <h3>imposes IC<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#imposesIC</p>
+  <div class="comment">
+   <span class="markdown">relates a methodology to the IC it imposes</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Methodology" title="https://w3id.org/lcanet/ia#Methodology">Methodology</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ImpactCategory" title="https://w3id.org/lcanet/ia#ImpactCategory">Impact Category</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#imposedByMethodology" title="https://w3id.org/lcanet/ia#imposedByMethodology">imposed by Methodology</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="includedInMethodology">
+  <h3>included In Methodology<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#includedInMethodology</p>
+  <div class="comment">
+   <span class="markdown">relates a method to the methodology it is included in</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Method" title="https://w3id.org/lcanet/ia#Method">Method</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Methodology" title="https://w3id.org/lcanet/ia#Methodology">Methodology</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#includesMethod" title="https://w3id.org/lcanet/ia#includesMethod">includes Method</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="includesMethod">
+  <h3>includes Method<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#includesMethod</p>
+  <div class="comment">
+   <span class="markdown">relates a methodology to the method it includes</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Methodology" title="https://w3id.org/lcanet/ia#Methodology">Methodology</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Method" title="https://w3id.org/lcanet/ia#Method">Method</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#includedInMethodology" title="https://w3id.org/lcanet/ia#includedInMethodology">included In Methodology</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="quantifiedByCF">
+  <h3>quantified By CF<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#quantifiedByCF</p>
+  <div class="comment">
+   <span class="markdown">relates an ICI to the CF it is quantified by</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ImpactCategoryIndicator" title="https://w3id.org/lcanet/ia#ImpactCategoryIndicator">Impact Category Indicator</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#CharacterizationFactor" title="https://w3id.org/lcanet/ia#CharacterizationFactor">Characterization Factor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#quantifiesICI" title="https://w3id.org/lcanet/ia#quantifiesICI">quantifies ICI</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="quantifiesICI">
+  <h3>quantifies ICI<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#quantifiesICI</p>
+  <div class="comment">
+   <span class="markdown">relates a CF to the ICI it quantifies</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CharacterizationFactor" title="https://w3id.org/lcanet/ia#CharacterizationFactor">Characterization Factor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ImpactCategoryIndicator" title="https://w3id.org/lcanet/ia#ImpactCategoryIndicator">Impact Category Indicator</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#quantifiedByCF" title="https://w3id.org/lcanet/ia#quantifiedByCF">quantified By CF</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="usedInMethod">
+  <h3>used In Method<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#usedInMethod</p>
+  <div class="comment">
+   <span class="markdown">relates a CM to the method it is used in</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CharacterizationModel" title="https://w3id.org/lcanet/ia#CharacterizationModel">Characterization Model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Method" title="https://w3id.org/lcanet/ia#Method">Method</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#usesCM" title="https://w3id.org/lcanet/ia#usesCM">uses CM</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="usesCM">
+  <h3>uses CM<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#usesCM</p>
+  <div class="comment">
+   <span class="markdown">relates a method to the CM it uses</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Method" title="https://w3id.org/lcanet/ia#Method">Method</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#CharacterizationModel" title="https://w3id.org/lcanet/ia#CharacterizationModel">Characterization Model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#usedInMethod" title="https://w3id.org/lcanet/ia#usedInMethod">used In Method</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#hasDefaultUnit" title="https://w3id.org/lcanet/ia#hasDefaultUnit">has Default Unit</a></li>
+  <li><a href="#http://qudt.org/schema/qudt#numericValue" title="http://qudt.org/schema/qudt#numericValue">numeric value</a></li>
+ </ul>
+ <div class="entity" id="hasDefaultUnit">
+  <h3>has Default Unit<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/lcanet/ia#hasDefaultUnit</p>
+  <div class="comment">
+   <span class="markdown">ICI has deafult unit</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ImpactCategoryIndicator" title="https://w3id.org/lcanet/ia#ImpactCategoryIndicator">Impact Category Indicator</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://qudt.org/schema/qudt#numericValue">
+  <h3>numeric value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://qudt.org/schema/qudt#numericValue</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://qudt.org/schema/qudt">http://qudt.org/schema/qudt</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#OverallImpactResult" title="https://w3id.org/lcanet/ia#OverallImpactResult">Overall Impact Result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/dcterms/bibliographicCitation" title="http://purl.org/dc/dcterms/bibliographicCitation"> <span>bibliographic Citation</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/date" title="http://purl.org/dc/terms/date"> <span>date</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description"> <span>description</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/hasVersion" title="http://purl.org/dc/terms/hasVersion"> <span>has Version</span> </a></li>
+  <li><a href="#http://purl.org/dc/dcterms/issued" title="http://purl.org/dc/dcterms/issued"> <span>issued</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued"> <span>issued</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespacePrefix" title="http://purl.org/vocab/vann/preferredNamespacePrefix"> <span>preferred Namespace Prefix</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri"> <span>preferred Namespace Uri</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher"> <span>publisher</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title"> <span>title</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/dcterms/bibliographicCitation">
+  <h3>bibliographic Citation<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/dcterms/bibliographicCitation</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/creator">
+  <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/date">
+  <h3>date<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/date</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/hasVersion">
+  <h3>has Version<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/hasVersion</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/dcterms/issued">
+  <h3>issued<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/dcterms/issued</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/issued">
+  <h3>issued<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/issued</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  <h3>preferred Namespace Prefix<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespacePrefix</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespaceUri">
+  <h3>preferred Namespace Uri<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespaceUri</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/publisher">
+  <h3>publisher<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/publisher</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/title">
+  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="swrlrules">
+ <h3 id="swrlrules" class="list">SWRL rules</h3>
+ <ul class="hlist">
+  <li><a href="#d4e689">Rule #1</a></li>
+  <li><a href="#d4e824">Rule #2</a></li>
+ </ul>
+ <div class="entity" id="d4e689">
+  <h3>Rule #1<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p><a href="#hasIC" title="https://w3id.org/lcanet/ia#hasIC">has Impact Category</a> <sup class="type-op" title="object property">op</sup>(?a,?c) , <a href="#ImpactCategory" title="https://w3id.org/lcanet/ia#ImpactCategory">Impact Category</a> <sup class="type-c" title="class">c</sup>(?c) , <a href="#containedInOIR" title="https://w3id.org/lcanet/ia#containedInOIR">contained In OIR</a> <sup class="type-op" title="object property">op</sup>(?a,?o) , <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a> <sup class="type-c" title="class">c</sup>(?a) , <a href="#OverallImpactResult" title="https://w3id.org/lcanet/ia#OverallImpactResult">Overall Impact Result</a> <sup class="type-c" title="class">c</sup>(?o) -&gt; <a href="#hasIC" title="https://w3id.org/lcanet/ia#hasIC">has Impact Category</a> <sup class="type-op" title="object property">op</sup>(?o,?c)</p>
+ </div>
+ <div class="entity" id="d4e824">
+  <h3>Rule #2<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p><a href="#ImpactCategory" title="https://w3id.org/lcanet/ia#ImpactCategory">Impact Category</a> <sup class="type-c" title="class">c</sup>(?c) , <a href="#hasIC" title="https://w3id.org/lcanet/ia#hasIC">has Impact Category</a> <sup class="type-op" title="object property">op</sup>(?o,?c) , <a href="#containedInOIR" title="https://w3id.org/lcanet/ia#containedInOIR">contained In OIR</a> <sup class="type-op" title="object property">op</sup>(?a,?o) , <a href="#LcaResult" title="https://w3id.org/lcanet/ia#LcaResult">LCA Result</a> <sup class="type-c" title="class">c</sup>(?a) , <a href="#OverallImpactResult" title="https://w3id.org/lcanet/ia#OverallImpactResult">Overall Impact Result</a> <sup class="type-c" title="class">c</sup>(?o) -&gt; <a href="#hasIC" title="https://w3id.org/lcanet/ia#hasIC">has Impact Category</a> <sup class="type-op" title="object property">op</sup>(?a,?c)</p>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+   
+
+<!--CHANGELOG SECTION-->
+   <div id="changelog">null</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

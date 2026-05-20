@@ -1,0 +1,962 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://qudt.org/schema/qudt", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/lcanet/ia" ],
+    "title" : {
+      "en" : "The Impact Assessment module of the Life Cycle Assessment Network Ontology (LCAnet)."
+    },
+    "iri" : "https://w3id.org/lcanet/ia",
+    "version" : "2.2.0",
+    "author" : [ "https://orcid.org/0000-0002-0438-6831" ],
+    "description" : {
+      "undefined" : "The Impact Assessment module is part of the LCAnet ontology proposed by the SmartACV Carnot Project.\n            It provides a formal representation of impact assessment concepts, methods, and characterization factors,\n            enabling the evaluation and quantification of environmental impacts within the LCA process of a product or service."
+    },
+    "labels" : {
+      "undefined" : "LCAnet-ImpactAssessment"
+    },
+    "other" : {
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "2.1.0",
+        "type" : "label"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0002-0438-6831",
+        "type" : "iri"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "ia",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "https://www.cea.fr",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "2.2.0",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/lcanet/ia#",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "The Impact Assessment module of the Life Cycle Assessment Network Ontology (LCAnet).",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-05-20",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "13",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/lcanet/ia#OzoneDepletionFootprint",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OzoneDepletionFootprint",
+      "undefined" : "Ozone Depletion Footprint"
+    },
+    "comment" : {
+      "undefined" : "Quantifies the potential stratospheric ozone layer depletion caused by substances emitted by a product throughout its life cycle. It is an ImpactResult linked to the Ozone Depletion impact category."
+    },
+    "id" : "3",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "4",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#ImpactCategoryIndicator",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImpactCategoryIndicator",
+      "undefined" : "Impact Category Indicator"
+    },
+    "comment" : {
+      "undefined" : "An impact category refers to a specific metric/measurable quantity that is used to quantify an impact category, such as Global Warming Potential (GWP) and Ozone Depletion Potential (ODP)."
+    },
+    "id" : "6"
+  }, {
+    "instances" : 0,
+    "union" : [ "9", "2" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "12"
+  }, {
+    "instances" : 0,
+    "union" : [ "9", "2" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#EnergyFootprint",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnergyFootprint",
+      "undefined" : "Energy Footprint"
+    },
+    "comment" : {
+      "undefined" : "Quantifies the total energy use associated with a product throughout its life cycle, including renewable and non-renewable sources. EnergyFootprint is a FlowResult linked to the Energy FlowType."
+    },
+    "id" : "14",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#MaterialFootprint",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaterialFootprint",
+      "undefined" : "Material Footprint"
+    },
+    "comment" : {
+      "undefined" : "refers to the total amount of raw materials extracted to meet final consumption demands. (ESPR Art 2 (26))."
+    },
+    "id" : "22",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#AirPollutionFootprint",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AirPollutionFootprint",
+      "undefined" : "Air Pollution Footprint"
+    },
+    "comment" : {
+      "undefined" : "Quantifies the release of airborne pollutants (e.g., particulate matter, photochemical ozone formation) over the life cycle of a product. AirPollutionFootprint is an ImpactResult associated with relevant environmental impact categories."
+    },
+    "id" : "25",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#CharacterizationFactor",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CharacterizationFactor",
+      "undefined" : "Characterization Factor"
+    },
+    "comment" : {
+      "undefined" : "Also called Impact factors, are factors that quantify the relative impact of different substances within the same category. These factors are used to convert the number of emissions into impact scores for each category."
+    },
+    "id" : "24"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#CharacterizationModel",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CharacterizationModel",
+      "undefined" : "Characterization Model"
+    },
+    "comment" : {
+      "undefined" : "A characterization model provides a mathmetical framework, as a set of equations, to quantify an impact category based on the chosen method. Example: IPCC (2021). A characterization model is used by a method."
+    },
+    "id" : "35"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#CarbonFootprint",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CarbonFootprint",
+      "undefined" : "Carbon Footprint"
+    },
+    "comment" : {
+      "undefined" : "means the sum of greenhouse gas emissions and greenhouse gas removals in a product system, expressed as CO equivalents and based on a life cycle assessment using the single impact category of climate change. (ESPR Art 2 25))"
+    },
+    "id" : "39",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#ToxicityFootprint",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ToxicityFootprint",
+      "undefined" : "Toxicity Footprint"
+    },
+    "comment" : {
+      "undefined" : "Quantifies the potential human health and ecological toxicity impacts of a product over its life cycle. ToxicityFootprint aggregates relevant ImpactCategories such as Human Toxicity (cancer and non-cancer) and Ecotoxicity."
+    },
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#EutrophicationFootprint",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EutrophicationFootprint",
+      "undefined" : "Eutophication Footprint"
+    },
+    "comment" : {
+      "undefined" : "Quantifies nutrient enrichment impacts (eutrophication) on freshwater, marine, or terrestrial ecosystems caused by a product during its life cycle. It aggregates relevant ImpactCategories."
+    },
+    "id" : "51",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#ImpactCategory",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImpactCategory",
+      "undefined" : "Impact Category"
+    },
+    "comment" : {
+      "undefined" : "An impact category represents a specific environmental issue that the LCA aims to assess, such as global warming or ozone depletion. Each category aggregates the effects of different emissions that contribute to the same environmental problem."
+    },
+    "id" : "20"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#Method",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Method",
+      "undefined" : "Method"
+    },
+    "comment" : {
+      "undefined" : "LCIA methods allow to transform raw emissions and resource data into understandable impact scores. Examples of methods include EN15804+A2, EF v3.1."
+    },
+    "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#WaterFootprint",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WaterFootprint",
+      "undefined" : "Water Footprint"
+    },
+    "comment" : {
+      "undefined" : "Quantifies the freshwater consumption associated with a product throughout its life cycle. WaterFootprint is a FlowResult linked to the Water FlowType."
+    },
+    "id" : "60",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#LcaResult",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LcaResult",
+      "undefined" : "LCA Result"
+    },
+    "subClasses" : [ "1", "39", "51", "3", "22", "60", "14", "61", "25" ],
+    "comment" : {
+      "undefined" : "A LCA result corresponds to the computed value of each flow (or sometimes activity as a group of its input and output flows) concerning an impact category (IC). \nThus, it is an entity that makes links to: a flow/activity (e.g. flat chip resistor), an exact value (e.g. 1,16E-03), and an impact category (e.g. climate change), indicating the participation of this flow/activity in the studied impact category issue."
+    },
+    "id" : "2"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#LandFootprint",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LandFootprint",
+      "undefined" : "Land Footprint"
+    },
+    "comment" : {
+      "undefined" : "Quantifies the occupation and transformation of land caused by a product throughout its life cycle. LandFootprint is an ImpactResult linked to the LandUse impact category."
+    },
+    "id" : "61",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#Methodology",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Methodology",
+      "undefined" : "Methodology"
+    },
+    "comment" : {
+      "undefined" : "LCIA methodologies group related LCIA methods.\nA methodology (identified by an LCA expert for carrying out a specific LCA study), assesses some topic which is included in the scope of the LCA study."
+    },
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#OverallImpactResult",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OverallImpactResult",
+      "undefined" : "Overall Impact Result"
+    },
+    "comment" : {
+      "undefined" : "It corresponds to the sum of all LCA result values of all flows/activities in the studied LCA of a product X, regarding an impact category Y."
+    },
+    "id" : "9"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "7",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "10",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "15",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "16",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "17",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "18",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "28",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "29",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "30",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "31",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "32",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "33",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "34",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "36",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "37",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "41",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "42",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "43",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "46",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "47",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "48",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "49",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "50",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "53",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "0"
+  }, {
+    "range" : "9",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "7"
+  }, {
+    "range" : "9",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "10"
+  }, {
+    "range" : "8",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "15"
+  }, {
+    "range" : "9",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "16"
+  }, {
+    "range" : "11",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "17"
+  }, {
+    "range" : "8",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#hasIC",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "hasIC",
+      "undefined" : "has Impact Category"
+    },
+    "domain" : "13",
+    "comment" : {
+      "undefined" : "relates a result to an impact category"
+    },
+    "attributes" : [ "object" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#containsLcaResult",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "containsLcaResult",
+      "undefined" : "contains Lca Result"
+    },
+    "domain" : "9",
+    "comment" : {
+      "undefined" : "relates a OIR to the LCA result it contains"
+    },
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#quantifiesICI",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "quantifiesICI",
+      "undefined" : "quantifies ICI"
+    },
+    "domain" : "24",
+    "comment" : {
+      "undefined" : "relates a CF to the ICI it quantifies"
+    },
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#imposesIC",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "imposesIC",
+      "undefined" : "imposes IC"
+    },
+    "domain" : "8",
+    "comment" : {
+      "undefined" : "relates a methodology to the IC it imposes"
+    },
+    "attributes" : [ "object" ],
+    "id" : "26"
+  }, {
+    "range" : "2",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "27"
+  }, {
+    "range" : "2",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "28"
+  }, {
+    "range" : "11",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "29"
+  }, {
+    "range" : "8",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "30"
+  }, {
+    "range" : "6",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "31"
+  }, {
+    "range" : "9",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "32"
+  }, {
+    "range" : "11",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "33"
+  }, {
+    "range" : "9",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "range" : "11",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "36"
+  }, {
+    "range" : "2",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#quantifiedByCF",
+    "inverse" : "23",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "quantifiedByCF",
+      "undefined" : "quantified By CF"
+    },
+    "domain" : "6",
+    "comment" : {
+      "undefined" : "relates an ICI to the CF it is quantified by"
+    },
+    "attributes" : [ "object" ],
+    "id" : "38"
+  }, {
+    "range" : "2",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "40"
+  }, {
+    "range" : "35",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "41"
+  }, {
+    "range" : "8",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "42"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#includedInMethodology",
+    "inverse" : "44",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "includedInMethodology",
+      "undefined" : "included In Methodology"
+    },
+    "domain" : "11",
+    "comment" : {
+      "undefined" : "relates a method to the methodology it is included in"
+    },
+    "attributes" : [ "object" ],
+    "id" : "43"
+  }, {
+    "range" : "9",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "45"
+  }, {
+    "range" : "11",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "46"
+  }, {
+    "range" : "20",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "47"
+  }, {
+    "range" : "8",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "48"
+  }, {
+    "range" : "6",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "49"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#containedInOIR",
+    "inverse" : "21",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "containedInOIR",
+      "undefined" : "contained In OIR"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "relates a LCA result to the OIR it is contained in"
+    },
+    "attributes" : [ "object" ],
+    "id" : "50"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#includesMethod",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "includesMethod",
+      "undefined" : "includes Method"
+    },
+    "domain" : "8",
+    "comment" : {
+      "undefined" : "relates a methodology to the method it includes"
+    },
+    "attributes" : [ "object" ],
+    "id" : "44"
+  }, {
+    "range" : "6",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "52"
+  }, {
+    "range" : "20",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "53"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#usedInMethod",
+    "inverse" : "55",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "usedInMethod",
+      "undefined" : "used In Method"
+    },
+    "domain" : "35",
+    "comment" : {
+      "undefined" : "relates a CM to the method it is used in"
+    },
+    "attributes" : [ "object" ],
+    "id" : "54"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#usesCM",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "usesCM",
+      "undefined" : "uses CM"
+    },
+    "domain" : "11",
+    "comment" : {
+      "undefined" : "relates a method to the CM it uses"
+    },
+    "attributes" : [ "object" ],
+    "id" : "55"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#assessedByICI",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "assessedByICI",
+      "undefined" : "assessed By ICI"
+    },
+    "domain" : "20",
+    "comment" : {
+      "undefined" : "relates an IC to the ICI it is assessed by"
+    },
+    "attributes" : [ "object" ],
+    "id" : "56"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#imposedByMethodology",
+    "inverse" : "26",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "imposedByMethodology",
+      "undefined" : "imposed by Methodology"
+    },
+    "domain" : "20",
+    "comment" : {
+      "undefined" : "relates an IC to the methodology it is imposed by"
+    },
+    "attributes" : [ "object" ],
+    "id" : "57"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#calculatedByCM",
+    "inverse" : "59",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "calculatedByCM",
+      "undefined" : "calculated By CM"
+    },
+    "domain" : "24",
+    "comment" : {
+      "undefined" : "relates a CF to the CM it is calculated by"
+    },
+    "attributes" : [ "object" ],
+    "id" : "58"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#calculatesCF",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "calculatesCF",
+      "undefined" : "calculates CF"
+    },
+    "domain" : "35",
+    "comment" : {
+      "undefined" : "relates a CM to the CF it calculates"
+    },
+    "attributes" : [ "object" ],
+    "id" : "59"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#assessIC",
+    "inverse" : "56",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "assessIC",
+      "undefined" : "assess IC"
+    },
+    "domain" : "6",
+    "comment" : {
+      "undefined" : "relates an ICI to the IC it assesses"
+    },
+    "attributes" : [ "object" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://qudt.org/schema/qudt#numericValue",
+    "baseIri" : "http://qudt.org/schema/qudt",
+    "range" : "4",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://qudt.org/schema/qudt",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "numericValue",
+      "undefined" : "numeric value"
+    },
+    "domain" : "12",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "63"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#hasDefaultUnit",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "hasDefaultUnit",
+      "undefined" : "has Default Unit"
+    },
+    "domain" : "6",
+    "comment" : {
+      "undefined" : "ICI has deafult unit"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "64"
+  }, {
+    "range" : "2",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "65"
+  }, {
+    "range" : "2",
+    "domain" : "60",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "66"
+  }, {
+    "range" : "2",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "67"
+  }, {
+    "range" : "2",
+    "domain" : "61",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "68"
+  }, {
+    "range" : "2",
+    "domain" : "51",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "69"
+  }, {
+    "range" : "2",
+    "domain" : "39",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "70"
+  }, {
+    "range" : "2",
+    "domain" : "22",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "71"
+  }, {
+    "range" : "2",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "72"
+  } ]
+}

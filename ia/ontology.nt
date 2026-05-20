@@ -1,0 +1,458 @@
+<https://w3id.org/lcanet/ia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/lcanet/ia> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/lcanet/ia/2.2.0> .
+<https://w3id.org/lcanet/ia> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-0438-6831> .
+<https://w3id.org/lcanet/ia> <http://purl.org/dc/terms/description> "The Impact Assessment module is part of the LCAnet ontology proposed by the SmartACV Carnot Project.\n            It provides a formal representation of impact assessment concepts, methods, and characterization factors,\n            enabling the evaluation and quantification of environmental impacts within the LCA process of a product or service." .
+<https://w3id.org/lcanet/ia> <http://purl.org/dc/terms/issued> "2026-05-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/lcanet/ia> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/lcanet/ia> <http://purl.org/dc/terms/publisher> <https://www.cea.fr> .
+<https://w3id.org/lcanet/ia> <http://purl.org/dc/terms/title> "The Impact Assessment module of the Life Cycle Assessment Network Ontology (LCAnet)."@en .
+<https://w3id.org/lcanet/ia> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ia" .
+<https://w3id.org/lcanet/ia> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/lcanet/ia#" .
+<https://w3id.org/lcanet/ia> <http://www.w3.org/2000/01/rdf-schema#label> "LCAnet-ImpactAssessment" .
+<https://w3id.org/lcanet/ia> <http://www.w3.org/2002/07/owl#priorVersion> "2.1.0" .
+<https://w3id.org/lcanet/ia> <http://www.w3.org/2002/07/owl#versionInfo> "2.2.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/dcterms/bibliographicCitation
+<http://purl.org/dc/dcterms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/dcterms/issued
+<http://purl.org/dc/dcterms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/date
+<http://purl.org/dc/terms/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/hasVersion
+<http://purl.org/dc/terms/hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.w3.org/2001/XMLSchema#gYear
+<http://www.w3.org/2001/XMLSchema#gYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/lcanet/ia#assessIC
+<https://w3id.org/lcanet/ia#assessIC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/ia#assessIC> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/lcanet/ia#assessedByICI> .
+<https://w3id.org/lcanet/ia#assessIC> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/ia#ImpactCategoryIndicator> .
+<https://w3id.org/lcanet/ia#assessIC> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/ia#ImpactCategory> .
+<https://w3id.org/lcanet/ia#assessIC> <http://www.w3.org/2000/01/rdf-schema#comment> "relates an ICI to the IC it assesses" .
+<https://w3id.org/lcanet/ia#assessIC> <http://www.w3.org/2000/01/rdf-schema#label> "assess IC" .
+# 
+# https://w3id.org/lcanet/ia#assessedByICI
+<https://w3id.org/lcanet/ia#assessedByICI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/ia#assessedByICI> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/ia#ImpactCategory> .
+<https://w3id.org/lcanet/ia#assessedByICI> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/ia#ImpactCategoryIndicator> .
+<https://w3id.org/lcanet/ia#assessedByICI> <http://www.w3.org/2000/01/rdf-schema#comment> "relates an IC to the ICI it is assessed by" .
+<https://w3id.org/lcanet/ia#assessedByICI> <http://www.w3.org/2000/01/rdf-schema#label> "assessed By ICI" .
+# 
+# https://w3id.org/lcanet/ia#calculatedByCM
+<https://w3id.org/lcanet/ia#calculatedByCM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/ia#calculatedByCM> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/lcanet/ia#calculatesCF> .
+<https://w3id.org/lcanet/ia#calculatedByCM> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/ia#CharacterizationFactor> .
+<https://w3id.org/lcanet/ia#calculatedByCM> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/ia#CharacterizationModel> .
+<https://w3id.org/lcanet/ia#calculatedByCM> <http://www.w3.org/2000/01/rdf-schema#comment> "relates a CF to the CM it is calculated by" .
+<https://w3id.org/lcanet/ia#calculatedByCM> <http://www.w3.org/2000/01/rdf-schema#label> "calculated By CM" .
+# 
+# https://w3id.org/lcanet/ia#calculatesCF
+<https://w3id.org/lcanet/ia#calculatesCF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/ia#calculatesCF> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/ia#CharacterizationModel> .
+<https://w3id.org/lcanet/ia#calculatesCF> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/ia#CharacterizationFactor> .
+<https://w3id.org/lcanet/ia#calculatesCF> <http://www.w3.org/2000/01/rdf-schema#comment> "relates a CM to the CF it calculates" .
+<https://w3id.org/lcanet/ia#calculatesCF> <http://www.w3.org/2000/01/rdf-schema#label> "calculates CF" .
+# 
+# https://w3id.org/lcanet/ia#containedInOIR
+<https://w3id.org/lcanet/ia#containedInOIR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/ia#containedInOIR> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/lcanet/ia#containsLcaResult> .
+<https://w3id.org/lcanet/ia#containedInOIR> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/ia#LcaResult> .
+<https://w3id.org/lcanet/ia#containedInOIR> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/ia#OverallImpactResult> .
+<https://w3id.org/lcanet/ia#containedInOIR> <http://www.w3.org/2000/01/rdf-schema#comment> "relates a LCA result to the OIR it is contained in" .
+<https://w3id.org/lcanet/ia#containedInOIR> <http://www.w3.org/2000/01/rdf-schema#label> "contained In OIR" .
+# 
+# https://w3id.org/lcanet/ia#containsLcaResult
+<https://w3id.org/lcanet/ia#containsLcaResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/ia#containsLcaResult> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/ia#OverallImpactResult> .
+<https://w3id.org/lcanet/ia#containsLcaResult> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/ia#LcaResult> .
+<https://w3id.org/lcanet/ia#containsLcaResult> <http://www.w3.org/2000/01/rdf-schema#comment> "relates a OIR to the LCA result it contains" .
+<https://w3id.org/lcanet/ia#containsLcaResult> <http://www.w3.org/2000/01/rdf-schema#label> "contains Lca Result" .
+# 
+# https://w3id.org/lcanet/ia#hasIC
+<https://w3id.org/lcanet/ia#hasIC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/ia#hasIC> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/lcanet/ia#OverallImpactResult> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/lcanet/ia#LcaResult> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/ia#hasIC> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/ia#ImpactCategory> .
+<https://w3id.org/lcanet/ia#hasIC> <http://www.w3.org/2000/01/rdf-schema#comment> "relates a result to an impact category" .
+<https://w3id.org/lcanet/ia#hasIC> <http://www.w3.org/2000/01/rdf-schema#label> "has Impact Category" .
+# 
+# https://w3id.org/lcanet/ia#imposedByMethodology
+<https://w3id.org/lcanet/ia#imposedByMethodology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/ia#imposedByMethodology> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/lcanet/ia#imposesIC> .
+<https://w3id.org/lcanet/ia#imposedByMethodology> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/ia#ImpactCategory> .
+<https://w3id.org/lcanet/ia#imposedByMethodology> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/ia#Methodology> .
+<https://w3id.org/lcanet/ia#imposedByMethodology> <http://www.w3.org/2000/01/rdf-schema#comment> "relates an IC to the methodology it is imposed by" .
+<https://w3id.org/lcanet/ia#imposedByMethodology> <http://www.w3.org/2000/01/rdf-schema#label> "imposed by Methodology" .
+# 
+# https://w3id.org/lcanet/ia#imposesIC
+<https://w3id.org/lcanet/ia#imposesIC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/ia#imposesIC> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/ia#Methodology> .
+<https://w3id.org/lcanet/ia#imposesIC> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/ia#ImpactCategory> .
+<https://w3id.org/lcanet/ia#imposesIC> <http://www.w3.org/2000/01/rdf-schema#comment> "relates a methodology to the IC it imposes" .
+<https://w3id.org/lcanet/ia#imposesIC> <http://www.w3.org/2000/01/rdf-schema#label> "imposes IC" .
+# 
+# https://w3id.org/lcanet/ia#includedInMethodology
+<https://w3id.org/lcanet/ia#includedInMethodology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/ia#includedInMethodology> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/lcanet/ia#includesMethod> .
+<https://w3id.org/lcanet/ia#includedInMethodology> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/ia#Method> .
+<https://w3id.org/lcanet/ia#includedInMethodology> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/ia#Methodology> .
+<https://w3id.org/lcanet/ia#includedInMethodology> <http://www.w3.org/2000/01/rdf-schema#comment> "relates a method to the methodology it is included in" .
+<https://w3id.org/lcanet/ia#includedInMethodology> <http://www.w3.org/2000/01/rdf-schema#label> "included In Methodology" .
+# 
+# https://w3id.org/lcanet/ia#includesMethod
+<https://w3id.org/lcanet/ia#includesMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/ia#includesMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/ia#Methodology> .
+<https://w3id.org/lcanet/ia#includesMethod> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/ia#Method> .
+<https://w3id.org/lcanet/ia#includesMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "relates a methodology to the method it includes" .
+<https://w3id.org/lcanet/ia#includesMethod> <http://www.w3.org/2000/01/rdf-schema#label> "includes Method" .
+# 
+# https://w3id.org/lcanet/ia#quantifiedByCF
+<https://w3id.org/lcanet/ia#quantifiedByCF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/ia#quantifiedByCF> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/lcanet/ia#quantifiesICI> .
+<https://w3id.org/lcanet/ia#quantifiedByCF> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/ia#ImpactCategoryIndicator> .
+<https://w3id.org/lcanet/ia#quantifiedByCF> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/ia#CharacterizationFactor> .
+<https://w3id.org/lcanet/ia#quantifiedByCF> <http://www.w3.org/2000/01/rdf-schema#comment> "relates an ICI to the CF it is quantified by" .
+<https://w3id.org/lcanet/ia#quantifiedByCF> <http://www.w3.org/2000/01/rdf-schema#label> "quantified By CF" .
+# 
+# https://w3id.org/lcanet/ia#quantifiesICI
+<https://w3id.org/lcanet/ia#quantifiesICI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/ia#quantifiesICI> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/ia#CharacterizationFactor> .
+<https://w3id.org/lcanet/ia#quantifiesICI> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/ia#ImpactCategoryIndicator> .
+<https://w3id.org/lcanet/ia#quantifiesICI> <http://www.w3.org/2000/01/rdf-schema#comment> "relates a CF to the ICI it quantifies" .
+<https://w3id.org/lcanet/ia#quantifiesICI> <http://www.w3.org/2000/01/rdf-schema#label> "quantifies ICI" .
+# 
+# https://w3id.org/lcanet/ia#usedInMethod
+<https://w3id.org/lcanet/ia#usedInMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/ia#usedInMethod> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/lcanet/ia#usesCM> .
+<https://w3id.org/lcanet/ia#usedInMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/ia#CharacterizationModel> .
+<https://w3id.org/lcanet/ia#usedInMethod> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/ia#Method> .
+<https://w3id.org/lcanet/ia#usedInMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "relates a CM to the method it is used in" .
+<https://w3id.org/lcanet/ia#usedInMethod> <http://www.w3.org/2000/01/rdf-schema#label> "used In Method" .
+# 
+# https://w3id.org/lcanet/ia#usesCM
+<https://w3id.org/lcanet/ia#usesCM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/ia#usesCM> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/ia#Method> .
+<https://w3id.org/lcanet/ia#usesCM> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/ia#CharacterizationModel> .
+<https://w3id.org/lcanet/ia#usesCM> <http://www.w3.org/2000/01/rdf-schema#comment> "relates a method to the CM it uses" .
+<https://w3id.org/lcanet/ia#usesCM> <http://www.w3.org/2000/01/rdf-schema#label> "uses CM" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://qudt.org/schema/qudt#numericValue
+<http://qudt.org/schema/qudt#numericValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://qudt.org/schema/qudt#numericValue> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/lcanet/ia#OverallImpactResult> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/lcanet/ia#LcaResult> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://qudt.org/schema/qudt#numericValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt#numericValue> <http://www.w3.org/2000/01/rdf-schema#label> "numeric value" .
+# 
+# https://w3id.org/lcanet/ia#hasDefaultUnit
+<https://w3id.org/lcanet/ia#hasDefaultUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/lcanet/ia#hasDefaultUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/ia#ImpactCategoryIndicator> .
+<https://w3id.org/lcanet/ia#hasDefaultUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/lcanet/ia#hasDefaultUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "ICI has deafult unit" .
+<https://w3id.org/lcanet/ia#hasDefaultUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has Default Unit" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/lcanet/ia#AirPollutionFootprint
+<https://w3id.org/lcanet/ia#AirPollutionFootprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/ia#AirPollutionFootprint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/ia#LcaResult> .
+<https://w3id.org/lcanet/ia#AirPollutionFootprint> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantifies the release of airborne pollutants (e.g., particulate matter, photochemical ozone formation) over the life cycle of a product. AirPollutionFootprint is an ImpactResult associated with relevant environmental impact categories." .
+<https://w3id.org/lcanet/ia#AirPollutionFootprint> <http://www.w3.org/2000/01/rdf-schema#label> "Air Pollution Footprint" .
+# 
+# https://w3id.org/lcanet/ia#CarbonFootprint
+<https://w3id.org/lcanet/ia#CarbonFootprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/ia#CarbonFootprint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/ia#LcaResult> .
+<https://w3id.org/lcanet/ia#CarbonFootprint> <http://www.w3.org/2000/01/rdf-schema#comment> "means the sum of greenhouse gas emissions and greenhouse gas removals in a product system, expressed as CO equivalents and based on a life cycle assessment using the single impact category of climate change. (ESPR Art 2 25))" .
+<https://w3id.org/lcanet/ia#CarbonFootprint> <http://www.w3.org/2000/01/rdf-schema#label> "Carbon Footprint" .
+# 
+# https://w3id.org/lcanet/ia#CharacterizationFactor
+<https://w3id.org/lcanet/ia#CharacterizationFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/ia#CharacterizationFactor> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#CharacterizationModel> .
+<https://w3id.org/lcanet/ia#CharacterizationFactor> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#ImpactCategory> .
+<https://w3id.org/lcanet/ia#CharacterizationFactor> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#ImpactCategoryIndicator> .
+<https://w3id.org/lcanet/ia#CharacterizationFactor> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#LcaResult> .
+<https://w3id.org/lcanet/ia#CharacterizationFactor> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#Method> .
+<https://w3id.org/lcanet/ia#CharacterizationFactor> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#Methodology> .
+<https://w3id.org/lcanet/ia#CharacterizationFactor> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#OverallImpactResult> .
+<https://w3id.org/lcanet/ia#CharacterizationFactor> <http://www.w3.org/2000/01/rdf-schema#comment> "Also called Impact factors, are factors that quantify the relative impact of different substances within the same category. These factors are used to convert the number of emissions into impact scores for each category." .
+<https://w3id.org/lcanet/ia#CharacterizationFactor> <http://www.w3.org/2000/01/rdf-schema#label> "Characterization Factor" .
+# 
+# https://w3id.org/lcanet/ia#CharacterizationModel
+<https://w3id.org/lcanet/ia#CharacterizationModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/ia#CharacterizationModel> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#ImpactCategory> .
+<https://w3id.org/lcanet/ia#CharacterizationModel> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#ImpactCategoryIndicator> .
+<https://w3id.org/lcanet/ia#CharacterizationModel> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#LcaResult> .
+<https://w3id.org/lcanet/ia#CharacterizationModel> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#Method> .
+<https://w3id.org/lcanet/ia#CharacterizationModel> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#Methodology> .
+<https://w3id.org/lcanet/ia#CharacterizationModel> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#OverallImpactResult> .
+<https://w3id.org/lcanet/ia#CharacterizationModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A characterization model provides a mathmetical framework, as a set of equations, to quantify an impact category based on the chosen method. Example: IPCC (2021). A characterization model is used by a method." .
+<https://w3id.org/lcanet/ia#CharacterizationModel> <http://www.w3.org/2000/01/rdf-schema#label> "Characterization Model" .
+# 
+# https://w3id.org/lcanet/ia#EnergyFootprint
+<https://w3id.org/lcanet/ia#EnergyFootprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/ia#EnergyFootprint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/ia#LcaResult> .
+<https://w3id.org/lcanet/ia#EnergyFootprint> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantifies the total energy use associated with a product throughout its life cycle, including renewable and non-renewable sources. EnergyFootprint is a FlowResult linked to the Energy FlowType." .
+<https://w3id.org/lcanet/ia#EnergyFootprint> <http://www.w3.org/2000/01/rdf-schema#label> "Energy Footprint" .
+# 
+# https://w3id.org/lcanet/ia#EutrophicationFootprint
+<https://w3id.org/lcanet/ia#EutrophicationFootprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/ia#EutrophicationFootprint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/ia#LcaResult> .
+<https://w3id.org/lcanet/ia#EutrophicationFootprint> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantifies nutrient enrichment impacts (eutrophication) on freshwater, marine, or terrestrial ecosystems caused by a product during its life cycle. It aggregates relevant ImpactCategories." .
+<https://w3id.org/lcanet/ia#EutrophicationFootprint> <http://www.w3.org/2000/01/rdf-schema#label> "Eutophication Footprint" .
+# 
+# https://w3id.org/lcanet/ia#ImpactCategory
+<https://w3id.org/lcanet/ia#ImpactCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/ia#ImpactCategory> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#ImpactCategoryIndicator> .
+<https://w3id.org/lcanet/ia#ImpactCategory> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#LcaResult> .
+<https://w3id.org/lcanet/ia#ImpactCategory> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#Method> .
+<https://w3id.org/lcanet/ia#ImpactCategory> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#Methodology> .
+<https://w3id.org/lcanet/ia#ImpactCategory> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#OverallImpactResult> .
+<https://w3id.org/lcanet/ia#ImpactCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "An impact category represents a specific environmental issue that the LCA aims to assess, such as global warming or ozone depletion. Each category aggregates the effects of different emissions that contribute to the same environmental problem." .
+<https://w3id.org/lcanet/ia#ImpactCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Impact Category" .
+# 
+# https://w3id.org/lcanet/ia#ImpactCategoryIndicator
+<https://w3id.org/lcanet/ia#ImpactCategoryIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/ia#ImpactCategoryIndicator> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#LcaResult> .
+<https://w3id.org/lcanet/ia#ImpactCategoryIndicator> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#Method> .
+<https://w3id.org/lcanet/ia#ImpactCategoryIndicator> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#Methodology> .
+<https://w3id.org/lcanet/ia#ImpactCategoryIndicator> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#OverallImpactResult> .
+<https://w3id.org/lcanet/ia#ImpactCategoryIndicator> <http://www.w3.org/2000/01/rdf-schema#comment> "An impact category refers to a specific metric/measurable quantity that is used to quantify an impact category, such as Global Warming Potential (GWP) and Ozone Depletion Potential (ODP)." .
+<https://w3id.org/lcanet/ia#ImpactCategoryIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "Impact Category Indicator" .
+# 
+# https://w3id.org/lcanet/ia#LandFootprint
+<https://w3id.org/lcanet/ia#LandFootprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/ia#LandFootprint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/ia#LcaResult> .
+<https://w3id.org/lcanet/ia#LandFootprint> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantifies the occupation and transformation of land caused by a product throughout its life cycle. LandFootprint is an ImpactResult linked to the LandUse impact category." .
+<https://w3id.org/lcanet/ia#LandFootprint> <http://www.w3.org/2000/01/rdf-schema#label> "Land Footprint" .
+# 
+# https://w3id.org/lcanet/ia#LcaResult
+<https://w3id.org/lcanet/ia#LcaResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/ia#LcaResult> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#Method> .
+<https://w3id.org/lcanet/ia#LcaResult> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#Methodology> .
+<https://w3id.org/lcanet/ia#LcaResult> <http://www.w3.org/2000/01/rdf-schema#comment> "A LCA result corresponds to the computed value of each flow (or sometimes activity as a group of its input and output flows) concerning an impact category (IC). \nThus, it is an entity that makes links to: a flow/activity (e.g. flat chip resistor), an exact value (e.g. 1,16E-03), and an impact category (e.g. climate change), indicating the participation of this flow/activity in the studied impact category issue." .
+<https://w3id.org/lcanet/ia#LcaResult> <http://www.w3.org/2000/01/rdf-schema#label> "LCA Result" .
+# 
+# https://w3id.org/lcanet/ia#MaterialFootprint
+<https://w3id.org/lcanet/ia#MaterialFootprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/ia#MaterialFootprint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/ia#LcaResult> .
+<https://w3id.org/lcanet/ia#MaterialFootprint> <http://www.w3.org/2000/01/rdf-schema#comment> "refers to the total amount of raw materials extracted to meet final consumption demands. (ESPR Art 2 (26))." .
+<https://w3id.org/lcanet/ia#MaterialFootprint> <http://www.w3.org/2000/01/rdf-schema#label> "Material Footprint" .
+# 
+# https://w3id.org/lcanet/ia#Method
+<https://w3id.org/lcanet/ia#Method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/ia#Method> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#OverallImpactResult> .
+<https://w3id.org/lcanet/ia#Method> <http://www.w3.org/2000/01/rdf-schema#comment> "LCIA methods allow to transform raw emissions and resource data into understandable impact scores. Examples of methods include EN15804+A2, EF v3.1." .
+<https://w3id.org/lcanet/ia#Method> <http://www.w3.org/2000/01/rdf-schema#label> "Method" .
+# 
+# https://w3id.org/lcanet/ia#Methodology
+<https://w3id.org/lcanet/ia#Methodology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/ia#Methodology> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/ia#OverallImpactResult> .
+<https://w3id.org/lcanet/ia#Methodology> <http://www.w3.org/2000/01/rdf-schema#comment> "LCIA methodologies group related LCIA methods.\nA methodology (identified by an LCA expert for carrying out a specific LCA study), assesses some topic which is included in the scope of the LCA study." .
+<https://w3id.org/lcanet/ia#Methodology> <http://www.w3.org/2000/01/rdf-schema#label> "Methodology" .
+# 
+# https://w3id.org/lcanet/ia#OverallImpactResult
+<https://w3id.org/lcanet/ia#OverallImpactResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/ia#OverallImpactResult> <http://www.w3.org/2000/01/rdf-schema#comment> "It corresponds to the sum of all LCA result values of all flows/activities in the studied LCA of a product X, regarding an impact category Y." .
+<https://w3id.org/lcanet/ia#OverallImpactResult> <http://www.w3.org/2000/01/rdf-schema#label> "Overall Impact Result" .
+# 
+# https://w3id.org/lcanet/ia#OzoneDepletionFootprint
+<https://w3id.org/lcanet/ia#OzoneDepletionFootprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/ia#OzoneDepletionFootprint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/ia#LcaResult> .
+<https://w3id.org/lcanet/ia#OzoneDepletionFootprint> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantifies the potential stratospheric ozone layer depletion caused by substances emitted by a product throughout its life cycle. It is an ImpactResult linked to the Ozone Depletion impact category." .
+<https://w3id.org/lcanet/ia#OzoneDepletionFootprint> <http://www.w3.org/2000/01/rdf-schema#label> "Ozone Depletion Footprint" .
+# 
+# https://w3id.org/lcanet/ia#ToxicityFootprint
+<https://w3id.org/lcanet/ia#ToxicityFootprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/ia#ToxicityFootprint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/ia#LcaResult> .
+<https://w3id.org/lcanet/ia#ToxicityFootprint> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantifies the potential human health and ecological toxicity impacts of a product over its life cycle. ToxicityFootprint aggregates relevant ImpactCategories such as Human Toxicity (cancer and non-cancer) and Ecotoxicity." .
+<https://w3id.org/lcanet/ia#ToxicityFootprint> <http://www.w3.org/2000/01/rdf-schema#label> "Toxicity Footprint" .
+# 
+# https://w3id.org/lcanet/ia#WaterFootprint
+<https://w3id.org/lcanet/ia#WaterFootprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/ia#WaterFootprint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/ia#LcaResult> .
+<https://w3id.org/lcanet/ia#WaterFootprint> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantifies the freshwater consumption associated with a product throughout its life cycle. WaterFootprint is a FlowResult linked to the Water FlowType." .
+<https://w3id.org/lcanet/ia#WaterFootprint> <http://www.w3.org/2000/01/rdf-schema#label> "Water Footprint" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<urn:swrl:var#c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#o> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid20 <http://www.w3.org/2003/11/swrl#body> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
+_:genid22 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid22 <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/lcanet/ia#OverallImpactResult> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
+_:genid24 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a> .
+_:genid24 <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/lcanet/ia#LcaResult> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
+_:genid26 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#o> .
+_:genid26 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a> .
+_:genid26 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/lcanet/ia#containedInOIR> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid28 .
+_:genid28 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> .
+_:genid28 <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/lcanet/ia#ImpactCategory> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid30 .
+_:genid30 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#c> .
+_:genid30 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a> .
+_:genid30 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/lcanet/ia#hasIC> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid20 <http://www.w3.org/2003/11/swrl#head> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid32 .
+_:genid32 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#c> .
+_:genid32 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid32 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/lcanet/ia#hasIC> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid7 <http://www.w3.org/2003/11/swrl#body> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid9 .
+_:genid9 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid9 <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/lcanet/ia#OverallImpactResult> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid11 .
+_:genid11 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a> .
+_:genid11 <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/lcanet/ia#LcaResult> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid13 .
+_:genid13 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#o> .
+_:genid13 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a> .
+_:genid13 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/lcanet/ia#containedInOIR> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid15 .
+_:genid15 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#c> .
+_:genid15 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid15 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/lcanet/ia#hasIC> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
+_:genid17 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> .
+_:genid17 <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/lcanet/ia#ImpactCategory> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid7 <http://www.w3.org/2003/11/swrl#head> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
+_:genid19 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#c> .
+_:genid19 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a> .
+_:genid19 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/lcanet/ia#hasIC> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
