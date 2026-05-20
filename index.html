@@ -1,203 +1,589 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>LCAnet – Life Cycle Assessment Ontology Network</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LCAnet – Life Cycle Assessment Ontology Network</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green-dark:  #1a3a2a;
+      --green-mid:   #2d6a4f;
+      --green-light: #52b788;
+      --green-pale:  #d8f3dc;
+      --green-ghost: #fdfffd;
+      --accent:      #40916c;
+      --accent2:     #74c69d;
+      --text:        #1b2e24;
+      --text-muted:  #4a6358;
+      --border:      #b7e4c7;
+      --white:       #ffffff;
+      --nav-h:       64px;
+    }
 
-<!-- Font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<style>
-  body {
-    font-family: 'Inter', Arial, sans-serif;
-    line-height: 1.6;
-    color: #222;
-    margin: 40px;
-    max-width: 1000px;
-  }
+    html { scroll-behavior: smooth; }
 
-  h1 {
-    font-weight: 600;
-    letter-spacing: -0.5px;
-  }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--green-ghost);
+      color: var(--text);
+      line-height: 1.7;
+    }
 
-  h2 {
-    margin-top: 30px;
-    font-weight: 600;
-  }
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--nav-h);
+      background: var(--green-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    }
 
-  p {
-    font-size: 15.5px;
-  }
+    .nav-brand {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--green-pale);
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
 
-  ul li {
-    margin-bottom: 6px;
-  }
+    .nav-brand span {
+      display: inline-block;
+      background: var(--green-light);
+      color: var(--green-dark);
+      padding: 0.15em 0.55em;
+      border-radius: 4px;
+      font-size: 0.85em;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+    }
 
-  a {
-    text-decoration: none;
-    color: #0645ad;
-  }
+    .nav-links {
+      display: flex;
+      gap: 0.25rem;
+      list-style: none;
+    }
 
-  a:hover {
-    text-decoration: underline;
-  }
+    .nav-links a {
+      color: var(--accent2);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.4em 0.9em;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+    }
 
-  .figure {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
+    .nav-links a:hover {
+      background: rgba(255,255,255,0.1);
+      color: var(--white);
+    }
 
-  .figure img {
-    max-width: 85%;
-    border: 1px solid #ddd;
-    padding: 5px;
-  }
+    /* ── LAYOUT ── */
+    .page-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
 
-  .caption {
-    font-size: 0.9em;
-    color: #555;
-  }
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 100%);
+      color: var(--white);
+      padding: 1rem 2rem 1rem;
+      text-align: center;
+      border-bottom: 4px solid var(--green-light);
+    }
 
-  footer {
-  margin-top: 20px;
-}
-footer p {
-  margin: 5px 0;
-}
+    .hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
 
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent2);
+    }
 
-</style>
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto 1.5rem;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.85);
+      font-weight: 300;
+    }
 
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.6rem;
+      font-size: 0.82rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35em;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: var(--green-pale);
+      padding: 0.3em 0.75em;
+      border-radius: 999px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      margin-top: 3rem;
+    }
+
+    section h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      border-left: 4px solid var(--green-light);
+      padding-left: 0.85rem;
+      margin-bottom: 1.2rem;
+    }
+
+    section h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 1.4rem 0 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 0.82rem;
+    }
+
+    p {
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    /* ── ARCHITECTURE IMAGE ── */
+    .arch-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(45,106,79,0.08);
+    }
+
+    .arch-box img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+
+    .arch-box figcaption {
+      margin-top: 0.75rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* ── MODULE CARDS ── */
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 1rem;
+    }
+
+    .module-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.1rem 1.3rem;
+      box-shadow: 0 1px 6px rgba(45,106,79,0.07);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .module-card:hover {
+      box-shadow: 0 4px 18px rgba(45,106,79,0.15);
+      transform: translateY(-2px);
+    }
+
+    .module-card .mod-name {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--green-dark);
+      margin-bottom: 0.3rem;
+    }
+
+    .module-card .mod-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .mod-link {
+      display: inline-block;
+      text-decoration: none;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 500;
+      background: var(--green-pale);
+      color: var(--green-dark);
+      padding: 0.25em 0.7em;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      transition: background 0.2s;
+    }
+
+    .mod-link:hover {
+      background: var(--green-light);
+      color: var(--white);
+    }
+
+    /* ── PLAIN LIST ITEMS ── */
+    .item-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .item-list li {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.7rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.93rem;
+      color: var(--text-muted);
+    }
+
+    .item-list li a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .item-list li a:hover { text-decoration: underline; }
+
+    .item-list li::before {
+      content: '→';
+      color: var(--green-light);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ── COMPETENCY BOX ── */
+    .cq-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+    }
+
+    /* ── USE CASE LINKS ── */
+    .usecase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .usecase-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.2rem;
+      box-shadow: 0 1px 6px rgba(45,106,79,0.07);
+    }
+
+    .usecase-card .uc-title {
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--green-dark);
+      margin-bottom: 0.4rem;
+    }
+
+    .usecase-card .uc-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+    }
+
+    /* ── CITATION / FOOTER ── */
+    .meta-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem 1.8rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    .meta-box strong { color: var(--text); }
+
+    .meta-box a { color: var(--accent); text-decoration: none; }
+    .meta-box a:hover { text-decoration: underline; }
+
+    .meta-box .cite-block {
+      background: var(--green-ghost);
+      border-left: 3px solid var(--green-light);
+      padding: 0.6rem 1rem;
+      border-radius: 0 6px 6px 0;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.82rem;
+      margin-top: 0.5rem;
+      color: var(--text);
+    }
+
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      padding-bottom: 2rem;
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      nav { padding: 0 1rem; }
+      .nav-links { gap: 0 }
+      .nav-links a { padding: 0.4em 0.5em; font-size: 0.8rem; }
+      .hero { padding: 2.5rem 1rem 2rem; }
+    }
+  </style>
 </head>
-
 <body>
 
-<h1>LCAnet – Life Cycle Assessment Ontology Network</h1>
+<!-- ═══════════ NAV ═══════════ -->
+<nav>
+  <a class="nav-brand" href="#">
+    <span>LCAnet</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#architecture">Architecture</a></li>
+    <li><a href="#modules">Modules</a></li>
+    <li><a href="#cqs">CQs</a></li>
+    <li><a href="#usecases">Use Cases</a></li>
+    <li><a href="#citation">Cite</a></li>
+  </ul>
+</nav>
 
-<p style="font-size: 1.1em;">
-LCAnet is a modular ontology network for Life Cycle Assessment (LCA) designed to provide a unified semantic framework for representing LCA systems and enabling interoperable knowledge modelling. 
-</p>
-
-<p>
-The ontology is organised into multiple interoperable modules connected through a central Core ontology, enabling structured representation and reasoning across the full LCA workflow.
-</p>
-
-<h2>Architecture Overview</h2>
-
-<p>
-LCAnet follows a modular architecture where each module captures a specific aspect of Life Cycle Assessment. The Core module integrates all components and ensures semantic consistency across the network.
-</p>
-
-<!-- Architecture Figure -->
-<div class="figure">
-  <img src="LCAnet_architecture.svg" alt="LCAnet Architecture">
-  <div class="caption">
-    LCAnet modular architecture showing the integration of all ontology modules through the Core.
+<!-- ═══════════ HERO ═══════════ -->
+<div class="hero">
+  <h1><em>LCAnet</em> – Life Cycle Assessment Ontology Network</h1>
+  <div class="hero-meta">
+    <span class="badge">Version 2.2.0</span>
+    <span class="badge">CC BY 4.0</span>
+    <span class="badge">w3id.org/lcanet</span>
+    <span class="badge">CEA List · Université Paris Saclay</span>
   </div>
 </div>
 
-<h2>LCAnet Modules</h2>
+<!-- ═══════════ PAGE CONTENT ═══════════ -->
+<div class="page-wrap">
 
-<p>The ontology is structured into the following interconnected modules:</p>
+  <!-- ARCHITECTURE -->
+  <section id="architecture">
+    <h2>Architecture Overview</h2>
+    <p>
+      LCAnet is a modular ontology network for Life Cycle Assessment providing a unified semantic
+    framework for interoperable knowledge modelling across the full LCA workflow. It follows a modular architecture where each module captures a specific aspect of
+      Life Cycle Assessment. The Core module integrates all components and ensures semantic
+      consistency across the network.
+    </p>
 
-<ul>
-  
-  <li>
-    <a href="core/index-en.html"><b>Core module</b></a> – integrates all modules into a unified framework
-  </li>
-  
-  <li>
-    <a href="activity/index-en.html"><b>Activity module</b></a> – models processes and flows in LCA systems
-  </li>
+    <figure class="arch-box">
+      <img src="https://danashfatima.github.io/lcanet/LCAnet_architecture.svg"
+           alt="LCAnet Architecture Diagram" />
+      <figcaption>
+        LCAnet modular architecture showing the integration of all ontology modules through the Core.
+      </figcaption>
+    </figure>
+  </section>
 
-  <li>
-    <a href="actor/index-en.html"><b>Actor module</b></a> – represents agents and responsibilities
-  </li>
+  <hr />
 
-  <li>
-    <a href="ia/index-en.html"><b>Impact Assessment module</b></a> – models environmental impact evaluation
-  </li>
+  <!-- MODULES -->
+  <section id="modules">
+    <h2>LCAnet Modules</h2>
+    <p>
+      The ontology is structured into the following interconnected modules, each independently
+      explorable or usable in combination through the Core.
+    </p>
+    <div class="module-grid">
 
-  <li>
-    <a href="property/index-en.html"><b>Property module</b></a> – represents qualitative and quantitative attributes
-  </li>
+      <div class="module-card">
+        <div class="mod-name">Core Module</div>
+        <div class="mod-desc">Integrates all modules into a unified semantic framework.</div>
+        <a class="mod-link" href="https://danashfatima.github.io/lcanet/core/index-en.html">HTML docs →</a>
+      </div>
 
-  <li>
-    <a href="st/index-en.html"><b>Spatiotemporal module</b></a> – models spatial and temporal context
-  </li>
+      <div class="module-card">
+        <div class="mod-name">Activity Module</div>
+        <div class="mod-desc">Models activities and flows in LCA systems.</div>
+        <a class="mod-link" href="https://danashfatima.github.io/lcanet/activity/index-en.html">HTML docs →</a>
+      </div>
 
-</ul>
+      <div class="module-card">
+        <div class="mod-name">Actor Module</div>
+        <div class="mod-desc">Represents agents and responsibilities within LCA system.</div>
+        <a class="mod-link" href="https://danashfatima.github.io/lcanet/actor/index-en.html">HTML docs →</a>
+      </div>
 
+      <div class="module-card">
+        <div class="mod-name">Impact Assessment Module</div>
+        <div class="mod-desc">Models environmental impact evaluation methodologies.</div>
+        <a class="mod-link" href="https://danashfatima.github.io/lcanet/ia/index-en.html">HTML docs →</a>
+      </div>
 
-<h2>Competency Questions</h2>
-<ul>
-  <li>
-    <a href="CQs"><b>List of CQs </b></a> – demonstrating the convience of the Lcanet ontology
-  </li>
-</ul>
-  
+      <div class="module-card">
+        <div class="mod-name">Property Module</div>
+        <div class="mod-desc">Represents qualitative and quantitative attributes.</div>
+        <a class="mod-link" href="https://danashfatima.github.io/lcanet/property/index-en.html">HTML docs →</a>
+      </div>
 
-<h2>How to use LCAnet</h2>
+      <div class="module-card">
+        <div class="mod-name">Spatiotemporal Module</div>
+        <div class="mod-desc">Models spatial and temporal contexts for LCA systems.</div>
+        <a class="mod-link" href="https://danashfatima.github.io/lcanet/st/index-en.html">HTML docs →</a>
+      </div>
 
-<p>
-Each module can be explored independently or in combination. The Core ontology ensures integration and semantic alignment across all modules, enabling coherent LCA modelling workflows.
-</p>
+    </div>
+  </section>
 
-<p>
-In the context of the SmartACV Carnot (CEA) Project, two use cases were explored: batteries and integrated circuits.  </p>
-<ul>
-  <li>
-    <a href="ICdata/index-en.html"><b>ICdata knowledge Graph</b></a> – demonstrating the applicability of the Lcanet ontology
-  </li>
-  <li>
-    <a href="ICdata/ICdata-HermiT-inferred.rdf"><b>ICdata inferred triplets via Hermit</b></a> – the extracted set of inferred triplets using Hermit run over the ICdata knowledge Graph
-  </li>
-  <li>
-    <a href="ICdata/inputs/IC-conceptualization.svg"><b>IC-model.svg</b></a> - presenting the concpetualization graph of the IC use case
-  </li>
-  <li>
-    <a href="ICdata/inputs/IC-LCAresultsperflow.xlsx"><b>IC-LCA-data.xlsx</b></a> - containing the LCA results of the flows/activities in the IC use case
-  </li>
-</ul>
+  <hr />
 
+  <!-- COMPETENCY QUESTIONS -->
+  <section id="cqs">
+    <h2>Competency Questions</h2>
+    <div class="cq-box">
+      <p>
+        A set of competency questions (CQs) demonstrates the convenience of
+        the LCAnet ontology across various scenarios.
+      </p>
+      <ul class="item-list" style="margin-top:0.75rem;">
+        <li>
+          10 representative CQs<a class="mod-link" href="https://danashfatima.github.io/lcanet/CQs">md file →</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+        
+
+  <hr />
+
+  <!-- USE CASES -->
+  <section id="usecases">
+    <h2>Use Cases</h2>
+    <p>
+      In the context of the <strong>SmartACV (CEA) Project</strong>, two use cases were
+      explored: batteries and integrated circuits. The resources below demonstrate the
+      practical applicability of LCAnet.
+    </p>
+    <div class="usecase-grid">
+
+      <div class="usecase-card">
+        <div class="uc-title">IC Knowledge Graph</div>
+        <p style="font-size:0.85rem; margin-bottom:0.5rem;">
+          Integrated circuits use case knowledge graph built with LCAnet.
+        </p>
+        <div class="uc-links">
+          <a class="mod-link" href="https://danashfatima.github.io/lcanet/ICdata/index-en.html">HTML docs →</a>
+        </div>
+      </div>
+
+      <div class="usecase-card">
+        <div class="uc-title">IC Inferred Triplets</div>
+        <p style="font-size:0.85rem; margin-bottom:0.5rem;">
+          Inferred triplets extracted via HermiT reasoner over the IC knowledge graph.
+        </p>
+        <div class="uc-links">
+          <a class="mod-link" href="https://danashfatima.github.io/lcanet/ICdata/ICdata-HermiT-inferred.rdf">RDF →</a>
+        </div>
+      </div>
+
+      <div class="usecase-card">
+        <div class="uc-title">IC Conceptualisation</div>
+        <p style="font-size:0.85rem; margin-bottom:0.5rem;">
+          Conceptualisation graph of the IC use case.
+        </p>
+        <div class="uc-links">
+          <a class="mod-link" href="https://danashfatima.github.io/lcanet/ICdata/inputs/IC-conceptualization.svg">SVG →</a>
+        </div>
+      </div>
+
+      <div class="usecase-card">
+        <div class="uc-title">IC LCA Data</div>
+        <p style="font-size:0.85rem; margin-bottom:0.5rem;">
+          LCA results per flow/activity in the IC use case.
+        </p>
+        <div class="uc-links">
+          <a class="mod-link" href="https://danashfatima.github.io/lcanet/ICdata/inputs/IC-LCAresultsperflow.xlsx">XLSX →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- CITATION & METADATA -->
+  <section id="citation">
+    <h2>Citation &amp; Metadata</h2>
+    <div class="meta-box">
+      <p><strong>Author:</strong>
+        <a href="https://orcid.org/0000-0002-0438-6831">Fatima Danash</a>
+        (CEA List, Université Paris Saclay)
+      </p>
+      <p><strong>Contributors:</strong>
+        <a href="https://orcid.org/0000-0003-2993-5734">Chokri Mraidha</a>,
+        <a href="https://orcid.org/0000-0003-3896-7295">Saadia Dhouib</a>,
+        <a href="https://orcid.org/0000-0002-4553-3930">Fabien Perdu</a>,
+        <a href="https://orcid.org/0009-0002-7928-9902">Jean-François Berrée</a>,
+        <a href="https://orcid.org/0009-0003-5475-3091">Makan-Thibault Halter</a>,
+        and Emmanuelle Core
+      </p>
+      <p><strong>License:</strong>
+        <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>
+      </p>
+      <p style="margin-top:1rem;"><strong>Cite as:</strong></p>
+      <div class="cite-block">
+        Danash, F., et al. (2026). <em>LCAnet: A Modular Ontology Network for Life Cycle Assessment</em>
+        (Version 2.1.0). Available at: https://w3id.org/lcanet
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-wrap -->
+
+<footer>
+  © 2026 LCAnet Ontology — 
+  <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> —
+  CEA List, Université Paris Saclay
+</footer>
 
 </body>
-
-<hr style="margin-top:40px;">
-
-<footer style="font-size: 0.9em; color: #555;">
-
-  <p>
-    <b>Author:</b> <a href="https://orcid.org/0000-0002-0438-6831">Fatima Danash</a> (CEA List, Université Paris Saclay)
-  </p>
-
-  <p>
-    <b>Contributors:</b> 
-    <a href="https://orcid.org/0000-0003-2993-5734">Chokri Mraidha</a>,
-    <a href="https://orcid.org/0000-0003-3896-7295">Saadia Dhouib</a>, 
-    <a href="https://orcid.org/0000-0002-4553-3930">Fabien Perdu</a>, 
-    <a href="https://orcid.org/0009-0002-7928-9902">Jean-François Berrée</a>,
-    <a href="https://orcid.org/0009-0003-5475-3091">Makan-Thibault HALTER</a>,
-    and <a>Emmanuelle Core</a>
-  </p>
-
-  <p>
-    <b>Cite as:</b><br>
-    Danash, F., et al. (2026). 
-    <i>LCAnet: A Modular Ontology Network for Life Cycle Assessment</i> (Version 2.1.0).<br>
-    Available at: <a href="https://w3id.org/lcanet">https://w3id.org/lcanet</a>
-  </p>
-
-  <p>
-    <b>License:</b> 
-    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>
-  </p>
-
-  <p>
-    © 2026 LCAnet Ontology. All rights reserved.
-  </p>
-
-</footer>
 </html>
