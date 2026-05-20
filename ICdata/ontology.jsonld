@@ -1,0 +1,3719 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+    }, {
+      "@id" : "_:genid3"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Climate_change_total"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#hasIC"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+    }, {
+      "@id" : "_:genid15"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Energy_resources"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/core#hasFlowCategory"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+    }, {
+      "@id" : "_:genid19"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid25"
+    }, {
+      "@id" : "_:genid23"
+    }, {
+      "@id" : "_:genid21"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Eutrophication_terrestrial"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#hasIC"
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Eutrophication_marine"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#hasIC"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Eutrophication_freshwater"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#hasIC"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+    }, {
+      "@id" : "_:genid29"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Land_use_occupation_and_transformation"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#hasIC"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid7"
+    }, {
+      "@id" : "_:genid5"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+    }, {
+      "@id" : "_:genid33"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Material_Resources"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/core#hasFlowCategory"
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+    }, {
+      "@id" : "_:genid37"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid37",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Ozone_depletion"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#hasIC"
+  } ]
+}, {
+  "@id" : "_:genid39",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+    }, {
+      "@id" : "_:genid41"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid41",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid47"
+    }, {
+      "@id" : "_:genid45"
+    }, {
+      "@id" : "_:genid43"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid43",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Human_toxicity_non_cancer"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#hasIC"
+  } ]
+}, {
+  "@id" : "_:genid45",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Human_toxicity_cancer"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#hasIC"
+  } ]
+}, {
+  "@id" : "_:genid47",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Ecotoxicity_freshwater"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#hasIC"
+  } ]
+}, {
+  "@id" : "_:genid49",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+    }, {
+      "@id" : "_:genid51"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Photochemical_ozone_formation_human_health"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#hasIC"
+  } ]
+}, {
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Water_use"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#hasIC"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Particulate_matter"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#hasIC"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+    }, {
+      "@id" : "_:genid11"
+    } ]
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/bibliographicCitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt#numericValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2000/10/swap/pim/contact#Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#Instant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#hasBeginning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#inXSDDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "https://orcid.org/0000-0002-0438-6831"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "The Integrated Circuits (IC) knowledge graph representing the dataset from the IC use case, \n        used to demonstarte the convenince and applicability of the LCAnet ontology."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@value" : "2026-05-20"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@id" : "https://www.cea.fr"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "The Integrated Circuits (IC) knowledge graph of the Life Cycle Assessment Network Ontology (LCAnet)."
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "ic"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://w3id.org/lcanet/ICdata#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ICdata"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/lcanet/core"
+  } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@value" : "2.1.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata/2.2.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "2.2.0"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#0daac3eb16074ecb93922f7338ae93bb",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/ia#calculatedByCM" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#PM_model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#18a6684317da48ff8f8c8c8f36200972",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/ia#calculatedByCM" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Based_on_USEtox2.1_model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#21914d7240fd422597f68af660756198",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/ia#calculatedByCM" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Available_WAter_REmaining_AWARE_model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#3a6dcc343adb4a9eafe7b8216fb820ff",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/ia#calculatedByCM" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Accumulated_Exceedance"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#3cde2dec99d14565a0fbd440b2e9a1e5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/ia#calculatedByCM" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#CML_2002_method_v.4.8"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#43640569fe3c4b1a99c900c9e6bc6980",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/ia#calculatedByCM" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Based_on_USEtox2.1_model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#51a1767a998e43ef85328b952ce81466",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/ia#calculatedByCM" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#EUTREND_model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#71c84e64a5e5417eafb4d50cc7f26eec",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/ia#calculatedByCM" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#LOTOS_EUROS_model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#7972ac525f924b94afca491923c5489a",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/ia#calculatedByCM" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#LANCA_model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#9e9c4443b42440c99f790a02bea4d677",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/ia#calculatedByCM" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Based_on_USEtox2.1_model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Abiotic_resource_depletion_ADP_ultimate_reserves",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategoryIndicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Abiotic resource depletion (ADP ultimate reserves)"
+  } ],
+  "https://w3id.org/lcanet/ia#assessIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Resource_use_minerals_and_metals"
+  } ],
+  "https://w3id.org/lcanet/ia#quantifiedByCF" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#3cde2dec99d14565a0fbd440b2e9a1e5"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "kg Sb -eq"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Accumulated_Exceedance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "(Seppälä et al. 2006, Posch et al, 2008)"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#CharacterizationModel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Accumulated Exceedance"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Accumulated_Exceedance_AE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategoryIndicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Accumulated Exceedance (AE)"
+  } ],
+  "https://w3id.org/lcanet/ia#assessIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Acidification"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#Eutrophication_terrestrial"
+  } ],
+  "https://w3id.org/lcanet/ia#quantifiedByCF" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#fcc6b6dc5ce0460b9abf365124c24b60"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#3a6dcc343adb4a9eafe7b8216fb820ff"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mol H+ -eq"
+  }, {
+    "@value" : "mol N -eq"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Acidification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Acidification"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Available_WAter_REmaining_AWARE_model",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "(Boulay et al., 2018; UNEP 2016)"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#CharacterizationModel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Available WAter REmaining (AWARE) model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Based_on_USEtox2.1_model",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "(Fantke et al. 2017), adapted as in Saouter et al., 2018"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#CharacterizationModel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Based on USEtox2.1 model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Bern_model_based_on_IPCC_2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "(Forster et al., 2021)"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#CharacterizationModel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Bern model based on IPCC 2021"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Biotic_resource_depletion_fossil_fuels_ADP_fossil",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategoryIndicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Biotic resource depletion fossil fuels (ADP-fossil)"
+  } ],
+  "https://w3id.org/lcanet/ia#assessIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Resource_use_fossils"
+  } ],
+  "https://w3id.org/lcanet/ia#quantifiedByCF" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#f941187970724fce99e30b2b40f1a144"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "MJ"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#CEA-internal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Internal to SmartACV members + LFIM members"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#CF_CO2equivalents",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#CharacterizationFactor"
+  } ],
+  "https://w3id.org/lcanet/ia#quantifiesICI" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Global_Warming_Potential_GWP100"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "kg CO2 eq"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#CML_2002_method_v.4.8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "van Oers et al., 2002"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#CharacterizationModel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CML 2002 method, v.4.8"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#CODDE-v3-db-time-start",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2006/time#inXSDDate" : [ {
+    "@value" : "27-01-2021"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Climate_change_total",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Climate change, total"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Comparative_Toxic_Unit_for_ecosystems_CTUe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategoryIndicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Comparative Toxic Unit for ecosystems (CTUe)"
+  } ],
+  "https://w3id.org/lcanet/ia#assessIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Ecotoxicity_freshwater"
+  } ],
+  "https://w3id.org/lcanet/ia#quantifiedByCF" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#18a6684317da48ff8f8c8c8f36200972"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "CTUe"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Comparative_Toxic_Unit_for_humans_CTUh",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategoryIndicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Comparative Toxic Unit for humans (CTUh)"
+  } ],
+  "https://w3id.org/lcanet/ia#assessIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Human_toxicity_cancer"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#Human_toxicity_non_cancer"
+  } ],
+  "https://w3id.org/lcanet/ia#quantifiedByCF" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#43640569fe3c4b1a99c900c9e6bc6980"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#9e9c4443b42440c99f790a02bea4d677"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "CTUh"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Degree_of_Confidence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#DataQualityProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QualitativeProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#EDIP_model",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "based on the ODPs of the World Meteorological Organisation (WMO) over an infinite time horizon (WMO 2014 + integrations)"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#CharacterizationModel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "EDIP model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#EF_v3.1_methodology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#Methodology"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#EUTREND_model",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "(Struijs et al, 2009) as applied in ReCiPe 2008"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#CharacterizationModel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "EUTREND model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Ecotoxicity_freshwater",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ecotoxicity, freshwater"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Emission_Agricultural",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Biosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Emission_Forestry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Biosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Emission_High_Pop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Biosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Emission_Industrial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Biosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Emission_Low_Pop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Biosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Emission_Low_Pop_long_term",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Biosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Emission_to_Ground_Water",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Biosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Emission_to_Ground_Water_lon_term",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Biosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Emission_to_Ocean",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Biosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Emission_to_River",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Biosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Emission_to_Stratosphere+Biosphere",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Biosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#End_of_Use_stage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/core#LifeCycleStage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Energy_Production",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#ActivityTag"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Energy_resources",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#FlowTag"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Eutrophication_freshwater",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Eutrophication, freshwater"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Eutrophication_marine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Eutrophication, marine"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Eutrophication_terrestrial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Eutrophication, terrestrial"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Fraction_of_nutrients_reaching_freshwater_end_compartment_P",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategoryIndicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fraction of nutrients reaching freshwater end compartment (P)"
+  } ],
+  "https://w3id.org/lcanet/ia#assessIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Eutrophication_freshwater"
+  } ],
+  "https://w3id.org/lcanet/ia#quantifiedByCF" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#ac65dd6094a14be2a259f19b78d3016f"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "kg P -eq"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Fraction_of_nutrients_reaching_marine_end_compartment_N",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategoryIndicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fraction of nutrients reaching marine end compartment (N)"
+  } ],
+  "https://w3id.org/lcanet/ia#assessIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Eutrophication_marine"
+  } ],
+  "https://w3id.org/lcanet/ia#quantifiedByCF" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#51a1767a998e43ef85328b952ce81466"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "kg N -eq"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Global_Warming_Potential_GWP100",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategoryIndicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Global Warming Potential (GWP100)"
+  } ],
+  "https://w3id.org/lcanet/ia#assessIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Climate_change_total"
+  } ],
+  "https://w3id.org/lcanet/ia#quantifiedByCF" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Global_warming_potential_GWP_over_a_100_year_time_horizon"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "kg CO2-eq"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Global_warming_potential_GWP_over_a_100_year_time_horizon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#CharacterizationFactor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Global warming potential (GWP) over a 100-year time horizon"
+  } ],
+  "https://w3id.org/lcanet/ia#calculatedByCM" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Bern_model_based_on_IPCC_2021"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Human_exposure_efficiency_relative_to_U235",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategoryIndicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Human exposure efficiency relative to U235"
+  } ],
+  "https://w3id.org/lcanet/ia#assessIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Ionising_radiation_human_health"
+  } ],
+  "https://w3id.org/lcanet/ia#quantifiedByCF" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#a5795b7bdeb34ab0bf8401320356bd9f"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "kBq U235 -eq"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Human_health_effect_model",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "as developed by Dreicer et al., 1995)"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#CharacterizationModel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Human health effect model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Human_toxicity_cancer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Human toxicity, cancer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Human_toxicity_non_cancer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Human toxicity, non-cancer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Hypothesis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QualitativeProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-29_mask_silicon_substrate_130nm_CN",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Chinese_Circuit"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production2"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-29_mask_silicon_substrate_130nm_EU",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_European_Circuit"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production1"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-29_mask_silicon_substrate_130nm_TW",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Taiwanian_Circuit"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production3"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-33_mask_silicon_substrate_90nm_CN",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Chinese_Circuit"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production2"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-33_mask_silicon_substrate_90nm_EU",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_European_Circuit"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production1"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-33_mask_silicon_substrate_90nm_TW",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Taiwanian_Circuit"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production3"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-38_mask_silicon_substrate_65nm_CN",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Chinese_Circuit"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production2"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-38_mask_silicon_substrate_65nm_EU",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_European_Circuit"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production1"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-38_mask_silicon_substrate_65nm_TW",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Taiwanian_Circuit"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production3"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-42_mask_silicon_substrate_45nm_CN",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Chinese_Circuit"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production2"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-42_mask_silicon_substrate_45nm_EU",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_European_Circuit"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production1"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-42_mask_silicon_substrate_45nm_TW",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Taiwanian_Circuit"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production3"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-50_mask_silicon_substrate_28nm_CN",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Chinese_Circuit"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production2"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-50_mask_silicon_substrate_28nm_EU",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_European_Circuit"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production1"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-50_mask_silicon_substrate_28nm_TW",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Taiwanian_Circuit"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production3"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-700_mg_Connector_for_PWB_FR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Daughter_Board"
+  } ],
+  "https://w3id.org/lcanet/core#flowHasImpactResult" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IRF4"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Axial_ferrite_inductor_SMD_RoHS_compliant__Singapore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_9"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Ceramic_SMD_capacitor_RoHS_compliant_France_FR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Daughter_Board"
+  } ],
+  "https://w3id.org/lcanet/core#flowHasImpactResult" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IRF8"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_23"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Ceramic_SMD_capacitor_RoHS_compliant_France_FR_i1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Test_Card_FT3242H"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_3"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Ceramic_dual_in_line_package_CERDIP_France_FR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Generic_module_Package_FR"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_0.25"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production4"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Ceramic_quad_flat_packages_CQFP_France_FR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Generic_module_Package_FR"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_0.25"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production4"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Ceramic_quad_flat_packages_CQFP_France_FR_i1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Daughter_Board"
+  } ],
+  "https://w3id.org/lcanet/core#flowHasImpactResult" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IRF6"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_451"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Chinese_Circuit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#ProductFlow"
+  } ],
+  "https://w3id.org/lcanet/activity#connected" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Chinese_Circuit_i"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Chinese_Circuit_i",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#ProductFlow"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_0.23"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Coaxial_connector_FR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Daughter_Board"
+  } ],
+  "https://w3id.org/lcanet/core#flowHasImpactResult" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IRF7"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_820"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Coaxial_connector__FR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_1"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_12"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Connector_for_PWB_FR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Daughter_Board"
+  } ],
+  "https://w3id.org/lcanet/core#flowHasImpactResult" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IRF2"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_700"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Connector_for_PWB_FR_i1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_500"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Daughter_Board",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#connected" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Daughter_Board_i1"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Daughter_Board_i1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Diode_SMD_MELF_MINIMELF_France_FR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Test_Card_FT3242H"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Dual_in_line_plastic_packages_frame_0.25_PDIP_France_FR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Generic_module_Package_FR"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_0.25"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production4"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-European_Circuit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#ProductFlow"
+  } ],
+  "https://w3id.org/lcanet/activity#connected" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-European_Circuit_i"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-European_Circuit_i",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#ProductFlow"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_0.16"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Flat_chip_resistor_SMD_RoHS_compliant_France_FR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Daughter_Board"
+  } ],
+  "https://w3id.org/lcanet/core#flowHasImpactResult" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IRF3"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_7"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Flat_chip_resistor_SMD_RoHS_compliant_France_FR_i1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Test_Card_FT3242H"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_3"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Flat_chip_resistor_SMD_RoHS_compliant_France_FR_i2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_76"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#ProductFlow"
+  } ],
+  "https://w3id.org/lcanet/activity#connected" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i1"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i2"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i3"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_0.161"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_157.4"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_50"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#connected" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR_i1"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR_i2"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR_i3"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR_i1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/core#flowHasImpactResult" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IRF5"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_4.1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR_i2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_5.482"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR_i3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_1.029"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-High_quad_packages_HiQUAD_France_FR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Generic_module_Package_FR"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_0.25"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production4"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-ICV_Storaige_Prototype",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isOutputProductOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_ICV_Storaige_Prototype"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Jack_base_female_RoHS_compliant_Europe_RER",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_1.7"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-LED_high_power_SMD_Europe_RER",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_15"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Metal_housing_connector_average_composition_RER",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_7.031"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Mother_Board",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#connected" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Mother_Board_i1"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Mother_Board_i1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_0.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-PCI_Bus_connector_RER",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_18.8"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_196"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-PCI_Bus_connector_RER_i1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Test_Card_FT3242H"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_18.8"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_62"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-PWB_FR4_preg_6_layers_RER_i1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Daughter_Board"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_3600"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-PWB_FR4_preg_6_layers_RER_i2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_31500"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Potentiometer_RoHS_compliant__SP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_620"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Chinese_Circuit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Production of Chinese Circuit"
+  } ],
+  "https://w3id.org/lcanet/activity#hasOutputProduct" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Chinese_Circuit"
+  } ],
+  "https://w3id.org/lcanet/core#activityBelongsToLCstage" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Production_stage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Daughter_Board",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Production of Daughter Board"
+  } ],
+  "https://w3id.org/lcanet/activity#hasInputProduct" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i1"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR_i1"
+  } ],
+  "https://w3id.org/lcanet/activity#hasOutputProduct" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Daughter_Board"
+  } ],
+  "https://w3id.org/lcanet/core#activityBelongsToLCstage" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Production_stage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_European_Circuit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Production of European Circuit"
+  } ],
+  "https://w3id.org/lcanet/activity#hasOutputProduct" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-European_Circuit"
+  } ],
+  "https://w3id.org/lcanet/core#activityBelongsToLCstage" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Production_stage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Generic_module_Integrated_circuit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Production of Generic Module Integrated Circuit"
+  } ],
+  "https://w3id.org/lcanet/activity#hasInputProduct" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Chinese_Circuit_i"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-European_Circuit_i"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Taiwan_Circuit_i"
+  } ],
+  "https://w3id.org/lcanet/activity#hasOutputProduct" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit"
+  } ],
+  "https://w3id.org/lcanet/core#activityBelongsToLCstage" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Production_stage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Generic_module_Package_FR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Production of Generic Module Package FR"
+  } ],
+  "https://w3id.org/lcanet/activity#hasOutputProduct" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR"
+  } ],
+  "https://w3id.org/lcanet/core#activityBelongsToLCstage" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Production_stage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_ICV_Storaige_Prototype",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Production of ICV Storage Prototype"
+  } ],
+  "https://w3id.org/lcanet/activity#hasInputProduct" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Daughter_Board_i1"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Mother_Board_i1"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Test_Card_FT3242H_i1"
+  } ],
+  "https://w3id.org/lcanet/core#activityBelongsToLCstage" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Production_stage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Production of Mother Board"
+  } ],
+  "https://w3id.org/lcanet/activity#hasInputProduct" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i2"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR_i2"
+  } ],
+  "https://w3id.org/lcanet/activity#hasOutputProduct" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Mother_Board"
+  } ],
+  "https://w3id.org/lcanet/core#activityBelongsToLCstage" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Production_stage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Taiwanian_Circuit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Production of Thaiwanian Circuit"
+  } ],
+  "https://w3id.org/lcanet/activity#hasOutputProduct" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Taiwan_Circuit"
+  } ],
+  "https://w3id.org/lcanet/core#activityBelongsToLCstage" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Production_stage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Test_Card_FT3242H",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Production of Test Card FT3242H"
+  } ],
+  "https://w3id.org/lcanet/activity#hasInputProduct" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i3"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR_i3"
+  } ],
+  "https://w3id.org/lcanet/activity#hasOutputProduct" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Test_Card_FT3242H"
+  } ],
+  "https://w3id.org/lcanet/core#activityBelongsToLCstage" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Production_stage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Relay_solid_state_optocoupler_high_current_60V/1.0A/0.5ohm_China_CN",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_260"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_4"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Small_outline_diode_semiconductor_Low_power_SOT23_SOT89_SOT223_France_FR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_3"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Stamping_ink_deposition_on_plastics_FR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Daughter_Board"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_10"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Stamping_ink_deposition_on_plastics_FR_i1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_4"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Taiwan_Circuit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#ProductFlow"
+  } ],
+  "https://w3id.org/lcanet/activity#connected" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Taiwan_Circuit_i"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Taiwan_Circuit_i",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#ProductFlow"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_0.61"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Test_Card_FT3242H",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#connected" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Test_Card_FT3242H_i1"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Test_Card_FT3242H_i1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_0.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Through_hole_transistor_IPAK_I2PAK_SOT32_SOT82_France_FR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_1.5mg"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_4"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-USB_base_B_type_female_RoHS_compliant_Europe_RER",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Test_Card_FT3242H"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-USB_plug_mini-B_type_male_Europe_RER",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Wafer_silicon_substrate_42_masks_45_nm_photolithography_Europe_EU-28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Daughter_Board"
+  } ],
+  "https://w3id.org/lcanet/core#flowHasImpactResult" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IRF1"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_9"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-Welding_of_steel_parts_electric_welding_France_FR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_length_7"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-ceramic_SMD_capacitor_RoHS_compliant_France_FR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_95"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-configurable_Soldering_of_SMD_components_SAC_reflow_soldering_at_plant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/activity#isInputFlowOf" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Daughter_Board"
+  } ],
+  "https://w3id.org/lcanet/core#hasProperty" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_7429"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_18"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QualitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Database_Source"
+  } ],
+  "https://w3id.org/lcanet/property#hasQualityValue" : [ {
+    "@value" : "CODDE (v3.00.000)"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QualitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Database_Source"
+  } ],
+  "https://w3id.org/lcanet/property#hasQualityValue" : [ {
+    "@value" : "NegaOctet (v01.00.001)"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_length_7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Length"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "7"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_0.161",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mass"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.161"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "g"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_0.25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mass"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.25"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "g"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mass"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "g"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_1.029",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mass"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1.029"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "g"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_1.5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mass"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1.5"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "g"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_1.5mg",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mass"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1.5"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mg"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_1.7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mass"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1.7"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "g"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_18.8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mass"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "18.8"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mg"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_260",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mass"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "260"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mg"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_451",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mass"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "451"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mg"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_5.482",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mass"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "5.482"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "g"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_500",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mass"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "500"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "g"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_620",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mass"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "620"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mg"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_7.031",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mass"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "7.031"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "g"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_700",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mass"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "700"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mg"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_7429",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mass"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "7429"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mg"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_820",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mass"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "820"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mg"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QualitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Produced_In"
+  } ],
+  "https://w3id.org/lcanet/property#hasQualityValue" : [ {
+    "@value" : "Europe"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QualitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Produced_In"
+  } ],
+  "https://w3id.org/lcanet/property#hasQualityValue" : [ {
+    "@value" : "Taiwan"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QualitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Produced_In"
+  } ],
+  "https://w3id.org/lcanet/property#hasQualityValue" : [ {
+    "@value" : "China"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_production4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QualitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Produced_In"
+  } ],
+  "https://w3id.org/lcanet/property#hasQualityValue" : [ {
+    "@value" : "France"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_0.5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Quantity"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.5"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "unit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Quantity"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "unit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Quantity"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "12"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "unit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Quantity"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "15"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "unit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Quantity"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "18"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "unit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_196",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Quantity"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "196"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "unit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Quantity"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "2"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "unit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Quantity"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "23"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "unit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Quantity"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "unit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Quantity"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "unit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Quantity"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "5"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "unit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_62",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Quantity"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "62"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "unit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Quantity"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "7"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "unit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_76",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Quantity"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "76"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "unit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Quantity"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "9"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "unit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_95",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Quantity"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "95"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "unit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_0.16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Surface"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.16"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mm2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_0.23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Surface"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.23"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mm2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_0.61",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Surface"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.61"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mm2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Surface"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mm2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Surface"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "10"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mm2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_157.4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Surface"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "157.4"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mm2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Surface"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "2"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mm2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_31500",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Surface"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "31500"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mm2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_3600",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Surface"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3600"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mm2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Surface"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mm2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_4.1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Surface"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4.1"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mm2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_50",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Surface"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "50"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mm2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Surface"
+  } ],
+  "https://w3id.org/lcanet/property#hasQuantityValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "9"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "mm2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IPCC_method",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#Method"
+  } ],
+  "https://w3id.org/lcanet/ia#usesCM" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IPCC_model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IPCC_model",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#CharacterizationModel"
+  } ],
+  "https://w3id.org/lcanet/ia#calculatesCF" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#CF_CO2equivalents"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IRF1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://qudt.org/schema/qudt#numericValue" : [ {
+    "@value" : "0.1254897000569"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+  } ],
+  "https://w3id.org/lcanet/ia#hasIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Climate_change_total"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IRF2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://qudt.org/schema/qudt#numericValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.0125489005"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+  } ],
+  "https://w3id.org/lcanet/ia#hasIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Climate_change_total"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IRF3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://qudt.org/schema/qudt#numericValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.215496007"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+  } ],
+  "https://w3id.org/lcanet/ia#hasIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Climate_change_total"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IRF4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://qudt.org/schema/qudt#numericValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.32514870004"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+  } ],
+  "https://w3id.org/lcanet/ia#hasIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Climate_change_total"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IRF5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://qudt.org/schema/qudt#numericValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.154730006"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+  } ],
+  "https://w3id.org/lcanet/ia#hasIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Climate_change_total"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IRF6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://qudt.org/schema/qudt#numericValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.351420009754"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+  } ],
+  "https://w3id.org/lcanet/ia#hasIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Climate_change_total"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IRF7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://qudt.org/schema/qudt#numericValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.32541112208"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+  } ],
+  "https://w3id.org/lcanet/ia#hasIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Climate_change_total"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IRF8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://qudt.org/schema/qudt#numericValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.421587009"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+  } ],
+  "https://w3id.org/lcanet/ia#hasIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Climate_change_total"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IR_Production_Circuit_Storaige",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://qudt.org/schema/qudt#numericValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.194533374702331"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+  } ],
+  "https://w3id.org/lcanet/core#impactResultConcernsActivity" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_ICV_Storaige_Prototype"
+  } ],
+  "https://w3id.org/lcanet/ia#containedInOIR" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Overall_IR_Climate_Change"
+  } ],
+  "https://w3id.org/lcanet/ia#hasIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Climate_change_total"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IR_Production_Daughter_Board",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://qudt.org/schema/qudt#numericValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.540494410009839"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+  } ],
+  "https://w3id.org/lcanet/core#impactResultConcernsActivity" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Daughter_Board"
+  } ],
+  "https://w3id.org/lcanet/ia#containedInOIR" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Overall_IR_Climate_Change"
+  } ],
+  "https://w3id.org/lcanet/ia#hasIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Climate_change_total"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IR_Production_Mother_Board",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://qudt.org/schema/qudt#numericValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "10.1273637779549"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+  } ],
+  "https://w3id.org/lcanet/core#impactResultConcernsActivity" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board"
+  } ],
+  "https://w3id.org/lcanet/ia#containedInOIR" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Overall_IR_Climate_Change"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#IR_Production_Test_Card",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://qudt.org/schema/qudt#numericValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1.57650467322258"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#LcaResult"
+  } ],
+  "https://w3id.org/lcanet/core#impactResultConcernsActivity" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Test_Card_FT3242H"
+  } ],
+  "https://w3id.org/lcanet/ia#containedInOIR" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Overall_IR_Climate_Change"
+  } ],
+  "https://w3id.org/lcanet/ia#hasIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Climate_change_total"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Impact_on_human_health",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategoryIndicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Impact on human health"
+  } ],
+  "https://w3id.org/lcanet/ia#assessIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Particulate_matter"
+  } ],
+  "https://w3id.org/lcanet/ia#quantifiedByCF" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#0daac3eb16074ecb93922f7338ae93bb"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "disease incidence"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Inputs_of_other_types",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Technosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Inputted_Auxiliaries/consumables",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Technosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Inputted_Energy_Consumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Technosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Inputted_Maintenance/Cleaning_auxiliaries",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Technosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Inputted_Manufactured_Product",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Technosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Inputted_Material",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Technosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Inputted_Packaging_Material",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Technosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Inputted_Process",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Technosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Inputted_Recycled_Material",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Technosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Inputted_Transportation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Technosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Inputted_Water_Consumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Technosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Interpretation-Report-XV1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/core#Interpretation"
+  } ],
+  "https://w3id.org/lcanet/ia#containedInOIR" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Overall_IR_Climate_Change"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Ionising_radiation_human_health",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ionising radiation, human health"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#LANCA_model",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "Soil quality index based on LANCA model (De Laurentiis et al. 2019) and on the LANCA CF version 2.5 (Horn and Maier, 2018)"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#CharacterizationModel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "LANCA model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#LCA-ICV-Storaige-performed-at",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2006/time#Instant"
+  } ],
+  "http://www.w3.org/2006/time#inXSDDate" : [ {
+    "@value" : "November 2024"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#LCA-ICV-Storiage-valid-between",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Acccording to the database versions, from which values for flows are taken, each version has a validity start-/end year"
+  } ],
+  "http://www.w3.org/2006/time#hasBeginning" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#CODDE-v3-db-time-start"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#NegaOctet-v1-db-time-start"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#LCA_of_ICV_Storaige_Prototype",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/core#LcaModel"
+  } ],
+  "https://w3id.org/lcanet/core#lcaModeHasScope" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Scope_of_ICV_Storaige_Prototype"
+  } ],
+  "https://w3id.org/lcanet/core#lcaModelConcernsLCStage" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Material_Extraction_stage"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#Production_stage"
+  } ],
+  "https://w3id.org/lcanet/core#lcaModelHasAuthor" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Thibault_Halter"
+  } ],
+  "https://w3id.org/lcanet/core#lcaModelHasGoal" : [ {
+    "@value" : "This LCA is an explorative work of a digital system from its design, in order to systematize this approach in future numeric designs."
+  } ],
+  "https://w3id.org/lcanet/core#lcaModelResultsInInterpretation" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Interpretation-Report-XV1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#LCAsystemsSite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/st#Site"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#LOTOS_EUROS_model",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "(Van Zelm et al, 2008) as applied in ReCiPe 2008"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#CharacterizationModel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "LOTOS-EUROS model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Land_use_occupation_and_transformation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Land use (occupation and transformation)"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Mass_Balance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#BalanceableProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Material_Extraction_stage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/core#LifeCycleStage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Material_Production",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#ActivityTag"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Material_Resources",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#FlowTag"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Methodology_EF_v3.0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#Methodology"
+  } ],
+  "https://w3id.org/lcanet/core#methodologyAssessesTopic" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Scope_of_ICV_Storaige_Prototype"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#NegaOctet-v1-db-time-start",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2006/time#inXSDDate" : [ {
+    "@value" : "22-11-2022"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Outputs_of_other_types",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Technosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Outputted_ByProduct",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Technosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Outputted_Product",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Technosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Outputted_Waste_for_Incineration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Technosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Outputted_Waste_for_disposal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Technosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Outputted_Waste_for_recycling/treatment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Technosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Overall_IR_Climate_Change",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://qudt.org/schema/qudt#numericValue" : [ {
+    "@value" : "12,4388962358897"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#OverallImpactResult"
+  } ],
+  "https://w3id.org/lcanet/ia#hasIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Climate_change_total"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Ozone_Depletion_Potential_ODP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategoryIndicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ozone Depletion Potential (ODP)"
+  } ],
+  "https://w3id.org/lcanet/ia#assessIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Ozone_depletion"
+  } ],
+  "https://w3id.org/lcanet/ia#quantifiedByCF" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#dc3acd87af0a4fe4b4686ed51b13e934"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "kg CFC-11-eq"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Ozone_depletion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ozone depletion"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#PM_model",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "(Fantke et al., 2016 in UNEP 2016)"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#CharacterizationModel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PM model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Particulate_matter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Particulate matter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Photochemical_ozone_formation_human_health",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Photochemical ozone formation, human health"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Processing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#ActivityTag"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Production_Site",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QualitativeProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Production_stage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/core#LifeCycleStage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Productionsite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/st#Site"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Quantity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Realized_On_Machine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QualitativeProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Resource_from_Air",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Biosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Resource_from_Biotic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Biosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Resource_from_Land",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Biosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Resource_from_Water",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Biosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Resource_use_fossils",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Resource use, fossils"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Resource_use_minerals_and_metals",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Resource use, minerals and metals"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Resources_from_Ground",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Biosphere"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Scope_of_ICV_Storaige_Prototype",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/core#Scope"
+  } ],
+  "https://w3id.org/lcanet/core#scopeHasAssumption" : [ {
+    "@value" : "no assumptions made"
+  } ],
+  "https://w3id.org/lcanet/core#scopeHasFunctionalUnit" : [ {
+    "@value" : "The production of 1 unit of prototype version of the ICV storaige (Temporary statement)"
+  } ],
+  "https://w3id.org/lcanet/core#scopeHasReferenceFlow" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#IC-ICV_Storaige_Prototype"
+  } ],
+  "https://w3id.org/lcanet/core#scopeHasSpatialScale" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#CEA-internal"
+  } ],
+  "https://w3id.org/lcanet/core#scopeHasSystemBoundary" : [ {
+    "@value" : "Cradle to Gate"
+  } ],
+  "https://w3id.org/lcanet/core#scopeHasTemporalScale" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#LCA-ICV-Storaige-performed-at"
+  }, {
+    "@id" : "https://w3id.org/lcanet/ICdata#LCA-ICV-Storiage-valid-between"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Service",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#ActivityTag"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Soap",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Soil_quality_index_dimensionless",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategoryIndicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Soil quality index (dimensionless)"
+  } ],
+  "https://w3id.org/lcanet/ia#assessIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Land_use_occupation_and_transformation"
+  } ],
+  "https://w3id.org/lcanet/ia#quantifiedByCF" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#7972ac525f924b94afca491923c5489a"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Thibault_Halter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/actor#Person"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Transportation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#ActivityTag"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Transportation_stage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/core#LifeCycleStage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Tropospheric_ozone_concentration_increase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategoryIndicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Tropospheric ozone concentration increase"
+  } ],
+  "https://w3id.org/lcanet/ia#assessIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Photochemical_ozone_formation_human_health"
+  } ],
+  "https://w3id.org/lcanet/ia#quantifiedByCF" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#71c84e64a5e5417eafb4d50cc7f26eec"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "kg NMVOC -eq"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Use_stage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/core#LifeCycleStage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#User_deprivation_potential_deprivation_weighted_consumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategoryIndicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "User deprivation potential (deprivation-weighted consumption)"
+  } ],
+  "https://w3id.org/lcanet/ia#assessIC" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Water_use"
+  } ],
+  "https://w3id.org/lcanet/ia#quantifiedByCF" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#21914d7240fd422597f68af660756198"
+  } ],
+  "https://w3id.org/lcanet/property#hasUnit" : [ {
+    "@value" : "m3 world-eq"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Volume",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#WasteTreatmentSite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/st#Site"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Waste_Treatment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#ActivityTag"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#Water_use",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/ia#ImpactCategory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Water use"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#a5795b7bdeb34ab0bf8401320356bd9f",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/ia#calculatedByCM" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Human_health_effect_model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#ac65dd6094a14be2a259f19b78d3016f",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/ia#calculatedByCM" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#EUTREND_model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#dc3acd87af0a4fe4b4686ed51b13e934",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/ia#calculatedByCM" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#EDIP_model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#f941187970724fce99e30b2b40f1a144",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/ia#calculatedByCM" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#CML_2002_method_v.4.8"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#fcc6b6dc5ce0460b9abf365124c24b60",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://w3id.org/lcanet/ia#calculatedByCM" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#Accumulated_Exceedance"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#test1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Activity"
+  } ],
+  "https://w3id.org/lcanet/activity#hasInputFlow" : [ {
+    "@id" : "https://w3id.org/lcanet/ICdata#test2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ICdata#test2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/lcanet/activity#Flow"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/activity#Activity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/activity#ActivityTag",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/activity#Biosphere",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/activity#Flow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/activity#FlowTag",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/activity#ProductFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/activity#Technosphere",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/activity#connected",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/activity#hasInputFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/activity#hasInputProduct",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/activity#hasOutputProduct",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/activity#isInputFlowOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/activity#isOutputProductOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/actor#Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/core#Interpretation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/core#LcaModel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/core#LifeCycleStage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/core#Scope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/core#activityBelongsToLCstage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/core#flowHasImpactResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/core#hasFlowCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/core#hasProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/core#impactResultConcernsActivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/core#lcaModeHasScope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/core#lcaModelConcernsLCStage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/core#lcaModelHasAuthor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/core#lcaModelHasGoal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/core#lcaModelResultsInInterpretation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/core#methodologyAssessesTopic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/core#scopeHasAssumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/core#scopeHasFunctionalUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/core#scopeHasReferenceFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/core#scopeHasSpatialScale",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/core#scopeHasSystemBoundary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/core#scopeHasTemporalScale",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#AirPollutionFootprint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#CarbonFootprint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid9"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#CharacterizationFactor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#CharacterizationModel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#EnergyFootprint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid13"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#EutrophicationFootprint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid17"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#ImpactCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#ImpactCategoryIndicator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#LandFootprint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid27"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#LcaResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#MaterialFootprint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid31"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#Method",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#Methodology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#OverallImpactResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#OzoneDepletionFootprint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid35"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#ToxicityFootprint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid39"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#WaterFootprint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid49"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#assessIC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#calculatedByCM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#calculatesCF",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#containedInOIR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#hasIC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#quantifiedByCF",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#quantifiesICI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/ia#usesCM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/property#BalanceableProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/property#DataQualityProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/property#QualitativeProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/property#QuantitativeProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/property#hasQualityValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/property#hasQuantityValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/property#hasUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/lcanet/st#Site",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+} ]

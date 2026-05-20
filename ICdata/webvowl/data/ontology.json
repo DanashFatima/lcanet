@@ -1,0 +1,3587 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org/lcanet/actor", "https://w3id.org/lcanet/property", "https://w3id.org/lcanet/activity", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/lcanet/st", "https://w3id.org/lcanet/core", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/lcanet/ia", "http://www.w3.org/2000/10/swap/pim/contact", "http://www.w3.org/2006/time" ],
+    "title" : {
+      "en" : "The Integrated Circuits (IC) knowledge graph of the Life Cycle Assessment Network Ontology (LCAnet)."
+    },
+    "iri" : "https://w3id.org/lcanet/ICdata",
+    "version" : "2.2.0",
+    "author" : [ "https://orcid.org/0000-0002-0438-6831" ],
+    "description" : {
+      "undefined" : "The Integrated Circuits (IC) knowledge graph representing the dataset from the IC use case, \n        used to demonstarte the convenince and applicability of the LCAnet ontology."
+    },
+    "labels" : {
+      "undefined" : "ICdata"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "2.1.0",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0002-0438-6831",
+        "type" : "iri"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "ic",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "https://www.cea.fr",
+        "type" : "iri"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/lcanet/ICdata#",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "2.2.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "The Integrated Circuits (IC) knowledge graph of the Life Cycle Assessment Network Ontology (LCAnet).",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-05-20",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "26",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "28",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/lcanet/core#LifeCycleStage",
+    "baseIri" : "https://w3id.org/lcanet/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LifeCycleStage"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#Transportation_stage",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Transportation_stage"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Material_Extraction_stage",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Material_Extraction_stage"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Production_stage",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Production_stage"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#End_of_Use_stage",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "End_of_Use_stage"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Use_stage",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Use_stage"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/lcanet/core#Scope",
+    "baseIri" : "https://w3id.org/lcanet/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Scope"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#Scope_of_ICV_Storaige_Prototype",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "scopeHasAssumption" : [ {
+          "identifier" : "scopeHasAssumption",
+          "language" : "undefined",
+          "value" : "no assumptions made",
+          "type" : "label"
+        } ],
+        "scopeHasReferenceFlow" : [ {
+          "identifier" : "scopeHasReferenceFlow",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-ICV_Storaige_Prototype",
+          "type" : "iri"
+        } ],
+        "scopeHasFunctionalUnit" : [ {
+          "identifier" : "scopeHasFunctionalUnit",
+          "language" : "undefined",
+          "value" : "The production of 1 unit of prototype version of the ICV storaige (Temporary statement)",
+          "type" : "label"
+        } ],
+        "scopeHasSpatialScale" : [ {
+          "identifier" : "scopeHasSpatialScale",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#CEA-internal",
+          "type" : "iri"
+        } ],
+        "scopeHasTemporalScale" : [ {
+          "identifier" : "scopeHasTemporalScale",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#LCA-ICV-Storaige-performed-at",
+          "type" : "iri"
+        }, {
+          "identifier" : "scopeHasTemporalScale",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#LCA-ICV-Storiage-valid-between",
+          "type" : "iri"
+        } ],
+        "scopeHasSystemBoundary" : [ {
+          "identifier" : "scopeHasSystemBoundary",
+          "language" : "undefined",
+          "value" : "Cradle to Gate",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Scope_of_ICV_Storaige_Prototype"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#CarbonFootprint",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CarbonFootprint"
+    },
+    "intersection" : [ "3" ],
+    "attributes" : [ "intersection", "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.w3.org/2000/10/swap/pim/contact#Person",
+    "baseIri" : "http://www.w3.org/2000/10/swap/pim/contact",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "attributes" : [ "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#OzoneDepletionFootprint",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OzoneDepletionFootprint"
+    },
+    "intersection" : [ "3" ],
+    "attributes" : [ "intersection", "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "https://w3id.org/lcanet/property#DataQualityProperty",
+    "baseIri" : "https://w3id.org/lcanet/property",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataQualityProperty"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#Degree_of_Confidence",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Degree_of_Confidence"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#Activity",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Activity"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasInputProduct" : [ {
+          "identifier" : "hasInputProduct",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i2",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasInputProduct",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR_i2",
+          "type" : "iri"
+        } ],
+        "hasOutputProduct" : [ {
+          "identifier" : "hasOutputProduct",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Mother_Board",
+          "type" : "iri"
+        } ],
+        "activityBelongsToLCstage" : [ {
+          "identifier" : "activityBelongsToLCstage",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Production_stage",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-Production_of_Mother_Board",
+        "undefined" : "Production of Mother Board"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-Production_of_European_Circuit",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "activityBelongsToLCstage" : [ {
+          "identifier" : "activityBelongsToLCstage",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Production_stage",
+          "type" : "iri"
+        } ],
+        "hasOutputProduct" : [ {
+          "identifier" : "hasOutputProduct",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-European_Circuit",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-Production_of_European_Circuit",
+        "undefined" : "Production of European Circuit"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Test_Card_FT3242H",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasInputProduct" : [ {
+          "identifier" : "hasInputProduct",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR_i3",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasInputProduct",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i3",
+          "type" : "iri"
+        } ],
+        "activityBelongsToLCstage" : [ {
+          "identifier" : "activityBelongsToLCstage",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Production_stage",
+          "type" : "iri"
+        } ],
+        "hasOutputProduct" : [ {
+          "identifier" : "hasOutputProduct",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Test_Card_FT3242H",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-Production_of_Test_Card_FT3242H",
+        "undefined" : "Production of Test Card FT3242H"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Taiwanian_Circuit",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasOutputProduct" : [ {
+          "identifier" : "hasOutputProduct",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Taiwan_Circuit",
+          "type" : "iri"
+        } ],
+        "activityBelongsToLCstage" : [ {
+          "identifier" : "activityBelongsToLCstage",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Production_stage",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-Production_of_Taiwanian_Circuit",
+        "undefined" : "Production of Thaiwanian Circuit"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-Production_of_ICV_Storaige_Prototype",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasInputProduct" : [ {
+          "identifier" : "hasInputProduct",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Test_Card_FT3242H_i1",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasInputProduct",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Mother_Board_i1",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasInputProduct",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Daughter_Board_i1",
+          "type" : "iri"
+        } ],
+        "activityBelongsToLCstage" : [ {
+          "identifier" : "activityBelongsToLCstage",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Production_stage",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-Production_of_ICV_Storaige_Prototype",
+        "undefined" : "Production of ICV Storage Prototype"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Chinese_Circuit",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasOutputProduct" : [ {
+          "identifier" : "hasOutputProduct",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Chinese_Circuit",
+          "type" : "iri"
+        } ],
+        "activityBelongsToLCstage" : [ {
+          "identifier" : "activityBelongsToLCstage",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Production_stage",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-Production_of_Chinese_Circuit",
+        "undefined" : "Production of Chinese Circuit"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Generic_module_Package_FR",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "activityBelongsToLCstage" : [ {
+          "identifier" : "activityBelongsToLCstage",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Production_stage",
+          "type" : "iri"
+        } ],
+        "hasOutputProduct" : [ {
+          "identifier" : "hasOutputProduct",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-Production_of_Generic_module_Package_FR",
+        "undefined" : "Production of Generic Module Package FR"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#test1",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasInputFlow" : [ {
+          "identifier" : "hasInputFlow",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#test2",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "test1"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Generic_module_Integrated_circuit",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasInputProduct" : [ {
+          "identifier" : "hasInputProduct",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Taiwan_Circuit_i",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasInputProduct",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Chinese_Circuit_i",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasInputProduct",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-European_Circuit_i",
+          "type" : "iri"
+        } ],
+        "activityBelongsToLCstage" : [ {
+          "identifier" : "activityBelongsToLCstage",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Production_stage",
+          "type" : "iri"
+        } ],
+        "hasOutputProduct" : [ {
+          "identifier" : "hasOutputProduct",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-Production_of_Generic_module_Integrated_circuit",
+        "undefined" : "Production of Generic Module Integrated Circuit"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Daughter_Board",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasInputProduct" : [ {
+          "identifier" : "hasInputProduct",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i1",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasInputProduct",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Package_FR_i1",
+          "type" : "iri"
+        } ],
+        "hasOutputProduct" : [ {
+          "identifier" : "hasOutputProduct",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Daughter_Board",
+          "type" : "iri"
+        } ],
+        "activityBelongsToLCstage" : [ {
+          "identifier" : "activityBelongsToLCstage",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Production_stage",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-Production_of_Daughter_Board",
+        "undefined" : "Production of Daughter Board"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "9"
+  }, {
+    "iri" : "https://w3id.org/lcanet/core#Interpretation",
+    "baseIri" : "https://w3id.org/lcanet/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Interpretation"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#Interpretation-Report-XV1",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "containedInOIR" : [ {
+          "identifier" : "containedInOIR",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Overall_IR_Climate_Change",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Interpretation-Report-XV1"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "10"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#ToxicityFootprint",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ToxicityFootprint"
+    },
+    "intersection" : [ "3" ],
+    "attributes" : [ "intersection", "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/lcanet/core#LcaModel",
+    "baseIri" : "https://w3id.org/lcanet/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LcaModel"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#LCA_of_ICV_Storaige_Prototype",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "lcaModelHasGoal" : [ {
+          "identifier" : "lcaModelHasGoal",
+          "language" : "undefined",
+          "value" : "This LCA is an explorative work of a digital system from its design, in order to systematize this approach in future numeric designs.",
+          "type" : "label"
+        } ],
+        "lcaModelHasAuthor" : [ {
+          "identifier" : "lcaModelHasAuthor",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Thibault_Halter",
+          "type" : "iri"
+        } ],
+        "lcaModeHasScope" : [ {
+          "identifier" : "lcaModeHasScope",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Scope_of_ICV_Storaige_Prototype",
+          "type" : "iri"
+        } ],
+        "lcaModelResultsInInterpretation" : [ {
+          "identifier" : "lcaModelResultsInInterpretation",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Interpretation-Report-XV1",
+          "type" : "iri"
+        } ],
+        "lcaModelConcernsLCStage" : [ {
+          "identifier" : "lcaModelConcernsLCStage",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Production_stage",
+          "type" : "iri"
+        }, {
+          "identifier" : "lcaModelConcernsLCStage",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Material_Extraction_stage",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "LCA_of_ICV_Storaige_Prototype"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#EutrophicationFootprint",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EutrophicationFootprint"
+    },
+    "intersection" : [ "3" ],
+    "attributes" : [ "intersection", "external" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#FlowTag",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FlowTag"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#Material_Resources",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Material_Resources"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Energy_resources",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Energy_resources"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "8",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/lcanet/st#Site",
+    "baseIri" : "https://w3id.org/lcanet/st",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Site"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#Productionsite",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Productionsite"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#WasteTreatmentSite",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "WasteTreatmentSite"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#LCAsystemsSite",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "LCAsystemsSite"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "15"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#ImpactCategoryIndicator",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImpactCategoryIndicator"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#Soil_quality_index_dimensionless",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "quantifiedByCF" : [ {
+          "identifier" : "quantifiedByCF",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#7972ac525f924b94afca491923c5489a",
+          "type" : "iri"
+        } ],
+        "assessIC" : [ {
+          "identifier" : "assessIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Land_use_occupation_and_transformation",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Soil_quality_index_dimensionless",
+        "undefined" : "Soil quality index (dimensionless)"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Accumulated_Exceedance_AE",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mol N -eq",
+          "type" : "label"
+        }, {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mol H+ -eq",
+          "type" : "label"
+        } ],
+        "quantifiedByCF" : [ {
+          "identifier" : "quantifiedByCF",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#3a6dcc343adb4a9eafe7b8216fb820ff",
+          "type" : "iri"
+        }, {
+          "identifier" : "quantifiedByCF",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#fcc6b6dc5ce0460b9abf365124c24b60",
+          "type" : "iri"
+        } ],
+        "assessIC" : [ {
+          "identifier" : "assessIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Eutrophication_terrestrial",
+          "type" : "iri"
+        }, {
+          "identifier" : "assessIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Acidification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Accumulated_Exceedance_AE",
+        "undefined" : "Accumulated Exceedance (AE)"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Human_exposure_efficiency_relative_to_U235",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "kBq U235 -eq",
+          "type" : "label"
+        } ],
+        "quantifiedByCF" : [ {
+          "identifier" : "quantifiedByCF",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#a5795b7bdeb34ab0bf8401320356bd9f",
+          "type" : "iri"
+        } ],
+        "assessIC" : [ {
+          "identifier" : "assessIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Ionising_radiation_human_health",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Human_exposure_efficiency_relative_to_U235",
+        "undefined" : "Human exposure efficiency relative to U235"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Comparative_Toxic_Unit_for_humans_CTUh",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "CTUh",
+          "type" : "label"
+        } ],
+        "quantifiedByCF" : [ {
+          "identifier" : "quantifiedByCF",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#9e9c4443b42440c99f790a02bea4d677",
+          "type" : "iri"
+        }, {
+          "identifier" : "quantifiedByCF",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#43640569fe3c4b1a99c900c9e6bc6980",
+          "type" : "iri"
+        } ],
+        "assessIC" : [ {
+          "identifier" : "assessIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Human_toxicity_cancer",
+          "type" : "iri"
+        }, {
+          "identifier" : "assessIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Human_toxicity_non_cancer",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Comparative_Toxic_Unit_for_humans_CTUh",
+        "undefined" : "Comparative Toxic Unit for humans (CTUh)"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Comparative_Toxic_Unit_for_ecosystems_CTUe",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "CTUe",
+          "type" : "label"
+        } ],
+        "quantifiedByCF" : [ {
+          "identifier" : "quantifiedByCF",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#18a6684317da48ff8f8c8c8f36200972",
+          "type" : "iri"
+        } ],
+        "assessIC" : [ {
+          "identifier" : "assessIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Ecotoxicity_freshwater",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Comparative_Toxic_Unit_for_ecosystems_CTUe",
+        "undefined" : "Comparative Toxic Unit for ecosystems (CTUe)"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Biotic_resource_depletion_fossil_fuels_ADP_fossil",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "MJ",
+          "type" : "label"
+        } ],
+        "quantifiedByCF" : [ {
+          "identifier" : "quantifiedByCF",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#f941187970724fce99e30b2b40f1a144",
+          "type" : "iri"
+        } ],
+        "assessIC" : [ {
+          "identifier" : "assessIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Resource_use_fossils",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Biotic_resource_depletion_fossil_fuels_ADP_fossil",
+        "undefined" : "Biotic resource depletion fossil fuels (ADP-fossil)"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Fraction_of_nutrients_reaching_freshwater_end_compartment_P",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "kg P -eq",
+          "type" : "label"
+        } ],
+        "quantifiedByCF" : [ {
+          "identifier" : "quantifiedByCF",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#ac65dd6094a14be2a259f19b78d3016f",
+          "type" : "iri"
+        } ],
+        "assessIC" : [ {
+          "identifier" : "assessIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Eutrophication_freshwater",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Fraction_of_nutrients_reaching_freshwater_end_compartment_P",
+        "undefined" : "Fraction of nutrients reaching freshwater end compartment (P)"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Impact_on_human_health",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "disease incidence",
+          "type" : "label"
+        } ],
+        "quantifiedByCF" : [ {
+          "identifier" : "quantifiedByCF",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#0daac3eb16074ecb93922f7338ae93bb",
+          "type" : "iri"
+        } ],
+        "assessIC" : [ {
+          "identifier" : "assessIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Particulate_matter",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Impact_on_human_health",
+        "undefined" : "Impact on human health"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Global_Warming_Potential_GWP100",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "kg CO2-eq",
+          "type" : "label"
+        } ],
+        "quantifiedByCF" : [ {
+          "identifier" : "quantifiedByCF",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Global_warming_potential_GWP_over_a_100_year_time_horizon",
+          "type" : "iri"
+        } ],
+        "assessIC" : [ {
+          "identifier" : "assessIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Climate_change_total",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Global_Warming_Potential_GWP100",
+        "undefined" : "Global Warming Potential (GWP100)"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Fraction_of_nutrients_reaching_marine_end_compartment_N",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "kg N -eq",
+          "type" : "label"
+        } ],
+        "quantifiedByCF" : [ {
+          "identifier" : "quantifiedByCF",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#51a1767a998e43ef85328b952ce81466",
+          "type" : "iri"
+        } ],
+        "assessIC" : [ {
+          "identifier" : "assessIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Eutrophication_marine",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Fraction_of_nutrients_reaching_marine_end_compartment_N",
+        "undefined" : "Fraction of nutrients reaching marine end compartment (N)"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Ozone_Depletion_Potential_ODP",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "kg CFC-11-eq",
+          "type" : "label"
+        } ],
+        "quantifiedByCF" : [ {
+          "identifier" : "quantifiedByCF",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#dc3acd87af0a4fe4b4686ed51b13e934",
+          "type" : "iri"
+        } ],
+        "assessIC" : [ {
+          "identifier" : "assessIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Ozone_depletion",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Ozone_Depletion_Potential_ODP",
+        "undefined" : "Ozone Depletion Potential (ODP)"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Abiotic_resource_depletion_ADP_ultimate_reserves",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "kg Sb -eq",
+          "type" : "label"
+        } ],
+        "quantifiedByCF" : [ {
+          "identifier" : "quantifiedByCF",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#3cde2dec99d14565a0fbd440b2e9a1e5",
+          "type" : "iri"
+        } ],
+        "assessIC" : [ {
+          "identifier" : "assessIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Resource_use_minerals_and_metals",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Abiotic_resource_depletion_ADP_ultimate_reserves",
+        "undefined" : "Abiotic resource depletion (ADP ultimate reserves)"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Tropospheric_ozone_concentration_increase",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "kg NMVOC -eq",
+          "type" : "label"
+        } ],
+        "quantifiedByCF" : [ {
+          "identifier" : "quantifiedByCF",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#71c84e64a5e5417eafb4d50cc7f26eec",
+          "type" : "iri"
+        } ],
+        "assessIC" : [ {
+          "identifier" : "assessIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Photochemical_ozone_formation_human_health",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Tropospheric_ozone_concentration_increase",
+        "undefined" : "Tropospheric ozone concentration increase"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#User_deprivation_potential_deprivation_weighted_consumption",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "m3 world-eq",
+          "type" : "label"
+        } ],
+        "quantifiedByCF" : [ {
+          "identifier" : "quantifiedByCF",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#21914d7240fd422597f68af660756198",
+          "type" : "iri"
+        } ],
+        "assessIC" : [ {
+          "identifier" : "assessIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Water_use",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "User_deprivation_potential_deprivation_weighted_consumption",
+        "undefined" : "User deprivation potential (deprivation-weighted consumption)"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "16"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#ImpactCategory",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImpactCategory"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#Ecotoxicity_freshwater",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Ecotoxicity_freshwater",
+        "undefined" : "Ecotoxicity, freshwater"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Human_toxicity_cancer",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Human_toxicity_cancer",
+        "undefined" : "Human toxicity, cancer"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Climate_change_total",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Climate_change_total",
+        "undefined" : "Climate change, total"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Eutrophication_terrestrial",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Eutrophication_terrestrial",
+        "undefined" : "Eutrophication, terrestrial"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Eutrophication_freshwater",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Eutrophication_freshwater",
+        "undefined" : "Eutrophication, freshwater"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Particulate_matter",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Particulate_matter",
+        "undefined" : "Particulate matter"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Resource_use_fossils",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Resource_use_fossils",
+        "undefined" : "Resource use, fossils"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Land_use_occupation_and_transformation",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Land_use_occupation_and_transformation",
+        "undefined" : "Land use (occupation and transformation)"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Human_toxicity_non_cancer",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Human_toxicity_non_cancer",
+        "undefined" : "Human toxicity, non-cancer"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Ozone_depletion",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Ozone_depletion",
+        "undefined" : "Ozone depletion"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Acidification",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Acidification",
+        "undefined" : "Acidification"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Ionising_radiation_human_health",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Ionising_radiation_human_health",
+        "undefined" : "Ionising radiation, human health"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Photochemical_ozone_formation_human_health",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Photochemical_ozone_formation_human_health",
+        "undefined" : "Photochemical ozone formation, human health"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Resource_use_minerals_and_metals",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Resource_use_minerals_and_metals",
+        "undefined" : "Resource use, minerals and metals"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Water_use",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Water_use",
+        "undefined" : "Water use"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Eutrophication_marine",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Eutrophication_marine",
+        "undefined" : "Eutrophication, marine"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#Method",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Method"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#IPCC_method",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "usesCM" : [ {
+          "identifier" : "usesCM",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IPCC_model",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IPCC_method"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#EnergyFootprint",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnergyFootprint"
+    },
+    "intersection" : [ "3" ],
+    "attributes" : [ "intersection", "external" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/lcanet/property#QuantitativeProperty",
+    "baseIri" : "https://w3id.org/lcanet/property",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QuantitativeProperty"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_95",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "unit",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "95",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_quantity_95",
+        "undefined" : "Quantity"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_196",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "unit",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "196",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_quantity_196",
+        "undefined" : "Quantity"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_4",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "unit",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "4",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_quantity_4",
+        "undefined" : "Quantity"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_3",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "unit",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "3",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_quantity_3",
+        "undefined" : "Quantity"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_2",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "unit",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "2",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_quantity_2",
+        "undefined" : "Quantity"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_1",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "unit",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "1",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_quantity_1",
+        "undefined" : "Quantity"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_0.5",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "unit",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "0.5",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_quantity_0.5",
+        "undefined" : "Quantity"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_1.029",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "g",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "1.029",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_mass_1.029",
+        "undefined" : "Mass"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_0.61",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mm2",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "0.61",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_sur_0.61",
+        "undefined" : "Surface"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_length_7",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mm",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "7",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_length_7",
+        "undefined" : "Length"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_5.482",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "g",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "5.482",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_mass_5.482",
+        "undefined" : "Mass"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_1.5",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "g",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "1.5",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_mass_1.5",
+        "undefined" : "Mass"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_0.23",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mm2",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "0.23",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_sur_0.23",
+        "undefined" : "Surface"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_4.1",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mm2",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "4.1",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_sur_4.1",
+        "undefined" : "Surface"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_1.7",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "g",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "1.7",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_mass_1.7",
+        "undefined" : "Mass"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_18.8",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mg",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "18.8",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_mass_18.8",
+        "undefined" : "Mass"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_62",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "unit",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "62",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_quantity_62",
+        "undefined" : "Quantity"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_15",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "unit",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "15",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_quantity_15",
+        "undefined" : "Quantity"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_0.25",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "g",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "0.25",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_mass_0.25",
+        "undefined" : "Mass"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_12",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "unit",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "12",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_quantity_12",
+        "undefined" : "Quantity"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_18",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "unit",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "18",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_quantity_18",
+        "undefined" : "Quantity"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_157.4",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mm2",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "157.4",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_sur_157.4",
+        "undefined" : "Surface"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_1",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "g",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "1",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_mass_1",
+        "undefined" : "Mass"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_7429",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mg",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "7429",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_mass_7429",
+        "undefined" : "Mass"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_0.161",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "g",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "0.161",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_mass_0.161",
+        "undefined" : "Mass"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_260",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mg",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "260",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_mass_260",
+        "undefined" : "Mass"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_10",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mm2",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "10",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_sur_10",
+        "undefined" : "Surface"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_23",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "unit",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "23",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_quantity_23",
+        "undefined" : "Quantity"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Volume",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Volume"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_50",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mm2",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "50",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_sur_50",
+        "undefined" : "Surface"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_500",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "g",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "500",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_mass_500",
+        "undefined" : "Mass"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_620",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mg",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "620",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_mass_620",
+        "undefined" : "Mass"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_7.031",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "g",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "7.031",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_mass_7.031",
+        "undefined" : "Mass"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_700",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mg",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "700",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_mass_700",
+        "undefined" : "Mass"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_820",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mg",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "820",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_mass_820",
+        "undefined" : "Mass"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_0.16",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mm2",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "0.16",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_sur_0.16",
+        "undefined" : "Surface"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_3600",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mm2",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "3600",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_sur_3600",
+        "undefined" : "Surface"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_1",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mm2",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "1",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_sur_1",
+        "undefined" : "Surface"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_7",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "unit",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "7",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_quantity_7",
+        "undefined" : "Quantity"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_5",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "unit",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "5",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_quantity_5",
+        "undefined" : "Quantity"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_9",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mm2",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "9",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_sur_9",
+        "undefined" : "Surface"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_2",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mm2",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "2",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_sur_2",
+        "undefined" : "Surface"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_76",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "unit",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "76",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_quantity_76",
+        "undefined" : "Quantity"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_451",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mg",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "451",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_mass_451",
+        "undefined" : "Mass"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_4",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mm2",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "4",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_sur_4",
+        "undefined" : "Surface"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_quantity_9",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "unit",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "9",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_quantity_9",
+        "undefined" : "Quantity"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Quantity",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Quantity"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_31500",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mm2",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "31500",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_sur_31500",
+        "undefined" : "Surface"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_mass_1.5mg",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "mg",
+          "type" : "label"
+        } ],
+        "hasQuantityValue" : [ {
+          "identifier" : "hasQuantityValue",
+          "language" : "undefined",
+          "value" : "1.5",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_mass_1.5mg",
+        "undefined" : "Mass"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "20"
+  }, {
+    "iri" : "https://w3id.org/lcanet/property#QualitativeProperty",
+    "baseIri" : "https://w3id.org/lcanet/property",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QualitativeProperty"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_production3",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasQualityValue" : [ {
+          "identifier" : "hasQualityValue",
+          "language" : "undefined",
+          "value" : "China",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_production3",
+        "undefined" : "Produced_In"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_production2",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasQualityValue" : [ {
+          "identifier" : "hasQualityValue",
+          "language" : "undefined",
+          "value" : "Taiwan",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_production2",
+        "undefined" : "Produced_In"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Realized_On_Machine",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Realized_On_Machine"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_production1",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasQualityValue" : [ {
+          "identifier" : "hasQualityValue",
+          "language" : "undefined",
+          "value" : "Europe",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_production1",
+        "undefined" : "Produced_In"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_Codde",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasQualityValue" : [ {
+          "identifier" : "hasQualityValue",
+          "language" : "undefined",
+          "value" : "CODDE (v3.00.000)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_DB_Codde",
+        "undefined" : "Database_Source"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_DB_nage",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasQualityValue" : [ {
+          "identifier" : "hasQualityValue",
+          "language" : "undefined",
+          "value" : "NegaOctet (v01.00.001)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_DB_nage",
+        "undefined" : "Database_Source"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Description",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Description"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Production_Site",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Production_Site"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Hypothesis",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Hypothesis"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-prop_production4",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasQualityValue" : [ {
+          "identifier" : "hasQualityValue",
+          "language" : "undefined",
+          "value" : "France",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-prop_production4",
+        "undefined" : "Produced_In"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#ProductFlow",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProductFlow"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-Taiwan_Circuit",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "connected" : [ {
+          "identifier" : "connected",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Taiwan_Circuit_i",
+          "type" : "iri"
+        } ],
+        "hasProperty" : [ {
+          "identifier" : "hasProperty",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_1",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-Taiwan_Circuit"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-European_Circuit",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "connected" : [ {
+          "identifier" : "connected",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-European_Circuit_i",
+          "type" : "iri"
+        } ],
+        "hasProperty" : [ {
+          "identifier" : "hasProperty",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_1",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-European_Circuit"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-Chinese_Circuit_i",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasProperty" : [ {
+          "identifier" : "hasProperty",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_0.23",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-Chinese_Circuit_i"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-European_Circuit_i",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasProperty" : [ {
+          "identifier" : "hasProperty",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_0.16",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-European_Circuit_i"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-Chinese_Circuit",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "connected" : [ {
+          "identifier" : "connected",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Chinese_Circuit_i",
+          "type" : "iri"
+        } ],
+        "hasProperty" : [ {
+          "identifier" : "hasProperty",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_1",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-Chinese_Circuit"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "connected" : [ {
+          "identifier" : "connected",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i3",
+          "type" : "iri"
+        }, {
+          "identifier" : "connected",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i2",
+          "type" : "iri"
+        }, {
+          "identifier" : "connected",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Generic_module_Integrated_Circuit_i1",
+          "type" : "iri"
+        } ],
+        "hasProperty" : [ {
+          "identifier" : "hasProperty",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_1",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-Generic_module_Integrated_Circuit"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IC-Taiwan_Circuit_i",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasProperty" : [ {
+          "identifier" : "hasProperty",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-prop_sur_0.61",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IC-Taiwan_Circuit_i"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#Flow",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Flow"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#test2",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "test2"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "24"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#WaterFootprint",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WaterFootprint"
+    },
+    "intersection" : [ "3" ],
+    "attributes" : [ "intersection", "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#MaterialFootprint",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaterialFootprint"
+    },
+    "intersection" : [ "3" ],
+    "attributes" : [ "intersection", "external" ],
+    "id" : "26"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#LcaResult",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LcaResult"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#IRF1",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasIC" : [ {
+          "identifier" : "hasIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Climate_change_total",
+          "type" : "iri"
+        } ],
+        "numericValue" : [ {
+          "identifier" : "numericValue",
+          "language" : "undefined",
+          "value" : "0.1254897000569",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IRF1"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IRF2",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasIC" : [ {
+          "identifier" : "hasIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Climate_change_total",
+          "type" : "iri"
+        } ],
+        "numericValue" : [ {
+          "identifier" : "numericValue",
+          "language" : "undefined",
+          "value" : "0.0125489005",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IRF2"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IRF3",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasIC" : [ {
+          "identifier" : "hasIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Climate_change_total",
+          "type" : "iri"
+        } ],
+        "numericValue" : [ {
+          "identifier" : "numericValue",
+          "language" : "undefined",
+          "value" : "0.215496007",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IRF3"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IR_Production_Mother_Board",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "containedInOIR" : [ {
+          "identifier" : "containedInOIR",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Overall_IR_Climate_Change",
+          "type" : "iri"
+        } ],
+        "impactResultConcernsActivity" : [ {
+          "identifier" : "impactResultConcernsActivity",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Mother_Board",
+          "type" : "iri"
+        } ],
+        "numericValue" : [ {
+          "identifier" : "numericValue",
+          "language" : "undefined",
+          "value" : "10.1273637779549",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IR_Production_Mother_Board"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IRF4",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasIC" : [ {
+          "identifier" : "hasIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Climate_change_total",
+          "type" : "iri"
+        } ],
+        "numericValue" : [ {
+          "identifier" : "numericValue",
+          "language" : "undefined",
+          "value" : "0.32514870004",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IRF4"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IRF5",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasIC" : [ {
+          "identifier" : "hasIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Climate_change_total",
+          "type" : "iri"
+        } ],
+        "numericValue" : [ {
+          "identifier" : "numericValue",
+          "language" : "undefined",
+          "value" : "0.154730006",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IRF5"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IRF6",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasIC" : [ {
+          "identifier" : "hasIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Climate_change_total",
+          "type" : "iri"
+        } ],
+        "numericValue" : [ {
+          "identifier" : "numericValue",
+          "language" : "undefined",
+          "value" : "0.351420009754",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IRF6"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IR_Production_Test_Card",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasIC" : [ {
+          "identifier" : "hasIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Climate_change_total",
+          "type" : "iri"
+        } ],
+        "containedInOIR" : [ {
+          "identifier" : "containedInOIR",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Overall_IR_Climate_Change",
+          "type" : "iri"
+        } ],
+        "impactResultConcernsActivity" : [ {
+          "identifier" : "impactResultConcernsActivity",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Test_Card_FT3242H",
+          "type" : "iri"
+        } ],
+        "numericValue" : [ {
+          "identifier" : "numericValue",
+          "language" : "undefined",
+          "value" : "1.57650467322258",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IR_Production_Test_Card"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IRF7",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasIC" : [ {
+          "identifier" : "hasIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Climate_change_total",
+          "type" : "iri"
+        } ],
+        "numericValue" : [ {
+          "identifier" : "numericValue",
+          "language" : "undefined",
+          "value" : "0.32541112208",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IRF7"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IRF8",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasIC" : [ {
+          "identifier" : "hasIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Climate_change_total",
+          "type" : "iri"
+        } ],
+        "numericValue" : [ {
+          "identifier" : "numericValue",
+          "language" : "undefined",
+          "value" : "0.421587009",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IRF8"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IR_Production_Circuit_Storaige",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "containedInOIR" : [ {
+          "identifier" : "containedInOIR",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Overall_IR_Climate_Change",
+          "type" : "iri"
+        } ],
+        "hasIC" : [ {
+          "identifier" : "hasIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Climate_change_total",
+          "type" : "iri"
+        } ],
+        "impactResultConcernsActivity" : [ {
+          "identifier" : "impactResultConcernsActivity",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Production_of_ICV_Storaige_Prototype",
+          "type" : "iri"
+        } ],
+        "numericValue" : [ {
+          "identifier" : "numericValue",
+          "language" : "undefined",
+          "value" : "0.194533374702331",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IR_Production_Circuit_Storaige"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IR_Production_Daughter_Board",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "containedInOIR" : [ {
+          "identifier" : "containedInOIR",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Overall_IR_Climate_Change",
+          "type" : "iri"
+        } ],
+        "hasIC" : [ {
+          "identifier" : "hasIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Climate_change_total",
+          "type" : "iri"
+        } ],
+        "impactResultConcernsActivity" : [ {
+          "identifier" : "impactResultConcernsActivity",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#IC-Production_of_Daughter_Board",
+          "type" : "iri"
+        } ],
+        "numericValue" : [ {
+          "identifier" : "numericValue",
+          "language" : "undefined",
+          "value" : "0.540494410009839",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IR_Production_Daughter_Board"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#LandFootprint",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LandFootprint"
+    },
+    "intersection" : [ "3" ],
+    "attributes" : [ "intersection", "external" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#AirPollutionFootprint",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AirPollutionFootprint"
+    },
+    "intersection" : [ "3" ],
+    "attributes" : [ "intersection", "external" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#Methodology",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Methodology"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#Methodology_EF_v3.0",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "methodologyAssessesTopic" : [ {
+          "identifier" : "methodologyAssessesTopic",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Scope_of_ICV_Storaige_Prototype",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Methodology_EF_v3.0"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#EF_v3.1_methodology",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "EF_v3.1_methodology"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://www.w3.org/2006/time#Instant",
+    "baseIri" : "http://www.w3.org/2006/time",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Instant"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#LCA-ICV-Storaige-performed-at",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "inXSDDate" : [ {
+          "identifier" : "inXSDDate",
+          "language" : "undefined",
+          "value" : "November 2024",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "LCA-ICV-Storaige-performed-at"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "30"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#CharacterizationFactor",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CharacterizationFactor"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#CF_CO2equivalents",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasUnit" : [ {
+          "identifier" : "hasUnit",
+          "language" : "undefined",
+          "value" : "kg CO2 eq",
+          "type" : "label"
+        } ],
+        "quantifiesICI" : [ {
+          "identifier" : "quantifiesICI",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Global_Warming_Potential_GWP100",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CF_CO2equivalents"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Global_warming_potential_GWP_over_a_100_year_time_horizon",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "calculatedByCM" : [ {
+          "identifier" : "calculatedByCM",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Bern_model_based_on_IPCC_2021",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Global_warming_potential_GWP_over_a_100_year_time_horizon",
+        "undefined" : "Global warming potential (GWP) over a 100-year time horizon"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "31"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#Technosphere",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Technosphere"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#Inputted_Transportation",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Inputted_Transportation"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Outputted_Waste_for_recycling/treatment",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Outputted_Waste_for_recycling/treatment"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Inputted_Process",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Inputted_Process"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Outputted_ByProduct",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Outputted_ByProduct"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Inputted_Recycled_Material",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Inputted_Recycled_Material"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Outputted_Waste_for_disposal",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Outputted_Waste_for_disposal"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Inputted_Packaging_Material",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Inputted_Packaging_Material"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Inputs_of_other_types",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Inputs_of_other_types"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Inputted_Manufactured_Product",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Inputted_Manufactured_Product"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Outputted_Product",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Outputted_Product"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Inputted_Maintenance/Cleaning_auxiliaries",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Inputted_Maintenance/Cleaning_auxiliaries"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Inputted_Material",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Inputted_Material"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Inputted_Auxiliaries/consumables",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Inputted_Auxiliaries/consumables"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Inputted_Water_Consumption",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Inputted_Water_Consumption"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Outputs_of_other_types",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Outputs_of_other_types"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Inputted_Energy_Consumption",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Inputted_Energy_Consumption"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Outputted_Waste_for_Incineration",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Outputted_Waste_for_Incineration"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "32"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#ActivityTag",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActivityTag"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#Transportation",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Transportation"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Material_Production",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Material_Production"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Service",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Service"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Waste_Treatment",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Waste_Treatment"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Processing",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Processing"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Energy_Production",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Energy_Production"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "33"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#OverallImpactResult",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OverallImpactResult"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#Overall_IR_Climate_Change",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "hasIC" : [ {
+          "identifier" : "hasIC",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#Climate_change_total",
+          "type" : "iri"
+        } ],
+        "numericValue" : [ {
+          "identifier" : "numericValue",
+          "language" : "undefined",
+          "value" : "12,4388962358897",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Overall_IR_Climate_Change"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "34"
+  }, {
+    "iri" : "https://w3id.org/lcanet/activity#Biosphere",
+    "baseIri" : "https://w3id.org/lcanet/activity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Biosphere"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#Emission_Agricultural",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Emission_Agricultural"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Resource_from_Water",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Resource_from_Water"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Resource_from_Biotic",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Resource_from_Biotic"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Resource_from_Land",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Resource_from_Land"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Emission_to_River",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Emission_to_River"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Emission_Low_Pop",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Emission_Low_Pop"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Emission_Low_Pop_long_term",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Emission_Low_Pop_long_term"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Emission_to_Stratosphere+Biosphere",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Emission_to_Stratosphere+Biosphere"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Resource_from_Air",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Resource_from_Air"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Emission_Forestry",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Emission_Forestry"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Emission_to_Ground_Water_lon_term",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Emission_to_Ground_Water_lon_term"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Emission_to_Ocean",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Emission_to_Ocean"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Emission_to_Ground_Water",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Emission_to_Ground_Water"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Emission_Industrial",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Emission_Industrial"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Resources_from_Ground",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Resources_from_Ground"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Emission_High_Pop",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Emission_High_Pop"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://w3id.org/lcanet/property#BalanceableProperty",
+    "baseIri" : "https://w3id.org/lcanet/property",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BalanceableProperty"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#Mass_Balance",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Mass_Balance"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "36"
+  }, {
+    "iri" : "https://w3id.org/lcanet/actor#Person",
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#Thibault_Halter",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "labels" : {
+        "IRI-based" : "Thibault_Halter"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#CharacterizationModel",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CharacterizationModel"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/lcanet/ICdata#Available_WAter_REmaining_AWARE_model",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "undefined",
+          "value" : "(Boulay et al., 2018; UNEP 2016)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Available_WAter_REmaining_AWARE_model",
+        "undefined" : "Available WAter REmaining (AWARE) model"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#CML_2002_method_v.4.8",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "undefined",
+          "value" : "van Oers et al., 2002",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CML_2002_method_v.4.8",
+        "undefined" : "CML 2002 method, v.4.8"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Human_health_effect_model",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "undefined",
+          "value" : "as developed by Dreicer et al., 1995)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Human_health_effect_model",
+        "undefined" : "Human health effect model"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#EUTREND_model",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "undefined",
+          "value" : "(Struijs et al, 2009) as applied in ReCiPe 2008",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "EUTREND_model",
+        "undefined" : "EUTREND model"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#LOTOS_EUROS_model",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "undefined",
+          "value" : "(Van Zelm et al, 2008) as applied in ReCiPe 2008",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "LOTOS_EUROS_model",
+        "undefined" : "LOTOS-EUROS model"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#LANCA_model",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "undefined",
+          "value" : "Soil quality index based on LANCA model (De Laurentiis et al. 2019) and on the LANCA CF version 2.5 (Horn and Maier, 2018)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "LANCA_model",
+        "undefined" : "LANCA model"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#PM_model",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "undefined",
+          "value" : "(Fantke et al., 2016 in UNEP 2016)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "PM_model",
+        "undefined" : "PM model"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Bern_model_based_on_IPCC_2021",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "undefined",
+          "value" : "(Forster et al., 2021)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Bern_model_based_on_IPCC_2021",
+        "undefined" : "Bern model based on IPCC 2021"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#IPCC_model",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "calculatesCF" : [ {
+          "identifier" : "calculatesCF",
+          "language" : "undefined",
+          "value" : "https://w3id.org/lcanet/ICdata#CF_CO2equivalents",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IPCC_model"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Accumulated_Exceedance",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "undefined",
+          "value" : "(Seppälä et al. 2006, Posch et al, 2008)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Accumulated_Exceedance",
+        "undefined" : "Accumulated Exceedance"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#EDIP_model",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "undefined",
+          "value" : "based on the ODPs of the World Meteorological Organisation (WMO) over an infinite time horizon (WMO 2014 + integrations)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "EDIP_model",
+        "undefined" : "EDIP model"
+      }
+    }, {
+      "iri" : "https://w3id.org/lcanet/ICdata#Based_on_USEtox2.1_model",
+      "baseIri" : "https://w3id.org/lcanet/ICdata",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "undefined",
+          "value" : "(Fantke et al. 2017), adapted as in Saouter et al., 2018",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Based_on_USEtox2.1_model",
+        "undefined" : "Based on USEtox2.1 model"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "38"
+  } ],
+  "property" : [ {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/lcanet/core#hasFlowCategory",
+    "baseIri" : "https://w3id.org/lcanet/core",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "hasFlowCategory"
+    },
+    "domain" : "8",
+    "attributes" : [ "object", "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "https://w3id.org/lcanet/ia#hasIC",
+    "baseIri" : "https://w3id.org/lcanet/ia",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "hasIC"
+    },
+    "domain" : "8",
+    "attributes" : [ "object", "external" ],
+    "id" : "22"
+  } ]
+}
