@@ -1,0 +1,637 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org/lcanet/actor", "http://www.w3.org/2000/01/rdf-schema", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema", "http://xmlns.com/foaf/0.1" ],
+    "title" : {
+      "en" : "The Actor module of the Life Cycle Assessment Network Ontology (LCAnet)."
+    },
+    "iri" : "https://w3id.org/lcanet/actor",
+    "version" : "2.2.0",
+    "author" : [ "https://orcid.org/0000-0002-0438-6831" ],
+    "description" : {
+      "undefined" : "The Actor module is part of the LCAnet ontology proposed by the SmartACV Carnot Project. \n            It provides a formal representation of actors (e.g., persons, organizations, and groups) \n            involved in LCA processes, as well as their roles and responsibilities. \n            It resuses some elements from the FOAF (Friend Of A Freind) ontology."
+    },
+    "labels" : {
+      "undefined" : "LCAnet-Actor"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "2.1.0",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0002-0438-6831",
+        "type" : "iri"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "actor",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "https://www.cea.fr",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "2.2.0",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/lcanet/actor#",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "The Actor module of the Life Cycle Assessment Network Ontology (LCAnet).",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-05-20",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "8",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "14",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "15",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "38",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/lcanet/actor#Agency",
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agency",
+      "undefined" : "Agency"
+    },
+    "comment" : {
+      "undefined" : "An actor capable of intentional action and decision-making."
+    },
+    "id" : "4",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/actor#Auditor",
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Auditor",
+      "undefined" : "Auditor"
+    },
+    "comment" : {
+      "undefined" : "Represents a type of role that an agent may assume when evaluating, reviewing, or verifying the conformity and quality of a life cycle assessment study or its results."
+    },
+    "id" : "6",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Agent",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent"
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "9"
+  }, {
+    "iri" : "https://w3id.org/lcanet/actor#Agent",
+    "equivalent" : [ "19", "9" ],
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent",
+      "undefined" : "Agent"
+    },
+    "subClasses" : [ "5", "14", "15" ],
+    "comment" : {
+      "undefined" : "An entity that performs, participates in, or influences activities."
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/lcanet/actor#Manufacturer",
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Manufacturer",
+      "undefined" : "Manufacturer"
+    },
+    "comment" : {
+      "undefined" : "Represents a type of role that an agent may assume when performing production or assembly activities within a life cycle system."
+    },
+    "id" : "21",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/actor#Researcher",
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Researcher",
+      "undefined" : "Researcher"
+    },
+    "comment" : {
+      "undefined" : "Represents a type of role that an agent may assume when conducting analysis, modeling, or scientific studies related to life cycle assessment data, methods, or systems."
+    },
+    "id" : "24",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/actor#Responsibility",
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Responsibility",
+      "undefined" : "Responsibility"
+    },
+    "comment" : {
+      "undefined" : "A Responsibility is a relator (a kind of social relation) that connects: the Agent (bearer),\nthe Role (through which it is borne), and the Action(s) or Goals to which it applies. It include duties, obligations, tasks, etc.\nExamples: certify LCA results, verify data quality, etc."
+    },
+    "id" : "1"
+  }, {
+    "iri" : "https://w3id.org/lcanet/actor#Organization",
+    "equivalent" : [ "25" ],
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organization",
+      "undefined" : "Organization"
+    },
+    "subClasses" : [ "4" ],
+    "comment" : {
+      "undefined" : "A structured collection of agents pursuing common objectives."
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "5",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/actor#Recycler",
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Recycler",
+      "undefined" : "Recycler"
+    },
+    "comment" : {
+      "undefined" : "Represents a type of role that an agent may assume when performing recovery, recycling, or treatment operations on products or materials at the end-of-life stage."
+    },
+    "id" : "28",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Organization",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organization"
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/lcanet/actor#Consumer",
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Consumer",
+      "undefined" : "Consumer"
+    },
+    "comment" : {
+      "undefined" : "epresents a type of role that an agent may assume when using or consuming a product or service during its life cycle."
+    },
+    "id" : "29",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://purl.org/dc/terms/Agent",
+    "baseIri" : "http://purl.org/dc/terms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent"
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/lcanet/actor#Role",
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Role",
+      "undefined" : "Role"
+    },
+    "subClasses" : [ "21", "24", "6", "28", "29", "33" ],
+    "comment" : {
+      "undefined" : "Represents a functional role that an agent can assume in a specific context.\nExample: LCA Auditor, LCA Agency Role"
+    },
+    "id" : "2"
+  }, {
+    "iri" : "https://w3id.org/lcanet/actor#Context",
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Context",
+      "undefined" : "Context"
+    },
+    "comment" : {
+      "undefined" : "A social, institutional, or processual situation that provides the setting in which a Role is played by an Agent and where its associated Responsibilities apply. Examples include projects, collaborations, assessments, or audits."
+    },
+    "id" : "11"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Group",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Group"
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://w3id.org/lcanet/actor#Group",
+    "equivalent" : [ "35" ],
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Group",
+      "undefined" : "Group"
+    },
+    "comment" : {
+      "undefined" : "A collection of agents acting together as a social unit."
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "14",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/lcanet/actor#Person",
+    "equivalent" : [ "38" ],
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person",
+      "undefined" : "Person"
+    },
+    "comment" : {
+      "undefined" : "A human individual acting as an agent."
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "15",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Person",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "38"
+  }, {
+    "iri" : "https://w3id.org/lcanet/actor#Customer",
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Customer",
+      "undefined" : "Customer"
+    },
+    "comment" : {
+      "undefined" : "Represents a type of role that an agent may assume when acquiring or purchasing a product or service within its life cycle."
+    },
+    "id" : "33",
+    "superClasses" : [ "2" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "10",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "12",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "13",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "16",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "17",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "27",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "30",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/lcanet/actor#entailedBy",
+    "inverse" : "3",
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "entailedBy",
+      "undefined" : "entailed By"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "relates a responsibility to the role it is entailed by"
+    },
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "range" : "1",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "7"
+  }, {
+    "range" : "1",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "10"
+  }, {
+    "range" : "2",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "12"
+  }, {
+    "range" : "15",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "13"
+  }, {
+    "range" : "15",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "16"
+  }, {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "17"
+  }, {
+    "range" : "8",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "18"
+  }, {
+    "range" : "8",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "20"
+  }, {
+    "iri" : "https://w3id.org/lcanet/actor#playedBy",
+    "inverse" : "23",
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "playedBy",
+      "undefined" : "played By"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "relates a role to the agent playing it"
+    },
+    "attributes" : [ "object" ],
+    "id" : "22"
+  }, {
+    "range" : "2",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "26"
+  }, {
+    "range" : "11",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/lcanet/actor#inContextOf",
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "inContextOf",
+      "undefined" : "in Context Of"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "relates a Role to the Context (e.g., project or process) in which it is instantiated and meaningful."
+    },
+    "attributes" : [ "object" ],
+    "id" : "30"
+  }, {
+    "iri" : "https://w3id.org/lcanet/actor#isBorneBy",
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "isBorneBy",
+      "undefined" : "is Borne By"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "relates a responsibility to the agent it is borne by"
+    },
+    "attributes" : [ "object" ],
+    "id" : "31"
+  }, {
+    "range" : "2",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "32"
+  }, {
+    "iri" : "https://w3id.org/lcanet/actor#entails",
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "entails",
+      "undefined" : "entails"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "relates a role to the responsibility it entails"
+    },
+    "attributes" : [ "object" ],
+    "id" : "3"
+  }, {
+    "range" : "2",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "34"
+  }, {
+    "range" : "2",
+    "domain" : "24",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "36"
+  }, {
+    "range" : "2",
+    "domain" : "29",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "37"
+  }, {
+    "range" : "2",
+    "domain" : "28",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "39"
+  }, {
+    "iri" : "https://w3id.org/lcanet/actor#playsRole",
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "playsRole",
+      "undefined" : "plays Role"
+    },
+    "domain" : "8",
+    "comment" : {
+      "undefined" : "relates an Agent to the Role they play"
+    },
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "range" : "8",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "40"
+  }, {
+    "range" : "2",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "41"
+  }, {
+    "iri" : "https://w3id.org/lcanet/actor#bearsResponsibility",
+    "inverse" : "31",
+    "baseIri" : "https://w3id.org/lcanet/actor",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "bearsResponsibility",
+      "undefined" : "bears Responsibility"
+    },
+    "domain" : "8",
+    "comment" : {
+      "undefined" : "relates an agent to the responsibility they bear"
+    },
+    "attributes" : [ "object" ],
+    "id" : "42"
+  }, {
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "43"
+  } ]
+}

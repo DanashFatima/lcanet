@@ -1,0 +1,294 @@
+<https://w3id.org/lcanet/actor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/lcanet/actor> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/lcanet/actor/2.2.0> .
+<https://w3id.org/lcanet/actor> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-0438-6831> .
+<https://w3id.org/lcanet/actor> <http://purl.org/dc/terms/description> "The Actor module is part of the LCAnet ontology proposed by the SmartACV Carnot Project. \n            It provides a formal representation of actors (e.g., persons, organizations, and groups) \n            involved in LCA processes, as well as their roles and responsibilities. \n            It resuses some elements from the FOAF (Friend Of A Freind) ontology." .
+<https://w3id.org/lcanet/actor> <http://purl.org/dc/terms/issued> "2026-05-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/lcanet/actor> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/lcanet/actor> <http://purl.org/dc/terms/publisher> <https://www.cea.fr> .
+<https://w3id.org/lcanet/actor> <http://purl.org/dc/terms/title> "The Actor module of the Life Cycle Assessment Network Ontology (LCAnet)."@en .
+<https://w3id.org/lcanet/actor> <http://purl.org/vocab/vann/preferredNamespacePrefix> "actor" .
+<https://w3id.org/lcanet/actor> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/lcanet/actor#" .
+<https://w3id.org/lcanet/actor> <http://www.w3.org/2000/01/rdf-schema#label> "LCAnet-Actor" .
+<https://w3id.org/lcanet/actor> <http://www.w3.org/2002/07/owl#priorVersion> "2.1.0" .
+<https://w3id.org/lcanet/actor> <http://www.w3.org/2002/07/owl#versionInfo> "2.2.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/date
+<http://purl.org/dc/terms/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/lcanet/actor#bearsResponsibility
+<https://w3id.org/lcanet/actor#bearsResponsibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/actor#bearsResponsibility> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/lcanet/actor#isBorneBy> .
+<https://w3id.org/lcanet/actor#bearsResponsibility> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/actor#Agent> .
+<https://w3id.org/lcanet/actor#bearsResponsibility> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/actor#Responsibility> .
+<https://w3id.org/lcanet/actor#bearsResponsibility> <http://www.w3.org/2000/01/rdf-schema#comment> "relates an agent to the responsibility they bear" .
+<https://w3id.org/lcanet/actor#bearsResponsibility> <http://www.w3.org/2000/01/rdf-schema#label> "bears Responsibility" .
+# 
+# https://w3id.org/lcanet/actor#entailedBy
+<https://w3id.org/lcanet/actor#entailedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/actor#entailedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/lcanet/actor#entails> .
+<https://w3id.org/lcanet/actor#entailedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/actor#Responsibility> .
+<https://w3id.org/lcanet/actor#entailedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/actor#Role> .
+<https://w3id.org/lcanet/actor#entailedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "relates a responsibility to the role it is entailed by" .
+<https://w3id.org/lcanet/actor#entailedBy> <http://www.w3.org/2000/01/rdf-schema#label> "entailed By" .
+# 
+# https://w3id.org/lcanet/actor#entails
+<https://w3id.org/lcanet/actor#entails> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/actor#entails> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/actor#Role> .
+<https://w3id.org/lcanet/actor#entails> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/actor#Responsibility> .
+<https://w3id.org/lcanet/actor#entails> <http://www.w3.org/2000/01/rdf-schema#comment> "relates a role to the responsibility it entails" .
+<https://w3id.org/lcanet/actor#entails> <http://www.w3.org/2000/01/rdf-schema#label> "entails" .
+# 
+# https://w3id.org/lcanet/actor#inContextOf
+<https://w3id.org/lcanet/actor#inContextOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/actor#inContextOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/actor#Role> .
+<https://w3id.org/lcanet/actor#inContextOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/actor#Context> .
+<https://w3id.org/lcanet/actor#inContextOf> <http://www.w3.org/2000/01/rdf-schema#comment> "relates a Role to the Context (e.g., project or process) in which it is instantiated and meaningful." .
+<https://w3id.org/lcanet/actor#inContextOf> <http://www.w3.org/2000/01/rdf-schema#label> "in Context Of" .
+# 
+# https://w3id.org/lcanet/actor#isBorneBy
+<https://w3id.org/lcanet/actor#isBorneBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/actor#isBorneBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/actor#Responsibility> .
+<https://w3id.org/lcanet/actor#isBorneBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/actor#Agent> .
+<https://w3id.org/lcanet/actor#isBorneBy> <http://www.w3.org/2000/01/rdf-schema#comment> "relates a responsibility to the agent it is borne by" .
+<https://w3id.org/lcanet/actor#isBorneBy> <http://www.w3.org/2000/01/rdf-schema#label> "is Borne By" .
+# 
+# https://w3id.org/lcanet/actor#playedBy
+<https://w3id.org/lcanet/actor#playedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/actor#playedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/lcanet/actor#playsRole> .
+<https://w3id.org/lcanet/actor#playedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/actor#Role> .
+<https://w3id.org/lcanet/actor#playedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/actor#Agent> .
+<https://w3id.org/lcanet/actor#playedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "relates a role to the agent playing it" .
+<https://w3id.org/lcanet/actor#playedBy> <http://www.w3.org/2000/01/rdf-schema#label> "played By" .
+# 
+# https://w3id.org/lcanet/actor#playsRole
+<https://w3id.org/lcanet/actor#playsRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/lcanet/actor#playsRole> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/lcanet/actor#Agent> .
+<https://w3id.org/lcanet/actor#playsRole> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/lcanet/actor#Role> .
+<https://w3id.org/lcanet/actor#playsRole> <http://www.w3.org/2000/01/rdf-schema#comment> "relates an Agent to the Role they play" .
+<https://w3id.org/lcanet/actor#playsRole> <http://www.w3.org/2000/01/rdf-schema#label> "plays Role" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/Agent
+<http://purl.org/dc/terms/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/Agent> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/lcanet/actor#Agent> .
+# 
+# http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/lcanet/actor#Agent> .
+# 
+# http://xmlns.com/foaf/0.1/Group
+<http://xmlns.com/foaf/0.1/Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Group> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/lcanet/actor#Group> .
+# 
+# http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/lcanet/actor#Organization> .
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/lcanet/actor#Person> .
+# 
+# https://w3id.org/lcanet/actor#Agency
+<https://w3id.org/lcanet/actor#Agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/actor#Agency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/actor#Organization> .
+<https://w3id.org/lcanet/actor#Agency> <http://www.w3.org/2000/01/rdf-schema#comment> "An actor capable of intentional action and decision-making." .
+<https://w3id.org/lcanet/actor#Agency> <http://www.w3.org/2000/01/rdf-schema#label> "Agency" .
+# 
+# https://w3id.org/lcanet/actor#Agent
+<https://w3id.org/lcanet/actor#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/actor#Agent> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/actor#Context> .
+<https://w3id.org/lcanet/actor#Agent> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/actor#Responsibility> .
+<https://w3id.org/lcanet/actor#Agent> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/actor#Role> .
+<https://w3id.org/lcanet/actor#Agent> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity that performs, participates in, or influences activities." .
+<https://w3id.org/lcanet/actor#Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent" .
+# 
+# https://w3id.org/lcanet/actor#Auditor
+<https://w3id.org/lcanet/actor#Auditor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/actor#Auditor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/actor#Role> .
+<https://w3id.org/lcanet/actor#Auditor> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a type of role that an agent may assume when evaluating, reviewing, or verifying the conformity and quality of a life cycle assessment study or its results." .
+<https://w3id.org/lcanet/actor#Auditor> <http://www.w3.org/2000/01/rdf-schema#label> "Auditor" .
+# 
+# https://w3id.org/lcanet/actor#Consumer
+<https://w3id.org/lcanet/actor#Consumer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/actor#Consumer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/actor#Role> .
+<https://w3id.org/lcanet/actor#Consumer> <http://www.w3.org/2000/01/rdf-schema#comment> "epresents a type of role that an agent may assume when using or consuming a product or service during its life cycle." .
+<https://w3id.org/lcanet/actor#Consumer> <http://www.w3.org/2000/01/rdf-schema#label> "Consumer" .
+# 
+# https://w3id.org/lcanet/actor#Context
+<https://w3id.org/lcanet/actor#Context> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/actor#Context> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/actor#Responsibility> .
+<https://w3id.org/lcanet/actor#Context> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/actor#Role> .
+<https://w3id.org/lcanet/actor#Context> <http://www.w3.org/2000/01/rdf-schema#comment> "A social, institutional, or processual situation that provides the setting in which a Role is played by an Agent and where its associated Responsibilities apply. Examples include projects, collaborations, assessments, or audits." .
+<https://w3id.org/lcanet/actor#Context> <http://www.w3.org/2000/01/rdf-schema#label> "Context" .
+# 
+# https://w3id.org/lcanet/actor#Customer
+<https://w3id.org/lcanet/actor#Customer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/actor#Customer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/actor#Role> .
+<https://w3id.org/lcanet/actor#Customer> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a type of role that an agent may assume when acquiring or purchasing a product or service within its life cycle." .
+<https://w3id.org/lcanet/actor#Customer> <http://www.w3.org/2000/01/rdf-schema#label> "Customer" .
+# 
+# https://w3id.org/lcanet/actor#Group
+<https://w3id.org/lcanet/actor#Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/actor#Group> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/actor#Agent> .
+<https://w3id.org/lcanet/actor#Group> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/actor#Person> .
+<https://w3id.org/lcanet/actor#Group> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of agents acting together as a social unit." .
+<https://w3id.org/lcanet/actor#Group> <http://www.w3.org/2000/01/rdf-schema#label> "Group" .
+# 
+# https://w3id.org/lcanet/actor#Manufacturer
+<https://w3id.org/lcanet/actor#Manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/actor#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/actor#Role> .
+<https://w3id.org/lcanet/actor#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a type of role that an agent may assume when performing production or assembly activities within a life cycle system." .
+<https://w3id.org/lcanet/actor#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "Manufacturer" .
+# 
+# https://w3id.org/lcanet/actor#Organization
+<https://w3id.org/lcanet/actor#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/actor#Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/actor#Agent> .
+<https://w3id.org/lcanet/actor#Organization> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/actor#Person> .
+<https://w3id.org/lcanet/actor#Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "A structured collection of agents pursuing common objectives." .
+<https://w3id.org/lcanet/actor#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization" .
+# 
+# https://w3id.org/lcanet/actor#Person
+<https://w3id.org/lcanet/actor#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/actor#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/actor#Agent> .
+<https://w3id.org/lcanet/actor#Person> <http://www.w3.org/2000/01/rdf-schema#comment> "A human individual acting as an agent." .
+<https://w3id.org/lcanet/actor#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person" .
+# 
+# https://w3id.org/lcanet/actor#Recycler
+<https://w3id.org/lcanet/actor#Recycler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/actor#Recycler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/actor#Role> .
+<https://w3id.org/lcanet/actor#Recycler> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a type of role that an agent may assume when performing recovery, recycling, or treatment operations on products or materials at the end-of-life stage." .
+<https://w3id.org/lcanet/actor#Recycler> <http://www.w3.org/2000/01/rdf-schema#label> "Recycler" .
+# 
+# https://w3id.org/lcanet/actor#Researcher
+<https://w3id.org/lcanet/actor#Researcher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/actor#Researcher> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lcanet/actor#Role> .
+<https://w3id.org/lcanet/actor#Researcher> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a type of role that an agent may assume when conducting analysis, modeling, or scientific studies related to life cycle assessment data, methods, or systems." .
+<https://w3id.org/lcanet/actor#Researcher> <http://www.w3.org/2000/01/rdf-schema#label> "Researcher" .
+# 
+# https://w3id.org/lcanet/actor#Responsibility
+<https://w3id.org/lcanet/actor#Responsibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/actor#Responsibility> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lcanet/actor#Role> .
+<https://w3id.org/lcanet/actor#Responsibility> <http://www.w3.org/2000/01/rdf-schema#comment> "A Responsibility is a relator (a kind of social relation) that connects: the Agent (bearer),\nthe Role (through which it is borne), and the Action(s) or Goals to which it applies. It include duties, obligations, tasks, etc.\nExamples: certify LCA results, verify data quality, etc." .
+<https://w3id.org/lcanet/actor#Responsibility> <http://www.w3.org/2000/01/rdf-schema#label> "Responsibility" .
+# 
+# https://w3id.org/lcanet/actor#Role
+<https://w3id.org/lcanet/actor#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/lcanet/actor#Role> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a functional role that an agent can assume in a specific context.\nExample: LCA Auditor, LCA Agency Role" .
+<https://w3id.org/lcanet/actor#Role> <http://www.w3.org/2000/01/rdf-schema#label> "Role" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<urn:swrl:var#a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#r> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#x> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid1 <http://www.w3.org/2003/11/swrl#body> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid3 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x> .
+_:genid3 <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/lcanet/actor#Responsibility> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid5 .
+_:genid5 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#x> .
+_:genid5 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> .
+_:genid5 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/lcanet/actor#entails> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
+_:genid7 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> .
+_:genid7 <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/lcanet/actor#Role> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid9 .
+_:genid9 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r> .
+_:genid9 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a> .
+_:genid9 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/lcanet/actor#playsRole> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid11 .
+_:genid11 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a> .
+_:genid11 <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/lcanet/actor#Agent> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid1 <http://www.w3.org/2003/11/swrl#head> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid13 .
+_:genid13 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#x> .
+_:genid13 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a> .
+_:genid13 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/lcanet/actor#bearsResponsibility> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,12 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<https://w3id.org/lcanet/actor/2.2.0> a prov:Entity;
+	 dc:title "The Actor module of the Life Cycle Assessment Network Ontology (LCAnet).";
+	 prov:wasAttributedTo <https://orcid.org/0000-0002-0438-6831>;
+	 dc:creator <https://orcid.org/0000-0002-0438-6831>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:specializationOf <https://w3id.org/lcanet/actor#>;
+	 prov:wasRevisionOf <2.1.0>;
+.
