@@ -295,6 +295,21 @@
     }
 
     /* ── USE CASE LINKS ── */
+
+    .uc-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+    }
+
+    .uc-box .uc-title {
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: var(--green-dark);
+      margin-bottom: 0.4rem;
+    }
+
     .usecase-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -503,49 +518,54 @@
       explored: batteries and integrated circuits. The resources below demonstrate the
       practical applicability of LCAnet.
     </p>
-    <div class="usecase-grid">
 
-      <div class="usecase-card">
-        <div class="uc-title">IC Knowledge Graph</div>
-        <p style="font-size:0.85rem; margin-bottom:0.5rem;">
-          Integrated circuits use case knowledge graph built with LCAnet.
-        </p>
-        <div class="uc-links">
-          <a class="mod-link" href="https://danashfatima.github.io/lcanet/ICdata/index-en.html">HTML docs →</a>
-        </div>
+    <div class="uc-box">
+      <p class="uc-title">Integrated Circuits Use case</p>
+      <div class="usecase-grid">
+
+          <div class="usecase-card">
+            <div class="uc-title">IC Conceptualisation</div>
+            <p style="font-size:0.85rem; margin-bottom:0.5rem;">
+              Conceptualisation graph of the IC use case.
+            </p>
+            <div class="uc-links">
+              <a class="mod-link" href="https://danashfatima.github.io/lcanet/ICdata/inputs/IC-conceptualization.svg">SVG →</a>
+            </div>
+          </div>
+
+          <div class="usecase-card">
+            <div class="uc-title">IC LCA Data</div>
+            <p style="font-size:0.85rem; margin-bottom:0.5rem;">
+              LCA results per flow/activity in the IC use case.
+            </p>
+            <div class="uc-links">
+              <a class="mod-link" href="https://danashfatima.github.io/lcanet/ICdata/inputs/IC-LCAresultsperflow.xlsx">XLSX →</a>
+            </div>
+          </div>
+          
+          <div class="usecase-card">
+            <div class="uc-title">IC Knowledge Graph</div>
+            <p style="font-size:0.85rem; margin-bottom:0.5rem;">
+              Integrated circuits use case knowledge graph built with LCAnet.
+            </p>
+            <div class="uc-links">
+              <a class="mod-link" href="https://danashfatima.github.io/lcanet/ICdata/index-en.html">HTML docs →</a>
+            </div>
+          </div>
+
+          <div class="usecase-card">
+            <div class="uc-title">IC Inferred Triplets</div>
+            <p style="font-size:0.85rem; margin-bottom:0.5rem;">
+              Inferred triplets extracted via HermiT reasoner over the IC knowledge graph.
+            </p>
+            <div class="uc-links">
+              <a class="mod-link" href="https://danashfatima.github.io/lcanet/ICdata/ICdata-HermiT-inferred.rdf">RDF →</a>
+            </div>
+          </div>
+
       </div>
-
-      <div class="usecase-card">
-        <div class="uc-title">IC Inferred Triplets</div>
-        <p style="font-size:0.85rem; margin-bottom:0.5rem;">
-          Inferred triplets extracted via HermiT reasoner over the IC knowledge graph.
-        </p>
-        <div class="uc-links">
-          <a class="mod-link" href="https://danashfatima.github.io/lcanet/ICdata/ICdata-HermiT-inferred.rdf">RDF →</a>
-        </div>
-      </div>
-
-      <div class="usecase-card">
-        <div class="uc-title">IC Conceptualisation</div>
-        <p style="font-size:0.85rem; margin-bottom:0.5rem;">
-          Conceptualisation graph of the IC use case.
-        </p>
-        <div class="uc-links">
-          <a class="mod-link" href="https://danashfatima.github.io/lcanet/ICdata/inputs/IC-conceptualization.svg">SVG →</a>
-        </div>
-      </div>
-
-      <div class="usecase-card">
-        <div class="uc-title">IC LCA Data</div>
-        <p style="font-size:0.85rem; margin-bottom:0.5rem;">
-          LCA results per flow/activity in the IC use case.
-        </p>
-        <div class="uc-links">
-          <a class="mod-link" href="https://danashfatima.github.io/lcanet/ICdata/inputs/IC-LCAresultsperflow.xlsx">XLSX →</a>
-        </div>
-      </div>
-
     </div>
+
   </section>
 
   <hr />
@@ -564,7 +584,7 @@
         <a href="https://orcid.org/0000-0002-4553-3930">Fabien Perdu</a>,
         <a href="https://orcid.org/0009-0002-7928-9902">Jean-François Berrée</a>,
         <a href="https://orcid.org/0009-0003-5475-3091">Makan-Thibault Halter</a>,
-        and Emmanuelle Core
+        and <a href="https://cea-litendays.com/emmanuelle-cor/">Emmanuelle Core</a>
       </p>
       <p><strong>License:</strong>
         <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>
@@ -572,7 +592,7 @@
       <p style="margin-top:1rem;"><strong>Cite as:</strong></p>
       <div class="cite-block">
         Danash, F., et al. (2026). <em>LCAnet: A Modular Ontology Network for Life Cycle Assessment</em>
-        (Version 2.1.0). Available at: https://w3id.org/lcanet
+        (Version 2.2.0). Available at: https://w3id.org/lcanet
       </div>
     </div>
   </section>
